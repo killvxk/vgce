@@ -1,4 +1,6 @@
+#summary Super Smash Bros. Brawl saved content formats
 #labels Game-SSBB,Platform-Wii,Featured
+
 =Table of Contents=
 <wiki:toc max_depth="1" />
 

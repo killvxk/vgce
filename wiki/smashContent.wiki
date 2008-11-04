@@ -1,5 +1,7 @@
 #labels Game-SSBB,Platform-Wii,Featured
+=Table of Contents=
 <wiki:toc max_depth="1" />
+
 
 = Content Header =
 
@@ -48,6 +50,7 @@ Data follows directly After
 ==Alignment==
 
   * Before re-encrypting the file, append any bytes until the file is aligned to 0x10.
+
 
 
 = Replay =
@@ -420,6 +423,7 @@ Then there are 4 bytes allocated for each player specified in the header.
 {{{
 	Y-Movement (signed %)
 }}}
+
 
 
 =Custom Stage=

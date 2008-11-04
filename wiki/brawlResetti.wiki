@@ -1,5 +1,5 @@
 #summary Everything that Resetti the Assist Trophy will ever say
-#labels Game-SSBB,Platform-Wii
+#labels Game-SSBB,Platform-Wii,Type-Content
 
 {{{
 Resetti

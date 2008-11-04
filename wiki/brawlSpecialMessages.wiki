@@ -1,5 +1,6 @@
 #labels Game-SSBB,Platform-Wii
-{{{Ness, the PSI-powered youth, has joined the
+{{{
+Ness, the PSI-powered youth, has joined the
 brawl!
 
 Marth, the emblem prince, has joined the

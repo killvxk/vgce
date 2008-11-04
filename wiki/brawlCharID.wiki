@@ -1,5 +1,5 @@
 #summary Super Smash Bros. Brawl Character ID List
-#labels Game-SSBB,Platform-Wii
+#labels Game-SSBB,Platform-Wii,Type-List
 
 {{{
 00 (00) - Mario

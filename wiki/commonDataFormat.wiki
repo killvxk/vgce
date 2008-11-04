@@ -1,5 +1,5 @@
 #summary Common Data format used by Nintendo
-#labels Platform-All
+#labels Platform-Nintendo,Game-All
 
 {{{
 0x00	EOF (File Size)

@@ -1,7 +1,8 @@
 #summary Snake Codecs for the Shadow Moses Island stage
 #labels Game-SSBB,Platform-Wii,Type-Content
 
-{{{--------------------------------------------------
+{{{
+--------------------------------------------------
 Snake, you know who that is?
 
 You're kidding, right? It's Mario.

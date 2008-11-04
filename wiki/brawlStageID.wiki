@@ -1,7 +1,7 @@
 #summary Super Smash Bros. Brawl Stage ID List
 #labels Platform-Wii,Game-SSBB
 
-<pre>
+{{{
 00 (0) - Battle (Dummy? Crash)
 01 (1) - BattleField (Battlefield)
 02 (2) - Final (Final Destination)
@@ -75,4 +75,4 @@
 41 (65) - BattleFieldS
 42 (66) - Max
 43 (67) - Unknown
-</pre>
+}}}

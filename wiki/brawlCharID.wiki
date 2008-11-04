@@ -1,4 +1,6 @@
+#summary Super Smash Bros. Brawl Character ID List
 #labels Game-SSBB,Platform-Wii
+
 {{{
 00 (00) - Mario
 01 (01) - Donkey (Donkey Kong)

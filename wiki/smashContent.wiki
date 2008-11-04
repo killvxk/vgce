@@ -36,7 +36,7 @@ Data follows directly After
 ==Compression==
 
   * If uncompressed size is not equal to current size, the data is compressed, otherwise it is uncompressed.
-  * If the data is compressed; It was have a LZ* format header. If it has been uncompressed, delete that header completely.
+  * If the data is compressed; It was have a common LZ format header. If it has been uncompressed, delete that header completely.
 
 ==Checksum Calculation==
 
@@ -91,7 +91,7 @@ Data follows directly After
 		0x01 - Match is BTT
 		0x08 - Fixed Camera
 		0x10 - Angled Camera
-		0x80 - Don`t use score
+		0x80 - Dont use score
 	Byte 6:
 		0x20 - Players???
 	Byte 7:
@@ -156,7 +156,7 @@ Data follows directly After
 		0x08 - Beam Sword
 		0x10 - Home-Run Bat
 		0x20 - Fan
-		0x40 - Lip`s Stick
+		0x40 - Lips Stick
 		0x80 - Star Rod
 	Byte 7:
 		0x01 - Heart Container
@@ -342,7 +342,7 @@ Data follows directly After
 			Byte 5:
 				0x01 - Has Franklin Badge
 				0x02 - Has Superspice Curry
-				0x04 - Has Flower (Lip`s Stick)
+				0x04 - Has Flower (Lips Stick)
 				0x08 - Has Bunny Hood
 				0x10 - Unknown (Always checked)
 				0x20 - Character is named
@@ -574,6 +574,7 @@ GIMMICK TILES (0x03)
 
 ==Actual Part Sizes==
 	The actual sizes of the parts can be determined by the following formulae:
+{{{
 	defaultSmallestSize / SmallestSize * currentSize = finalSize
 
 	rsx/rsy = real smallest size x/y
@@ -581,7 +582,7 @@ GIMMICK TILES (0x03)
 
 	rsx/sx*x
 	rsy/sy*y
-
+}}}
 	These rules only apply if x OR y is greater than or equal to the respective x/y values for the large size object, otherwise the object will be centered in its x/y, instead of stretching.
 
 

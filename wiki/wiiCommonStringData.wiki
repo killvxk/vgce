@@ -1,5 +1,5 @@
 #summary Common Wii string data such as msbin
-#labels Platform-Wii
+#labels Platform-Wii,Game-All
 
 UTF8 encoding, with the following control characters:
 {{{

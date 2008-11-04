@@ -1,4 +1,6 @@
+#summary Super Smash Bros. Brawl Custom Stage Constants
 #labels Game-SSBB,Platform-Wii
+
 {{{
 stageEdit.bin declarations
 

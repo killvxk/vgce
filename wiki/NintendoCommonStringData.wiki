@@ -1,5 +1,5 @@
 #summary Common string data such as msbin
-#labels Game-All,Platform-Nintendo
+#labels Game-All,Platform-Nintendo,Type-FileFormat
 
 UTF8 encoding, with the following control characters:
 {{{

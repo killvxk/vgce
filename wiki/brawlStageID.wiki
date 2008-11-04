@@ -1,5 +1,5 @@
 #summary Super Smash Bros. Brawl Stage ID List
-#labels Platform-Wii,Game-SSBB
+#labels Platform-Wii,Game-SSBB,Type-List
 
 {{{
 00 (0) - Battle (Dummy? Crash)

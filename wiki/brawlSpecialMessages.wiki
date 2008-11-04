@@ -1,4 +1,6 @@
+#summary Super Smash Bros. Brawl Special Messages List
 #labels Game-SSBB,Platform-Wii
+
 {{{
 Ness, the PSI-powered youth, has joined the
 brawl!

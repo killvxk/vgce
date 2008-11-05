@@ -1,9 +1,9 @@
 #summary Snake Codecs for the Shadow Moses Island stage
 #labels Game-SSBB,Platform-Wii,Type-Content
 
+=Mario=
 {{{
---------------------------------------------------
-Snake, you know who that is?
+"Snake, you know who that is?
 
 You're kidding, right? It's Mario.
 
@@ -21,11 +21,11 @@ This is a once-in-a-lifetime chance,
 Snake. Now get out there and show
 him what you're made of. No regrets.
 
-Got it.
-
---------------------------------------------------
-
-Colonel! That fox is fast!
+Got it."
+}}}
+=Fox=
+{{{
+"Colonel! That fox is fast!
 
 You're fighting Fox, eh, Snake?
 
@@ -47,11 +47,11 @@ Don't remind me. First FOXHOUND and
 now this guy... I'm sick of foxes.
 
 You and foxes have a long history together.
-You ought to be proud.
-
---------------------------------------------------
-
-That guy with the mustache...
+You ought to be proud."
+}}}
+=Luigi=
+{{{
+"That guy with the mustache...
 
 Ha. You mean the "King of Second
 Bananas"?
@@ -72,11 +72,11 @@ Colonel, what's gotten into you?!
 La li lu le lo! La li lu le lo! La li lu le lo!
 
 Colonel, snap out of it! Colonel!!
-Coooooooloneeeeeel!
-
---------------------------------------------------
-
-That kid... Isn't that Ness?
+Coooooooloneeeeeel!"
+}}}
+=Ness=
+{{{
+"That kid... Isn't that Ness?
 
 Ness?
 
@@ -102,11 +102,11 @@ him predicting my every move.
 
 Even if he had telepathic powers, I don't
 think he'd use them to mess with you like
-that. I hear he's a good kid.
-
---------------------------------------------------
-
-Careful, Snake! That's the great and
+that. I hear he's a good kid."
+}}}
+=Bowser=
+{{{
+"Careful, Snake! That's the great and
 terrible Bowser!
 
 Bowser? Looks like a cheap movie
@@ -126,11 +126,11 @@ But that's only because he's the heaviest
 fighter here--by far.
 
 He's a powerhouse of destruction.
-Careful he doesn't flatten you.
-
---------------------------------------------------
-
-Snake, I see you're fighting Zelda.
+Careful he doesn't flatten you."
+}}}
+=Zelda=
+{{{
+"Snake, I see you're fighting Zelda.
 
 Yeah, I guess. Doesn't feel right fighting
 someone in a dress, though...
@@ -150,11 +150,11 @@ So this rose has thorns... Interesting...
 
 Don't worry. I know from experience that
 it's the quiet ones you have to watch out
-for.
-
---------------------------------------------------
-
-This guy kind of gives me the creeps.
+for."
+}}}
+=Wario=
+{{{
+"This guy kind of gives me the creeps.
 
 That's Wario, Snake.
 
@@ -182,11 +182,11 @@ fly around, too.
 By farting?! Are you kidding me?!
 
 Sadly, no. I am not kidding. If his belly
-starts to bulge, watch out.
-
---------------------------------------------------
-
-Pokémon Trainer... That's the guy
+starts to bulge, watch out."
+}}}
+=Pokémon Trainer=
+{{{
+"Pokémon Trainer... That's the guy
 giving orders behind a Pokémon, right? 
 
 Right, and this Pokémon Trainer is
@@ -213,11 +213,11 @@ on their own.
 
 So let's do this together, partner. 
 
-...Yeah... Whatever you say, Colonel.
-
---------------------------------------------------
-
-Look at the size of that hammer...
+...Yeah... Whatever you say, Colonel."
+}}}
+=King Dedede=
+{{{
+"Look at the size of that hammer...
 
 That's King Dedede you're fighting, Snake.
 
@@ -243,11 +243,11 @@ nothing...
 
 But he also leaves himself wide open.
 Just make sure you avoid the swing,
-Snake.
-
---------------------------------------------------
-
-This swordsman's gonna be tough to beat.
+Snake."
+}}}
+=Ike=
+{{{
+"This swordsman's gonna be tough to beat.
 
 Fighting Ike, eh, Snake?
 
@@ -273,11 +273,11 @@ is a crucial element in battle. Using that
 distance can give you an advantage
 against some enemies.
 
-Yeah, I've got the same feeling...
-
---------------------------------------------------
-
-Aw, there's a big eyeball walking around
+Yeah, I've got the same feeling..."
+}}}
+=Jigglypuff=
+{{{
+"Aw, there's a big eyeball walking around
 here... 
 
 That's just Jigglypuff.
@@ -302,11 +302,11 @@ So it puts a lot of energy into sleeping?
 Sounds pretty irresponsible if you ask me.
 
 Takes all kinds, Snake. Especially here in
-"Brawl."
-
---------------------------------------------------
-
-Colonel, it's me! I'm fighting myself!
+''Brawl.''"
+}}}
+=Snake=
+{{{
+"Colonel, it's me! I'm fighting myself!
 
 Snake, what's going on out there?!
 
@@ -329,19 +329,19 @@ matched in power, your fighting styles will
 make a big difference.
 
 You've faced tougher odds in the past,
-Snake. Don't let this impostor beat you!!
-
---------------------------------------------------
-
-Colonel, there's a guy in here who looks
+Snake. Don't let this impostor beat you!!"
+}}}
+=Wolf=
+{{{
+"Colonel, there's a guy in here who looks
 like a wolf... 
 
 You mean the fighter named Wolf. 
 
-"Wolf." Real imaginative name...
+''Wolf.'' Real imaginative name...
 
 He's the leader of a ragtag team called
-"Star Wolf." They're the longtime rivals of
+''Star Wolf.'' They're the longtime rivals of
 Star Fox.
 
 Kind of strange for a wolf to have friends,
@@ -352,22 +352,16 @@ others. I suppose they're more like
 hangers-on than actual comrades. 
 
 But he's a remarkable pilot. And his ship,
-the "Wolfen," is no slouch, either. 
+the ''Wolfen,'' is no slouch, either. 
 
 But this is hand-to-hand combat, Colonel.
 He's out of his element. 
 
 Careful, Snake. Those claws of his aren't
-just for show. 
-
---------------------------------------------------
-
-Snake, do you copy?
-Snake! Snaaake!!
-
---------------------------------------------------
-
-Otacon, there's a gorilla wearing a tie here.
+just for show. "
+}}}
+{{{
+"Otacon, there's a gorilla wearing a tie here.
 He's huge.
 
 That's Donkey Kong. As you can tell, he's
@@ -390,11 +384,11 @@ Nope, they're still at it. Seems like
 they're always competing in something--
 kart racing, sports, you name it.
 
-A chip off the old block...
-
---------------------------------------------------
-
-Otacon, who's the guy with the sword?
+A chip off the old block..."
+}}}
+=Link=
+{{{
+"Otacon, who's the guy with the sword?
 
 That's Link. He's the hero of Hyrule. 
 
@@ -418,11 +412,11 @@ What's that supposed to mean?
 
 You tell me, Mr. Utility Belt.
 
-...
-
---------------------------------------------------
-
-Hey, Otacon. I got a woman here in a
+..."
+}}}
+=Samus=
+{{{
+"Hey, Otacon. I got a woman here in a
 Power Suit...
 
 Huh? How'd you know she was a woman?
@@ -448,11 +442,11 @@ people like you and me can't even begin to
 imagine.
 
 But underneath that cold, metal exterior
-beats the heart of a woman...
-
---------------------------------------------------
-
-Otacon! What's this lizard thing?
+beats the heart of a woman..."
+}}}
+=Yoshi=
+{{{
+"Otacon! What's this lizard thing?
 
 That's a Yoshi. It's a dinosaur from Yoshi's
 Island.
@@ -475,16 +469,16 @@ Now you've got me curious. ...How about I
 capture one so we can see what they taste
 like?
 
-Uhh, Snake...
-
---------------------------------------------------
-
-Snake! Watch out!
+Uhh, Snake..."
+}}}
+=Kirby=
+{{{
+"Snake! Watch out!
 
 For what? That pink marshmallow?
 
-That's Kirby, also known as "Kirby from
-Dream Land." 
+That's Kirby, also known as ''Kirby from
+Dream Land.'' 
 
 He's from another planet--in other words,
 an extraterrestrial.
@@ -492,7 +486,7 @@ an extraterrestrial.
 He's got a powerful stomach that lets him
 swallow and digest anything.
 
-And he also has a "Copy Ability" that
+And he also has a ''Copy Ability'' that
 allows him to mimic opponents, steal their
 moves, and use those moves against them.
 
@@ -500,11 +494,11 @@ On top of that, he has the power to fly
 around the stage, so once he's got you in
 his sights, there's no place to run.
 
-...Huh? Yeah, got it. I'll keep an eye out.
-
---------------------------------------------------
-
-Hey! That's Captain Falcon, isn't it!
+...Huh? Yeah, got it. I'll keep an eye out."
+}}}
+=Captain Falcon=
+{{{
+"Hey! That's Captain Falcon, isn't it!
 
 Good eye, Snake!
 He's F-Zero pilot number 07!
@@ -518,11 +512,11 @@ OK, ready? Go!
 
 Falcon Puuuunch!!
 
-Falcon Kiiiiiiick!!
-
---------------------------------------------------
-
-Otacon, there's a guy walking around in
+Falcon Kiiiiiiick!!"
+}}}
+=Mr. Game & Watch=
+{{{
+"Otacon, there's a guy walking around in
 here...and he's only got two dimensions!
 
 That's Mr. Game & Watch. He comes from
@@ -546,11 +540,11 @@ Well, um... He's... I mean... Look, just
 start fighting him, and I'm sure everything
 will make sense.
 
-...
-
---------------------------------------------------
-
-This guy is giving off a murderous vibe!
+..."
+}}}
+=Ganondorf=
+{{{
+"This guy is giving off a murderous vibe!
 Even getting close to him makes my skin
 crawl...
 
@@ -572,11 +566,11 @@ firepower! Count yourself lucky!
 It's not like you to whine, Snake. 
 
 I was just asking, sheesh. Well, it's back
-to the mission for me. 
-
---------------------------------------------------
-
-Otacon, there's a kid with wings out here.
+to the mission for me. "
+}}}
+=Pit=
+{{{
+"Otacon, there's a kid with wings out here.
 Is he a mutant? Or is he just into
 costumes?
 
@@ -599,13 +593,13 @@ He used to be a weakling, but countless
 trials over the years have toughened him
 up.
 
-And by trials, you mean, "Game Overs"? 
+And by trials, you mean, ''Game Overs''? 
 
-Yeah, you should know all about that. 
-
---------------------------------------------------
-
-Otacon, there's a chimpanzee here wearing
+Yeah, you should know all about that. "
+}}}
+=Diddy Kong=
+{{{
+"Otacon, there's a chimpanzee here wearing
 a Nintendo hat.
 
 That's Diddy Kong. He's Donkey Kong's
@@ -628,11 +622,11 @@ If you pick up some of those peanuts,
 they'll restore your health a little. 
 
 Hmm. Edible ammunition, huh... Times
-sure have changed.
-
---------------------------------------------------
-
-So, Snake, you're fighting Robot?
+sure have changed."
+}}}
+=R.O.B.=
+{{{
+"So, Snake, you're fighting Robot?
 
 Yeah, it's a robot. Although, couldn't they
 have come up with a better name?
@@ -651,11 +645,11 @@ arms, the color of the Japanese Famicom.
 You sure know your geeky tech stuff,
 Otacon.
 
-Well, you know...
-
---------------------------------------------------
-
-... 
+Well, you know..."
+}}}
+=Sonic=
+{{{
+"... 
 
 Snake, what is it? 
 
@@ -675,16 +669,11 @@ him I just don't like.
 But...why? You must have some kind of
 reason.
 
-...Nope, just don't like him.
-
---------------------------------------------------
-
-Snake! What's going on?!
-Snake! Snaaake!!
-
---------------------------------------------------
-
-Ooh! How cuute!
+...Nope, just don't like him."
+}}}
+=Pikachu=
+{{{
+"Ooh! How cuute!
 
 What? The yellow thing? 
 
@@ -711,11 +700,11 @@ catch Pikachu for me? Pleeeeease?
 Give me a break! What do I look like, a
 Pokémon Trainer?
 
-Fine... Sorry I asked. 
-
---------------------------------------------------
-
-Mei Ling, tell me what you know about
+Fine... Sorry I asked. "
+}}}
+=Peach=
+{{{
+"Mei Ling, tell me what you know about
 Peach.
 
 Princess Peach is the beloved ruler of the
@@ -730,7 +719,7 @@ Yes, but every time it happens, Mario ends
 up saving her.
 
 Sure, he may not look like your ideal
-"knight in shining armor." A little on the
+''knight in shining armor.'' A little on the
 short side, I'd say...
 
 But still, don't you think it's romantic? I
@@ -741,11 +730,11 @@ If he was smart, he'd tell her to stop
 getting kidnapped.
 
 ...You don't get a lot of dates, do you,
-Snake?
-
---------------------------------------------------
-
-What's going on here? What happened to
+Snake?"
+}}}
+=Sheik=
+{{{
+"What's going on here? What happened to
 Zelda?!
 
 Snake, Princess Zelda transformed into
@@ -770,14 +759,14 @@ Don't you think talking to someone halfway
 around the world is a kind of magic? Or
 flying across entire continents?
 
-No. I think this is completely different.
-
---------------------------------------------------
-
-So those two are the Ice Climbers, huh? 
+No. I think this is completely different."
+}}}
+=Ice Climbers=
+{{{
+"So those two are the Ice Climbers, huh? 
 
 Snake, have you ever heard of a
-"blood bond"?
+''blood bond''?
 
 Sure.
 
@@ -793,9 +782,9 @@ I dunno. Seems to me they'd get in each
 other's way fighting to see who gets to the
 top first.
 
-Snake, in China they say, "Though
+Snake, in China they say, ''Though
 brothers may quarrel at home, outside
-they defend each other from slight."
+they defend each other from slight.''
 
 Is that really a Chinese proverb?
 
@@ -804,12 +793,12 @@ way occasionally, they'll pull together in
 times of need. 
 
 They're an inseparable team, Snake. Don't
-underestimate them!
-
---------------------------------------------------
-
-Snake, have you heard the saying "Politics
-makes strange bedfellows"?
+underestimate them!"
+}}}
+=Marth=
+{{{
+"Snake, have you heard the saying ''Politics
+makes strange bedfellows''?
 
 Don't tell me that's a Chinese proverb.
 
@@ -837,11 +826,11 @@ Then he was betrayed by one of his most
 trusted friends. I can't even imagine how
 that feels... 
 
-...I can.
-
---------------------------------------------------
-
-Mei Ling, there's a mysterious masked
+...I can."
+}}}
+=Meta Knight=
+{{{
+"Mei Ling, there's a mysterious masked
 man flying around here with a sword... 
 
 That's Meta Knight. He's a knight from
@@ -866,11 +855,11 @@ of like someone else I know.
 
 Really... And who would that be?
 
-Use your imagination...
-
---------------------------------------------------
-
-Mei Ling, Samus took her clothes off!
+Use your imagination..."
+}}}
+=Zero-Suit Samus=
+{{{
+"Mei Ling, Samus took her clothes off!
 
 That's just her in the Zero Suit, Snake. 
 
@@ -889,13 +878,13 @@ her a super athlete.
 I don't think a normal human could ever
 keep up. Just look at her.
 
-...Her loss.
-
---------------------------------------------------
-
-Snake, have you ever heard of the ancient
-Chinese story, "The Vain Ocean of Wealth
-and Splendor" from the Zhen Zhong Ji?
+...Her loss."
+}}}
+=Captain Olimar=
+{{{
+"Snake, have you ever heard of the ancient
+Chinese story, ''The Vain Ocean of Wealth
+and Splendor'' from the Zhen Zhong Ji?
 
 I've been waiting for the movie.
 
@@ -921,11 +910,11 @@ Well, yeah, I suppose so.
 No one truly fights alone. Not even me. 
 
 ...You're absolutely right, Snake. Good
-luck. I'm rooting for you. 
-
---------------------------------------------------
-
-I see you're fighting Lucas, Snake.
+luck. I'm rooting for you. "
+}}}
+=Lucas=
+{{{
+"I see you're fighting Lucas, Snake.
 
 Lucas?
 
@@ -948,11 +937,11 @@ The question is how you translate those
 hardships into a better future.
 
 ...Mmm. Well, I hope things turn out OK
-for him.
-
---------------------------------------------------
-
-You're fighting Lucario, aren't you, Snake? 
+for him."
+}}}
+=Lucario=
+{{{
+"You're fighting Lucario, aren't you, Snake? 
 
 Mei Ling, what's that purple fire coming
 out of his hands?
@@ -982,11 +971,11 @@ You must have rubbed off on me.
 
 Well, come back in one piece, and I'll
 teach you all the Chinese proverbs you can
-handle.
-
---------------------------------------------------
-
-Mei Ling, who is this kid with the cat
+handle."
+}}}
+=Toon Link=
+{{{
+"Mei Ling, who is this kid with the cat
 eyes...? 
 
 Oh, they call him Toon Link. Doesn't he
@@ -1011,16 +1000,11 @@ I think I can relate to that.
 Huh? What do you mean?
 
 There's been more than one "Snake," too,
-you know...
-
---------------------------------------------------
-
-Snake! Don't quit now!
-Snake! Snaaake!!
-
---------------------------------------------------
-
-This is Snake... 
+you know..."
+}}}
+=Falco=
+{{{
+"This is Snake... 
 
 Copy, Snake! This is Slippy!
 
@@ -1056,11 +1040,24 @@ Hey, maybe so! I feel all fuzzy now!
 Thanks, Snake!
 
 Maybe next time we meet, you can design
-me a weapon...
+me a weapon..."
 
---------------------------------------------------
+{{{
+"Snake! Get up!
+Snake! Snaaake!!"
+}}}
 
-Snake! Get up!
-Snake! Snaaake!!
+{{{
+"Snake, do you copy?
+Snake! Snaaake!!"
+}}}
 
+{{{
+"Snake! Don't quit now!
+Snake! Snaaake!!"
+}}}
+
+{{{
+"Snake! What's going on?!
+Snake! Snaaake!!"
 }}}

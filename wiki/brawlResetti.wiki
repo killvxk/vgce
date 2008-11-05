@@ -3,25 +3,25 @@
 
 =Resetti=
 
-`
+{{{
 "Think you don't gotta
 listen to me? HEY!"
-`
-`
+}}}
+{{{
 "Quiet down, will ya?
 I'm talkin' here! 
 HEY!"
-`
-`
+}}}
+{{{
 H-hey! Don't you
 ditch me, punk!
-`
-`
+}}}
+{{{
 HEY!
-`
-`
+}}}
+{{{
 NO RESETTIN'!
-`
+}}}
 YOU HEAR ME?!
 
 Huh? You sayin' you never

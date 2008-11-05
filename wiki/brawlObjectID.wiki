@@ -1,4 +1,4 @@
-#summary Super Smash Bros. Brawl Object ID List
+#summary Object ID List
 #labels Game-SSBB,Platform-Wii,Type-List
 
 =ITEMS=

@@ -2,7 +2,7 @@
 #labels Game-SSBB,Platform-Wii,Featured,Type-FileFormat
 
 =Table of Contents=
-<wiki:toc max_depth="3" />
+<wiki:toc max_depth="2" />
 
 Note: Space between content head and format start still needs to be described properly.
 
@@ -361,13 +361,13 @@ Data follows directly After
 		+0x3D    u8         // Unknown Character Flags???
 		+0x3E    u8         // Unknown Character Flags???
 		+0x3F    u8         // Character spawn point ? player #
-		+0x40 - Size Ratio (4)
-		+0x44 - Unknown (float)
-		+0x48 - Weight Ratio (4)
-		+0x4C - Unknown
-		+0x50 - Unknown
-		+0x54 - Unknown (float)
-		+0x58 - Unknown
+		+0x40    float      // Size Ratio (4)
+		+0x44    float      // Unknown (float)
+		+0x48    float      // Weight Ratio (4)
+		+0x4C    float      // Unknown
+		+0x50    float      // Unknown
+		+0x54    float      // Unknown (float)
+		+0x58    float      // Unknown
 }}}
 
 == Action Data ==
@@ -387,37 +387,35 @@ Then there are 4 bytes allocated for each player specified in the header.
 
 ===Byte 1===
 {{{
-	0x01 - ATTACK
-	0x02 - 
-	0x04 - D-Pad UP
-	0x08 - D-Pad Right/Left
-	0x10 - D-Pad Down
-	0x20 - D-Pad Left
-	0x40 - D-Pad Right
-	0x80 - 
+	0x01 // ATTACK
+	0x02 // Unknown
+	0x04 // D-Pad UP
+	0x08 // D-Pad Right/Left
+	0x10 // D-Pad Down
+	0x20 // D-Pad Left
+	0x40 // D-Pad Right
+	0x80 // Unknown 
 }}}
 
 ===Byte 2===
 {{{
-	0x01 - ATTACK
-	0x02 - SPECIAL
-	0x04 - JUMP
-	0x08 - SHIELD
-	0x10 - 
-	0x20 - SMASH (C-Stick used)
-	0x40 - Alternate 1
-	0x80 - Alternate 2
+	0x01 // ATTACK
+	0x02 // SPECIAL
+	0x04 // JUMP
+	0x08 // SHIELD
+	0x10 // Unknown
+	0x20 // SMASH (C-Stick used)
+	0x40 // Alternate 1
+	0x80 // Alternate 2
 }}}
 
 ===Byte 3===
-{{{
 	X-Movement (signed %)
-}}}
+
 
 ===Byte 4===
-{{{
 	Y-Movement (signed %)
-}}}
+
 
 
 ---- 
@@ -428,124 +426,133 @@ Then there are 4 bytes allocated for each player specified in the header.
 Format excludes saved content header.
 
 {{{
-0x00 - ASCII: "ED01"
-0x04 - Section Size
-0x08 - Pointer to JPEG data (relative to section start)
-0x0C - Size of JPEG data
-0x10 - Unknown/Unused
-0x14 - Stage Style
-	00 - Nature
-	01 - Factory
-	02 - Remains
-0x15 - Stage Size
-	00 - Small (10 block width)
-	01 - Medium (14 block width)
-	02 - Large (18 block width)
-0x16 - Number of Blocks contained (1)
-0x17 - Image Format [00 = standard; 01 = widescreen] (1)
-0x18 - Music ID (2)
-	See musicSFX_ID.txt
+0x00    char("ED01")
+0x04    u32         // Section Size
+0x08    u32         // Pointer to JPEG data (relative to section start)
+0x0C    u32         // Size of JPEG data
+0x10    u32         // Unknown/Unused
+0x14    u8          // Stage Style
+			00 // Nature
+			01 // Factory
+			02 // Remains
+0x15    u8          // Stage Size
+			00 // Small (10 block width)
+			01 // Medium (14 block width)
+			02 // Large (18 block width)
+0x16    u8          // Number of Blocks contained (1)
+0x17    u8          // Image Format
+			00 = standard;
+			01 = widescreen;
+0x18    u16         // Music ID (2)
+0x1A    u16         // Unknown (2)
+0x1C    char[2][16] // Stage name (Maximum of 16 characters. Unicode 16-bit formatting. Can be null terminated.)
+0x3C    u32         // Unknown (4)
+0x40    float       // Start p1 X (float)
+0x44    float       // Start p1 Y (float)
+0x48    float       // Start p2 X (float)
+0x4C    float       // Start p2 Y (float)
+0x50    float       // Start p3 X (float)
+0x54    float       // Start p3 Y (float)
+0x58    float       // Start p4 X (float)
+0x5C    float       // Start p4 Y (float)
+0x60    float       // Start p5 X (float)
+0x64    float       // Start p5 Y (float)
+0x68    float       // Start p6 X (float)
+0x6C    float       // Start p6 Y (float)
+0x70    float       // Start p7 X (float)
+0x74    float       // Start p7 Y (float)
+0x78    float       // Unknown
+0x7C    float       // Unknown
+0x80    *           // Blocks
+}}}
 
-0x1A - Unknown (2)
-0x1C - Stage name
-	Maximum of 16 characters. Unicode 16-bit formatting. Can be null terminated.
+==Block Format==
+===Byte 1===
+*Tile position* (no X/Y, just position as if a single dimension ex: if the width is 12 and you want to place it in the second row, then this byte is 0x12[18], since it is read always as an internal width of 18)
+{{{
+	X = byte % 18, Y = byte / 18  //(Always 18 on all stage sizes)
+}}}
 
-0x3C - Unknown (4)
+===Bytes 2, 3, 4===
+{{{
+	11100000 00000000 00000000	- Size X (u3)
+	00011100 00000000 00000000	- Size Y (u3)
+	00000011 10000000 00000000	- Smallest X (u3)
+	00000000 01110000 00000000	- Smallest Y (u3)
+	00000000 00001100 00000000	- Tile group (u2)
+		0x00 // Basic;
+		0x01 // Deco[unused];
+		0x02 // Fixed;
+		0x03 // Gimmick;
+	00000000 00000011 11000000	- Tile ID (u4)
+	00000000 00000000 00100000 	- Flipped Flag (u1)
+		0 // Not flipped;
+		1 // Flipped;
+	00000000 00000000 00011000	- Sub-Value (Spring jump height) (u2)
+	00000000 00000000 00000111	- Extension (big red field of shit surrounding block) (u3)
+		0x00 // None;
+		0x02 // +1 to sides+top;
+		0x03 // +1 to top+bottom;
+		0x05 // +1 to top;
+}}}
 
-0x40 - Start p1 X (float)
-0x44 - Start p1 Y (float)
-0x48 - Start p2 X (float)
-0x4C - Start p2 Y (float)
-0x50 - Start p3 X (float)
-0x54 - Start p3 Y (float)
-0x58 - Start p4 X (float)
-0x5C - Start p4 Y (float)
-0x60 - Start p5 X (float)
-0x64 - Start p5 Y (float)
-0x68 - Start p6 X (float)
-0x6C - Start p6 Y (float)
-0x70 - Start p7 X (float)
-0x74 - Start p7 Y (float)
-
-0x78 - Padding? (possibly additional/respawn x/y)
-0x7C - Padding?
-
-0x80 - Blocks (Can place up to 252 of any block, regardless of type/size/location)
-	See "StageValue.txt" for default values.
-
-	Byte 1: Tile position (no X/Y, just position as if a single dimension ex: if the width is 12 and you want to place it in the second row, then this byte is 0x12[18], since it is read always as an internal width of 18)
-		X = byte % 18, Y = byte / 18  (Always 18 on all stage sizes)
-
-	Byte 2: Tile Sizes
-		11100000 	- Size X
-		00011100 	- Size Y
-		000000111	- Smallest X
-
-	Byte 3: Tile ID
-		01110000	- Smallest Y
-		00001100	- Tile group (0x00 = Basic, 0x01 = Deco[unused], 0x02 = Fixed, 0x03 = Gimmick)
-		00000011 11	- Tile ID
-
-	Byte 4: Tile Flags
-		00100000 	- Flipped Flag; 1 = Flipped, 0 = Not
-		00011000	- Sub-Value (Spring jump height)
-		00000111	- Extension (big red field of shit surrounding block, 0x00 = none, 0x02 = +1 to sides+top, 0x03 = +1 to top+bottom, 0x05 = +1 to top)
-
-
-Tile ID
-BASIC TILES (0x00)
-	0x00 - Debug Block ( *_BASIC_00) [unused, invalid piece]
-	0x01 - Normal Platform ( *_BASIC_01)
-	0x02 - Sloping Platform ( *_BASIC_02)
-	0x03 - Tiny Platform ( *_BASIC_03)
-	0x04 - Staircase top ( *_BASIC_04) [unused, valid piece]
-	0x05 - Square Block ( *_BASIC_05)
-	0x06 - Sloping Staircase ( *_BASIC_06)
-	0x07 - 45 Degree Slope  ( *_BASIC_07)
-	0x08 - *_BASIC_08 [unused]
-	0x09 - Horizontally dominent slope ( *_BASIC_09)
-	0x0A - *_BASIC_10 [unused]
-	0x0B - *_BASIC_11 [unused]
-	0x0C - *_BASIC_12 [unused]
-	0x0D - *_BASIC_13 [unused]
-	0x0E - *_BASIC_14 [unused]
-	0x0F - *_BASIC_15 [unused]
-
-FIXED TILES (0x02)
-	0x00 - *_FIX_00 [unused]
-	0x01 - *_FIX_01 [unused]
-	0x02 - *_FIX_02 (Factory, Nature, Remains)
-	0x03 - *_FIX_03 (Factory, Nature)
-	0x04 - *_FIX_04 (Factory, Nature, Remains)
-	0x05 - *_FIX_05 (Remains)
-	0x06 - *_FIX_06 (Factory, Remains)
-	0x07 - *_FIX_07 [unused]
-	0x08 - *_FIX_08 (Factory, Nature, Remains)
-	0x09 - *_FIX_09 (Factory, Remains)
-	0x0A - *_FIX_10 (Nature)
-	0x0B - *_FIX_11 (Nature, Remains)
-	0x0C - *_FIX_12 (Factory, Nature, Remains)
-	0x0D - *_FIX_13 (Factory, Nature)
-	0x0E - *_FIX_14 [unused]
-	0x0F - *_FIX_15 [unused]
-
-GIMMICK TILES (0x03)
-	0x00 - GIMMICK_00 [unused]
-	0x01 - Vertical Moving Platform (GIMMICK_01)
-	0x02 - Horizontal Moving Platform (GIMMICK_02)
-	0x03 - Platform Wheel (GIMMICK_03)
-	0x04 - Spring (GIMMICK_04)
-	0x05 - Ice Block (GIMMICK_05)
-	0x06 - Falling Block (GIMMICK_06)
-	0x07 - Conveyor Belt (GIMMICK_07)
-	0x08 - Spikes (GIMMICK_08)
-	0x09 - Ladder (GIMMICK_09)
-	0x0A - GIMMICK_10 [unused]
-	0x0B - GIMMICK_11 [unused]
-	0x0C - GIMMICK_12 [unused]
-	0x0D - GIMMICK_13 [unused]
-	0x0E - GIMMICK_14 [unused]
-	0x0F - GIMMICK_15 [unused]
+==Tile ID==
+===BASIC TILES===
+{{{
+	0x00 // Debug Block ( *_BASIC_00) [unused, invalid piece]
+	0x01 // Normal Platform ( *_BASIC_01)
+	0x02 // Sloping Platform ( *_BASIC_02)
+	0x03 // Tiny Platform ( *_BASIC_03)
+	0x04 // Staircase top ( *_BASIC_04) [unused, valid piece]
+	0x05 // Square Block ( *_BASIC_05)
+	0x06 // Sloping Staircase ( *_BASIC_06)
+	0x07 // 45 Degree Slope  ( *_BASIC_07)
+	0x08 // *_BASIC_08 [unused]
+	0x09 // Horizontally dominent slope ( *_BASIC_09)
+	0x0A // *_BASIC_10 [unused]
+	0x0B // *_BASIC_11 [unused]
+	0x0C // *_BASIC_12 [unused]
+	0x0D // *_BASIC_13 [unused]
+	0x0E // *_BASIC_14 [unused]
+	0x0F // *_BASIC_15 [unused]
+}}}
+===FIXED TILES===
+{{{
+	0x00 // *_FIX_00 [unused]
+	0x01 // *_FIX_01 [unused]
+	0x02 // *_FIX_02 (Factory, Nature, Remains)
+	0x03 // *_FIX_03 (Factory, Nature)
+	0x04 // *_FIX_04 (Factory, Nature, Remains)
+	0x05 // *_FIX_05 (Remains)
+	0x06 // *_FIX_06 (Factory, Remains)
+	0x07 // *_FIX_07 [unused]
+	0x08 // *_FIX_08 (Factory, Nature, Remains)
+	0x09 // *_FIX_09 (Factory, Remains)
+	0x0A // *_FIX_10 (Nature)
+	0x0B // *_FIX_11 (Nature, Remains)
+	0x0C // *_FIX_12 (Factory, Nature, Remains)
+	0x0D // *_FIX_13 (Factory, Nature)
+	0x0E // *_FIX_14 [unused]
+	0x0F // *_FIX_15 [unused]
+}}}
+===GIMMICK TILES===
+{{{
+	0x00 // GIMMICK_00 [unused]
+	0x01 // Vertical Moving Platform (GIMMICK_01)
+	0x02 // Horizontal Moving Platform (GIMMICK_02)
+	0x03 // Platform Wheel (GIMMICK_03)
+	0x04 // Spring (GIMMICK_04)
+	0x05 // Ice Block (GIMMICK_05)
+	0x06 // Falling Block (GIMMICK_06)
+	0x07 // Conveyor Belt (GIMMICK_07)
+	0x08 // Spikes (GIMMICK_08)
+	0x09 // Ladder (GIMMICK_09)
+	0x0A // GIMMICK_10 [unused]
+	0x0B // GIMMICK_11 [unused]
+	0x0C // GIMMICK_12 [unused]
+	0x0D // GIMMICK_13 [unused]
+	0x0E // GIMMICK_14 [unused]
+	0x0F // GIMMICK_15 [unused]
 }}}
 
 ==Moving Platform Analysis==
@@ -567,8 +574,8 @@ GIMMICK TILES (0x03)
 {{{
 	defaultSmallestSize / SmallestSize * currentSize = finalSize
 
-	rsx/rsy = real smallest size x/y
-	sx/sy = smallest size x/y
+	// rsx/rsy = real Smallest Size x/y
+	// sx/sy = smallest Size x/y
 
 	rsx/sx*x
 	rsy/sy*y
@@ -583,4 +590,4 @@ GIMMICK TILES (0x03)
 
 
 ==Preview==
-	The stage preview image is not required. If it is omitted, the stage will appear to have a garbage preview.
+	The stage preview image is not required. If it is omitted, the stage will appear to have a garbage preview. Any valid JPG can be used as a preview image.

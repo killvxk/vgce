@@ -1,4 +1,4 @@
-#summary Super Smash Bros. Brawl Custom Stage Visual
+#summary Custom Stage Visual
 #labels Game-SSBB,Platform-Wii
 
 {{{

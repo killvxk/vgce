@@ -20,18 +20,18 @@ Saved content must be decrypted using a special Brawl key for the first portion 
 0x08 (8)		//Wii System Date/Time (not necessary)
 0x10 (4)	!	//Checksum
 0x14 (1)		//Region
-	0x00 = JAP;
-	0x21 = USA;
-	0x44 = EUR;
+	0x00 = "JAP";
+	0x21 = "USA";
+	0x44 = "EUR";
 0x15 (1) 	!	//Content Type
-	0x01 = Snapshot;
-	0x02 = Replay;
-	0x03 = Stage;
+	0x01 = "Snapshot";
+	0x02 = "Replay";
+	0x03 = "Stage";
 0x16 (1)		//Save Type
-	0x00 = Standard;
-	0x01 = Unknown;
-	0x02 = Official Download;
-	0x03 = savesample;
+	0x00 // Standard;
+	0x01 // Unknown;
+	0x02 // Official Download;
+	0x03 // Savesample;
 0x17 (1)	!	// Must be 0xDB (possibly to do with checksum; DB stand for DeadBeef)
 0x18 (4)	!	//Uncompressed Size
 0x1C (4)	!	//Current Size
@@ -118,20 +118,20 @@ Data follows directly After
 
 0x28    u32      // Unknown (Event match use) (00000001 = practice)
 0x2C    u8       // Stadium Type (1)
-	00 = HRC;
-	03 = BTT;
-	05 = 10-Man;
-	06 = 100-man;
-	07 = 3-Minute;
-	08 = 15-Minute;
-	09 = Endless;
-	0A = Cruel;
+	00 // HRC;
+	03 // BTT;
+	05 // 10-Man;
+	06 // 100-man;
+	07 // 3-Minute;
+	08 // 15-Minute;
+	09 // Endless;
+	0A // Cruel;
 0x2D    u8       // Unknown 
 0x2E    u8       // Item Rate
-	0 = None;
-	1 = Low;
-	2 = Med;
-	3 = High;
+	0 = "None";
+	1 = "Low";
+	2 = "Med";
+	3 = "High";
 0x2F    u8       // Unknown (Always 0xFF??)
 0x30    u24      // Unknown (??)
 0x33    u8       // Stage ID (1)
@@ -291,9 +291,9 @@ Data follows directly After
 //  +--> Character Structure (92 bytes[0x5C]):
 		+0x00    u8         // Character ID
 		+0x01    u8         // Character Controller
-				0x00 = Human;
-				0x01 = CPU;
-				0x03 = Unused;
+				0x00 = "Human";
+				0x01 = "CPU";
+				0x03 = "Unused";
 		+0x02    u8         // Character spawn point ? player #
 		+0x03    u8         // Character spawn point ? player #
 		+0x04    u8         // Stock (FF = infinite)
@@ -337,15 +337,15 @@ Data follows directly After
 
 		+0x1D    u8         // Unknown
 		+0x1E    u8         // CPU AI
-			00 = None;
-			01 = Stand;
-			02 = Walk;
-			03 = Jump;
-			04 = run;
-			05 = Event AI(inf final smash run);
-			07 = Event AI(visitor to Flatzone);
-			0E = Attack;
-			19 = Control;
+			00 = "None";
+			01 = "Stand";
+			02 = "Walk";
+			03 = "Jump";
+			04 = "Run";
+			05 = "Event" // (inf final smash run);
+			07 = "Event" // (visitor to Flatzone);
+			0E = "Attack";
+			19 = "Control";
 		+0x1F    u8         // CPU Level (%)
 		+0x20    u32        // Damage (%) (4)
 		+0x24    u16        // HP (2)
@@ -374,14 +374,14 @@ Data follows directly After
 
 === Header ===
 1-byte Header (flags)
-  * 0x01 - Player 1
-  * 0x02 - Player 2
-  * 0x04 - Player 3
-  * 0x08 - Player 4
-  * 0x10 - Unknown (+4)
-  * 0x20 - Unknown (+8)
-  * 0x40 - Unknown/Unused
-  * 0x80 - Unknown
+  * 0x01 = Player 1
+  * 0x02 = Player 2
+  * 0x04 = Player 3
+  * 0x08 = Player 4
+  * 0x10 = Unknown (+4)
+  * 0x20 = Unknown (+8)
+  * 0x40 = Unknown/Unused
+  * 0x80 = Unknown
 
 Then there are 4 bytes allocated for each player specified in the header.
 
@@ -399,12 +399,12 @@ Then there are 4 bytes allocated for each player specified in the header.
 
 ===Byte 2===
 {{{
-	0x01 // ATTACK
-	0x02 // SPECIAL
-	0x04 // JUMP
-	0x08 // SHIELD
+	0x01 = "ATTACK";
+	0x02 = "SPECIAL";
+	0x04 = "JUMP";
+	0x08 = "SHIELD";
 	0x10 // Unknown
-	0x20 // SMASH (C-Stick used)
+	0x20 = "SMASH"; // (C-Stick used)
 	0x40 // Alternate 1
 	0x80 // Alternate 2
 }}}
@@ -432,17 +432,17 @@ Format excludes saved content header.
 0x0C    u32         // Size of JPEG data
 0x10    u32         // Unknown/Unused
 0x14    u8          // Stage Style
-			00 // Nature
-			01 // Factory
-			02 // Remains
+			00 = "Nature";
+			01 = "Factory";
+			02 = "Remains";
 0x15    u8          // Stage Size
-			00 // Small (10 block width)
-			01 // Medium (14 block width)
-			02 // Large (18 block width)
+			00 = "Small";  // (10 block width)
+			01 = "Medium"; // (14 block width)
+			02 = "Large"   // (18 block width)
 0x16    u8          // Number of Blocks contained (1)
-0x17    u8          // Image Format
-			00 = standard;
-			01 = widescreen;
+0x17    u8          // Preview aspect Ratio
+			00 = "4:3";
+			01 = "16:9";
 0x18    u16         // Music ID (2)
 0x1A    u16         // Unknown (2)
 0x1C    char[2][16] // Stage name (Maximum of 16 characters. Unicode 16-bit formatting. Can be null terminated.)
@@ -475,21 +475,21 @@ Format excludes saved content header.
 
 ===Bytes 2, 3, 4===
 {{{
-	11100000 00000000 00000000	- Size X (u3)
-	00011100 00000000 00000000	- Size Y (u3)
-	00000011 10000000 00000000	- Smallest X (u3)
-	00000000 01110000 00000000	- Smallest Y (u3)
-	00000000 00001100 00000000	- Tile group (u2)
-		0x00 // Basic;
-		0x01 // Deco[unused];
-		0x02 // Fixed;
-		0x03 // Gimmick;
-	00000000 00000011 11000000	- Tile ID (u4)
-	00000000 00000000 00100000 	- Flipped Flag (u1)
-		0 // Not flipped;
-		1 // Flipped;
-	00000000 00000000 00011000	- Sub-Value (Spring jump height) (u2)
-	00000000 00000000 00000111	- Extension (big red field of shit surrounding block) (u3)
+	11100000 00000000 00000000	// Size X (u3)
+	00011100 00000000 00000000	// Size Y (u3)
+	00000011 10000000 00000000	// Smallest X (u3)
+	00000000 01110000 00000000	// Smallest Y (u3)
+	00000000 00001100 00000000	// Tile group (u2)
+		0x00 = "Basic";
+		0x01 = "Deco"; // Unused
+		0x02 = "Fixed";
+		0x03 = "Gimmick";
+	00000000 00000011 11000000	// Tile ID (u4)
+	00000000 00000000 00100000 	// Flipped Flag (u1)
+		0 = "Normal";
+		1 = "Flipped";
+	00000000 00000000 00011000	// Sub-Value (Spring jump height) (u2)
+	00000000 00000000 00000111	// Extension (big red field of shit surrounding block) (u3)
 		0x00 // None;
 		0x02 // +1 to sides+top;
 		0x03 // +1 to top+bottom;
@@ -572,7 +572,7 @@ Format excludes saved content header.
 ==Actual Part Sizes==
 	The actual sizes of the parts can be determined by the following formulae:
 {{{
-	defaultSmallestSize / SmallestSize * currentSize = finalSize
+	defaultSmallestSize / smallestSize * currentSize = finalSize
 
 	// rsx/rsy = real Smallest Size x/y
 	// sx/sy = smallest Size x/y

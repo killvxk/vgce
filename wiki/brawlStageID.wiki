@@ -1,4 +1,4 @@
-#summary Super Smash Bros. Brawl Stage ID List
+#summary Stage ID List
 #labels Platform-Wii,Game-SSBB,Type-List
 
 {{{

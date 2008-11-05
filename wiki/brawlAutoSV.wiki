@@ -1,4 +1,4 @@
-#summary Super Smash Bros Brawl AutoSV.bin format
+#summary AutoSV.bin format
 #labels Platform-Wii,Game-SSBB,Type-FileFormat
 {{{
 0x00		Region (0x14 = USA; 0x15 = PAL) (4)

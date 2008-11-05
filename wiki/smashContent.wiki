@@ -2,7 +2,7 @@
 #labels Game-SSBB,Platform-Wii,Featured,Type-FileFormat
 
 =Table of Contents=
-<wiki:toc max_depth="1" />
+<wiki:toc max_depth="3" />
 
 
 = Content Header =
@@ -14,15 +14,25 @@ Header size: 0x20 (32 bytes)
 
 Saved content must be decrypted using a special Brawl key for the first portion of the header, and the SD key for the remaining portion of the file.
 {{{
-0x00 (8)		Wii ID - Same as "Wii Number" in Address Book (not necessary)
-0x08 (8)		Wii System Date/Time (not necessary)
-0x10 (4)	!	Checksum
-0x14 (1)		Region (0x00 = JAP;  0x21 = USA;  0x44 = EUR)
-0x15 (1) 	!	Content Type (0x01 = Snapshot;  0x02 = Replay;  0x03 = Stage)
-0x16 (1)		Save Type (0x03 = savesample;  0x02 = Official Download;  0x00 = Standard)
-0x17 (1)	!	Must be 0xDB (possibly to do with checksum)
-0x18 (4)	!	Uncompressed Size
-0x1C (4)	!	Current Size
+0x00 (8)		//Wii ID - Same as "Wii Number" in Address Book (not necessary)
+0x08 (8)		//Wii System Date/Time (not necessary)
+0x10 (4)	!	//Checksum
+0x14 (1)		//Region
+	0x00 = JAP;
+	0x21 = USA;
+	0x44 = EUR;
+0x15 (1) 	!	//Content Type
+	0x01 = Snapshot;
+	0x02 = Replay;
+	0x03 = Stage;
+0x16 (1)		//Save Type
+	0x00 = Standard;
+	0x01 = Unknown;
+	0x02 = Official Download;
+	0x03 = savesample;
+0x17 (1)	!	// Must be 0xDB (possibly to do with checksum; DB stand for DeadBeef)
+0x18 (4)	!	//Uncompressed Size
+0x1C (4)	!	//Current Size
 }}}
 ! = Required Fields; Others can all be 0x00, other values untested.
 

@@ -1,4 +1,4 @@
-#summary Super Smash Bros. Brawl saved content formats
+#summary Saved content formats
 #labels Game-SSBB,Platform-Wii,Featured,Type-FileFormat
 
 =Table of Contents=

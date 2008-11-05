@@ -1,6 +1,12 @@
 #summary Common string data such as msbin
 #labels Game-All,Platform-Nintendo,Type-FileFormat
 
+=Games Seen=
+
+  * Super Smash Bros. Brawl
+
+=Format=
+
 UTF8 encoding, with the following control characters:
 {{{
 0x0A			= New line

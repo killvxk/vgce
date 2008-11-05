@@ -1,23 +1,27 @@
 #summary Everything that Resetti the Assist Trophy will ever say
 #labels Game-SSBB,Platform-Wii,Type-Content
 
-{{{
-Resetti
+=Resetti=
 
-Think you don't gotta
-listen to me? HEY!
-
-Quiet down, will ya?
+`
+"Think you don't gotta
+listen to me? HEY!"
+`
+`
+"Quiet down, will ya?
 I'm talkin' here! 
-HEY!
-
+HEY!"
+`
+`
 H-hey! Don't you
 ditch me, punk!
-
+`
+`
 HEY!
-
+`
+`
 NO RESETTIN'!
-
+`
 YOU HEAR ME?!
 
 Huh? You sayin' you never

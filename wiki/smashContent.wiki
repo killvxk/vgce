@@ -6,7 +6,7 @@
 
 Note: Space between content head and format start still needs to be described properly.
 
----- 
+----
 = Content Header =
 
 
@@ -66,7 +66,7 @@ Data follows directly After
   * Before re-encrypting the file, append any bytes until the file is aligned to 0x10.
 
 
----- 
+----
 = Replay =
 
 == Format ==
@@ -418,7 +418,7 @@ Then there are 4 bytes allocated for each player specified in the header.
 
 
 
----- 
+----
 =Custom Stage=
 
 ==Format==
@@ -468,7 +468,7 @@ Format excludes saved content header.
 
 ==Block Format==
 ===Byte 1===
-*Tile position* (no X/Y, just position as if a single dimension ex: if the width is 12 and you want to place it in the second row, then this byte is 0x12[18], since it is read always as an internal width of 18)
+*Tile position* (no X/Y, just position as if a single dimension ex: if the width is 12 and you want to place it in the second row, then this byte is 0x12(18 dec), since it is read always as an internal width of 18)
 {{{
 	X = byte % 18, Y = byte / 18  //(Always 18 on all stage sizes)
 }}}

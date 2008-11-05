@@ -1,6 +1,13 @@
 #summary Common Data format used by Nintendo
 #labels Game-All,Platform-Nintendo,Type-FileFormat
 
+=Games Seen=
+
+  * Super Smash Bros. Melee
+  * Super Smash Bros. Brawl
+
+=Format=
+
 {{{
 0x00	EOF (File Size)
 0x04	Data Table Pointer

@@ -1042,22 +1042,22 @@ Thanks, Snake!
 Maybe next time we meet, you can design
 me a weapon..."
 }}}
-
+=Death 1=
 {{{
 "Snake! Get up!
 Snake! Snaaake!!"
 }}}
-
+=Death 2=
 {{{
 "Snake, do you copy?
 Snake! Snaaake!!"
 }}}
-
+=Death 3=
 {{{
 "Snake! Don't quit now!
 Snake! Snaaake!!"
 }}}
-
+=Death 4=
 {{{
 "Snake! What's going on?!
 Snake! Snaaake!!"

@@ -13,8 +13,8 @@ I'm talkin' here!
 HEY!"
 }}}
 {{{
-H-hey! Don't you
-ditch me, punk!
+"H-hey! Don't you
+ditch me, punk!"
 }}}
 {{{
 "HEY!"

@@ -1,5 +1,5 @@
 #summary Container format.
-#labels Type-FileFormat,Game-All,Platform-Wii
+#labels Type-FileFormat,Game-Okami,Platform-Wii,Platform-PS2
 
 = Games Seen =
 

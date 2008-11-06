@@ -1,6 +1,11 @@
 #summary AIEdit Opcodes list
 #labels Type-List,Game-Starcraft,Platform-PC
 
+=Table of Contents=
+<wiki:toc max_depth="2" />
+
+----
+
 =0x00 - goto=
 _Description:_
 Jump to %1(block)
@@ -191,7 +196,11 @@ Clear defense against enemy attacking air units, when air units are attacked
 =0x1F - send_suicide=
 _Description:_
 Send all units to suicide mission
- %1(byte) determines which type: 0 = Strategic suicide; 1 = Random suicide
+ %1(byte) determines which type
+{{{
+0 = Strategic;
+1 = Random;
+}}}
  
 
 
@@ -212,6 +221,7 @@ _Description:_
 The use of this command is unknown
  Takes %1(byte) as parameter
  
+_*I'm guessing this is to set the default minerals(starting resources) for the game.*_
 
 
 =0x23 - defaultbuild_off=
@@ -253,13 +263,13 @@ Causes a fatal AI script error "Illegal AI script executed."
 
 =0x29 - enter_bunker=
 _Description:_
-Enter Bunker in selected location
+Orders all valid units in a selected location to enter the closest bunker.
  
 
 
 =0x2A - value_area=
 _Description:_
-Value this area higher
+Values the location's area higher than other regions. Units will rally or defend this position more frequently.
  
 
 
@@ -406,7 +416,7 @@ Return to the flow point of the call command
 _Description:_
 The use of this command is unknown. Takes %1(military).
  
-
+*_Eval probably stands for evaluate._*
 
 =0x43 - creep=
 _Description:_
@@ -447,21 +457,22 @@ Run simultaneously code at %1(block)
 =0x49 - rush=
 _Description:_
 Jump to %2(block) if predifined condition scheme %1(byte) is met
-
-[list]0 = Barracks OR Spawning Pool OR Gateway (includes incomplete)
-1 = At Least 17 Marines + Bunkers, OR at least 16 Sunken Colonies + Hydralisks, OR at least 7 Zealots
-2 = At least 25 Marines + Bunkers, OR At least 11 Mutalisks + Spore Colonies + Hydralisks
-3 = At least 6 Marines + Bunkers, OR At least 3 Sunken Colonies + Hydralisks, OR Hydralisk Den?, OR at least 2 Zealots
-4 = At least 17 Marines + Bunkers, OR At least 16 Sunken Colonies + Hydralisks, OR at least 9 Zealots
-5 = At least 7 Marines + Bunkers, OR at least 7 Sunken Colonies + Hydralisks, OR at least 4 Zealots
-6 = At least 13 Marines + Bunkers, OR at least 2 Sunken Colonies, OR at least 2 Dragoons
-7 = ?? Siege Tank, OR ?? Queen, OR at most 5 Zealots.
-8 = At least 6 Marines + Bunkers, OR at least 3 Sunken Colonies + Hydralisks, OR at least 2 Zealots
-9 = At least 10 Marines + Bunkers, OR at least 5 sunken colonies + Hydralisks, OR at least 6 Zealots
-10= At least 5 Marines + Bunkers, OR at least 5 Sunken Colonies + Hydralisks, OR at least 3 Zealots
-11= At least 10 Marines + Bunkers, OR at least 10 Sunken Colonies + Hydralisks, OR at least 6 Zealots
-12= At Least 17 Marines + Bunkers, OR at least 6 Mutalisks + Spore Colonies + Hydralisks, OR at least 3 Dragoons + Scouts
-13= At least 25 Marines + Bunkers, OR at least 11 Mutalisks + Spore Colonies + Hydralisks, OR at least 8 Dragoons + Scouts[/list] 
+{{{
+0  = // Barracks OR Spawning Pool OR Gateway (includes incomplete)
+1  = // At Least 17 Marines + Bunkers, OR at least 16 Sunken Colonies + Hydralisks, OR at least 7 Zealots
+2  = // At least 25 Marines + Bunkers, OR At least 11 Mutalisks + Spore Colonies + Hydralisks
+3  = // At least 6 Marines + Bunkers, OR At least 3 Sunken Colonies + Hydralisks, OR Hydralisk Den?, OR at least 2 Zealots
+4  = // At least 17 Marines + Bunkers, OR At least 16 Sunken Colonies + Hydralisks, OR at least 9 Zealots
+5  = // At least 7 Marines + Bunkers, OR at least 7 Sunken Colonies + Hydralisks, OR at least 4 Zealots
+6  = // At least 13 Marines + Bunkers, OR at least 2 Sunken Colonies, OR at least 2 Dragoons
+7  = // ?? Siege Tank, OR ?? Queen, OR at most 5 Zealots.
+8  = // At least 6 Marines + Bunkers, OR at least 3 Sunken Colonies + Hydralisks, OR at least 2 Zealots
+9  = // At least 10 Marines + Bunkers, OR at least 5 sunken colonies + Hydralisks, OR at least 6 Zealots
+10 = // At least 5 Marines + Bunkers, OR at least 5 Sunken Colonies + Hydralisks, OR at least 3 Zealots
+11 = // At least 10 Marines + Bunkers, OR at least 10 Sunken Colonies + Hydralisks, OR at least 6 Zealots
+12 = // At Least 17 Marines + Bunkers, OR at least 6 Mutalisks + Spore Colonies + Hydralisks, OR at least 3 Dragoons + Scouts
+13 = // At least 25 Marines + Bunkers, OR at least 11 Mutalisks + Spore Colonies + Hydralisks, OR at least 8 Dragoons + Scouts
+}}}
 
 
 =0x4A - scout_with=
@@ -597,6 +608,7 @@ If enemy has at least %1(word) minerals and %2(word) gas then jump in %3(block)
 _Description:_
 The use of this command is unknown. Takes %1(byte), %2(byte), and %3(short).
  
+_*Probably stands for "If Different", where %3 is a block to jump to.*_
 
 
 =0x60 - easy_attack=
@@ -665,6 +677,7 @@ _Description:_
 The use of this command is unknown
  Takes %1(unit) and %2(block) as parameters
  
+_*This is probably known, and looks pretty obvious.*_
 
 
 =0x6B - create_nuke=
@@ -699,7 +712,7 @@ _Description:_
 The use of this command is unknown
  Takes %1(byte) and %2(block) as parameters
  
-
+_*Probably response to help_iftrouble*_
 
 =0x70 - try_townpoint=
 _Description:_

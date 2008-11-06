@@ -1,5 +1,5 @@
 #summary Common Data format used by Nintendo
-#labels Game-All,Platform-Nintendo,Type-FileFormat
+#labels Game-SSBB,Platform-Wii,Type-FileFormat,Game-SSBM,Platform-GC
 
 =Games Seen=
 

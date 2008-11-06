@@ -432,7 +432,7 @@ Go to %1(block) when attacked.
 
 =0x45 - player_need=
 _Description:_
-If player does not have %1(byte) %2(building[s]), build it, otherwise ignore this op.
+If player does not have %1(byte) %2(buildings), build it, otherwise ignore this op.
  
 
 

@@ -8,13 +8,21 @@
 
 =Notes=
 F = Fast/Forwards
+
 B = Backwards
+
 Light = (Regular item)
+
 Heavy = (Box or Barrel)
+
 Hi = Up
+
 Lw = Down
+
 N = Normal
+
 S = Smash/Start
+
 Appeal = Taunt
 
 

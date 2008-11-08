@@ -1,6 +1,10 @@
 #summary Stage ID List
 #labels Game-SSBM,Platform-GC,Type-List
 
+
+=Table of Contents=
+<wiki:toc max_depth="2" />
+
 =DEBUG LEVELS=
 {{{
 000 [000]   // Dummy

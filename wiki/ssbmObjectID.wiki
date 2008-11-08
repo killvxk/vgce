@@ -1,0 +1,276 @@
+#summary Object ID List
+#labels Type-List,Game-SSBM,Platform-GC
+
+=Table of Contents=
+<wiki:toc max_depth="2" />
+
+
+=Items=
+{{{
+00 // Capsule
+01 // Box
+02 // Barrel (Taru)
+03 // Egg
+04 // Party Ball (Kusudama)
+05 // Barrel Cannon (TaruCann)
+06 // Bob-omb (BombHei)
+07 // Mr. Saturn (Dosei)
+08 // Heart Container
+09 // Maxim Tomato
+0A // Starman
+0B // Home-Run Bat
+0C // Beam Sword
+0D // Parasol
+0E // Green Shell (G Shell)
+0F // Red Shell (R Shell)
+10 // Ray Gun (L Gun)
+11 // Freezie (Freeze)
+12 // Food
+13 // Proximity Mine (MSBomb)
+14 // Flipper
+15 // Super Scope (S Scope)
+16 // Star Rod
+17 // Lip's Stick
+18 // Fan (Harisen)
+19 // Fire Flower (F Flower)
+1A // Super Mushroom (Kinoko)
+1B // Poison Mushroom (DKinoko)
+1C // Hammer
+1D // Warp Star (WStar)
+1E // Screw Attack (ScBall)
+1F // Bunny Hood (RabbitC)
+20 // Metal Box (MetalB)
+21 // Cloaking Device (SpyCloak)
+22 // Poké Ball (M Ball)
+}}}
+
+=Item Related=
+{{{
+23 // Ray Gun recoil effect
+24 // Star Rod Star
+25 // Lips Stick Dust
+26 // Super Scope Beam
+27 // Ray Gun Beam
+28 // Hammer Head
+29 // Flower
+2A // Yoshi's egg (Event)
+}}}
+
+=Monsters=
+{{{
+2B // Goomba (DKuriboh)
+2C // Redead (Leadead)
+2D // Octarok (Octarock)
+2E // Ottosea
+2F // Stone(Octarok Projectile)
+}}}
+
+=Character Related=
+{{{
+30 // Mario's fire
+31 // Dr.Mario's Capsule
+32 // Kirby's Cutter beam
+33 // Kirby's Hammer
+34 // 
+35 // 
+36 // Fox's Laser
+37 // Falco's Laser
+38 // Fox's shadow
+39 // Falco's shadow
+3A // Link's bomb 
+3B // Young Link's bomb
+3C // Link's boomerang
+3D // Young Link's boomerang
+3E // Link's Hookshot
+3F // Young Link's Hookshot
+40 // Arrow
+41 // Fire Arrow
+42 // PK Fire 
+43 // PK Flash 
+44 // PK Flash
+45 // PK Thunder (Primary)
+46 // PK Thunder
+47 // PK Thunder
+48 // PK Thunder
+49 // PK Thunder
+4A // Fox's Blaster
+4B // Falco's Blaster
+4C // Link's Arrow
+4D // Young Link's arrow
+4E // PK Flash (explosion)
+4F // Needle(thrown)
+50 // Needle
+51 // Pikachu's Thunder 
+52 // Pichu's Thunder
+53 // Mario's cape
+54 // Dr.Mario's cape 
+55 // Smoke (Sheik)
+56 // Yoshi's egg(thrown) 
+57 // 	Yoshi's Tongue??
+58 // Yoshi's Star 
+59 // Pikachu's thunder (B)
+5A // Pikachu's thunder (B)
+5B // Pichu's thunder (B)
+5C // Pichu's thunder (B)
+5D // Samus's bomb
+5E // Samus's chargeshot 
+5F // Missile 
+60 // Grapple beam
+61 // Sheik's chain
+62 // 
+63 // Turnup 
+64 // Bowser's flame
+65 // Ness's bat 	
+66 // Yoyo
+67 // Peach's parasol
+68 // Toad	
+69 // Luigi's fire 	
+6A // Ice(Iceclimbers)
+6B // Blizzard 	
+6C // Zelda's fire
+6D // Zelda's fire (explosion)
+6E // 
+6F // Toad's spore	
+70 // Mewtwo's Shadowball
+71 // Iceclimbers' Up  //B
+72 // Pesticide
+73 // Manhole
+74 // Fire(G&W)
+75 // Parashute
+76 // Turtle
+77 // Sperky
+78 // Judge
+79 // 
+7A // Sausage
+7B // Milk (Young Link)
+7C // Firefighter(G&W)
+7D // Masterhand's Laser
+7E // Masterhand's Bullet
+7F // Crazyhand's Laser
+80 // Crazyhand's Bullet
+81 // Crazyhand's Bomb
+82 // Kirby copy Mario's Fire (B)
+83 // Kirby copy Dr. Mario's Capsule (B)
+84 // Kirby copy Luigi's Fire (B)
+85 // Kirby copy IceClimber's IceCube (B)
+86 // Kirby copy Peach's Toad (B)
+87 // Kirby copy Toad's Spore (B)
+88 // Kirby copy Fox's Laser (B)
+89 // Kirby copy Falco's Laser (B)
+8A // Kirby copy Fox's Blaster (B)
+8B // Kirby copy Falco's Blaster (B)
+8C // Kirby copy Link's Arrow (B)
+8D // Kirby copy Young Link's Arrow (B)
+8E // Kirby copy Link's Arrow (B)
+8F // Kirby copy Young Link's Arrow (B)
+90 // Kirby copy Mewtwo's Shadowball (B)
+91 // Kirby copy PK Flash (B)
+92 // Kirby copy PK Flash Explosion (B)
+93 // Kirby copy Pikachu's Thunder (B)
+94 // Kirby copy Pikachu's Thunder (B)
+95 // Kirby copy Pichu's Thunder (B)
+96 // Kirby copy Pichu's Thunder (B)
+97 // Kirby copy Samus' Chargeshot (B)
+98 // Kirby copy Sheik's Needle (thrown) (B)
+99 // Kirby copy Sheik's Needle (ground) (B)
+9A // Kirby copy Bowser's Flame (B)
+9B // Kirby copy Mr. Game & Watch's Sausage (B)
+9C // (unique)
+9D // 	Yoshi's Tongue?? (B)
+9E // (unique)
+9F // Coin
+A0 // (unique)
+}}}
+
+=Pokemon=
+{{{
+A0      //  Used for Random Pokemon value
+A1 // Goldeen (Tosakinto)
+A2 // Chicorita 
+A3 // Snorlax
+A4 // Blastoise
+A5 // Weezing (Matadogas)
+A6 // Charizard (Lizardon)
+A7 // Moltres
+A8 // Zapdos
+A9 // Articuno
+AA // Wobbuffet
+AB // Scizor
+AC // Unown
+AD // Entei
+AE // Raikou
+AF // Suicune
+B0 // Bellossom (Kireihana)
+B1 // Electrode (Marumine)
+B2 // Lugia
+B3 // Ho-oh
+B4 // Ditto (Metamon)
+B5 // Clefairy
+B6 // Togepi
+B7 // Mew
+B8 // Celebi
+B9 // Staryu (Hitodeman)
+BA // Chansey
+BB // Porygon2
+BC // Cyndaquil (Hinoarashi)
+BD // Marill
+BE // Venusaur (Fushigibana)
+}}}
+
+=Pokemon Related=
+{{{
+BF // Chicorita's Leaf
+C0 // Blastoise's Water
+C1 // Weezing's Gas
+C2 // Weezing's Gas
+C3 // Charizard's Breath
+C4 // Charizard's Breath
+C5 // Charizard's Breath
+C6 // Charizard's Breath
+C7 // Mini-Unowns
+C8 // Lugia's Aeroblast
+C9 // Lugia's Aeroblast
+CA // Lugia's Aeroblast
+CB // Ho-Oh's Flame
+CC // Staryu's Star
+CD // Healing Egg
+CE // Cyndaquil's Fire
+CF // 
+}}}
+
+=Monsters 2=
+{{{
+D0 // Old Goomba (Old-Kuri)
+D1 // Target (Mato)
+D2 // Shyguy (Heiho)
+D3 // Koopa(Green) (Nokonoko)
+D4 // Koopa(Red) (PataPata)
+D5 // Likelile
+D6 // Old Redead (old-lead) [invalid]
+D7 // Old Octorok(old-octa) [invalid]
+D8 // Old Ottosea (old-otto)
+D9 // White Bear (whitebea)
+DA // Klap
+DB // Green Shell (zgshell)
+DC // Red Shell (green act) (zrshell)
+}}}
+
+=Stage Specific=
+{{{
+DD // Tingle (on balloon)
+DE // [Invalid]
+DF // [Invalid]
+E0 // [Invalid]
+E1 // Apple
+E2 // Healing Apple
+E3 // [Invalid]
+E4 // [Invalid]
+E5 // [Invalid]
+E6 // Tool (Flatzone)
+E7 // [Invalid]
+E8 // [Invalid]
+E9 // Birdo
+EA // Arwing Laser 
+EB // Great Fox's Laser 
+EC // Birdo's Egg
+}}}

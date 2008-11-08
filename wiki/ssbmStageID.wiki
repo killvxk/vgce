@@ -5,13 +5,13 @@
 =Table of Contents=
 <wiki:toc max_depth="2" />
 
-=DEBUG LEVELS=
+=Debug=
 {{{
 000 [000]   // Dummy
 001 [001]   // TEST
 }}}
 
-=STANDARD LEVELS=
+=Standard=
 {{{
 002 [002]   // Fountain of Dreams (Izumi)
 003 [003]   // Pokémon Stadium (Pstadium)
@@ -46,7 +46,7 @@
 032 [020]   // Final Destination (last)
 }}}
 
-=TARGET TESTS=
+=Target Test=
 {{{
 033 [021]   // Target Test   // Mario (TMario)
 034 [022]   // Target Test   // C. Falcon (TCaptain)
@@ -76,7 +76,7 @@
 058 [03A]   // Target Test   // Ganondorf (TGanon)
 }}}
 
-=ADVENTURE MODE=
+=Adventure Mode=
 {{{
 059 [03B]   // 1  //1 Kinoko (Mushroom Kingdom Adventure)
 060 [03C]   // 1  //2 Castle (vs Peach & Mario [or luigi])
@@ -103,7 +103,7 @@
 081 [051]   // 12  //2 Last (vs Giga Bowser)
 }}}
 
-=BONUS STAGES=
+=Bonus Stage=
 {{{
 082 [052]   // Takisusume (Race to the Finish Classic)
 083 [053]   // Grab the Trophies (figureget)
@@ -111,7 +111,7 @@
 085 [055]   // Heal (All  //Star's Stage Inbetween Matches)
 }}}
 
-=CLASSIC MODE (vs single character)=
+=Classic (vs single character)=
 {{{
 086 [056]   // Princess Peach's Castle (vs Mario)
 087 [057]   // Rainbow Cruise (vs Mario)
@@ -153,7 +153,7 @@
 123 [07B]   // Great Bay (vs Marth)
 }}}
 
-=CLASSIC MODE (vs two characters)=
+=Classic (vs two characters)=
 {{{
 124 [07C]   // Pokémon Stadium (vs Team Mario something??)
 125 [07D]   // Battlefield (Plays Mario Theme) (vs Team Mario & Bowser)
@@ -188,7 +188,7 @@
 154 [09A]   // Great Bay (vs Team Marth & Link)
 }}}
 
-=CLASSIC MODE (vs giant character)=
+=Classic (vs giant character)=
 {{{
 155 [09B]   // Princess Peach's Castle (vs Giant Mario)
 156 [09C]   // Kongo Jungle (vs Giant DK)
@@ -202,7 +202,7 @@
 164 [0A4]   // Temple (?)
 }}}
 
-=CLASSIC MODE (vs team character)=
+=Classic (vs team character)=
 {{{
 165 [0A5]   // Rainbow Cruise (vs team Mario)
 166 [0A6]   // Jungle Japes (vs Team Donkey Kong)
@@ -216,13 +216,13 @@
 174 [0AE]   // Mute City (vs Team Captain Falcon)
 }}}
 
-=CLASSIC MODE FINAL=
+=Classic Final=
 {{{
 175 [0AF]   // Battlefield (No items) (vs Metal Character)
 176 [0B0]   // Final Destination (No items) (vs Master Hand)
 }}}
 
-=ALL-STAR MODE=
+=All-Star=
 {{{
 177 [0B1]   // Rainbow Cruise (vs Mario)
 178 [0B2]   // Kongo Jungle (vs Donkey Kong)
@@ -251,7 +251,7 @@
 201 [0C9]   // Brinstar Depths (vs Gannondorf)
 }}}
 
-=EVENTS=
+=Event Match=
 {{{
 202 [0CA]   // Battlefield (Event #01) (Trouble King)
 203 [0CB]   // Temple (Event #18) (Link's Adventure)
@@ -326,7 +326,7 @@
 272 [110]   // Final Destination (All-Star Match Deluxe 5-6 /vs Gannondorf)
 }}}
 
-=UNLOCKABLES=
+=Unlockables=
 {{{
 273 [111]   // Battlefield (NO CHARA)
 274 [112]   // Pokémon Stadium //Unlocking Jigglypuff
@@ -342,7 +342,7 @@
 284 [11C]   // Temple (Emblem Music) //Unlocking Roy?
 }}}
 
-=MULTI-MAN MELEE=
+=Multi-Man Melee=
 {{{
 285 [11D]   // Battlefield (Multi-Man Melee)
 }}}

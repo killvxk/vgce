@@ -1,6 +1,11 @@
 #summary Starcraft commands list used in replays and packets
 #labels Game-Starcraft,Type-List,Platform-PC
 
+
+=Table of Contents=
+<wiki:toc max_depth="2" />
+
+
 =Notes=
 This list has been merged due to the similarity between Replay data and Packet data.
 

@@ -1,5 +1,5 @@
 #summary Starcraft commands list used in replays and packets
-#labels Game-Starcraft,Type-List,Platform-PC
+#labels Game-Starcraft,Type-List,Platform-PC,Featured
 
 
 =Table of Contents=

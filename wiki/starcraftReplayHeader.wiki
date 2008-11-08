@@ -2,7 +2,7 @@
 #labels Platform-PC,Game-Starcraft,Type-FileFormat
 
 =Format=
-
+{{{
 u8		// Is Broodwar
 u32		// Number of Frames
 u8		// 	Unknown
@@ -55,3 +55,4 @@ struct[12] //Player Structures (*12)
 
 u32[8]		// Player Colour
 u8[8]		// 	Unknown (0x01 if custom colour is used)
+}}}

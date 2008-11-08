@@ -16,23 +16,23 @@ Command class 1 opcodes are typically those from ~0x37 to ~0x50.
 =Command Opcodes=
 
 ----------------------------------------------------
-==*0x5B - * Make Game Public==
+==0x5B -  Make Game Public==
 {{{
    // No parameters.
 }}}
 CLASS 1 ONLY
 
 ----------------------------------------------------
-==*0x5A - *Merge Dark Archon==
+==0x5A - Merge Dark Archon==
 {{{
    // No parameters.
 }}}
 CLASS 2 ONLY
 
 ----------------------------------------------------
-*0x59 - *INVALID
+0x59 - INVALID
 ----------------------------------------------------
-==*0x58 - *Minimap Ping==
+==0x58 - Minimap Ping==
 {{{
        s16  // x
        s16  // y
@@ -40,14 +40,14 @@ CLASS 2 ONLY
 CLASS 2 ONLY
 
 ----------------------------------------------------
-==*0x57 - *Leave Game==
+==0x57 - Leave Game==
 {{{
 	u8  // 1=Player Quit, 6=Player Dropped
 }}}
 CLASS 2 ONLY
 
 ----------------------------------------------------
-==*0x56 - *Change Replay Speed==
+==0x56 - Change Replay Speed==
 {{{
     u8   // 0=Play, 1=Pause
     u32  // Game Speed
@@ -56,83 +56,83 @@ CLASS 2 ONLY
 CLASS 2 ONLY
 
 ----------------------------------------------------
-==*0x55 - *Set Latency==
+==0x55 - Set Latency==
 {{{
     u8  // Latency setting
 }}}
 CLASS 2 ONLY
 
 ----------------------------------------------------
-==*0x54 - * Mission Briefing Start==
+==0x54 -  Mission Briefing Start==
 {{{
     // No Parameters
 }}}
 CLASS 1
 
 ----------------------------------------------------
-*0x53 - * DEFAULT CASE 2 (unknown command) INVALID
-*0x52 - * DEFAULT CASE (unknown command) INVALID
-*0x51 - *INVALID
+0x53 -  DEFAULT CASE 2 (unknown command) INVALID
+0x52 -  DEFAULT CASE (unknown command) INVALID
+0x51 - INVALID
 ----------------------------------------------------
-*0x50 - *Unknown
+0x50 - Unknown
 {{{
       // No Parameters.
 }}}
 INVALID
 
 ----------------------------------------------------
-==*0x4F - *Map data transfer==
+==0x4F - Map data transfer==
 {{{
       u16  // Packet size [after value]
       u16  // Transfer ID
 	
-	//*ID 0 - Unknown*
+	//ID 0 - Unknown
 		u8[6]   // Unknown
-	//*ID 1 - File Name*
+	//ID 1 - File Name
 		u32       // File size?
 		u32       // File hash?
 		cstring   // File name
-	//*ID 4 - Transfer data*
+	//ID 4 - Transfer data
 	      u8   // Unknown)
 	      u32  // File offset ?
 	      u16  // Block size [after value]
 		// ..data..
-	//*ID 5 - Request data*
+	//ID 5 - Request data
 	      u8   // Unknown
 	      u32  // File offset ?
 }}}
 INVALID
 
 ----------------------------------------------------
-==*0x4E - *Ban Player==
+==0x4E - Ban Player==
 {{{
       u8   // Player ID
 }}}
 INVALID
 
 ----------------------------------------------------
-*0x4D - * 		(unban player?)
+0x4D -  		(unban player?)
 {{{
 
 }}}
 INVALID
 
 ----------------------------------------------------
-==*0x4C - *Lobby Chat==
+==0x4C - Lobby Chat==
 {{{
       cstring   // Message
 }}}
 INVALID
 
 ----------------------------------------------------
-==*0x4B - *Force Name Transfer==
+==0x4B - Force Name Transfer==
 {{{
       u8[120]   // Unknown
 }}}
 INVALID
 
 ----------------------------------------------------
-==*0x4A - *Player/Force Data Transfer==
+==0x4A - Player/Force Data Transfer==
 {{{
       u16  // Game Speed ?
       u16  // Unknown
@@ -204,14 +204,14 @@ INVALID
 INVALID
 
 ----------------------------------------------------
-==*0x49 - *Information Request==
+==0x49 - Information Request==
 {{{
       u32   // Information Byte; 6 = File Name, 7 = File Data ??
 }}}
 INVALID
 
 ----------------------------------------------------
-*0x48 - * Unknown
+0x48 -  Unknown
 {{{
      u32  // Unknown
      u8   // Unknown [player related]
@@ -226,10 +226,10 @@ INVALID
 INVALID CLASS 2
 
 ----------------------------------------------------
-*0x47 - *INVALID
-*0x46 - *INVALID
+0x47 - INVALID
+0x46 - INVALID
 ----------------------------------------------------
-==*0x45 - *Swap Players==
+==0x45 - Swap Players==
 {{{
 	u8  // Slot # Source
 	u8  // Slot # Destination
@@ -237,7 +237,7 @@ INVALID CLASS 2
 CLASS 1 ONLY
 
 ----------------------------------------------------
-==*0x44 - * Slot Change==
+==0x44 -  Slot Change==
 {{{
         u8  // Slot #
         u8  // Owner? (Non-standard)
@@ -245,21 +245,21 @@ CLASS 1 ONLY
 CLASS 1 ONLY
 
 ----------------------------------------------------
-*0x43 - *UNKNOWN
+0x43 - UNKNOWN
 {{{
 	u8  // Unknown
 }}}
 CLASS 1 ONLY
 
 ----------------------------------------------------
-*0x42 - *UNKNOWN
+0x42 - UNKNOWN
 {{{
 	u8  // Unknown
 }}}
 CLASS 1 ONLY
 
 ----------------------------------------------------
-==*0x41 - *Race Change==
+==0x41 - Race Change==
 {{{
 	u8  // slot #
 	u8  // Race ID
@@ -267,14 +267,14 @@ CLASS 1 ONLY
 CLASS 1 ONLY
 
 ----------------------------------------------------
-*0x40 - *Unknown
+0x40 - Unknown
 {{{
      u8[17]   // Unknown
 }}}
 CLASS 1 ONLY
 
 ----------------------------------------------------
-*0x3F - *Unknown (Confirmation?)
+0x3F - Unknown (Confirmation?)
 {{{
 	u8   // player ID?
 	u16  // Unknown (Null)
@@ -284,7 +284,7 @@ CLASS 1 ONLY
 CLASS 1 ONLY
 
 ----------------------------------------------------
-==*0x3E - *Game Slot Modification==
+==0x3E - Game Slot Modification==
 {{{
 	u8  // Slot #
 	u8  // Player ID
@@ -295,49 +295,49 @@ CLASS 1 ONLY
 CLASS 1 ONLY
 
 ----------------------------------------------------
-==*0x3D - *Map Download %==
+==0x3D - Map Download %==
 {{{
 	s8  // Percentage
 }}}
 CLASS 1 ONLY
 
 ----------------------------------------------------
-==*0x3C - *Start Game==
+==0x3C - Start Game==
 {{{
      // No parameters.
 }}}
 CLASS 1 ONLY
 
 ----------------------------------------------------
-*0x3B - *Unknown
+0x3B - Unknown
 {{{
 	u8  // Unknown
 }}}
 CLASS 1 & 2
 
 ----------------------------------------------------
-*0x3A - *Unknown
+0x3A - Unknown
 {{{
 	u8  // Unknown
 }}}
 CLASS 1 & 2
 
 ----------------------------------------------------
-*0x39 - *Unknown
+0x39 - Unknown
 {{{
    // No parameters.
 }}}
 CLASS 2 ONLY
 
 ----------------------------------------------------
-*0x38 - *Unknown
+0x38 - Unknown
 {{{
    // No parameters.
 }}}
 CLASS 2 ONLY
 
 ----------------------------------------------------
-==*0x37 - *Game Hash Check==
+==0x37 - Game Hash Check==
 (determines syncronized gameplay, sent every ~0.2 seconds or before any order)
 {{{
    u8[6]   // Unknown
@@ -345,56 +345,56 @@ CLASS 2 ONLY
 CLASS 2 ONLY
 
 ----------------------------------------------------
-==*0x36 - *Stim==
+==0x36 - Stim==
 {{{
   //  No parameters.
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x35 - *Building Morph==
+==0x35 - Building Morph==
 {{{
 	u16  // Unit ID (Units.dat)
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x34 - *Cancel Addon==
+==0x34 - Cancel Addon==
 {{{
   //  No parameters.
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x33 - *Cancel Upgrade==
+==0x33 - Cancel Upgrade==
 {{{
   //  No parameters.
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x32 - *Upgrade==
+==0x32 - Upgrade==
 {{{
 	u8   // Upgrade ID (Upgrades.dat)
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x31 - *Cancel Research==
+==0x31 - Cancel Research==
 {{{
   //  No parameters.
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x30 - *Research==
+==0x30 - Research==
 {{{
 	u8   // Tech ID (Techdata.dat)
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x2F - *Lift==
+==0x2F - Lift==
 {{{
 	s16 // (x) ?
 	s16 // (y) ?
@@ -402,14 +402,14 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x2E - *Cancel Nuke==
+==0x2E - Cancel Nuke==
 {{{
    // No parameters.
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x2D - *Unburrow==
+==0x2D - Unburrow==
 {{{
 	u8   // Type (unused)
 		0 = // instant;
@@ -418,7 +418,7 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x2C - *Burrow==
+==0x2C - Burrow==
 {{{
 	u8   // Type (unused)
 		0 = // instant;
@@ -427,7 +427,7 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x2B - *Hold Position==
+==0x2B - Hold Position==
 {{{
 	u8   // Type
 		0 = // instant;
@@ -436,21 +436,21 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x2A - *Merge Archon==
+==0x2A - Merge Archon==
 {{{
    // No parameters.
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x29 - *Unload==
+==0x29 - Unload==
 {{{
 	u16  // (Unit ID? [memory])
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x28 - *Unload All==
+==0x28 - Unload All==
 {{{
 	u8  // Type
 		0 = // instant;
@@ -459,14 +459,14 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x27 - *Build Subunit(Interceptor/Scarab)==
+==0x27 - Build Subunit(Interceptor/Scarab)==
 {{{
    // No parameters.
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x26 - *Siege==
+==0x26 - Siege==
 {{{
 	u8   // Type (unused)
 		0 = // instant;
@@ -475,7 +475,7 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x25 - *Unsiege==
+==0x25 - Unsiege==
 {{{
 	u8   // Type (unused)
 		0 = // instant;
@@ -484,16 +484,16 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-*0x24 - * INVALID
+0x24 -  INVALID
 ----------------------------------------------------
-==*0x23 - *Unit Morph==
+==0x23 - Unit Morph==
 {{{
 	u16  // Unit ID (Units.dat);
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x22 - *Decloak==
+==0x22 - Decloak==
 {{{
 	u8   // Type (unused)
 		0 = // instant;
@@ -502,7 +502,7 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x21 - *Cloak==
+==0x21 - Cloak==
 {{{
 	u8   // Type (unused)
 		0 = // instant;
@@ -511,21 +511,21 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x20 - *Cancel Train==
+==0x20 - Cancel Train==
 {{{
 	u16  // Unit ID (Units.dat);
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x1F - *Train==
+==0x1F - Train==
 {{{
 	u16  // Unit ID (Units.dat);
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x1E - *Return Cargo==
+==0x1E - Return Cargo==
 {{{
 	u8   // Type
 		0 = // instant;
@@ -534,28 +534,28 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-*0x1D - *"Nothing" ?
+0x1D - "Nothing" ?
 {{{
     // No parameters.
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x1C - *Reaver Stop==
+==0x1C - Reaver Stop==
 {{{
      // No parameters
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x1B - *Carrier Stop==
+==0x1B - Carrier Stop==
 {{{
      // No parameters
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x1A - *Stop==
+==0x1A - Stop==
 {{{
 	u8   // Type
 		0 = // instant;
@@ -564,24 +564,24 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x19 - *Cancel Unit Morph==
+==0x19 - Cancel Unit Morph==
 {{{
   //  No parameters.
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x18 - *Cancel Construction==
+==0x18 - Cancel Construction==
 {{{
    // No parameters.
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-*0x17 - *INVALID
-*0x16 - *INVALID
+0x17 - INVALID
+0x16 - INVALID
 ----------------------------------------------------
-==*0x15 - *Target Command==
+==0x15 - Target Command==
 {{{
 	s16  // x
 	s16  // y
@@ -595,7 +595,7 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x14 - *Right Click==
+==0x14 - Right Click==
 {{{
 	s16  // (x);
 	s16  // (y);
@@ -608,7 +608,7 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x13 - *Hotkey==
+==0x13 - Hotkey==
 {{{
 	u8  //command
 		0 = // save;
@@ -618,28 +618,28 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x12 - *Use Cheat==
+==0x12 - Use Cheat==
 {{{
     u32  //(Cheat code flags).
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x11 - *Resume Game==
+==0x11 - Resume Game==
 {{{
     // No parameters.
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x10 - *Pause Game==
+==0x10 - Pause Game==
 {{{
     // No parameters.
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x0F - *Change Game Speed==
+==0x0F - Change Game Speed==
 {{{
       u8   //speed
             0="Slowest";
@@ -648,7 +648,7 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x0E - *Ally==
+==0x0E - Ally==
 {{{
 	u2 	// (Alliance p1) [0 = enemy, 1= allied, 2 = allied vic]
 	u2 	// (Alliance p2) [0 = enemy, 1= allied, 2 = allied vic]
@@ -670,7 +670,7 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x0D - *Vision==
+==0x0D - Vision==
 {{{
 	0x80 00 // Vision for player 1
 	0x40 00 // Vision for player 2
@@ -692,7 +692,7 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x0C - *Build==
+==0x0C - Build==
 {{{
 	u8   // (Command [Orders.dat Entry Listing])
 	s16  // (x [tile])
@@ -702,7 +702,7 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x0B - *Shift Deselect==
+==0x0B - Shift Deselect==
 {{{
 	u8   // (#of Units)
 	u16  // (Unit ID[memory])
@@ -710,7 +710,7 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x0A - *Shift Select==
+==0x0A - Shift Select==
 {{{
 	u8   // (#of Units)
 	u16  // (Unit ID[memory])
@@ -718,7 +718,7 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x09 - *Select==
+==0x09 - Select==
 {{{
 	u8   // (#of Units)
 	u16  // (Unit ID[memory])
@@ -726,14 +726,14 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-==*0x08 - *Restart Game==
+==0x08 - Restart Game==
 {{{
       // No parameters.
 }}}
 CLASS 2 ONLY
 
 ----------------------------------------------------
-==*0x07 - * Load Game==
+==0x07 -  Load Game==
 {{{
       u32     //(unknown)
       cstring // Name
@@ -741,7 +741,7 @@ CLASS 2 ONLY
 CLASS 2 ONLY
 
 ----------------------------------------------------
-==*0x06 - *Save Game==
+==0x06 - Save Game==
 {{{
       u32     //(unknown)
       cstring // Name
@@ -749,30 +749,30 @@ CLASS 2 ONLY
 CLASS 2 ONLY
 
 ----------------------------------------------------
-==*0x05 - * Keep Alive==
+==0x05 -  Keep Alive==
 {{{
       // No parameters.
 }}}
 CLASS 1 & 2
 
 ----------------------------------------------------
-*0x04 - *UNDEFINED
+0x04 - UNDEFINED
 ----------------------------------------------------
-*0x03 - * Unknown
+0x03 -  Unknown
 {{{
       // No parameters.
 }}}
 UNDEFINED
 ----------------------------------------------------
-*0x02 - *UNDEFINED
+0x02 - UNDEFINED
 ----------------------------------------------------
-*0x01 - * Claim Host ?
+0x01 -  Claim Host ?
 {{{
       //No parameters.
 }}}
 UNDEFINED
 ----------------------------------------------------
-==*0x00 - *Game Chat==
+==0x00 - Game Chat==
 {{{
       u8      // (unknown)
       cstring // (message)
@@ -792,7 +792,7 @@ UNDEFINED
 	u8   // Command ID (0x00)
 	u8   // Player ID
 	u8   // Resend
-	*    // ...Packet Data...
+	    // ...Packet Data...
 }}}
 The command opcode is not stored in the Command ID of the packet, but rather in the data, where many commands may stack.
 
@@ -802,10 +802,10 @@ Command class 1 opcodes are others used by Starcraft for communication; send tex
 
 =Replay Header=
 {{{
-   u32  // time (Game Ticks * 255??)
+   u32  // time (Game Ticks  255??)
    u8   // unk (Game Ticks??)
 
    u8   // Player ID
    u8   // Command ID
-   *    // ...Command Variables...
+       // ...Command Variables...
 }}}

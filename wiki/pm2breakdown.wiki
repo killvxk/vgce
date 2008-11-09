@@ -18,7 +18,7 @@ Message data for events and NPCs. In each file, every string is separated by a 0
 
 ==rel==
 
-Don't worry too much about this. *.rel files are external modules that the game reads(like DLLs) for each area of the game.
+Don't worry too much about this. .rel files are external modules that the game reads(like DLLs) for each area of the game.
 
 ==sound==
 

@@ -10,7 +10,7 @@ Note: Space between content head and format start still needs to be described pr
 = Content Header =
 
 
-== Format ==
+== Header Format ==
 Saved content header;
 Header Size: 0x20 (32 bytes)
 Header Extension Size: 0x34 (52 bytes)
@@ -82,7 +82,7 @@ Data follows directly After
 ----
 = Screenshot =
 
-== Format ==
+== Screenshot Format ==
 {{{
 0x00	u32	// Widescreen Flag (Set if screenshot was taken in widescreen mode)
 0x04	u32	// Size of JPEG Data
@@ -92,7 +92,7 @@ Data follows directly After
 ----
 = Replay =
 
-== Format ==
+== Replay Format ==
 {{{
 0x00    char("PR05")
 0x04    u32      // Unknown
@@ -395,7 +395,7 @@ Data follows directly After
 
 == Action Data ==
 
-=== Header ===
+=== Action Header ===
 1-byte Header (flags)
   * 0x01 = Player 1
   * 0x02 = Player 2
@@ -444,7 +444,7 @@ Then there are 4 bytes allocated for each player specified in the header.
 ----
 =Custom Stage=
 
-==Format==
+== Custom Stage Format ==
 
 Format excludes saved content header.
 
@@ -489,14 +489,14 @@ Format excludes saved content header.
 0x80    *           // Blocks
 }}}
 
-==Block Format==
-===Byte 1===
+== Block Format ==
+=== Block Byte 1 ===
 *Tile position* (no X/Y, just position as if a single dimension ex: if the width is 12 and you want to place it in the second row, then this byte is 0x12(18 dec), since it is read always as an internal width of 18)
 {{{
 	X = byte % 18, Y = byte / 18  //(Always 18 on all stage sizes)
 }}}
 
-===Bytes 2, 3, 4===
+=== Bytes 2, 3, 4 ===
 {{{
 	11100000 00000000 00000000	// Size X (u3)
 	00011100 00000000 00000000	// Size Y (u3)

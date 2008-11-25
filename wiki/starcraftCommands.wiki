@@ -779,7 +779,7 @@ UNDEFINED
 }}}
 UNDEFINED
 ----------------------------------------------------
-==0x00 - Game Chat==
+==0x00 - Old Game Chat==
 {{{
       u8      // (unknown)
       cstring // (message)

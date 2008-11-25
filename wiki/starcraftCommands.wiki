@@ -17,8 +17,8 @@ Command class 1 opcodes are typically those from ~0x37 to ~0x50.
 ----------------------------------------------------
 ==0x5C - Game Chat==
 {{{
-   u8         // Player ID byte
-   cstring    // Message
+   u8          // Player ID
+   char[80]    // Message
 }}}
 CLASS 2 AND REPLAY; (as of 1.16)
 

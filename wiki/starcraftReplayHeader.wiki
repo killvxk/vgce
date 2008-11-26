@@ -23,11 +23,11 @@ u16		"Tileset"
 u16		// 	Unknown ( x > 0 ) (0x01)
 char[25]	// Creator Name
 char[32]	// Map Name
-u16		"GameTemplate"	    // Game Type ID
-u16		"GameTemplate"	    // Subtype ID
-u16		"GameTemplate"	    // Subtype Display Value
-u16		"GameTemplate"	    // Subtype Label
-u8		"GameTemplate"	    // Victory Conditions
+u16		<GameTemplate>	    // Game Type ID
+u16		<GameTemplate>	    // Subtype ID
+u16		<GameTemplate>	    // Subtype Display Value
+u16		<GameTemplate>	    // Subtype Label
+u8		<GameTemplate>	    // Victory Conditions
                          0x00 = "Map Default";
                          0x01 = "Melee";
                          0x02 = "Highest Score";
@@ -37,7 +37,7 @@ u8		"GameTemplate"	    // Victory Conditions
                          0x06 = "Slaughter";
                          0x07 = "One on One";
 
-u8		"GameTemplate"	    // Resources (type)
+u8		<GameTemplate>	    // Resources (type)
                          0x00 = "Map Default";
                          0x01 = "Fixed Value";
                          0x02 = "Low";
@@ -45,35 +45,35 @@ u8		"GameTemplate"	    // Resources (type)
                          0x04 = "High";
                          0x05 = "Income";
 
-u8		"GameTemplate"	    // Unit Stats
+u8		<GameTemplate>	    // Unit Stats
                          0x00 = "Map Default";
                          0x01 = "Standard";
 
-u8		"GameTemplate"	    // Fog of War
+u8		<GameTemplate>	    // Fog of War
                          0x00 = "Off";
                          0x01 = "Warcraft1";
                          0x02 = "On";
 
-u8		"GameTemplate"	    // Starting Units
+u8		<GameTemplate>	    // Starting Units
                          0x00 = "Map Default";
                          0x01 = "Workers Only";
                          0x02 = "Workers and Center";
 
-u8		"GameTemplate"	    // Starting Positions
+u8		<GameTemplate>	    // Starting Positions
                          0x00 = "Random";
                          0x01 = "Fixed";
 
-u8		"GameTemplate"	    // Player Types (Flags)
+u8		<GameTemplate>	    // Player Types (Flags)
                          0x01 = "Computer Players";
                          0x02 = "Single Player";
 
-u8		"GameTemplate"	    // Allies allowed flag
-u8		"GameTemplate"	    // Number of Teams
-u8		"GameTemplate"	    // Cheat Codes allowed flag
-u8		"GameTemplate"	    // Tournament Mode enabled flag
-u32		"GameTemplate"	    // Victory Condition Value
-u32		"GameTemplate"	    // Resources Value
-u32		"GameTemplate"		// Unknown/unused
+u8		<GameTemplate>	    // Allies allowed flag
+u8		<GameTemplate>	    // Number of Teams
+u8		<GameTemplate>	    // Cheat Codes allowed flag
+u8		<GameTemplate>	    // Tournament Mode enabled flag
+u32		<GameTemplate>	    // Victory Condition Value
+u32		<GameTemplate>	    // Resources Value
+u32		<GameTemplate>		// Unknown/unused
 u8		// 	Unknown/unused
 
 struct[12] //Player Structures (*12)

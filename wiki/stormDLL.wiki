@@ -38,20 +38,20 @@
 134	int 	__stdcall SNetSendServerChatCommand(char *command)
 135	BOOL	__stdcall SNet135(signed int a1, int a2, int a3)
 136	BOOL	__stdcall SNet136(int a1, int a2, int a3)
-137	BOOL	__stdcall SNet137(int a1)
+137	BOOL	__stdcall SNet137(int a1)	// SNetGetPlayerNames?
 138	BOOL	__stdcall SNetCreateLadderGame(int a1, int a2, int a3, int a4, int a5, int a6, const void *MemSrc, int MemSize, int a9, char *playerName, int a11, int a12)
 139	BOOL	__stdcall SNet139(unsigned int a1, int size, int a3, int a4, int a5)
 140	BOOL	__stdcall SNetCheckDataFile(int a1, int a2, int a3, int a4)
 141	int 	__stdcall SNetSendLeagueCommand(char *cmd, int a2)
-142	int 	__stdcall SNet142(int a1, int a2, int a3)
+142	int 	__stdcall SNetSendReplayPath(int a1, int a2, char *a3)
 143	int 	__stdcall SNet143(int a1)
-144	BOOL	__stdcall SNet144(int a1)
-145	int 	__stdcall SNet145(int a1)
-146	int	__stdcall SNet146(int a1, int a2)
+144	BOOL	__stdcall SNet144(int a1)	// conjunction with 139
+145	int 	__stdcall SNetLeagueLogout(char *bnetName)
+146	int	__stdcall SNet146(int curPlayerID, int a2)
 
 201	HDC 	__stdcall SDlgBeginPaint(HWND window, LPPAINTSTRUCT ps)
 202	int 	__stdcall SDlgBltToWindowI(HWND window, HRGN hrgnSrc2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10)
-203	BOOL 	__cdecl SDlgCheckTimers()
+203	BOOL 	__cdecl   SDlgCheckTimers()
 204	int 	__stdcall SDlgCreateDialogIndirectParam(HMODULE hModule, LPCSTR lpName, HWND hWndParent, LPVOID lpParam)
 205	int 	__stdcall SDlgCreateDialogParam(int a1, int a2, HWND hWndParent, LPVOID lpParam)
 206	HGDIOBJ __stdcall SDlgDefDialogProc(HWND hDlg, signed int DlgType, HDC textLabel, HWND hWnd)
@@ -68,7 +68,7 @@
 217	int 	__stdcall SDlgSetCursor(HWND hWnd, LONG dwNewLong, int a3, int a4)
 218	int 	__stdcall SDlgSetSystemCursor(int a1, int a2, int a3, signed int a4)
 219	int 	__stdcall SDlgSetTimer(int a1, int a2, int a3, int a4)
-220	int 	__cdecl SDlgUpdateCursor()
+220	int 	__cdecl   SDlgUpdateCursor()
 221	int 	__stdcall SDlgBltToWindowE(HWND hWnd, HRGN a2, char *a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10)
 222	int 	__stdcall SDlgSetBitmapE(int a1, int a2, char *src, int a4, int a5, int a6, int a7, signed int a8, int a9, signed int a10)
 223	int 	__stdcall Ordinal223(int a1, char *a2)
@@ -96,20 +96,20 @@
 271	LONG 	__stdcall SFileSetFilePointer(HANDLE hFile, LONG filePos, LONG *filePosHigh, DWORD dwMethod)
 272	LCID 	__stdcall SFileSetLocale(LCID lcLocale)
 273	BOOL 	__stdcall SFileGetBasePath(char *result, int maxSize)
-274	BOOL 	__stdcall SFile274(int a1, int a2)
+274	BOOL 	__stdcall SFile274(int a1, int callback)
 275	BOOL 	__stdcall SFileGetArchiveName(HANDLE hArchive, char *name, int length)
 276	BOOL 	__stdcall SFileGetFileName(HANDLE hFile, char *name, int length)
 277	int 	__stdcall SFile277(int a1, int a2, int a3)
 278	char 	__stdcall SFile278(char)
-279	int 	__stdcall SFile279(HANDLE hFile, int a2, int a3, int a4, LONG lpDistanceToMoveHigh)
-280	BOOL 	__stdcall SFile280(void *location)
-281	BOOL 	__stdcall SFile281(void *hArchive, HANDLE hFile, int a3, int a4, int a5, DWORD searchScope, struct _OVERLAPPED *lpOverlapped)
+279	int 	__stdcall SFile279(char *filename, int a2, int a3, int a4, int a5)
+280	BOOL 	__stdcall SFile280(void *location)	// in conjunction with 281
+281	BOOL 	__stdcall SFile281(void *hArchive, char *filename, int a3, int a4, int a5, DWORD searchScope, struct _OVERLAPPED *lpOverlapped)
 282	void 	__stdcall SFile282(int a1, int a2)
 283	void 	__stdcall SFile283(int a1)
 284	int 	__stdcall SFile284(int a1)
 285	void 	__stdcall SFile285(int a1)
 
-294	LCID 	__cdecl SFileGetLocale()
+294	LCID 	__cdecl   SFileGetLocale()
 
 301	BOOL 	__cdecl   StormDestroy()
 302	HMODULE __cdecl   StormGetInstance()
@@ -173,7 +173,7 @@
 389	BOOL	__stdcall SGdiSelectObject(int a1)
 390	BOOL	__stdcall SGdiSetPitch(int pitch)
 391	BOOL	__stdcall SGdiTextOut(int a1, int a2, int a3, unsigned int a8, const char *arg1C, unsigned int arg20)
-392	BOOL	__stdcall SGdi392(int, int, int, int)   // "SGdi4"
+392	BOOL	__stdcall SGdi392(int, int, int, int)
 393	BOOL	__stdcall SGdi393(int, int, int)
 
 401	void *	__stdcall SMemAlloc(int amount, char *logfilename, int logline, int defaultValue)
@@ -184,13 +184,13 @@
 
 412	BOOL	__stdcall SMsgDispatchMessage(int, int, int, int, int, int)
 413	WPARAM	__stdcall SMsgDoMessageLoop(int, int)
-414	BOOL	__stdcall SMsgRegisterCommand(int, int, int) // SMSH
-415	BOOL	__stdcall SMsgRegisterKeyDown(int, int, int) // SMSJ
-416	BOOL	__stdcall SMsgRegisterKeyUp(int, int, int) // SMSK
-417	BOOL	__stdcall SMsgRegisterMessage(int, int, int) // SMSG
-418	BOOL	__stdcall SMsgPopRegisterState(int) // 376 all
-419	BOOL	__stdcall SMsgPushRegisterState(int) // 377 all
-420	BOOL 	__stdcall SMsg420(int a1, int a2, int a3) // SMSI
+414	BOOL	__stdcall SMsgRegisterCommand(int, int, int) 	// SMSH
+415	BOOL	__stdcall SMsgRegisterKeyDown(int, int, int) 	// SMSJ
+416	BOOL	__stdcall SMsgRegisterKeyUp(int, int, int) 	// SMSK
+417	BOOL	__stdcall SMsgRegisterMessage(int, int, int) 	// SMSG
+418	BOOL	__stdcall SMsgPopRegisterState(int)
+419	BOOL	__stdcall SMsgPushRegisterState(int)
+420	BOOL 	__stdcall SMsg420(int a1, int a2, int a3) 	// Register SMSI
 421	BOOL 	__stdcall SRegLoadData(char *keyname, char *valuename, HKEY phkResult, LPBYTE lpData, int a5, LPDWORD lpcbData)
 422	BOOL	__stdcall SRegLoadString(char *keyname, char *valuename, int a3, int a4, size_t buffersize)
 423	BOOL	__stdcall SRegLoadValue(char *keyname, char *valuename, int a3, int a4)
@@ -240,14 +240,14 @@
 469	int 	__stdcall SErrRegisterHandler(int)
 470	int 	__stdcall SErr470(int)
 
-472	int 	__stdcall SCmdGetBool(int) // 473
+472	int 	__stdcall SCmdGetBool(int)
 473	int 	__stdcall SCmdGetNum(int)
 474	int 	__stdcall SCmdGetString(int, int, int)
 475	int 	__stdcall SCmdProcess(int, int, int, int)
-476	int 	__stdcall SCmdRegisterArgList(int, int) // 477
+476	int 	__stdcall SCmdRegisterArgList(int, int)
 477	int 	__stdcall SCmdRegisterArgument(int, int, int, int, int, int, int, int)
-478	int 	__stdcall SCmd478(int)
-479	int 	__stdcall SCmdProcessCommandLine(int, int)	// GetCommandLineA, 475
+478	int 	__stdcall SCmd478(int)	// called in conjunction with 474
+479	int 	__stdcall SCmdProcessCommandLine(int, int)
 
 481	int 	__stdcall SMemFindNextBlock(int, int, int, int)
 482	int 	__stdcall SMemFindNextHeap(int nextheap, int details, int prevheap)
@@ -263,7 +263,7 @@
 492	int 	__stdcall SMemFill(int, int, char)
 493	int 	__stdcall SMemMove(void *dest, void *source, size_t size)
 494	int 	__stdcall SMemZero(void *location, size_t length)
-495	int 	__stdcall SMem495(int, int, int)
+495	int 	__stdcall SMem495(int, int, int)	// wallloc and cache
 496	int 	__stdcall SMem496(int, char)
 497	int 	__stdcall SMemDumpState(int, int)
 
@@ -271,9 +271,9 @@
 502	DWORD 	__stdcall SStrHash(const char *string, unsigned long, unsigned long Seed)
 503	int 	__stdcall SStrNCat(char *base, char *new, int max_length)
 504	int 	__stdcall SStrTokenize(const char **string, char *(*string), size_t size, const char *buffer, int *whitespace)
-505	int 	__stdcall SStr505(int, int, int)
+505	int 	__stdcall SStr505(int, int, int)	// SStrHash64?
 506	int 	__stdcall SStrLen(const char* str)
-507	int	__stdcall SStr507(int, char, DWORD ExitCode)
+507	int	__stdcall Ordinal507(int, char, DWORD ExitCode)	// stpl, chatroom
 508	int	__stdcall SStrCmp(const char *string1, const char *string2, size_t size)
 509	int	__stdcall SStrCmpI(const char *string1, const char *string2, size_t size)
 510	int 	__stdcall SStrUpper(char *string)
@@ -289,39 +289,39 @@
 
 521	int 	__stdcall Ordinal521(int)
 
-523	int 	__stdcall Ordinal523(int, int, int, int)	// calls 534
+523	int 	__stdcall Ordinal523(int, int, int, int)	// calls 534, called in conjunction with 524
 524	int 	__stdcall Ordinal524(int, int)
-525	int 	__stdcall Ordinal525(int)
+525	int 	__stdcall Ordinal525(int)			// related to the above two
 
-527	int 	__stdcall SRgn527i(int, int, int)
-528	int 	__stdcall SRgn528i(int, int, int, int) // 535
+527	int 	__stdcall SRgn527(int, int, int)
+528	int 	__stdcall SRgn528i(int, int, int, int)  // 534
 529	int 	__stdcall SRgn529i(int, int, int) // 536
 530	int 	__stdcall SRgn530i(int, int) // 537
 531	int 	__stdcall SRgn531i(int, int, int) //538
 532	int 	__stdcall SRgn532i(int, int) // 539
 533	int 	__stdcall SRgn533i(int, int, int) // 540
-534	int 	__stdcall SRgn534f(int, int, int, int)
+534	int 	__stdcall SRgn534(int, int, int, int)
 535	int 	__stdcall SRgn535f(int, int, int, int)
 536	int 	__stdcall SRgn536f(int, int, int)
 537	int 	__stdcall SRgn537f(int, int)
 538	int 	__stdcall SRgn538f(int, float, float)
 539	int 	__stdcall SRgn539f(int, int)
 540	void	__stdcall SRgn540f(int, float, float)
-541	LPVOID	__stdcall SLog541(DWORD NumberOfBytesWritten) 		// close handle
-542	HANDLE	__stdcall SLog542(LPCSTR lpFileName, int, int) 		// create file
+541	LPVOID	__stdcall SLogClose(DWORD NumberOfBytesWritten)
+542	HANDLE	__stdcall SLogCreate(char *filename, int, int)
 543	void	__stdcall SLog543(int, int)
-544	void	__stdcall SLog544(int, int, DWORD NumberOfBytesWritten)
-545	void	__stdcall SLog545(DWORD NumberOfBytesWritten)
-546	void	__cdecl   SLog546()
-547	void	__cdecl   SLog547(int, char *, char)
-548	void	__cdecl   SLog548(DWORD NumberOfBytesWritten, char *, char NumberOfBytesWritten)  // Add to log file // calls 553
+544	void	__stdcall SLogDump(int, int, DWORD NumberOfBytesWritten)
+545	void	__stdcall SLogFlush(DWORD NumberOfBytesWritten)
+546	void	__cdecl   SLogFlushAll()
+547	void	__cdecl   SLogPend(int, char *, char)
+548	void	__cdecl   SLogWrite(HANDLE handle, char *format, char *text)
 549	LPVOID	__stdcall SLog549(int, int)
-550	LPVOID	__stdcall SLog550(int, int)
+550	LPVOID	__stdcall SLog550(HANDLE handle, int a2)
 551	BOOL	__stdcall SCompCompress(void *a1, int a2, unsigned int a3, signed int amount, int a5, char a6, int a7)
 552	BOOL	__stdcall SCompDecompress(void *a1, int *a2, const void *a3, unsigned int a4)
-553	void	__stdcall SLog553(int, char *, va_list NumberOfBytesWritten)
+553	void	__stdcall SLogVWrite(int, char *, va_list NumberOfBytesWritten)
 
-561	void	__cdecl   SErr561(char *, char)			// SErrCheckDebugSymbolLibrary
+561	void	__cdecl   SErr561(char *, char)		// SErrCheckDebugSymbolLibrary
 562	int 	__cdecl   SErrDisplayErrorFmt(DWORD dwMessageId, char, DWORD ExitCode, int, UINT uExitCode, char *, char)
 563	int 	__cdecl	  SErrIsDisplayingError()
 564	int 	__stdcall SErrPrepareAppFatal(int, int)
@@ -338,15 +338,15 @@
 577	__int64		__stdcall SStrToInt64(const char *string)
 578	int 		__cdecl   SStrVPrintf(char *dest, size_t size, const char *format, char *)
 579	int 		__stdcall SStrLower(char *string)
-580	int 		__stdcall SStr580(int, int, int, int)			// str hashes
+580	int 		__stdcall Ordinal580(int, int, int, int)			// str hashes
 581	int 		__cdecl   SStrPrintf(char *dest, size_t size, const char *format, ...)
-582	int 		__stdcall SRgn582(int)
+582	int 		__stdcall Ordinal582(int)
 583	int 		__stdcall SRgn583(LPRECT lpRect)
-584	int 		__stdcall Ordinal584(int, int)
-585	int 		__stdcall Ordinal585(int, char *)
-586	int 		__stdcall Ordinal586(int, int)
-587	int 		__stdcall Ordinal587(int, int)
-588	int 		__stdcall SNet588(char *, char *)
+584	int 		__stdcall SStrStr584(int, int)
+585	int 		__stdcall SStrStrl585(int, char *)
+586	int 		__stdcall SStrStr586(int, char *)
+587	int 		__stdcall SStrStr587(int, int)
+588	int 		__stdcall SNet588(char *, char *)	// league related
 
 601	int __stdcall SBigAdd(void *buffer, const void *buffer2, const void *buffer3)
 602	int __stdcall SBigAnd(void *buffer, const void *buffer2, const void *buffer3)
@@ -396,18 +396,19 @@
 646	int __stdcall SBigToUnsigned(void *, int)
 647	int __stdcall SBigXor(void *, int, int)
 
-901	int __stdcall SUni901(int, int, int)
-902	int __stdcall SUni902(int, int, int, int, int, int)
-903	int __stdcall SUni903(int, int, int)
-904	int __stdcall SUni904(int, int, int, int, int, int)
-905	int __stdcall SUni905(int, int)
-906	int __stdcall SUni906(int, int)
-907	int __stdcall SUni907(int, int)
-908	int __stdcall SUni908(int, int)
-909	int __stdcall SUni909(int, int, int)
-910	int __stdcall SUni910(int, int, int)
-911	int __stdcall SUni911(int, int, int)
-912	int __stdcall SUni912(int, int, int)
-913	int __stdcall SUni913(int, int, int)
-914	int __stdcall SUni914(int, int, int)
+901	int __stdcall SUniConvertUTF16to8Len(int, int, int)
+902	int __stdcall SUniConvertUTF16to8(int, int, int, int, int, int)
+903	int __stdcall SUniConvertUTF8to16Len(int, int, int)
+904	int __stdcall SUniConvertUTF8to16(int, int, int, int, int, int)
+905	int __stdcall SUniS905(int, int)
+906	int __stdcall SUniS906(int, int)
+907	int __stdcall SUniFindAfterUTF8Chr(int, int)
+908	int __stdcall SUniFindUTF8ChrStart(int, int)
+909	int __stdcall SUniConvertUTF16To909(int, int, int)
+910	int __stdcall SUniConvertUTF16To910(int, int, int)
+911	int __stdcall SUniConvertUTF16To911(int, int, int)
+912	int __stdcall SUniConvert912(int, int, int)
+913	int __stdcall SUniConvert913(int, int, int)
+914	int __stdcall SUniConvert914(int, int, int)
+915	int __stdcall SUniConvertUTF8ToWin(int a1, int a2, int a3)
 }}}

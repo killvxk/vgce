@@ -1,4 +1,5 @@
 #summary Starcraft Scenario Chunk Compression
+#labels Game-Starcraft,Platform-PC
 
 {{{
 Theory: Should compress better if things are nulled out, or values are lower(more common) or removed completely.

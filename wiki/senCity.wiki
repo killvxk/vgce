@@ -1,0 +1,279 @@
+{{{
+Map Size:   256x256
+Tileset:    Badlands
+Player 1:   Race(Forced Random), colour(Red),    Owner(Human)
+Player 2:   Race(Forced Random), colour(Blue),   Owner(Human)
+Player 3:   Race(Forced Random), colour(Teal),   Owner(Human)
+Player 4:   Race(Forced Random), colour(Purple), Owner(Human)
+Player 5:   Race(Forced Random), colour(Orange), Owner(Human)
+Player 6:   Race(Forced Random), colour(Brown),  Owner(Human)
+Player 7:   Race(Forced Random), colour(White),  Owner(Human)
+Player 8:   Race(Forced Random), colour(Yellow), Owner(Human)
+}}}
+
+  * Sq. Tiles allocated per member: 1591 (example: 37x43 region) [the tile police will arrest you if you go overboard!]
+
+  * Locations/Switches allocated per member: 6
+
+  * Deaths allocated per member: 5
+
+  * Sprites(placed) allocated per member: 12
+
+  * Units(placed) allocated per member: 40
+
+  * String space per member: 1400 characters
+
+
+  * Triggers: Hyper triggers will apply to all players. Alliance and vision triggers will be pre-defined. 
+
+  * Restricted Triggers: Any form of extended condition/action. Leaderboard. End game. Wait. Countdown timer. AI Scripts. Single Player. Killing the player or any personally claimed unit. General Kill/Remove(you must use "at location".) Setting score or resources(adding and subtracting only). Mute unit speech. Moving other members' locations/units. Directly impacting the players when they are not in your allocated region. Unstable doodad state triggers. 
+
+
+Valid Actions:
+{{{
+Preserve Trigger                                                   [Given]
+Transmission(Text, Unit, Loc, Time, Modifier, Wave, WavTime)       [Must execute only for players in your own space]
+Play WAV(Wav, WavTime)                                             [Must execute only for players in your own space]
+Display Text Message(Text)                                         [Must execute only for players in your own space]
+Center View(Loc)                                                   [Must execute only for players in your own space]
+Create Unit with Properties(Player, Unit, Number, Loc, UnitProp)   [Can only use your allocated locations. Must execute in your own space.]
+Set Mission Objectives(Text)                                       [Must execute only for players in your own space]
+Set Switch(Switch, SwAction)                                       [Can only use your allocated switches]
+Kill Unit At Location(Player, TUnit, Number, Loc)                  [Must execute only in your own space. Can not kill personal unit, can not kill player.]
+Remove Unit At Location(Player, TUnit, Number, Loc)                [Must execute only in your own space. Can not remove personal unit, can not remove player.]
+Set Resources(Player, Number, Modifier, ResType)                   [Must execute only for players in your own space. Can only add/subtract maximum value of 100.]
+Set Score(Player, Number, Modifier, Score)                         [Must execute only for players in your own space. Can only add/subtract maximum value of 100.]
+Minimap Ping(Loc)                                                  [Must execute only for players in your own space]
+Talking Portrait(Unit, Time)                                       [Must execute only for players in your own space]
+Move Location(Player, TUnit, SLoc, DLoc)                           [Can only use your allocated locations]
+Move Unit(Player, TUnit, Number, SLoc, DLoc)                       [Can only use your allocated locations]
+Set Doodad State(Player, TUnit, Loc, State)                        [Can only use in your allocated space. Must not be issued on player. Must not crash the game.]
+**Set Invincibility(Player, TUnit, Loc, State)                     [Not sure about restriction on this(of course must be your own location)]
+Create Unit(Player, Unit, Number, Loc)                             [Must execute only in your own space.]
+Set Deaths(Player, TUnit, Number, Modifier)                        [Must not modify other members allocated deaths.]
+Order(Player, TUnit, SLoc, DLoc, Order)                            [Must execute only in your own space.]
+Comment(Text)                                                      [Given. SHOULD comment your own triggers.]
+Give Units to Player(SPlayer, DPlayer, TUnit, Number, Loc)         [Must execute only in your own space. Must not give players unit.]
+Modify Unit Hit Points(Player, TUnit, Number, ModAmount, Loc)      [Must execute only in your own space.]
+Modify Unit Energy(Player, TUnit, Number, ModAmount, Loc)          [Must execute only in your own space.]
+Modify Unit Shield Points(Player, TUnit, Number, ModAmount, Loc)   [Must execute only in your own space.]
+Modify Unit Resource Amount(Player, Number, ModAmount, Loc)        [Must execute only in your own space.]
+Modify Unit Hanger Count(Player, TUnit, Number, ModAmount, Loc)    [Must execute only in your own space.]
+}}}
+
+
+Unit Names:
+{{{
+Terran Marine                                   = // personally claimable (Switches+Locations 1-6)
+Terran Ghost                                    = "[Echo]:]" (Switches+Locations 7-12)
+Terran Vulture                                  = // personally claimable (Switches+Locations 13-18)
+Terran Goliath                                  = // personally claimable (Switches+Locations 19-24)
+Terran Siege Tank (Tank Mode)                   = // personally claimable (Switches+Locations 25-30)
+Terran SCV                                      = // personally claimable (Switches+Locations 31-36)
+Terran Wraith                                   = // claimable
+Terran Science Vessel                           = // claimable
+Gui Montag (Firebat)                            = "Toothfariy" (Switches+Locations 37-42)
+Terran Dropship                                 =  // claimable
+Terran Battlecruiser                            =  // claimable
+Spider Mine                                     =  // needs name
+Terran Civilian                                 = "Guest"
+Sarah Kerrigan (Ghost)                          =  // personally claimable (Switches+Locations 43-48)
+Alan Schezar (Goliath)                          = "blacklight28" (Switches+Locations 49-54)
+Jim Raynor (Vulture)                            =  // personally claimable (Switches+Locations 55-60)
+Jim Raynor (Marine)                             =  "[Dark_Marine]:]" (Switches+Locations 66-71)
+Tom Kazansky (Wraith)                           =  // claimable
+Magellan (Science Vessel)                       =  // claimable
+Edmund Duke (Tank Mode)                         =  // personally claimable (Switches+Locations 72-77)
+Edmund Duke (Siege Mode)                        =  // Claimable
+Arcturus Mengsk (Battlecruiser)                 =  // claimable
+Hyperion (Battlecruiser)                        =  // claimable
+Norad II (Battlecruiser)                        =  // claimable
+Terran Siege Tank (Siege Mode)                  =  // Claimable
+Terran Firebat                                  =  // personally claimable (Switches+Locations 78-83)
+Terran Medic                                    =  // personally claimable (Switches+Locations 84-89)
+Zerg Larva                                      =  // needs name
+Zerg Egg                                        =  // needs name
+Zerg Zergling                                   =  // personally claimable (Switches+Locations 90-95)
+Zerg Hydralisk                                  = "New-.Hydrolisk" (Switches+Locations 96-101)
+Zerg Ultralisk                                  = "LoveLess" (Switches+Locations 102-107)
+Zerg Broodling                                  =  // personally claimable (Switches+Locations 108-113)
+Zerg Drone                                      =  "l)ark_ssj9kevin" (Switches+Locations 114-119)
+Zerg Overlord                                   =  // claimable
+Zerg Mutalisk                                   =  // claimable
+Zerg Guardian                                   =  // claimable
+Zerg Queen                                      =  // claimable
+Zerg Defiler                                    =  // personally claimable (Switches+Locations 120-125)
+Zerg Scourge                                    =  // claimable
+Torrasque (Ultralisk)                           =  // personally claimable (Switches+Locations 126-131)
+Matriarch (Queen)                               =  // claimable
+Infested Terran                                 =  // claimable
+Infested Kerrigan (Infested Terran)             =  // personally claimable (Switches+Locations 132-137)
+Unclean One (Defiler)                           =  // personally claimable (Switches+Locations 138-143)
+Hunter Killer (Hydralisk)                       = "xYoshix" (Switches+Locations 144-149)
+Devouring One (Zergling)                        =  "[Pigy_G]:]" (Switches+Locations 150-155)
+Kukulza (Mutalisk)                              =  // claimable
+Kukulza (Guardian)                              =  // claimable
+Yggdrasill (Overlord)                           =  // claimable
+Terran Valkyrie                                 =  // claimable
+Mutalisk Cocoon                                 =  // claimable
+Protoss Corsair                                 =  // claimable
+Protoss Dark Templar (Unit)                     =   // Restricted
+Zerg Devourer                                   =  // claimable
+Protoss Dark Archon                             =  // personally claimable (Switches+Locations 156-161)
+Protoss Probe                                   =  // personally claimable (Switches+Locations 162-167)
+Protoss Zealot                                  =  "Mp)BluEditor" (Switches+Locations 168-173)
+Protoss Dragoon                                 =  // personally claimable (Switches+Locations 174-179)
+Protoss High Templar                            =  // personally claimable (Switches+Locations 180-185)
+Protoss Archon                                  =  // personally claimable (Switches+Locations 186-191)
+Protoss Shuttle                                 =  // claimable
+Protoss Scout                                   =  // claimable
+Protoss Arbiter                                 =   // Restricted
+Protoss Carrier                                 =  // claimable
+Protoss Interceptor                             =  // claimable
+Protoss Dark Templar (Hero)                     =   // Restricted
+Zeratul (Dark Templar)                          =   // Restricted
+Tassadar/Zeratul (Archon)                       =  "TassadarZeratul" (Switches+Locations 192-197)
+Fenix (Zealot)                                  = "stickynote" (Switches+Locations 198-203)
+Fenix (Dragoon)                                 =  "Mp)Dungeon-Master" (Switches+Locations 204-210)
+Tassadar (Templar)                              =  // personally claimable (Switches+Locations 210-215)
+Mojo (Scout)                                    =  // claimable
+Warbringer (Reaver)                             =  // personally claimable (Switches+Locations 216-221)
+Gantrithor (Carrier)                            =  // claimable
+Protoss Reaver                                  =  // personally claimable (Switches+Locations 222-227)
+Protoss Observer                                =  // Restricted
+Danimoth (Arbiter)                              =  // Restricted
+Aldaris (Templar)                               = "Heinermann" (Switches+Locations 228-233)
+Artanis (Scout)                                 =  // claimable
+Rhynadon (Badlands Critter)                     =  // reserved by [Pigy_G]:]  
+Bengalaas (Jungle Critter)                      =  // reserved by [Dark_Marine]:]
+Cargo Ship (Unused)                             =  // claimable
+Mercenary Gunship (Unused)                      =  // claimable
+Scantid (Desert Critter)                        =  // claimable
+Kakaru (Twilight Critter)                       =  // claimable
+Ragnasaur (Ashworld Critter)                    =  // claimable
+Ursadon (Ice World Critter)                     =  // claimable
+Lurker Egg                                      =  // claimable
+Raszagal (Corsair)                              =  // claimable
+Samir Duran (Ghost)                             =  // personally claimable (Switches+Locations 234-239)
+Alexei Stukov (Ghost)                           = "[Vi3t-X]:]" (Switches+Locations 240-245)
+Gerard DuGalle (BattleCruiser)                  =  // claimable
+Zerg Lurker                                     =  // claimable
+Infested Duran (Infested Terran)                = "Excalibur[MM]" (Switches+Locations 246-251)
+
+Terran Command Center                           =  // claimable
+Terran Comsat Station                           =  // claimable
+Terran Nuclear Silo                             =  // claimable
+Terran Supply Depot                             =  // claimable
+Terran Refinery                                 =  // claimable
+Terran Barracks                                 =  // claimable
+Terran Academy                                  =  // claimable
+Terran Factory                                  =  // claimable
+Terran Starport                                 =  // claimable
+Terran Control Tower                            =  // claimable
+Terran Science Facility                         =  // claimable
+Terran Covert Ops                               =  // claimable
+Terran Physics Lab                              =  // claimable
+Terran Machine Shop                             =  // claimable
+Terran Engineering Bay                          =  // claimable
+Terran Armory                                   =  // claimable
+Terran Missile Turret                           =  // claimable
+Terran Bunker                                   =  // claimable
+Norad II (Crashed)                              =  // claimable
+Ion Cannon                                      =  // claimable
+Uraj Crystal                                    =  // claimable
+Khalis Crystal                                  =  // claimable
+Infested Command Center                         =  // claimable
+Zerg Hatchery                                   =  // claimable
+Zerg Lair                                       =  // claimable
+Zerg Hive                                       =  // claimable
+Zerg Nydus Canal                                =  // claimable
+Zerg Hydralisk Den                              =  // claimable
+Zerg Defiler Mound                              =  // claimable
+Zerg Greater Spire                              =  // claimable
+Zerg Queens Nest                                =  // claimable
+Zerg Evolution Chamber                          =  // claimable
+Zerg Ultralisk Cavern                           =  // claimable
+Zerg Spire                                      =  // claimable
+Zerg Spawning Pool                              =  // claimable
+Zerg Creep Colony                               =  // claimable
+Zerg Spore Colony                               =  // claimable
+Zerg Sunken Colony                              =  // claimable
+Zerg Overmind (With Shell)                      =  // claimable
+Zerg Overmind                                   =  // claimable
+Zerg Extractor                                  =  // claimable
+Mature Chrysalis                                =  // claimable
+Zerg Cerebrate                                  =  // claimable
+Zerg Cerebrate Daggoth                          =  // claimable
+Protoss Nexus                                   =  // claimable
+Protoss Robotics Facility                       =  // claimable
+Protoss Pylon                                   =  // claimable
+Protoss Assimilator                             =  // claimable
+Protoss Observatory                             =  // claimable
+Protoss Gateway                                 =  // claimable
+Protoss Photon Cannon                           =  // claimable
+Protoss Citadel of Adun                         =  // claimable
+Protoss Cybernetics Core                        =  // claimable
+Protoss Templar Archives                        =  // claimable
+Protoss Forge                                   =  // claimable
+Protoss Stargate                                =  // claimable
+Stasis Cell/Prison                              =  // claimable
+Protoss Fleet Beacon                            =  // claimable
+Protoss Arbiter Tribunal                        =  // claimable
+Protoss Robotics Support Bay                    =  // claimable
+Protoss Shield Battery                          =  // claimable
+Khaydarin Crystal Formation                     =  // claimable
+Protoss Temple                                  =  // claimable
+XelNaga Temple                                  =  // claimable
+Mineral Field (Type 1)                          =  // needs name
+Mineral Field (Type 2)                          =  // claimable
+Mineral Field (Type 3)                          =  // claimable
+Independent Starport (Unused)                   =  // claimable
+Vespene Geyser                                  =  // needs name
+Warp Gate                                       =  // claimable
+Psi Disrupter                                   =  // claimable
+Zerg Beacon                                     =  // needs name
+Terran Beacon                                   =  // needs name
+Protoss Beacon                                  =  // needs name
+Zerg Flag Beacon                                =  // needs name
+Terran Flag Beacon                              =  // needs name
+Protoss Flag Beacon                             =  // needs name
+Power Generator                                 =  // needs name
+Overmind Cocoon                                 =  // needs name
+Floor Missile Trap                              =  // needs name
+Floor Hatch (Unused)                            =  // needs name
+Floor Gun Trap                                  =  // needs name
+Left Wall Missile Trap                          =  // needs name
+Left Wall Flame Trap                            =  // needs name
+Right Wall Missile Trap                         =  // needs name
+Right Wall Flame Trap                           =  // needs name
+Start Location                                  =  // needs name
+Flag                                            =  // needs name
+Young Chrysalis                                 =  // needs name
+Psi Emitter                                     =  // needs name
+Data Disc                                       =  // needs name
+Khaydarin Crystal                               =  // needs name
+Mineral Cluster Type 1                          =  // needs name
+Mineral Cluster Type 2                          =  // needs name
+Protoss Vespene Gas Orb Type 1                  =  // needs name
+Protoss Vespene Gas Orb Type 2                  =  // needs name
+Zerg Vespene Gas Sac Type 1                     =  // needs name
+Zerg Vespene Gas Sac Type 2                     =  // needs name
+Terran Vespene Gas Tank Type 1                  =  // needs name
+Terran Vespene Gas Tank Type 2                  =  // needs name
+}}}
+
+  * Those with "needs name" are units that can be used by any member.
+
+  * If you are participating, you MUST claim a personally claimable slot. You can claim an additional 2 claimable slots.
+
+  * Please suggest names for the "needs name" entries.
+
+  * Please suggest/confirm the player slots(owner, race, colour)
+
+  * Suggest force name and map name.
+
+
+  * Additional rules: You may give/share your resources(Deaths, Switches, Locations, Tiles, String Space, Units, Sprites) to/with other members, on both members' consent.
+
+
+If you have any problems with the rules I've laid out, please post with details.

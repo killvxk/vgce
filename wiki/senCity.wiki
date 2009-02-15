@@ -1,33 +1,25 @@
 {{{
 Map Size:   256x256
 Tileset:    Badlands
-Player 1:   Race(Forced Random), colour(Red),    Owner(Human)
-Player 2:   Race(Forced Random), colour(Blue),   Owner(Human)
-Player 3:   Race(Forced Random), colour(Teal),   Owner(Human)
+Player 1:   Race(Forced Random), colour(Red), Owner(Human)
+Player 2:   Race(Forced Random), colour(Blue), Owner(Human)
+Player 3:   Race(Forced Random), colour(Teal), Owner(Human)
 Player 4:   Race(Forced Random), colour(Purple), Owner(Human)
 Player 5:   Race(Forced Random), colour(Orange), Owner(Human)
-Player 6:   Race(Forced Random), colour(Brown),  Owner(Human)
-Player 7:   Race(Forced Random), colour(White),  Owner(Human)
+Player 6:   Race(Forced Random), colour(Brown), Owner(Human)
+Player 7:   Race(Forced Random), colour(White), Owner(Human)
 Player 8:   Race(Forced Random), colour(Yellow), Owner(Human)
 }}}
 
   * Sq. Tiles allocated per member: 1591 (example: 37x43 region) [the tile police will arrest you if you go overboard!]
-
   * Locations/Switches allocated per member: 6
-
   * Deaths allocated per member: 5
-
   * Sprites(placed) allocated per member: 12
-
   * Units(placed) allocated per member: 40
-
   * String space per member: 1400 characters
 
-
   * Triggers: Hyper triggers will apply to all players. Alliance and vision triggers will be pre-defined. 
-
   * Restricted Triggers: Any form of extended condition/action. Leaderboard. End game. Wait. Countdown timer. AI Scripts. Single Player. Killing the player or any personally claimed unit. General Kill/Remove(you must use "at location".) Setting score or resources(adding and subtracting only). Mute unit speech. Moving other members' locations/units. Directly impacting the players when they are not in your allocated region. Unstable doodad state triggers. 
-
 
 Valid Actions:
 {{{
@@ -60,7 +52,6 @@ Modify Unit Shield Points(Player, TUnit, Number, ModAmount, Loc)   [Must execute
 Modify Unit Resource Amount(Player, Number, ModAmount, Loc)        [Must execute only in your own space.]
 Modify Unit Hanger Count(Player, TUnit, Number, ModAmount, Loc)    [Must execute only in your own space.]
 }}}
-
 
 Unit Names:
 {{{
@@ -119,7 +110,7 @@ Mutalisk Cocoon                                 =  // claimable
 Protoss Corsair                                 =  // claimable
 Protoss Dark Templar (Unit)                     =   // Restricted
 Zerg Devourer                                   =  // claimable
-Protoss Dark Archon                             =  // personally claimable (Switches+Locations 156-161)
+Protoss Dark Archon                             =  "EzDay281[MM]" (Switches+Locations 156-161)
 Protoss Probe                                   =  // personally claimable (Switches+Locations 162-167)
 Protoss Zealot                                  =  "Mp)BluEditor" (Switches+Locations 168-173)
 Protoss Dragoon                                 =  // personally claimable (Switches+Locations 174-179)
@@ -263,17 +254,11 @@ Terran Vespene Gas Tank Type 2                  =  // needs name
 }}}
 
   * Those with "needs name" are units that can be used by any member.
-
   * If you are participating, you MUST claim a personally claimable slot. You can claim an additional 2 claimable slots.
-
   * Please suggest names for the "needs name" entries.
-
   * Please suggest/confirm the player slots(owner, race, colour)
-
   * Suggest force name and map name.
 
-
-  * Additional rules: You may give/share your resources(Deaths, Switches, Locations, Tiles, String Space, Units, Sprites) to/with other members, on both members' consent.
-
+Additional rules: You may give/share your resources(Deaths, Switches, Locations, Tiles, String Space, Units, Sprites) to/with other members, on both members' consent.
 
 If you have any problems with the rules I've laid out, please post with details.

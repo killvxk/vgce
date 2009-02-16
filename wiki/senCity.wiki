@@ -55,9 +55,9 @@ Modify Unit Hanger Count(Player, TUnit, Number, ModAmount, Loc)    [Must execute
 
 Unit Names:
 {{{
-Terran Marine                                   = // personally claimable (Switches+Locations 1-6)
+Terran Marine                                   = "Hug A Zergling" (Switches+Locations 1-6)
 Terran Ghost                                    = "[Echo]:]" (Switches+Locations 7-12)
-Terran Vulture                                  = // personally claimable (Switches+Locations 13-18)
+Terran Vulture                                  = "NerdyTerdy" (Switches+Locations 13-18)
 Terran Goliath                                  = // personally claimable (Switches+Locations 19-24)
 Terran Siege Tank (Tank Mode)                   = // personally claimable (Switches+Locations 25-30)
 Terran SCV                                      = // personally claimable (Switches+Locations 31-36)

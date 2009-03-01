@@ -71,7 +71,7 @@ CLASS 2 ONLY
         {
             0x00 = "Slowest",
             0x01 = "Slower",
-            0x02 = "Slow,
+            0x02 = "Slow",
             0x03 = "Normal",
             0x04 = "Fast",
             0x05 = "Faster",
@@ -675,7 +675,7 @@ CLASS 2 ONLY AND REPLAY
         {
             0x00 = "Slowest",
             0x01 = "Slower",
-            0x02 = "Slow,
+            0x02 = "Slow",
             0x03 = "Normal",
             0x04 = "Fast",
             0x05 = "Faster",

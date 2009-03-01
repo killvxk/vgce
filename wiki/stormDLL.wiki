@@ -1,5 +1,5 @@
 #summary Storm.dll Functions and their Ordinals
-#labels Type-List,Game-Starcraft,Game-Warcraft2,Game-Diablo,Game-Diablo2,Game-Warcraft3,Game-WoW,Platform-PC
+#labels Type-List,Game-Starcraft,Game-Warcraft2,Game-Diablo,Game-Diablo2,Game-Warcraft3,Platform-PC
 Note: Some name assignments may not be accurate, or may be out-dated. This is for the Starcraft: Broodwar version of storm.dll. If there are any corrections to be made, please post a comment.
 
 {{{
@@ -88,7 +88,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 258    BOOL     __stdcall SFileDdaGetPos(int a1, int a2, int a3)
 259    BOOL     __stdcall SFileDdaGetVolume(int a1, int a2, int a3)
 260    BOOL     __stdcall SFileDdaInitialize(HANDLE directsound)
-261    BOOL     __stdcall SFileDdaSetVolume(int a1, signed int a2, signed int a3)
+261    BOOL     __stdcall SFileDdaSetVolume(HANDLE directsound, signed int bigvolume, signed int volume)
 262    BOOL     __cdecl   SFileDestroy()
 263    BOOL     __stdcall SFileEnableDirectAccess(HANDLE hFile)
 264    BOOL     __stdcall SFileGetFileArchive(HANDLE hFile, HANDLE archive)
@@ -283,10 +283,10 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 489    int     __stdcall SMemHeapRealloc(int a1, int a2, void *a3, int a4)
 490    int     __stdcall SMemHeapSize(int a1, int a2, void *a3)
 491    int     __stdcall SMemCopy(void *dest, const void *source, size_t size)
-492    int     __stdcall SMemFill(int, int, char)
+492    int     __stdcall SMemFill(void *location, size_t length, char fillWith)
 493    int     __stdcall SMemMove(void *dest, void *source, size_t size)
 494    int     __stdcall SMemZero(void *location, size_t length)
-495    int     __stdcall SMemCmp(int, int, int)
+495    int     __stdcall SMemCmp(void *location1, void *location2, size_t size)
 496    int     __stdcall SMem496(int, char)             // either SMemGetAllocated or SMemSetDebugFlags
 497    BOOL    __stdcall SMemDumpState(int, int)
 
@@ -384,7 +384,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 606    int      __stdcall SBigDel(void *buffer)
 607    int      __stdcall SBigDiv(int a1, const void *buffer1, const void *buffer2)
 608    int      __stdcall SBigFindPrime(int a1, void *a2, unsigned int a3, const void *a4)
-609    int      __stdcall SBigFromBinary(void *buffer, const void *str, unsigned int num)
+609    int      __stdcall SBigFromBinary(void *buffer, const void *str, size_t size)
 610    int      __stdcall SBigFromStr(void *buffer, int a2)
 611    int      __stdcall SBigFromStream(void *buffer, int a2, int a3, int a4)
 612    int      __stdcall SBigFromUnsigned(void *buffer, unsigned int value)

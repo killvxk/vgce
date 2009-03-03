@@ -1,6 +1,8 @@
 #summary Starcraft Save Game(*.SNX, *.MLX) file.
 #labels Type-FileFormat,Game-Starcraft,Platform-PC
 
+Incomplete. Work in progress.
+
 {{{
 Compressed block format:
 {

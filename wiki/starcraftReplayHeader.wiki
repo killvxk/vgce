@@ -3,89 +3,83 @@
 
 =Format=
 {{{
-u8		// Is Broodwar flag
-u32		// Number of Frames
-u8		// 	Unknown
-u8		// 	Unknown
-u8		// 	Unknown
-u32		"Creation Date"
-u8[12]		// Available Slots
-char[28]	"Game Name"
-u16		"Map Width"
-u16		"Map Height"
-u8		// 	Unknown (0x01)
-u8		// Slots Available
-u16		"Game Speed"
-u16		"Game Type"
-u16		"Game Subtype"
-u32		// 	Unknown (Random Seed?)
-u16		"Tileset"
-u16		// 	Unknown ( x > 0 ) (0x01)
-char[25]	// Creator Name
-char[32]	// Map Name
-u16		<GameTemplate>	    // Game Type ID
-u16		<GameTemplate>	    // Subtype ID
-u16		<GameTemplate>	    // Subtype Display Value
-u16		<GameTemplate>	    // Subtype Label
-u8		<GameTemplate>	    // Victory Conditions
-                         0x00 = "Map Default";
-                         0x01 = "Melee";
-                         0x02 = "Highest Score";
-                         0x03 = "Resources";
-                         0x04 = "CTF";
-                         0x05 = "Sudden Death";
-                         0x06 = "Slaughter";
-                         0x07 = "One on One";
+u8		    isBroodwar;
+u32		    frameCount;
+u8			unk1;
+u8			unk2;
+u8			unk3;
+u32		    dateCreated;
+u8[12]		slotsAvailable;
+char[28]	gameName;
+u16		    mapWidth;
+u16		    mapHeight;
+u8			isBroodwar2;
+u8		    availableSlots;
+u16		    gameSpeed;
+u16		    gameType;
+u16		    gameSubtype;
+u32			randSeed;
+u16		    tileset;
+u16			unk4;
+char[25]	creatorName;
+char[32]	mapName;
+u16	    	GameTemplate_gameType;
+u16		    GameTemplate_subType;
+u16		    GameTemplate_subTypeDisplay;
+u16		    GameTemplate_subTypeLabel;
+u8		    GameTemplate_victoryConditions
+                {
+                    0x00 = "Map Default",
+                    0x01 = "Melee",
+                    0x02 = "Highest Score",
+                    0x03 = "Resources",
+                    0x04 = "CTF",
+                    0x05 = "Sudden Death",
+                    0x06 = "Slaughter",
+                    0x07 = "One on One"
+                };
+u8	    	GameTemplate_resourceType
+                {
+                    0x00 = "Map Default",
+                    0x01 = "Fixed Value",
+                    0x02 = "Low",
+                    0x03 = "Medium",
+                    0x04 = "High",
+                    0x05 = "Income"
+                };
+u8	    	GameTemplate_useStandardUnitStats;
+u8	    	GameTemplate_fogOfWarUnused;
+u8	    	GameTemplate_startingUnits
+                {
+                    0x00 = "Map Default",
+                    0x01 = "Workers Only",
+                    0x02 = "Workers and Center"
+                };
+u8		    GameTemplate_useFixedPositions;
+u8		    GameTemplate_restrictionFlags
+                {
+                    0x01 = "Allow Computer Players",
+                    0x02 = "Allow Single Player"
+                };
+u8	    	GameTemplate_alliesAllowed;
+u8	    	GameTemplate_teams;
+u8	    	GameTemplate_cheats;
+u8	    	GameTemplate_tournamentMode;
+u32	    	GameTemplate_victoryConditionValue;
+u32	    	GameTemplate_resourcesValue;
+u32	    	GameTemplate_unused;
+u8	    	extraUnused;
 
-u8		<GameTemplate>	    // Resources (type)
-                         0x00 = "Map Default";
-                         0x01 = "Fixed Value";
-                         0x02 = "Low";
-                         0x03 = "Medium";
-                         0x04 = "High";
-                         0x05 = "Income";
-
-u8		<GameTemplate>	    // Unit Stats
-                         0x00 = "Map Default";
-                         0x01 = "Standard";
-
-u8		<GameTemplate>	    // Fog of War
-                         0x00 = "Off";
-                         0x01 = "Warcraft1";
-                         0x02 = "On";
-
-u8		<GameTemplate>	    // Starting Units
-                         0x00 = "Map Default";
-                         0x01 = "Workers Only";
-                         0x02 = "Workers and Center";
-
-u8		<GameTemplate>	    // Starting Positions
-                         0x00 = "Random";
-                         0x01 = "Fixed";
-
-u8		<GameTemplate>	    // Player Types (Flags)
-                         0x01 = "Computer Players";
-                         0x02 = "Single Player";
-
-u8		<GameTemplate>	    // Allies allowed flag
-u8		<GameTemplate>	    // Number of Teams
-u8		<GameTemplate>	    // Cheat Codes allowed flag
-u8		<GameTemplate>	    // Tournament Mode enabled flag
-u32		<GameTemplate>	    // Victory Condition Value
-u32		<GameTemplate>	    // Resources Value
-u32		<GameTemplate>		// Unknown/unused
-u8		// 	Unknown/unused
-
-struct[12] //Player Structures (*12)
+pStruct
 {
-	u32		// Player ID
-	u32		// Number of Actions
-	u8		// Owner
-	u8		// Race
-	u8		// Force
-	Char[25]	// Player Name
-}
+	u32		    playerID;
+	u32		    playerFlags;
+	u8		    playerOwner;
+	u8		    playerRace;
+	u8		    playerForce;
+	char[25]    playerName;
+}[12];
 
-u32[8]		// Player Colour
-u8[8]		// 	Unknown (0x01 if custom colour is used)
+u32[8]		playerColour;
+u8[8]		useCustomColour;
 }}}

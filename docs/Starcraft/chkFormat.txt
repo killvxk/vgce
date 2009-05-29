@@ -1,0 +1,247 @@
+CHK File format specs
+
+"TYPE"
+	size: Constant 4 bytes
+	Validation: Unknown
+	notes: Only required for VER of 1.04 and above. All game types.
+	Fields:
+		DWORD	Type{	"SWAR",  // 1.04
+				"BWAR"}  // Broodwar
+
+"VER "
+	size: Constant 2 bytes.
+	Validation: Must be size of 2 bytes.
+	notes: Required in all versions, in all game types.
+	Fields:
+		u16	Version{	0x39, // Beta		// invalid
+					0x3B, // 1.00 Retail
+					0x3F, // 1.04 Hybrid/Extended
+					0xCD} // Broodwar
+
+"DIM "
+	size: Constant 4 bytes.
+	Validation: Must be size of 4 bytes.
+	notes:  Required in all versions, all game types.
+	Fields:
+		u16	mapWidth	// in tiles, can be any number
+		u16	mapHeight	// in tiles, can be any number
+
+
+"ERA "
+	size: Constant 2 bytes.
+	validation: Must be size of 2 bytes.
+	notes: Required in all versions, in all game types.
+	Fields:
+		u16 & 0x07	Tileset{	0x00,	// Badlands
+						0x01,	// Space Platform
+						0x02,	// Installation
+						0x03,	// Ashworld
+						0x04,	// Jungle
+						0x05,	// Desert
+						0x06,	// Arctic
+						0x07}	// Twilight
+
+"OWNR"
+	size: Constant 12 bytes.
+	validation: Must be size of 12 bytes.
+	notes: Required in all versions, in all game types. Buffer overflow available.
+	Fields:
+		u8[12]		Owner{	0x00,  // Inactive          // valid for CHK setting
+					0x01,  // Computer(game)
+					0x02,  // Human(Occupied)
+					0x03,  // Rescue Passive    // valid for CHK setting
+					0x04,  // Unused
+					0x05,  // Computer          // valid for CHK setting
+					0x06,  // Human(Open)       // valid for CHK setting
+					0x07,  // Neutral           // valid for CHK setting
+					0x08}  // Closed
+
+
+"SIDE"
+	size: Constant 12 bytes.
+	validation: Must be size of 12 bytes.
+	notes: Required in all versions, all game types. Buffer overflow available.
+	Fields:
+		u8[12]	race{	0x00,	// Zerg
+				0x01,	// Terran
+				0x02,	// Protoss
+				0x03,	// Invalid
+				0x04,	// Invalid
+				0x05,	// User Select
+				0x06,	// Random
+				0x07}	// Inactive[invalid]
+
+"STR "
+	size: Variable size.
+	validation: Must be a size of at least 1 byte.
+	notes: Required in all versions, all game types.
+	Fields:
+		u16			numberOfEntries
+		u16[numberOfEntries]	stringPointers 	// from section start
+		void *			stringData
+
+"SPRP"
+	size: Constant 4 bytes.
+	validation: Must be a size of 4 bytes.
+	notes: Required in all versions, all game types.
+	Fields:
+		u16	mapTitleIndex		// Defaults to the filename if this is 0.
+		u16	mapDescriptionIndex	// Defaults to no description if this is 0.
+
+"FORC"
+	size: Variable Size.
+	validation: Must be less than or equal to 20 bytes.
+	notes: Required in all versions, all game types.
+	Fields:
+		u8[8]	playerForce		// the force the player belongs to
+		u16[4]	forceStringIndex
+		u8[4]	forceFlags{	0x01,	// Random Start Location
+					0x02,	// Allies
+					0x04,	// Allied Victory
+					0x08}	// Shared Vision
+
+"VCOD"
+	size: Variable Size.
+	validation: Must be greater than or equal to 4 bytes. Must result in a valid checksum.
+	notes: Required in all versions, in all game types.
+	Fields:
+		char[1024]	Seed
+		u8[]		Opcode{		0x00,	// XOR's the current hash with the total values of OWNR, SIDE, FORC
+						0x01,	// Adds to the current hash with the total values of OWNR, SIDE, FORC
+						0x02,	// Subtracts from the current hash with the total values of OWNR, SIDE, FORC
+						0x03,
+						0x04,
+						0x05,  // same as 0x04
+						0x06,
+						0x07,
+						default} // do nothing
+
+"MTXM"
+	size: Variable
+	Validation: Must be less than or equal to 131072(0x20000) bytes(256 * 256 * 2).
+	Notes: Required in all versions, all game types. Buffer Overflow available.
+		This section can be "split", where the second tile array overrides the first only up to its specified size.
+		If the size of the MTXM does not cover the entire map, the following tiles will be NULL(0x00) tiles.
+	Fields:
+		u16[]	tileIndex
+
+"THG2"
+	size: Variable
+	Validation: Must be a multiple of 10.
+	Notes: Required in all versions, all game types. Buffer overflow available.
+		This section can be duplicated, where Starcraft will read all entries in both sections and append it to the previous.
+		If the sprite property is unchecked, the sprite will be placed as a unit.
+		Units will be placed only on UMS game type.
+		If it is not a UMS game type, the unit must be owned by Player 12, or must be a Door(Left/Right Upper, Left/Right Pit), otherwise the unit will not be placed.
+	Fields:
+		
+
+"PUNI"
+	Size: Constant 5700 bytes.
+	Validation: Must be 5700 bytes.
+	Notes: Required only in UMS game type for all versions.
+	Fields:
+
+"UPGR"
+	Size: Constant 1748 bytes.
+	Validation: Must be 1748 bytes.
+	Notes: Required only in UMS game type for retail and hybrid versions.
+	Fields:
+
+"PUPx"
+	Size: Constant 2318 bytes.
+	Validation: Must be 2318 bytes.
+	Notes: Required only in UMS game type for Broodwar. Optional for retail and hybrid.
+	Fields:
+
+"PTEC"
+	Size: Constant 912 bytes.
+	Validation: Must be 912 bytes.
+	Notes: Required only in UMS game type for retail and hybrid versions.
+	Fields:
+
+"PTEx"
+	Size: Constant 1672 bytes.
+	Validation: Must be 1672 bytes.
+	Notes: Required only in UMS game types for Broodwar. Optional for Retail and hybrid.
+	Fields:
+
+"UNIT"
+	Size: Variable
+	Validation: Must be a multiple of 36.
+	Note: Required in all versions, all game types. Buffer overflow available.
+		This section can be duplicated, where Starcraft will read all entries in both sections and append it to the previous.
+	Fields:
+
+"MASK"
+	Size: Variable
+	Validation: This section will always validate.
+	Note: Required only in UMS game types for all versions.
+	Fields:
+
+"UPRP"
+	Size: Constant 1280 bytes.
+	Validation: Must be 1280 bytes.
+	Note: Required only in UMS game types for all versions.
+	Fields:
+
+"MRGN"
+	Size: Constant 1280 bytes for retail. Constant 5100 bytes for Hybrid and Broodwar.
+	Validation: Must be one of those constant sizes.
+	Note: Required only in UMS game types for all versions.
+	Fields:
+
+"TRIG"
+	Size: Variable
+	Validation: Must be multiple of 2400.
+	Notes: Required only in UMS game types for all versions.
+	Fields:
+
+"MBRF"
+	Size: Variable
+	Validation: Must be multiple of 2400.
+	Notes: Required only in UMS game types for all versions.
+	Fields:
+
+"UNIS"
+	Size: Constant 4048 bytes.
+	Validation: Must be 4048 bytes.
+	Notes: Required only in UMS game types for retail and hybrid versions.
+	Fields:
+
+"UNIx"
+	Size: Constant 4168 bytes.
+	Validation: Must be 4168 bytes.
+	Notes: Required only in UMS game types for Broodwar. Optional for retail and hybrid.
+	Fields:
+
+"UPGS"
+	Size: Constant 598 bytes.
+	Validation: Must be 598 bytes.
+	Notes: Required in UMS game types for retail and hybrid versions.
+	Fields:
+
+"UPGx"
+	Size: Constant 794 bytes.
+	Validation: Must be 794 bytes.
+	Notes: Required in UMS game types for Broodwar. Optional for retail and hybrid.
+	Fields:
+
+"TECS"
+	Size: Constant 216 bytes.
+	Validation: Must be 216 bytes.
+	Notes: Required in UMS game types for retail and hybrid versions.
+	Fields:
+
+"TECx"
+	Size: Constant 396 bytes.
+	Validation: Must be 396 bytes.
+	Notes: Required in UMS game types for Broodwar. Optional for retail and hybrid.
+	Fields:
+
+"COLR"
+	Size: Cosntant 8 bytes.
+	Validation: Must be 8 bytes.
+	Notes: Required for all game types using Broodwar only.
+	Fields:
+		u8[8]	playerColourIndex

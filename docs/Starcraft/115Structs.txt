@@ -1,0 +1,353 @@
+CUNIT STRUCT
++0x0 - CUNIT* Previous
++0x4 - CUNIT* Next
++0x8 - DWORD dwHP
++0xC - CSPRITE* Sprite
++0x10 - WORD wMoveToXPos
++0x12 - WORD wMoveToYPos
++0x14 - CUNIT* Target_1
++0x18 - WORD wCurrentXPos_?
++0x1A - WORD wCurrentYPos_?
++0x1C - WORD wX_?
++0x1E - WORD wY_?
++0x20 - BYTE bMovementFlags_?
+	2 - Making Building?
+	4 - Moving?
+
++0x22 - BYTE bFlingyTurnRadius
++0x23 - BYTE bCurrentDirection_?
++0x24 - WORD wFlingyID
+
++0x27 - BYTE bFlingyMovementType
++0x28 - WORD wCurrentXPos
++0x2A - WORD wCurrentYPos
++0x2C - DWORD dwX_Halt
++0x30 - DWORD dwY_Halt
++0x34 - DWORD dwFlingySpeed
++0x38 - DWORD dwUnknown_38_Speed
++0x3C - DWORD dwUnknown_3C_Speed
+
++0x48 - WORD wFlingyAcceleration
+
++0x4C - BYTE bPlayerID
++0x4D - BYTE bMainOrderID
++0x4E - BYTE bMainOrderState
++0x4F - BYTE bOrderSignal
+
++0x54 - BYTE bMainOrderTimer
++0x55 - BYTE bGroundWeaponCooldown
++0x56 - BYTE bAirWeaponCooldown
++0x57 - BYTE bSpellCooldown
++0x58 - WORD wOrderTargetX
++0x5A - WORD wOrderTargetY
++0x5C - CUNIT* Target_Order
++0x60 - DWORD dwShield
++0x64 - WORD wUnitID
++0x68 - CUNIT* PlayerPrevious
++0x6C - CUNIT* PlayerNext
++0x70 - CUNIT* Subunit
++0x74 - CORDER* OrderQueueHead
++0x78 - CORDER* OrderQueueTail
+
++0x7C	- Unknown AI Cloak
+
++0x80 - CUNIT* ConnectedUnit
+
++0x84 - BYTE bNumOfQueuedOrders
++0x85 - BYTE bUnknown_85_Order_Timer_Seperate
+
++0x88 - WORD wDisplayedUnitID?
+
++0x8E - BYTE bRankIncrease
++0x8F - BYTE bKillCount
+
++0x93 - BYTE bUnknownState?
++0x94 - BYTE bCurrentButtonSet
++0x98 - WORD wQueue1
++0x9A - WORD wQueue2
++0x9C - WORD wQueue3
++0x9E - WORD wQueue4
++0xA0 - WORD wQueue5
++0xA2 - WORD wEnergy
++0xA4 - BYTE bQueueSlot
+
++0xA6 - BYTE bSecondaryOrderID
+	-Cloak, Build, expand creep
++0xA8 - WORD bHPGainDuringBuild/Repair?
+
++0xAC - WORD wRemainingBuildTime
+
+UNION
+WORD
+ +0xC0 - BYTE bSpidermineCount
+ +0xC1 - BYTE bUnusedC1
+ +0xC2 - BYTE bUnusedC2
+ +0xC3 - BYTE bUnusedC3
+CUNIT
+ +0xC0 - CUNIT* Unit_Unknown_1
+	IF Carrier/Reaver - First Hangar Unit
+	IF Scarab/Interceptor - Parent
+	IF Building - Addon
+	IF Worker - Powerup Carried
+UNION
+WORD
+ +0xC4 - WORD wAddonBuildID
+ +0xC6 - WORD wUpgradeResearchTime
+CUNIT*
+ +0xC4 - CUNIT* Unit_Unknown_2
+	IF Scarab/Interceptor - Next Unit in Parent Hangar
+UNION
+BYTE
+ +0xC8 - BYTE bScarabCount/bTechID
+ +0xC9 - BYTE bInterceptorCount/bUpgradeID
+ +0xCA - BYTE bLarvaSpawnTimer
+ +0xCB - BYTE bIsLanding
+CUNIT
+ +0xC8 - CUNIT* Unit_Unknown_2
+	IF Scarab/Interceptor - Previous in Parent's Hangar
++0xCC - BYTE b_Unknown
+	-IF Interceptor/Scarab - InHanger?
+	-IF CreepUnit - timer between creep expansions
+	-IF Repairing - decrease mineral timer
++0xCD - BYTE bUpgradeLevel
++0xCE - BYTE bIsCarryingSomething?/Going to carry something?/Targeting Resources?
++0xCF - BYTE bResourceAmount
+UNION
+WORD/BYTE
+ +0xD0 - WORD wResourceContained/wPowerupDropTargetX
+ +0xD2 - WORD wPowerupDropTargetY
+ +0xD2 - BYTE bResourceIscript
+ +0xD3 - BYTE bResourceCount?
+DWORD
+ +0xD0 - CUNIT ResourceTarget/NydusConnected
+ +0xD0 - CSPRITE NukeDot
+
+
++0xDC - DWORD dwStatus
+	00000001(0x1) - Is Completed
+	00000010(0x2) - Is on ground? or is it is unit...
+	00000100(0x4) - Is in air
+	00001000(0x8) - Checked for disabled, if it is 00001000, then the unit is disabled(/unpowered?)
+	00010000(0x10) - Checked for burrowing purposes, if it is 00010000, then the unit is burrowed
+	00100000(0x20) - Unit is entering a building
+	01000000(0x40) - unit is entering a transport
+	10000000(0x80) - 
+	
+	00000001(0x100) - Checked for invisible purposes, if it is 00000001, then the unit requires a detector?
+	00000010(0x200) - checked for cloak?
+	00000100(0x400) - deals with doodad states? if set, is disabled
+	00001000(0x800) - Unit cloaking doesn't need energy decrease
+	00010000(0x1000) - Unit is in unbreakable code section? Cannot receive orders
+	00100000(0x2000) - Set by nobrkcodestart
+	01000000(0x4000) - 
+	10000000(0x8000) - cannot attack if set
+	
+	00000001(0x10000)
+	00000010(0x20000) - Is a Building?
+	00000100(0x40000)
+	00001000(0x80000) - Unit is Unmovable
+
+	00000100(0x4000000) - Invincible
+
+	00010000(0x10000000) - Speed upgrade
+	00100000(0x20000000) - cooldown upgrade
+	01000000(0x40000000) - 
+
++0xE0 - BYTE bResouceType
++0xE1 - BYTE bWireframeRandomizer
++0xE2 - BYTE bSecondaryOrderState
++0xE3 - BYTE bUnknown_E3_Counter_Down
+
++0xEC - CUNIT* CurrentBuildUnit
+
+UNION
+WORD/CUNIT
+ +0xF8 - WORD wRallyX
+ +0xFA - WORD wRallyY
+ +0xFC - CUNIT* RallyUnit
+CUNIT
+ +0xF8 - CUNIT* PreviousPsiProvider
+ +0xFC - CUNIT* NextPsiProvider
++0x100 - DWORD dwPath_Unknown
+
++0x106 - BYTE bUnused_106
++0x107 - BYTE bIsBeingHealed
++0x108 - WORD wX_Contours_1_Unknown
++0x10A - WORD wY_Contours_1_Unknown
++0x10C - WORD wX_Contours_2_Unknown
++0x10E - WORD wY_Contours_2_Unknown
++0x110 - WORD wRemoveTimer
+	Hallucination, DSwarm, DWeb, Broodling
++0x112 - WORD wDMatrixDamage
++0x114 - BYTE bDMatrixTimer
++0x115 - BYTE bStimTimer
++0x116 - BYTE bEnsnareTimer
++0x117 - BTYE bLockdownTimer
++0x118 - BYTE bIrradiateTimer
++0x119 - BYTE bStatisTimer
++0x11A - BYTE bPlagueTimer
++0x11B - BYTE bIsUnderStorm
+	Used to tell if a unit is under psi storm
++0x11C - CUNIT* IrradiatedBy
++0x120 - BYTE bIrradiatePlayerID
++0x121 - BYTE bParasiteFlags
+	Each bit corrisponds to the player who has parasited this unit
++0x122 - BYTE bCycleCounter
+	Runs updates 2 times per sec(about)
++0x123 - BYTE bIsBlind
++0x124 - BYTE bMaelstromCounter
++0x125 - bUnknown_Unreferenced
++0x126 - BYTE bAcidSporeCount
++0x127 - BYTE bAcidSpore1Time
++0x128 - BYTE bAcidSpore2Time
++0x129 - BYTE bAcidSpore3Time
++0x12A - BYTE bAcidSpore4Time
++0x12B - BYTE bAcidSpore5Time
++0x12C - BYTE bAcidSpore6Time
++0x12D - BYTE bAcidSpore7Time
++0x12E - BYTE bAcidSpore8Time
++0x12F - BYTE bAcidSpore9Time
++0x130 - WORD w3by3OffsetIndex
++0x132 - WORD wUnused_1325a
++0x134 - DWORD dwUnknown_134_CUNIT_AI
++0x138 - WORD wAirStrength(see equation below, 1 if has no air weapon but has a ground)
++0x13A - WORD wGroundStrength(see equation below, 1 if has no ground weapon but has an air)
++0x13C - DWORD dwTableID_Unknown_1
++0x140 - DWORD dwTableID_Unknown_2
++0x144 - DWORD dwTableID_Unknown_3
++0x148 - DWORD dwTableID_Unknown_4
++0x14C - BYTE bRepulse_Unknown_1
++0x14D - BYTE bRepulse_Unknown_2
++0x14E - BYTE bDriftPosX(mapsizex/1.5 max)
++0x14F - BYTE bDriftPosY(mapsizey/1.5 max)
+
+
+
+
+
+
+CSPRITE STRUCT
++0x8 - WORD wSpriteID
++0xE - BYTE bFlags_E
+
++0x14 - Move X
++0x16 - Move Y
+
+
+CIMAGE
+
+CORDER
+
+CWEAPON
++0x0 - CWEAPON* Previous
++0x4 - CWEAPON* Next
++0x8 - DWORD dwUnknown
++0xC - CSPRITE* Sprite
++0x58 - WORD wTargetGroundX
++0x5A - WORD wTargetGroundY
++0x5C - CUNIT* TargetUnit
++0x60 - BYTE bWeaponID
+
++0x63 - BYTE bBounceCount
++0x64 - CUNIT* AttackingUnit
+
+CPLAYER
++0x0 - BYTE bPlayerType
+	1 - Computer
+	2 - Human
+	3 - Rescuable
+	7 - Neutral
+	10 - Human Defeated(Left)
+	11 - Computer Defeated(Left)
++0x1 - BYTE bPlayerRace
++0x2 - BYTE bPlayerForce
++0x3 - char[23] szName
++0x1C - dwPlayerNumber(+1)?
++0x20 - dwUnknown
+
+round(
+squareroot
+((integermath)
+	(range/cooldown)*factor*damage amount
+	+
+	(((factor*damage*2048)/coolodwn)*total_hpshield)/256
+}
+*
+7.58
+}
+
+
+ /range*factor*damage   8*factor*damage*hpshield\
+|------------------- + ------------------------  | ^ .5
+ \       cooldown             cooldown          / 
+
+
+factor*damage
+------------- * (range + 8*hpshield)    ^ .5   * 7.58 toINT
+   cooldown
+
+
+				ARMOR TABLE - 1.15		
+
+		Independant		Small			Medium			Large	
+Independant	0 - 515b90		0 - 515b94		0 - 515b98		0 - 515b9c
+Explosive	0 - 515ba4		50%(128) - 515ba8	75%(192) - 515bac	100%(256) - 515bb0
+Concussive	0 - 515bb8		100%(256) - 515bbc	50%(128) - 515bc0	25%(64) - 515bc4
+Normal		0 - 515bcc		100%(256) - 515bd0	100%(256) - 515bd4	100%(256) - 515bd8
+Ignore Armor	0 - 515be0		100%(256) - 515be4	100%(256) - 515be8	100%(256) - 515bec
+
+
+
+EMP = Inner Splash controls radius of effect
+
+Units.dat Advanced flags:
+
+ - 1 - Building 
+ - 2 - Addon
+ - 4 - Flyer
+ - 8 - Worker
+ - 10 - Subunit
+ - 20 - Flying Building
+ - 40 - Hero
+ - 80 - Regen HP
+
+ - 100 - Ani Idle?
+ - 200 - Cloak
+ - 400 - 2 in 1
+ - 800 - Neut Access?Neutral?Single Entity.
+ - 1000 - Resource Depot
+ - 2000 - Contain Gas/Resource Container
+ - 4000 - Robotic
+ - 8000 - Detector
+
+ - 10000 - Organic
+ - 20000 - Creep
+ - 40000 - Unused
+ - 80000 - Req Psi
+ - 100000 - Burrowable
+ - 200000 - Spell/Mana
+ - 400000 - Perm Cloak
+ - 800000 - NPC/Access?Pickup Item?
+
+ - 1000000 - Morph from Unit?/Check SUPPLY CouNT
+ - 2000000 - Med overlay
+ - 4000000 - Large overlay
+ - 8000000 - Auto attk/Battle React
+ - 10000000 - Attack/Direct attk
+ - 20000000 - Invincible
+ - 40000000 - Mech
+ - 80000000 - Produce units? - Wide radius creep
+
+Rally Point Unit ID's
+
+106 - Command Center
+111 - Barracks
+113 - Factory
+114 - Starport
+131 - Hatchery
+132 - Lair
+133 - Hive
+154 - Nexus
+155 - Robotics Facility
+160 - Gateway
+167 - Stargate

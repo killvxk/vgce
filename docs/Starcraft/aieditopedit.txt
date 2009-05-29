@@ -1,0 +1,589 @@
+0x00 - goto
+Description: Jump to %1(block).
+
+
+
+0x01 - notowns_jump
+Description: If computer doesn't have a %1(unit), jump to %2(block).
+Notes: Can be any unit. All units must be 0.
+
+
+0x02 - wait
+Description:
+Wait for %1(word) tenths of second in normal game speed.
+ 
+
+
+0x03 - start_town
+Description: Starts the AI Script for town management.
+  
+
+
+0x04 - start_areatown
+Description: Starts the AI Script for area town management.
+ 
+
+
+0x05 - expand
+Description: Run code at %2(block) for expansion number %1(byte).
+Notes: Different behaviour at 5000 ore and 3000 gas.
+
+
+0x06 - build
+Description: Build %2(building) until it commands %1(byte) of them, at priority %3(byte).
+Default priority: 30
+
+
+0x07 - upgrade
+Description: Research upgrade %2(upgrade) up to level %1(byte), at priority %3(byte).
+ 
+
+
+0x08 - tech
+Description: Research technology %1(technology), at priority %2(byte).
+ 
+
+
+0x09 - wait_build
+Description: Wait until computer commands %1(byte) %2(building).
+Default Priority: 30
+
+
+0x0A - wait_buildstart
+Description: Wait until construction of %1(byte) %2(unit) has started.
+Default Priority: 30 
+
+
+0x0B - attack_clear
+Description: Clear the attack data.
+ 
+
+
+0x0C - attack_add
+Description: Add %1(byte) %2(military) to the current attacking party.
+ 
+
+
+0x0D - attack_prepare
+Description: Prepare the attack.
+ 
+
+
+0x0E - attack_do
+Description: Attack the enemy with the current attacking party.
+Default Priority: 30
+
+
+0x0F - wait_secure
+Description: The use of this command is unknown. Takes no parameters.
+ 
+
+
+0x10 - capt_expand
+Description: The use of this command is unknown. Takes no parameter.
+ 
+
+
+0x11 - build_bunkers
+Description: The use of this command is unknown. Takes no parameters.
+Default Priority: 30 
+
+
+0x12 - wait_bunkers
+Description: The use of this command is unknown. Takes no parameters.
+Default Priority: 60
+
+
+0x13 - defensebuild_gg
+Description: Build %1(byte) %2(military) to defend against enemy attacking ground units, when ground units are attacked
+ 
+
+
+0x14 - defensebuild_ag
+Description: Build %1(byte) %2(military) to defend against enemy attacking air units, when ground units are attacked
+ 
+
+
+0x15 - defensebuild_ga
+Description: Build %1(byte) %2(military) to defend against enemy attacking ground units, when air units are attacked
+ 
+
+
+0x16 - defensebuild_aa
+Description: Build %1(byte) %2(military) to defend against enemy attacking air units, when air units are attacked
+ 
+
+
+0x17 - defenseuse_gg
+Description: Use %1(byte) %2(military) to defend against enemy attacking ground units, when ground units are attacked
+ 
+
+
+0x18 - defenseuse_ag
+Description: Use %1(byte) %2(military) to defend against enemy attacking air units, when ground units are attacked
+ 
+
+
+0x19 - defenseuse_ga
+Description: Use %1(byte) %2(military) to defend against enemy attacking ground units, when air units are attacked
+ 
+
+
+0x1A - defenseuse_aa
+Description: Use %1(byte) %2(military) to defend against enemy attacking air units, when air units are attacked
+ 
+
+
+0x1B - defenseclear_gg
+Description: Clear defense against enemy attacking ground units, when ground units are attacked
+ 
+
+
+0x1C - defenseclear_ag
+Description: Clear defense against enemy attacking air units, when ground units are attacked
+ 
+
+
+0x1D - defenseclear_ga
+Description: Clear defense against enemy attacking ground units, when air units are attacked
+ 
+
+
+0x1E - defenseclear_aa
+Description: Clear defense against enemy attacking air units, when air units are attacked
+ 
+
+
+0x1F - send_suicide
+Description: Send all units on %1(type) suicide mission.
+	0x00 = Strategic;
+	0x01 = Random;
+ 
+
+
+0x20 - player_enemy
+Description: Make selected player enemy.
+ 
+
+
+0x21 - player_ally
+Description: Make selected player ally
+ 
+
+
+0x22 - default_min
+Description: The use of this command is unknown. Specify Default Minimum. Takes %1(byte) as parameter.
+ 
+
+
+0x23 - defaultbuild_off
+Description: Turns off default build.
+
+
+
+0x24 - stop
+Description: Stop script code execution.
+Notes: Often used to close script blocks called simultaneously.
+
+
+
+0x25 - switch_rescue
+Description: Switch computer to rescuable passive mode.
+
+
+
+0x26 - move_dt
+Description: Move Dark Templars to selected location.
+
+
+
+0x27 - debug
+Description: Show debug string %2(cstring) and continue in %1(block).
+
+
+
+0x28 - fatal_error
+Description: Causes a fatal AI script error "Illegal AI script executed."
+
+
+
+0x29 - enter_bunker
+Description: Enter Bunker in selected location.
+
+
+
+0x2A - value_area
+Description: Value this area higher.
+
+
+
+0x2B - transports_off
+Description: Computer will not manage/build transports on its own.
+
+
+
+0x2C - check_transports
+Description: Informs computer to use transports up to the defined Max.
+
+
+
+0x2D - nuke_rate
+Description: Builds nukes every %1(byte) minutes.
+
+
+
+0x2E - max_force
+Description: Set the maximum force value to %1(score).
+
+
+
+0x2F - clear_combatdata
+Description: Clear previous combat data.
+ 
+
+
+0x30 - random_jump
+Description: There is %1(byte) chances out of 256 to jump to %2(block).
+ 
+
+
+0x31 - time_jump
+Description: Jumps to %2(block) if %1(byte) normal game minutes have passed in the game.
+ 
+
+
+0x32 - farms_notiming
+Description: Build necessary farms only when it hits the maximum supply available.
+ 
+
+
+0x33 - farms_timing
+Description: Build necessary farms with a correct timing, so nothing is paused by a maximum supply limit hit.
+ 
+
+
+0x34 - build_turrets
+Description: The use of this command is unknown. Takes no parameters.
+ 
+
+
+0x35 - wait_turrets
+Description: The use of this command is unknown. Takes no parameters.
+ 
+
+
+0x36 - default_build
+Description: The use of this command is unknown. Takes no parameters. Specifies default build on.
+ 
+
+
+0x37 - harass_factor
+Description: The use of this command is unknown. Takes %1(short).
+ 
+
+
+0x38 - start_campaign
+Description: Starts the AI Script for Campaign.
+ 
+
+
+0x39 - race_jump
+Description: According to the nearest enemy race, jump in %1(block) if it is Terran, %2(block) if Zerg or %3(block) if Protoss.
+ 
+
+
+0x3A - region_size
+Description: If enemy unit is within %1 (byte) (unknown measure), jump to %2 (block).
+ 
+
+
+0x3B - get_oldpeons
+Description: This command takes %1(byte) number of workers from the main to move to the expansion. Should be used only after the expansion is completed.
+ 
+
+
+0x3C - groundmap_jump
+Description: If it is a ground map(in other words, if the enemy is reachable), jump to %1(block).
+ 
+
+
+0x3D - place_guard
+Description: Place %2(byte) guards(guardindex, 0+) using %1(unit) to guard town.
+  
+
+
+0x3E - wait_force
+Description: Wait until computer commands %1(byte) %2(military).
+ 
+
+
+0x3F - guard_resources
+Description: Send units of type %1(military) to guard as many resources spots as possible(1 per spot).
+ 
+
+
+0x40 - call
+Description: Call %1(block) as a sub-routine.
+ 
+
+
+0x41 - return
+Description: Return to the flow point of the call command.
+ 
+
+
+0x42 - eval_harass
+Description: The use of this command is unknown. Takes %1(military).
+ 
+
+
+0x43 - creep
+Description: Place towers using %1(byte) placement scheme (undefined).
+ 
+
+
+0x44 - panic
+Description: Go to %1(block) when attacked.
+ 
+
+
+0x45 - player_need
+Description: If player does not have %1(byte) %2(building[s]), build it, otherwise ignore this op. Priority 80?
+ 
+
+
+0x46 - do_morph
+Description: Morph %2(military) until it commands %1(byte) of them.
+ 
+
+
+0x47 - wait_upgrades
+Description: The use of this command is unknown. Takes no parameters.
+ 
+
+
+0x48 - multirun
+Description: Run simultaneously code at %1(block).
+ 
+
+
+0x49 - rush
+Description: Jump to %2(block) if predifined condition scheme %1(byte) is met.
+
+00 = Barracks OR Spawning Pool OR Gateway (includes incomplete)
+01 = At Least 17 Marines + Bunkers, OR at least 16 Sunken Colonies + Hydralisks, OR at least 7 Zealots
+02 = At least 25 Marines + Bunkers, OR At least 11 Mutalisks + Spore Colonies + Hydralisks
+03 = At least 6 Marines + Bunkers, OR At least 3 Sunken Colonies + Hydralisks, OR Hydralisk Den?, OR at least 2 Zealots
+04 = At least 17 Marines + Bunkers, OR At least 16 Sunken Colonies + Hydralisks, OR at least 9 Zealots
+05 = At least 7 Marines + Bunkers, OR at least 7 Sunken Colonies + Hydralisks, OR at least 4 Zealots
+06 = At least 13 Marines + Bunkers, OR at least 2 Sunken Colonies, OR at least 2 Dragoons
+07 = ?? Siege Tank, OR ?? Queen, OR at most 5 Zealots.
+08 = At least 6 Marines + Bunkers, OR at least 3 Sunken Colonies + Hydralisks, OR at least 2 Zealots
+09 = At least 10 Marines + Bunkers, OR at least 5 sunken colonies + Hydralisks, OR at least 6 Zealots
+10= At least 5 Marines + Bunkers, OR at least 5 Sunken Colonies + Hydralisks, OR at least 3 Zealots
+11= At least 10 Marines + Bunkers, OR at least 10 Sunken Colonies + Hydralisks, OR at least 6 Zealots
+12= At Least 17 Marines + Bunkers, OR at least 6 Mutalisks + Spore Colonies + Hydralisks, OR at least 3 Dragoons + Scouts
+13= At least 25 Marines + Bunkers, OR at least 11 Mutalisks + Spore Colonies + Hydralisks, OR at least 8 Dragoons + Scouts
+
+
+
+0x4A - scout_with
+Description: Takes %1(military) as parameter, but is unused(no code executed).
+ 
+
+
+0x4B - define_max
+Description: Define maximum number of %2(unit) to %1(byte).
+ 
+
+
+0x4C - train
+Description: Train %2(military) until it commands %1(byte) of them.
+ 
+
+
+0x4D - target_expansion
+Description: Attack an enemy expansion.
+ 
+
+
+0x4E - wait_train
+Description: Wait until computer commands %1(byte) %2(military).
+ 
+
+
+0x4F - set_attacks
+Description: The use of this command is unknown. Takes %1(byte) as parameter.
+ 
+
+
+0x50 - set_gencmd
+Description: Set generic command target.
+ 
+
+
+0x51 - make_patrol
+Description: Make these units patrol in selected location.
+ 
+
+
+0x52 - give_money
+Description: Give 2000 ore and gas if owned resources are low.
+ Should only be used in campaign scripts
+ 
+
+
+0x53 - prep_down
+Description: The use of this command is unknown. Takes %1(byte), %2(byte), and %3(military).
+ 
+
+
+0x54 - resources_jump
+Description: If computer has at least %1(word) minerals and %2(word) gas then jump in %3(block).
+ 
+
+
+0x55 - enter_transport
+Description: Enter in nearest Transport in selected location.
+ 
+
+
+0x56 - exit_transport
+Description: Exit Transport in selected location.
+ 
+
+
+0x57 - sharedvision_on
+Description: Enable Shared vision for player %1(byte).
+ 
+
+
+0x58 - sharedvision_off
+Description: Disable Shared Vision for player %1(byte).
+ 
+
+
+0x59 - nuke_location
+Description: Nuke at selected location.
+ 
+
+
+0x5A - harass_location
+Description: AI Harass at selected location.
+ 
+
+
+0x5B - implode
+Description: The use of this command is unknown. Takes no parameters.
+ 
+
+
+0x5C - guard_all
+Description: The use of this command is unknown. Takes no parameters.
+ 
+
+
+0x5D - enemyowns_jump
+Description: If enemy has a %1(unit), jump to %2(block).
+ 
+
+
+0x5E - enemyresources_jump
+Description: If enemy has at least %1(word) minerals and %2(word) gas then jump in %3(block).
+ 
+
+
+0x5F - if_dif
+Description: The use of this command is unknown. Takes %1(byte), %2(byte), and %3(short).
+ 
+
+
+0x60 - easy_attack
+Description: The use of this command is unknown. Takes %1(byte) and %2(military).
+ 
+
+
+0x61 - kill_thread
+Description: Kill the current thread
+ 
+
+
+0x62 - killable
+Description: Allows the current thread to be killed by another one
+ 
+
+
+0x63 - wait_finishattack
+Description: Wait until attacking party has finished to attack
+ (? definition ?) 
+
+
+0x64 - quick_attack
+Description: Perform a quick attack (attack_prepare and attack_do).
+ 
+
+
+0x65 - junkyard_dog
+Description: Junkyard Dog at selected location
+ 
+
+
+0x66 - fake_nuke
+Description: The use of this command is unknown
+ Takes no parameters
+ 
+
+
+0x67 - disruption_web
+Description: Disruption Web at selected location
+ 
+
+
+0x68 - recall_location
+Description: Recall at selected location
+ 
+
+
+0x69 - set_randomseed
+Description: Set random seed to %1(word) %2(word) (The two words are transformed in a 32-bit integer)
+ 
+
+
+0x6A - if_owned
+Description: Jump to %2(block) if the player owns at least one %1(unit).
+ 
+
+
+0x6B - create_nuke
+Description: Create a nuke.
+ Should only be used in campaign scripts
+ 
+
+
+0x6C - create_unit
+Description: Create %1(unit) at map position (x,y) where x = %2(word) and y = %3(word)
+ Should only be used in campaign scripts
+ 
+
+
+0x6D - nuke_pos
+Description: Launch a nuke at map position (x,y) where x = %1(word) and y = %2(word)
+ Should only be used in campaign scripts
+ 
+
+
+0x6E - help_iftrouble
+Description: Ask allies help if computer is ever in trouble
+ 
+
+
+0x6F - allies_watch
+Description: The use of this command is unknown
+ Takes %1(byte) and %2(block) as parameters
+ 
+
+
+0x70 - try_townpoint
+Description: The use of this command is unknown. Takes %1(byte) and %2(block) as parameters
+ 
+

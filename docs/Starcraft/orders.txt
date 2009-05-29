@@ -1,0 +1,947 @@
+A * before the order means that it is a 'self' running order seperate from the main one.
+
+[B]0 [color=lightgreen][0x00][/color] Die – [/B] 
+[list]
+	Description: Causes the unit to die.  Normal units run the death iscript animation, while hallucinated units have the sound/sprite spawned and then are removed.
+	Default Requirements: Allow on hallucinated units.
+[/list]
+[B]1 [color=lightgreen][0x01][/color] Stop – [/B]
+[list]
+	Description: Normal unit stop command.  Stops current order chain, and then goes to idle.
+	Default Requirements: Allow on hallucinated units.
+[/list]
+[B]2 [color=lightgreen][0x02][/color] Guard – [/B] 
+[list]
+	Description: Generic Guard order. Determines what guard command a unit uses.
+	Default Requirements: Unit responds to Battle Orders. Allow on hallucinated units.
+[/list]
+[B]3 [color=lightgreen][0x03][/color] Player Guard – [/B] 
+[list]
+	Description: Attacking Mobile unit guard order.
+	Default Requirements: Unit responds to Battle Orders. Allow on hallucinated units.
+[/list]
+[B]4 [color=lightgreen][0x04][/color] Turret Guard – [/B] 
+[list]
+	Description: Attacking unit turret guard.
+	Default Requirements: Unit is a subunit. Allow on hallucinated units.
+[/list]
+[B]5 [color=lightgreen][0x05][/color] Bunker Guard – [/B] 
+[list]
+	Description: Transport building guard. Set when a building picks up a unit.
+	Default Requirements: Unit must be a Terran Bunker.
+[/list]
+[B]6 [color=lightgreen][0x06][/color] Ignore – [/B] 
+[list]
+	Description: Unit move. Ignores enemies on way to destination.
+	Default Requirements: Unit is able to move. Allow on hallucinated units.
+[/list]
+[B]7 [color=lightgreen][0x07][/color] Reaver Stop – [/B] 
+[list]
+	Description: Stop order for the reaver.
+	Default Requirements: Unit must be Reaver/Warbringer. Allow on hallucinated units.
+[/list]
+[B]8 [color=lightgreen][0x08][/color] Attack 1 – [/B] 
+[list]
+	Description: Generic attack order.
+	Default Requirements: Unit responds to battle orders. Allow on hallucinated units.
+[/list]
+[B]9 [color=lightgreen][0x09][/color] Attack 2 – [/B] 
+[list]
+	Description: Move to attack shrouded building.
+	Default Requirements: Unit responds to battle orders. Allow on hallucinated units.
+[/list]
+[B]10 [color=lightgreen][0x0A][/color] Attack Unit – [/B] 
+[list]
+	Description: Mobile unit attacking a unit/building.
+	Default Requirements: Unit is able to move. Allow on hallucinated units.
+[/list]
+[B]11 [color=lightgreen][0x0B][/color] Attack Fixed Range – [/B] 
+[list]
+	Description: Attack for an immobile unit.  Lurker attack.
+	Default Requirements: Unit responds to battle orders. Allow on hallucinated units.
+[/list]
+[B]12 [color=lightgreen][0x0C][/color] Attack Tile – [/B] 
+[list]
+	Description: Unused
+	Default Requirements: Unit responds to battle orders. Allow on hallucinated units.
+[/list]
+[B]13 [color=lightgreen][0x0D][/color] Hover – [/B] 
+[list]
+	Description: Unused
+	Default Requirements: Unit is able to move. Allow on hallucinated units.
+[/list]
+[B]14 [color=lightgreen][0x0E][/color] Attack Move  – [/B] 
+[list]
+	Description: Unit move, attack enemies along path to target.
+	Default Requirements: Unit is able to move. Allow on hallucinated units.
+[/list]
+[B]15 [color=lightgreen][0x0F][/color] Infest Mine 1 – [/B] 
+[list]
+	Description: Ran when a unit is being infested.
+	Default Requirements: Unit must be Terran Command Center.
+[/list]
+[B]16 [color=lightgreen][0x10][/color] Nothing 1 – [/B] 
+[list]
+	Description: Unknown
+	Default Requirements: Unused.
+[/list]
+[B]17 [color=lightgreen][0x11][/color] Powerup 1 – [/B] 
+[list]
+	Description: Unknown. Speculated to be a Powerup being built order.
+	Default Requirements: Unused.
+[/list]
+[B]18 [color=lightgreen][0x12][/color] Tower Guard – [/B] 
+[list]
+	Description: Building tower guard.
+	Default Requirements: Unit must be either Photon Cannon, Missile Turret, Sunken Colony, or Spore Colony.
+[/list]
+[B]19 [color=lightgreen][0x13][/color] Tower Attack – [/B] 
+[list]
+	Description: Building tower attack.
+	Default Requirements: Unit must be either Photon Cannon, Missile Turret, Sunken Colony, Spore Colony, Floor Gun Trap, Left Wall Missile Trap, Left Wall Flame Trap, Right Wall Flame Trap, Right Wall Missile Trap,
+[/list]
+[B]20 [color=lightgreen][0x14][/color] Vulture Mine – [/B] 
+[list]
+	Description: Spidermine idle order.
+	Default Requirements: Unit must be Vulture Spider Mine.
+[/list]
+[B]21 [color=lightgreen][0x15][/color] Stay in Range – [/B] 
+[list]
+	Description: Mobile unit base attack.
+	Default Requirements: Unit is able to move. Allow on hallucinated units.
+[/list]
+[B]22 [color=lightgreen][0x16][/color] Turret Attack – [/B] 
+[list]
+	Description: Mobile Unit Turret attack.
+	Default Requirements: Must be subunit. Allow on hallucinated units.
+[/list]
+[B]23 [color=lightgreen][0x17][/color] Nothing 2 – [/B] 
+[list]
+	Description: Do nothing, next order.
+	Default Requirements: Allow on hallucinated units.
+[/list]
+[B]24 [color=lightgreen][0x18][/color] Nothing 3 – [/B] 
+[list]
+	Description: Unknown, used when a unit is changing state between siege <-> normal.
+	Default Requirements: Unused.
+[/list]
+[B]25 [color=lightgreen][0x19][/color] Drone Start Build – [/B] 
+[list]
+	Description: Move to target position and run drone build.
+	Default Requirements: Unit must be Zerg Drone.
+[/list]
+[B]26 [color=lightgreen][0x1A][/color] Drone Build – [/B] 
+[list]
+	Description: Check resources and run drone land.
+	Default Requirements: Unit must be Zerg Drone.
+[/list]
+[B]27 [color=lightgreen][0x1B][/color] Infest Mine 2 – [/B] 
+[list]
+	Description: Move to Infest a unit.
+	Default Requirements: Unit must be Zerg Queen/Matriarch.
+[/list]
+[B]28 [color=lightgreen][0x1C][/color] Infest Mine 3 – [/B] 
+[list]
+	Description: Move to Infest shrouded unit
+	Default Requirements: Unit must be Zerg Queen/Matriarch.
+[/list]
+[B]29 [color=lightgreen][0x1D][/color] Infest Mine 4 – [/B] 
+[list]
+	Description: Infest Unit. Hides unit, runs infest 1 on target, then reshows unit.
+	Default Requirements: Unit must be Zerg Queen/Matriarch.
+[/list]
+[B]30 [color=lightgreen][0x1E][/color] Build 1 – [/B] 
+[list]
+	Description: Move/Start Terran Building.
+	Default Requirements: Unit must be Terran SCV.
+[/list]
+[B]31 [color=lightgreen][0x1F][/color] Build 2 – [/B] 
+[list]
+	Description: Full Protoss Building order.
+	Default Requirements: Unit must be Protoss Probe.
+[/list]
+[B]32 [color=lightgreen][0x20][/color] Build 3 – [/B] 
+[list]
+	Description: Creates the Protoss Building.
+	Default Requirements: Unit must be Protoss Probe.
+[/list]
+[B]33 [color=lightgreen][0x21][/color] Build 4 – [/B] 
+[list]
+	Description: SCV is building.
+	Default Requirements: Unit must be Terran SCV.
+[/list]
+[B]34 [color=lightgreen][0x22][/color] Repair 1 – [/B] 
+[list]
+	Description: Repair Unit.
+	Default Requirements: Unit must be Terran SCV.
+[/list]
+[B]35 [color=lightgreen][0x23][/color] Repair 2 – [/B] 
+[list]
+	Description: Move to repair shrouded building.
+	Default Requirements: Unit must be Terran SCV.
+[/list]
+[B]36 [color=lightgreen][0x24][/color] Place Addon – [/B] 
+[list]
+	Description: Move and start addon.
+	Default Requirements: Blank.
+[/list]
+[B]37 [color=lightgreen][0x25][/color] *Build Addon – [/B] 
+[list]
+	Description: Building Addon.
+	Default Requirements: Unused.
+[/list]
+[B]38 [color=lightgreen][0x26][/color] *Train – [/B] 
+[list]
+	Description: Training Unit.
+	Default Requirements: Unused.
+[/list]
+[B]39 [color=lightgreen][0x27][/color] Rally Point 1 – [/B] 
+[list]
+	Description: Rally to Visible Unit.  Causes units to follow the selected unit.
+	Default Requirements: Unit is able to set Rally Point.
+[/list]
+[B]40 [color=lightgreen][0x28][/color] Rally Point 2 – [/B] 
+[list]
+	Description: Rally to tile.
+	Default Requirements: Unit is able to set Rally Point.
+[/list]
+[B]41 [color=lightgreen][0x29][/color] Zerg Birth – [/B] 
+[list]
+	Description: Unit is being born.
+	Default Requirements: Unit must be Zerg Egg or Zerg Cocoon.
+[/list]
+[B]42 [color=lightgreen][0x2A][/color] Morph 1 – [/B] 
+[list]
+	Description: Unit Morph
+	Default Requirements: Unused.
+[/list]
+[B]43 [color=lightgreen][0x2B][/color] Morph 2 – [/B] 
+[list]
+	Description: Building Morph
+	Default Requirements: Unused
+[/list]
+[B]44 [color=lightgreen][0x2C][/color] Build Self 1 – [/B] 
+[list]
+	Description: Terran Building, Is being built.
+	Default Requirements: Unused
+[/list]
+[B]45 [color=lightgreen][0x2D][/color] Zerg Build Self – [/B] 
+[list]
+	Description: Zerg Building build order.
+	Default Requirements: Unused.
+[/list]
+[B]46 [color=lightgreen][0x2E][/color] Build 5 – [/B] 
+[list]
+	Description: Nydus canal exit build order.
+	Default Requirements: Unit must be Zerg Nydus Canal and must not have exit.
+[/list]
+[B]47 [color=lightgreen][0x2F][/color] Enter nydus canal – [/B] 
+[list]
+	Description: Enter/transport through nydus canal
+	Default Requirements: Unused.
+[/list]
+[B]48 [color=lightgreen][0x30][/color] Build Self 2 – [/B] 
+[list]
+	Description: Protoss Building being built order.
+	Default Requirements: Unused.
+[/list]
+[B]49 [color=lightgreen][0x31][/color] Follow – [/B] 
+[list]
+	Description: Move to/with unit or building.  Causes units to load into transports or enter nydus canal or recharge shields.
+	Default Requirements: Unit is able to move. Allow on hallucinated units.
+[/list]
+[B]50 [color=lightgreen][0x32][/color] Carrier – [/B] 
+[list]
+	Description: Idle command for the carrier.
+	Default Requirements: Unit must be Carrier/Gantrithor. Allow on hallucinated units.
+[/list]
+[B]51 [color=lightgreen][0x33][/color] Carrier Ignore 1 – [/B] 
+[list]
+	Description: Carrier move command.  Ignores enemies
+	Default Requirements: Unit must be Carrier/Gantrithor or Reaver/Warbringer. Allow on hallucinated units.
+[/list]
+[B]52 [color=lightgreen][0x34][/color] Carrier Stop – [/B] 
+[list]
+	Description: Carrier stop command. Runs idle.
+	Default Requirements: Unit must be Carrier/Gantrithor. Allow on hallucinated units.
+[/list]
+[B]53 [color=lightgreen][0x35][/color] Carrier Attack 1 – [/B] 
+[list]
+	Description: Generic Carrier attack command.
+	Default Requirements: Unit must be Carrier/Gantrithor. Allow on hallucinated units.
+[/list]
+[B]54 [color=lightgreen][0x36][/color] Carrier Attack 2 – [/B] 
+[list]
+	Description: Move to attack shrouded building.
+	Default Requirements: Unit must be Carrier/Gantrithor. Allow on hallucinated units.
+[/list]
+[B]55 [color=lightgreen][0x37][/color] Carrier Ignore 2 – [/B] 
+[list]
+	Description: Unknown. Possibly a secondary move.
+	Default Requirements: Unit must be Carrier/Gantrithor or Reaver/Warbringer. Allow on hallucinated units.
+[/list]
+[B]56 [color=lightgreen][0x38][/color] Carrier Fight – [/B] 
+[list]
+	Description: Carrier Attack Unit.
+	Default Requirements: Unit must be Carrier/Gantrithor. Allow on hallucinated units.
+[/list]
+[B]57 [color=lightgreen][0x39][/color] Hold Position 1 – [/B] 
+[list]
+	Description: Carrier Hold Position.
+	Default Requirements: Unit must be Carrier/Gantrithor. Allow on hallucinated units.
+[/list]
+[B]58 [color=lightgreen][0x3A][/color] Reaver – [/B] 
+[list]
+	Description: Reaver Idle order.
+	Default Requirements: Unit must be Reaver/Warbringer. Allow on hallucinated units.
+[/list]
+[B]59 [color=lightgreen][0x3B][/color] Reaver Attack 1 – [/B] 
+[list]
+	Description: Generic reaver attack order.
+	Default Requirements: Unit must be Reaver/Warbringer. Allow on hallucinated units.
+[/list]
+[B]60 [color=lightgreen][0x3C][/color] Reaver Attack 2 – [/B] 
+[list]
+	Description: Move to attack shrouded building
+	Default Requirements: Unit must be Reaver/Warbringer. Allow on hallucinated units.
+[/list]
+[B]61 [color=lightgreen][0x3D][/color] Reaver Fight – [/B] 
+[list]
+	Description: Reaver attack unit.
+	Default Requirements: Unit must be Reaver/Warbringer. Allow on hallucinated units.
+[/list]
+[B]62 [color=lightgreen][0x3E][/color] Reaver Hold – [/B] 
+[list]
+	Description: Reaver hold position.
+	Default Requirements: Unit must be Reaver/Warbringer. Allow on hallucinated units.
+[/list]
+[B]63 [color=lightgreen][0x3F][/color] *Train Fighter – [/B] 
+[list]
+	Description: Training subunit(scarab, interceptor).  Causes all interceptors within a carrier to be healed when not attacking.
+	Default Requirements: Unused.
+[/list]
+[B]64 [color=lightgreen][0x40][/color] Strafe Unit 1 – [/B] 
+[list]
+	Description: Interceptor move and attack.
+	Default Requirements: Unit must be Protoss Interceptor. Allow on hallucinated units.
+[/list]
+[B]65 [color=lightgreen][0x41][/color] Strafe Unit 2 – [/B] 
+[list]
+	Description: Scarab move and attack.
+	Default Requirements: Unit must be Protoss Scarab.
+[/list]
+[B]66 [color=lightgreen][0x42][/color] Recharge Shields 1 – [/B] 
+[list]
+	Description: Unit recharge shields.
+	Default Requirements: Unused.
+[/list]
+[B]67 [color=lightgreen][0x43][/color] Recharge shields 2 – [/B] 
+[list]
+	Description: Shield Battery, recharge shield cast on unit or ground. Unit runs recharge shields 1, shield battery runs shield battery.  If cast on ground, recharges all units within rechargeable radius.
+	Default Requirements: Unit must be Protoss Shield Battery.
+[/list]
+[B]68 [color=lightgreen][0x44][/color] *Shield Battery – [/B] 
+[list]
+	Description: Shield Battery, is recharging.  
+	Default Requirements: Unused.
+[/list]
+[B]69 [color=lightgreen][0x45][/color] Return – [/B] 
+[list]
+	Description: Interceptor return to parent.
+	Default Requirements: Unit must be a Worker (has harvest orders).
+[/list]
+[B]70 [color=lightgreen][0x46][/color] Drone Land – [/B] 
+[list]
+	Description: Drone landing order.  Used when building.
+	Default Requirements: Unit must be Zerg Drone.
+[/list]
+[B]71 [color=lightgreen][0x47][/color] Building Land – [/B] 
+[list]
+	Description: Building land order.
+	Default Requirements: Unit must be a building(can lift off) that is lifted off.
+[/list]
+[B]72 [color=lightgreen][0x48][/color] Building Liftoff – [/B] 
+[list]
+	Description: Begin Building Liftoff
+	Default Requirements: Unit must be a building(can lift off) that is on the ground.
+[/list]
+[B]73 [color=lightgreen][0x49][/color] Drone Liftoff – [/B] 
+[list]
+	Description: Begin Drone liftoff
+	Default Requirements: Unit must be Zerg Drone.
+[/list]
+[B]74 [color=lightgreen][0x4A][/color] Liftoff – [/B] 
+[list]
+	Description: Unit is lifting off.
+	Default Requirements: Unit must be a building(can lift off).
+[/list]
+[B]75 [color=lightgreen][0x4B][/color] Research Tech – [/B] 
+[list]
+	Description: Building researching tech.
+	Default Requirements: Unused.
+[/list]
+[B]76 [color=lightgreen][0x4C][/color] Upgrade – [/B] 
+[list]
+	Description: Building researching upgrade.
+	Default Requirements: Unused.
+[/list]
+[B]77 [color=lightgreen][0x4D][/color] Larva – [/B] 
+[list]
+	Description: Idle order for larva. Make sure it stays on creep, dies if off, and says within the range of the parent it came from.
+	Default Requirements: Unit must be Zerg Larva. Allow on hallucinated units.
+[/list]
+[B]78 [color=lightgreen][0x4E][/color] *Spawning Larva – [/B] 
+[list]
+	Description: Building is spawning larva.
+	Default Requirements: Unit must be Hatchery/Lair/Hive.
+[/list]
+[B]79 [color=lightgreen][0x4F][/color] Harvest 1 – [/B] 
+[list]
+	Description: Generic move to harvest order.
+	Default Requirements: Unit must be a Worker (has harvest orders).
+[/list]
+[B]80 [color=lightgreen][0x50][/color] Harvest 2 – [/B] 
+[list]
+	Description: Move to harvest shrouded minerals/gas
+	Default Requirements: Unit must be a Worker (has harvest orders).
+[/list]
+[B]81 [color=lightgreen][0x51][/color] Harvest Gas 1 – [/B] 
+[list]
+	Description: Move to harvest gas.
+	Default Requirements: Unit must be a Worker (has harvest orders).
+[/list]
+[B]82 [color=lightgreen][0x52][/color] Harvest Gas 2 – [/B] 
+[list]
+	Description: Check if it can enter the gas mine(no unit in it).
+	Default Requirements: Unit must be a Worker (has harvest orders).
+[/list]
+[B]83 [color=lightgreen][0x53][/color] Harvest Gas 3 – [/B] 
+[list]
+	Description: Enter/exit mine, set return order.
+	Default Requirements: Unused.
+[/list]
+[B]84 [color=lightgreen][0x54][/color] Return Gas – [/B] 
+[list]
+	Description: Return order, has gas.
+	Default Requirements: Unit must be a Worker (has harvest orders).
+[/list]
+[B]85 [color=lightgreen][0x55][/color] Harvest Minerals 1 – [/B] 
+[list]
+	Description: Move to harvest minerals.
+	Default Requirements: Unit must be a Worker (has harvest orders).
+[/list]
+[B]86 [color=lightgreen][0x56][/color] Harvest Minerals 2 – [/B] 
+[list]
+	Description: Can harvest minerals(one unit per field).
+	Default Requirements: Unit must be a Worker (has harvest orders).
+[/list]
+[B]87 [color=lightgreen][0x57][/color] Harvest Minerals 3 – [/B] 
+[list]
+	Description: Harvesting minerals.  Runs iscript to spawn weapon.
+	Default Requirements: Unused.
+[/list]
+[B]88 [color=lightgreen][0x58][/color] Harvest 3 – [/B] 
+[list]
+	Description: Harvesting minerals is interrupted.
+	Default Requirements: Unused.
+[/list]
+[B]89 [color=lightgreen][0x59][/color] Harvest 4 – [/B] 
+[list]
+	Description: Unknown harvest command.
+	Default Requirements: Unused.
+[/list]
+[B]90 [color=lightgreen][0x5A][/color] Return Minerals – [/B] 
+[list]
+	Description: Return resources – [/B] Has minerals.
+	Default Requirements: Unit must be a Worker (has harvest orders).
+[/list]
+[B]91 [color=lightgreen][0x5B][/color] Harvest 5 – [/B] 
+[list]
+	Description: Harvest Interrupt – [/B] recharge shields.
+	Default Requirements: Unused.
+[/list]
+[B]92 [color=lightgreen][0x5C][/color] Enter Transport – [/B] 
+[list]
+	Description: Move/enter a transport.
+	Default Requirements: Allow on Hallucinated Units.
+[/list]
+[B]93 [color=lightgreen][0x5D][/color] Pickup 1 – [/B] 
+[list]
+	Description: Transport Idle command.
+	Default Requirements: Unit must be Transport(Can carry units) or Zerg Overlord.
+[/list]
+[B]94 [color=lightgreen][0x5E][/color] Pickup 2 – [/B] 
+[list]
+	Description: Mobile Transport unit pickup.
+	Default Requirements: Unit must be Transport(Can carry units).
+[/list]
+[B]95 [color=lightgreen][0x5F][/color] Pickup 3 – [/B] 
+[list]
+	Description: Building pickup.
+	Default Requirements: Unit must be Terran Bunker.
+[/list]
+[B]96 [color=lightgreen][0x60][/color] Pickup 4 – [/B] 
+[list]
+	Description: Unknown – [/B] AI pickup?
+	Default Requirements: Unused.
+[/list]
+[B]97 [color=lightgreen][0x61][/color] Powerup 2 – [/B] 
+[list]
+	Description: Idle for powerups.
+	Default Requirements: Unit must be a powerup.
+[/list]
+[B]98 [color=lightgreen][0x62][/color] Siege Mode – [/B] 
+[list]
+	Description: Switch to Siege mode.
+	Default Requirements: Unused.
+[/list]
+[B]99 [color=lightgreen][0x63][/color] Tank Mode – [/B] 
+[list]
+	Description: Switch to Tank mode.
+	Default Requirements: Unused.
+[/list]
+[B]100 [color=lightgreen][0x64][/color] Watch Target – [/B] 
+[list]
+	Description: Immobile Unit base, watch the target.  
+	Default Requirements: Allow on hallucinated units.
+[/list]
+[B]101 [color=lightgreen][0x65][/color] Init Creep Growth – [/B] 
+[list]
+	Description: Start Spreading Creep.
+	Default Requirements: Unit must be Hatchery/Lair/Hive or Creep Colony.
+[/list]
+[B]102 [color=lightgreen][0x66][/color] *Spread Creep – [/B] 
+[list]
+	Description: Spreads creep. If it is a larva producer, runs that order also.
+	Default Requirements: Blank.
+[/list]
+[B]103 [color=lightgreen][0x67][/color] Stopping Creep Growth – [/B] 
+[list]
+	Description: Stops creep growth.
+	Default Requirements: Unit must be Sunken/Spore Colony.
+[/list]
+[B]104 [color=lightgreen][0x68][/color] Guardian Aspect – [/B] 
+[list]
+	Description: Unused, Morph 1 is used for unit morphing.
+	Default Requirements: Unit must be Zerg Mutalisk.
+[/list]
+[B]105 [color=lightgreen][0x69][/color] Warping Archon – [/B] 
+[list]
+	Description: Move and start archon merge.
+	Default Requirements: Unused.
+[/list]
+[B]106 [color=lightgreen][0x6A][/color] Completing Archon summon – [/B] 
+[list]
+	Description: Archon build self order.
+	Default Requirements: Unused.
+[/list]
+[B]107 [color=lightgreen][0x6B][/color] Hold Position 2 – [/B] 
+[list]
+	Description: Attacking Unit hold position.
+	Default Requirements: Unit is able to Hold Position. Allow on hallucinated units.
+[/list]
+[B]108 [color=lightgreen][0x6C][/color] Hold Position 3 – [/B] 
+[list]
+	Description: Queen Hold position.
+	Default Requirements: Unit must be Zerg Queen/Matriarch.
+[/list]
+[B]109 [color=lightgreen][0x6D][/color] *Cloak – [/B] 
+[list]
+	Description: Cloak Unit.
+	Default Requirements: Unused.
+[/list]
+[B]110 [color=lightgreen][0x6E][/color] *Decloak – [/B] 
+[list]
+	Description: Decloak Unit.
+	Default Requirements: Unused.
+[/list]
+[B]111 [color=lightgreen][0x6F][/color] Unload – [/B] 
+[list]
+	Description: Unload a unit from the transport.
+	Default Requirements: Unit must be a transport.
+[/list]
+[B]112 [color=lightgreen][0x70][/color] Move Unload – [/B] 
+[list]
+	Description: Move to unload site and run unload order.
+	Default Requirements: Unit must be a transport.
+[/list]
+[B]113 [color=lightgreen][0x71][/color] Fire Yamato Gun 1 – [/B] 
+[list]
+	Description: Cast Spell: Yamato.
+	Default Requirements: Unused.
+[/list]
+[B]114 [color=lightgreen][0x72][/color] Fire Yamato Gun 2 – [/B] 
+[list]
+	Description: Move to cast spell on shrouded building.
+	Default Requirements: Unused.
+[/list]
+[B]115 [color=lightgreen][0x73][/color] Magna Pulse – [/B] 
+[list]
+	Description: Cast Spell: Lockdown.
+	Default Requirements: Unused.
+[/list]
+[B]116 [color=lightgreen][0x74][/color] Burrow – [/B] 
+[list]
+	Description: Burrow Unit.
+	Default Requirements: Unused.
+[/list]
+[B]117 [color=lightgreen][0x75][/color] Burrowed – [/B] 
+[list]
+	Description: Burrowed Unit idle.
+	Default Requirements: Unused.
+[/list]
+[B]118 [color=lightgreen][0x76][/color] Unburrow – [/B] 
+[list]
+	Description: Unburrow unit.
+	Default Requirements: Unused.
+[/list]
+[B]119 [color=lightgreen][0x77][/color] Dark Swarm – [/B] 
+[list]
+	Description: Cast Spell: Dark Swarm.
+	Default Requirements: Unused.
+[/list]
+[B]120 [color=lightgreen][0x78][/color] Cast Parasite – [/B] 
+[list]
+	Description: Cast Spell: Parasite.
+	Default Requirements: Unused.
+[/list]
+[B]121 [color=lightgreen][0x79][/color] Summon Broodlings – [/B] 
+[list]
+	Description: Cast Spell: Spawn Broodings.
+	Default Requirements: Unused.
+[/list]
+[B]122 [color=lightgreen][0x7A][/color] Emp Shockwave – [/B] 
+[list]
+	Description: Cast Spell: EMP Shockwave.
+	Default Requirements: Unused.
+[/list]
+[B]123 [color=lightgreen][0x7B][/color] Nuke Wait – [/B] 
+[list]
+	Description: Unknown.
+	Default Requirements: Unit must be Terran Nuclear Missile.
+[/list]
+[B]124 [color=lightgreen][0x7C][/color] Nuke Train – [/B] 
+[list]
+	Description: Silo Idle
+	Default Requirements: Unused.
+[/list]
+[B]125 [color=lightgreen][0x7D][/color] Nuke Launch – [/B] 
+[list]
+	Description: Launch for nuclear missile.
+	Default Requirements: Unit must be Terran Nuclear Missile.
+[/list]
+[B]126 [color=lightgreen][0x7E][/color] Nuke Paint – [/B] 
+[list]
+	Description: Move to and set nuke target.
+	Default Requirements: Unit must be Terran Ghost.
+[/list]
+[B]127 [color=lightgreen][0x7F][/color] Nuke Unit – [/B] 
+[list]
+	Description: Nuke the ground location of the unit.
+	Default Requirements: Unit must be Terran Nuclear Missile.
+[/list]
+[B]128 [color=lightgreen][0x80][/color] Nuke Ground – [/B] 
+[list]
+	Description: Nuke ground.
+	Default Requirements: Unit must be Terran Nuclear Missile.
+[/list]
+[B]129 [color=lightgreen][0x81][/color] Nuke Track – [/B] 
+[list]
+	Description: Ghost order during nuke.
+	Default Requirements: Unit must be Terran Nuclear Missile.
+[/list]
+[B]130 [color=lightgreen][0x82][/color] Init Arbiter – [/B] 
+[list]
+	Description: Run nearby cloaking.
+	Default Requirements: Unit must be Protoss Arbiter/Danimoth. Allow on Hallucinated units.
+[/list]
+[B]131 [color=lightgreen][0x83][/color] *Cloak Nearby Units – [/B] 
+[list]
+	Description: Cloak non arbiters within range.
+	Default Requirements: Unit must be Protoss Arbiter/Danimoth.
+[/list]
+[B]132 [color=lightgreen][0x84][/color] Place Mine – [/B] 
+[list]
+	Description: Place spider mine.
+	Default Requirements: Unused.
+[/list]
+[B]133 [color=lightgreen][0x85][/color] Right click action – [/B] 
+[list]
+	Description: right click, sets correct order based on target.
+	Default Requirements: Allow on Hallucinated units.
+[/list]
+[B]134 [color=lightgreen][0x86][/color] Sap Unit – [/B] 
+[list]
+	Description: Suicide Attack Unit.
+	Default Requirements: Unit must be Zerg infested Terran. Allow on Hallucinated units.
+[/list]
+[B]135 [color=lightgreen][0x87][/color] Sap Location – [/B] 
+[list]
+	Description: Suicide Attack tile.
+	Default Requirements: Unit must be Zerg infested Terran. Allow on Hallucinated units.
+[/list]
+[B]136 [color=lightgreen][0x88][/color] Hold Position 4 – [/B] 
+[list]
+	Description: Suicide Hold Position.
+	Default Requirements: Unit must be Zerg Infested Terran or Zerg Scourge. Allow on Hallucinated units.
+[/list]
+[B]137 [color=lightgreen][0x89][/color] Teleport – [/B] 
+[list]
+	Description: Recall(units within range of target pos).
+	Default Requirements: Unused.
+[/list]
+[B]138 [color=lightgreen][0x8A][/color] Teleport to Location – [/B] 
+[list]
+	Description: Causes units to teleport when being recalled.
+	Default Requirements: Unused.
+[/list]
+[B]139 [color=lightgreen][0x8B][/color] Place Scanner – [/B] 
+[list]
+	Description: Place Scanner Sweep Unit at position.
+	Default Requirements: Unused.
+[/list]
+[B]140 [color=lightgreen][0x8C][/color] Scanner – [/B] 
+[list]
+	Description: Scanner Sweep Unit idle.
+	Default Requirements: Unit must be Scanner Sweep.
+[/list]
+[B]141 [color=lightgreen][0x8D][/color] Defensive Matrix – [/B] 
+[list]
+	Description: Defensive Matrix cast on target.
+	Default Requirements: Unused.
+[/list]
+[B]142 [color=lightgreen][0x8E][/color] Psi Storm – [/B] 
+[list]
+	Description: Cast Spell: Psi Storm.
+	Default Requirements: Unused.
+[/list]
+[B]143 [color=lightgreen][0x8F][/color] Irradiate – [/B] 
+[list]
+	Description: Cast Spell: Irradiate.
+	Default Requirements: Unused.
+[/list]
+[B]144 [color=lightgreen][0x90][/color] Plague – [/B] 
+[list]
+	Description: Cast Spell: Plague.
+	Default Requirements: Unused.
+[/list]
+[B]145 [color=lightgreen][0x91][/color] Consume – [/B] 
+[list]
+	Description: Cast Spell: Consume.
+	Default Requirements: Unused.
+[/list]
+[B]146 [color=lightgreen][0x92][/color] Ensnare – [/B] 
+[list]
+	Description: Cast Spell: Ensnare.
+	Default Requirements: Unused.
+[/list]
+[B]147 [color=lightgreen][0x93][/color] Stasis Field – [/B] 
+[list]
+	Description: Cast Spell: Stasis Field.
+	Default Requirements: Unused.
+[/list]
+[B]148 [color=lightgreen][0x94][/color] Hallucianation 1 – [/B] 
+[list]
+	Description: Hallucination Cast on target.
+	Default Requirements: Unused.
+[/list]
+[B]149 [color=lightgreen][0x95][/color] *Hallucination 2 – [/B] 
+[list]
+	Description: Kill Halluciation on spell cast.
+	Default Requirements: Unused.
+[/list]
+[B]150 [color=lightgreen][0x96][/color] Reset Collision 1 – [/B] 
+[list]
+	Description: Collision Reset between 2 units.
+	Default Requirements: Unused.
+[/list]
+[B]151 [color=lightgreen][0x97][/color] Reset Collision 2 – [/B] 
+[list]
+	Description: Collision reset between harvester and mine.
+	Default Requirements: Unused.
+[/list]
+[B]152 [color=lightgreen][0x98][/color] Patrol – [/B] 
+[list]
+	Description: Patrol to target, queue patrol to original position.
+	Default Requirements: Unit is able to move. Allow on Hallucinated units.
+[/list]
+[B]153 [color=lightgreen][0x99][/color] CTF COP Init – [/B] 
+[list]
+	Description: CTF Initialization
+	Default Requirements: Unused.
+[/list]
+[B]154 [color=lightgreen][0x9A][/color] CTF COP 1 – [/B] 
+[list]
+	Description: CTF Idle
+	Default Requirements: Unused.
+[/list]
+[B]155 [color=lightgreen][0x9B][/color] CTF COP 2 – [/B] 
+[list]
+	Description: Unknown?  Reset COP?
+	Default Requirements: Unit must be Zerg Flag Beacon, Terran Flag Beacon, or Protoss Flag Beacon.
+[/list]
+[B]156 [color=lightgreen][0x9C][/color] Computer AI – [/B] 
+[list]
+	Description: AI Control.
+	Default Requirements: Unused.
+[/list]
+[B]157 [color=lightgreen][0x9D][/color] Atk Move EP – [/B] 
+[list]
+	Description: AI Attack Move?
+	Default Requirements: Unit is able to move. Allow on Hallucinated units.
+[/list]
+[B]158 [color=lightgreen][0x9E][/color] Harass Move – [/B] 
+[list]
+	Description: Aggressive Attack Move?  Units won’t give up on a target.  If they see it, they’ll attack it, even worse than attack move.  Might be a computer attack move?
+	Default Requirements: Unused.
+[/list]
+[B]159 [color=lightgreen][0x9F][/color] AI Patrol – [/B] 
+[list]
+	Description: Moves units to the center of the current ‘area’ they are at?  Not sure if the spacing is meant to allow for detectors to cover an area or not.
+	Default Requirements: Unused.
+[/list]
+[B]160 [color=lightgreen][0xA0][/color] Guard Post – [/B] 
+[list]
+	Description: Immobile Unit Guard.
+	Default Requirements: Unused.
+[/list]
+[B]161 [color=lightgreen][0xA1][/color] Rescue Passive – [/B] 
+[list]
+	Description: Rescuable unit idle.
+	Default Requirements: Unused.
+[/list]
+[B]162 [color=lightgreen][0xA2][/color] Neutral – [/B] 
+[list]
+	Description: Neutral Unit idle.
+	Default Requirements: Unused.
+[/list]
+[B]163 [color=lightgreen][0xA3][/color] Computer Return – [/B] 
+[list]
+	Description: Return computer units to defensive position?  Was seen returning units that had followed a unit outside of a base and killed it.
+	Default Requirements: Unused.
+[/list]
+[B]164 [color=lightgreen][0xA4][/color] Init Psi Provider – [/B] 
+[list]
+	Description: Init Psi Provider.  Adds to some kind of linked list.
+	Default Requirements: Unused.
+[/list]
+[B]165 [color=lightgreen][0xA5][/color] Self Destrucing – [/B] 
+[list]
+	Description: Remove unit.
+	Default Requirements: Unit must be Protoss Scarab.
+[/list]
+[B]166 [color=lightgreen][0xA6][/color] Critter – [/B] 
+[list]
+	Description: Critter idle.
+	Default Requirements: Unit must be Rhynadon, Bengalaas, Ragnasaur, Scantid, Kakaru, or Ursadon. Allow on hallucinated units.
+[/list]
+[B]167 [color=lightgreen][0xA7][/color] Hidden Gun – [/B] 
+[list]
+	Description: Trap idle order.
+	Default Requirements: Unit must be Floor Gun Trap, Left Wall Missile Trap, Left Wall Flame Trap, Right Wall Missile Trap, or Right Wall Flame Trap.
+[/list]
+[B]168 [color=lightgreen][0xA8][/color] Open Door – [/B] 
+[list]
+	Description: Opens the door.
+	Default Requirements: Unit must be Left Upper Level Door, Right Upper Level Door, Left Pit Door, or Right pit Door.
+[/list]
+[B]169 [color=lightgreen][0xA9][/color] Close Door – [/B] 
+[list]
+	Description: Closes the door.
+	Default Requirements: Unit must be Left Upper Level Door, Right Upper Level Door, Left Pit Door, or Right pit Door.
+[/list]
+[B]170 [color=lightgreen][0xAA][/color] Hide Trap – [/B] 
+[list]
+	Description: Trap return to idle.
+	Default Requirements: Unit must be Floor Missile Trap, Floor Gun Trap, Left Wall Missile Trap, Left Wall Flame Trap, Right Wall Missile Trap, or Right Wall Flame Trap.
+[/list]
+[B]171 [color=lightgreen][0xAB][/color] Reveal Trap – [/B] 
+[list]
+	Description: Trap attack.
+	Default Requirements: Unit must be Floor Missile Trap, Floor Gun Trap, Left Wall Missile Trap, Left Wall Flame Trap, Right Wall Missile Trap, or Right Wall Flame Trap.
+[/list]
+[B]172 [color=lightgreen][0xAC][/color] Enable doodad – [/B] 
+[list]
+	Description: Enable Doodad State.
+	Default Requirements: Unused.
+[/list]
+[B]173 [color=lightgreen][0xAD][/color] Disable doodad – [/B] 
+[list]
+	Description: Disable Doodad State.
+	Default Requirements: Unused.
+[/list]
+[B]174 [color=lightgreen][0xAE][/color] Warp in – [/B] 
+[list]
+	Description: Unused. Left over from unit warp in which now exists in Starcraft 2.
+	Default Requirements: Unused.
+[/list]
+[B]175 [color=lightgreen][0xAF][/color] Medic – [/B] 
+[list]
+	Description: Idle command for the Terran Medic.
+	Default Requirements: Unit must be Terran Medic.
+[/list]
+[B]176 [color=lightgreen][0xB0][/color] Medic Heal 1 – [/B] 
+[list]
+	Description: Heal cast on target.
+	Default Requirements: Unit must be Terran Medic.
+[/list]
+[B]177 [color=lightgreen][0xB1][/color] Heal Move – [/B] 
+[list]
+	Description: Attack move command for the Terran Medic.
+	Default Requirements: Unit must be Terran Medic.
+[/list]
+[B]178 [color=lightgreen][0xB2][/color] Medic Hold Position – [/B] 
+[list]
+	Description: Holds Position for Terran Medics, heals units within range.
+	Default Requirements: Unit must be Terran Medic.
+[/list]
+[B]179 [color=lightgreen][0xB3][/color] Medic Heal 2 – [/B] 
+[list]
+	Description: Return to idle after heal.
+	Default Requirements: Unused.
+[/list]
+[B]180 [color=lightgreen][0xB4][/color] Restoration – [/B] 
+[list]
+	Description: Cast Spell: Restoration.
+	Default Requirements: Unused.
+[/list]
+[B]181 [color=lightgreen][0xB5][/color] Cast Disruption Web – [/B] 
+[list]
+	Description: Cast Spell: Disruption Web.
+	Default Requirements: Unused.
+[/list]
+[B]182 [color=lightgreen][0xB6][/color] Cast Mind Control – [/B] 
+[list]
+	Description: Mind Control Cast on Target.
+	Default Requirements: Unit must be Protoss Dark Archon.
+[/list]
+[B]183 [color=lightgreen][0xB7][/color] Warping Dark Archon – [/B] 
+[list]
+	Description: Dark Archon Meld.
+	Default Requirements: Unused.
+[/list]
+[B]184 [color=lightgreen][0xB8][/color] Cast Feedback – [/B] 
+[list]
+	Description: Feedback cast on target.
+	Default Requirements: Unused.
+[/list]
+[B]185 [color=lightgreen][0xB9][/color] Cast Optical Flare – [/B] 
+[list]
+	Description: Cast Spell: Optical Flare.
+	Default Requirements: Unused.
+[/list]
+[B]186 [color=lightgreen][0xBA][/color] Cast Maelstrom – [/B] 
+[list]
+	Description: Cast Spell: Maelstrom.
+	Default Requirements: Unused.
+[/list]
+[B]187 [color=lightgreen][0xBB][/color] Junk Yard Dog – [/B] 
+[list]
+	Description: Junk yard dog movement.
+	Default Requirements: Unused.
+[/list]
+[B]188 [color=lightgreen][0xBC][/color] Fatal – [/B] 
+[list]
+	Description: Nothing.
+	Default Requirements: Unused.
+[/list]

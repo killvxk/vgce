@@ -1,0 +1,181 @@
+inGame commands:
+
+    /?
+    /help
+    /w
+    /whisper
+    /m
+    /msg
+
+    SoundChaosDebug
+    /nopickup
+    /players
+    /framerate
+    /fps
+
+    @
+    !
+    /
+
+commandline options:
+
+VIDEO
+    WINDOW      w           Runs the client in a window.
+    3DFX        3dfx        
+    OPENGL      opengl      Changes the rendering engine to OpenGL
+    D3D         d3d         Changes the rendering engine to Direct 3D
+    RAVE        rave        
+    PERSPECTIVE per         
+    QUALITY     lq          
+    GAMMA       gamma %d
+    VSYNC       vsync
+    FRAMERATE   fr %d
+    
+NETWORK
+    SERVERIP    s %s
+    GAMETYPE    gametype %d
+    ARENA       arena %d
+    JOINID      joinid %d
+    GAMENAME    gamename %s
+    BATTLENETIP bn %s
+    MCPIP       mcpip %s
+    NOPK        nopk
+    COMINT      comint %d
+    SKIPTOBNET  skiptobnet      Automatically connects to Battle.net.
+    OPENC       openc           
+    
+CHARACTER
+    AMAZON      ama
+    PALADIN     pal
+    SORCERESS   sor
+    NECROMANCER nec
+    BARBARIAN   bar
+    INVINCIBLE  i
+    NAME        name %s
+    REALM       realm %s
+    CTEMP       ctemp %d
+    
+MONSTERS
+    NOMONSTERS      nm
+    MONSTERCLASS    m %d
+    MONSTERINFO     minfo
+    MONSTERDEBUG    md %d
+    
+ITEM
+    RARE        rare
+    UNIQUE      unique
+    
+INTERFACE
+    ACT         act %d        Starts a new character in the act specified
+    
+DEBUG
+    LOG         log         Logs game commands to d2log.txt.
+    MSGLOG      msglog
+    SAFEMODE    safe
+    NOSAVE      nosave
+    SEED        seed %d      Sets the random seed to a constant value.
+    CHEATS      cheats
+    TEEN        teen
+    NOSOUND     ns          Disables all game sound
+    QuEsTs      questall    
+    
+FILEIO
+    NOPRELOAD   npl
+    DIRECT      direct
+    LOWEND      lem
+    NOCOMPRESS  nocompress      Hides active objects(Characters, enemies).
+    
+TXT
+    TXT         txt
+    
+BUILD
+    BUILD       build       Displays the build number(revision) next to the version.
+    
+Misc
+    modstate0               No Mode (none.dll)
+    client                  Client Mode (D2Client.dll)
+    server                  Server Mode (D2Server.dll)
+    multiplayer             Multiplayer Mode (D2Multi.dll)
+    launcher                Launcher Mode (D2Launch.dll)
+    expand                  Expanded Mode (D2EClient.dll)
+    
+registry keys:
+
+[Diablo II]
+    REG_DWORD   UseCmdLine
+    REG_STRING  CmdLine
+    REG_STRING  SvcCmdLine
+    REG_DWORD   Resolution
+    REG_STRING  BNETIP
+    REG_STRING  LNG File
+    REG_STRING  Default Command Line
+    REG_STRING  Aux Battle.net
+    REG_DWORD   PopupHireling
+    REG_DWORD   Help Menu
+    REG_DWORD   AutoMapFade
+    REG_DWORD   AutoMap Centers
+    REG_DWORD   AutoMap Party
+    REG_DWORD   AutoMap Party Names
+    REG_DWORD   AutoMap Left
+    REG_DWORD   Blended Shadows
+    REG_DWORD   Light Quality
+    REG_DWORD   Always Run
+    REG_DWORD   Contrast
+    REG_DWORD   Gamma
+    REG_DWORD   AutoMapMode
+    REG_DWORD   Perspective
+    REG_DWORD   Text Display Beta
+    REG_DWORD   Mini Panel
+    REG_DWORD   GAMEOVER
+    REG_DWORD   CompressedData
+    REG_DWORD   PlayerPos
+    REG_STRING  Preferred Realm
+    REG_STRING  Last BNet
+    REG_STRING  LastTcpIp
+    REG_DWORD   AllowHardcore
+    REG_DWORD   Skip To Open
+    REG_DWORD   MAX_PLAYER
+    REG_DWORD   DIFF_LEVEL
+    REG_DWORD   LVL_REST
+    REG_DWORD   Sound Mixer
+    REG_DWORD   Master Volume
+    REG_DWORD   Music Volume
+    REG_DWORD   Positional Bias
+    REG_DWORD   NPC Speech
+    REG_DWORD   Options Music
+    REG_STRING  InstallPath
+    REG_STRING  Save Path
+    REG_DWORD   TraceUnfreedMemory
+    REG_DWORD   NoStackDump
+    
+[Diablo II\VideoConfig]    
+    REG_DWORD   dwFlags
+    REG_DATA    GUID
+    REG_STRING  DeviceName
+    
+[Patch]
+    REG_DATA    Patches
+    REG_STRING  Launcher
+    REG_STRING  SrcData
+    REG_STRING  DstData
+    
+[Configuration]
+    REG_DATA    *Unknown*
+    REG_DWORD   Registration Version
+    REG_DWORD   Registration Authority
+    REG_DWORD   Client ID
+    REG_DWORD   Client Token
+    REG_DATA    Override Battle.net gateways
+    REG_DATA    Diablo II Battle.net gateways
+    ReG_STRING  Server List
+    
+[Network Providers]
+    REG_DWORD   Preferred Provider
+    
+[Internal]
+    REG_DWORD   Debug Memory
+    REG_DWORD   Protect Memory
+    REG_DWORD   Window Mode
+    
+[Video Player]
+    REG_DWORD   Mode

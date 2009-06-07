@@ -1,0 +1,29 @@
+Client codes:
+JSTR    Japan Starcraft
+SSHR    Starcraft Shareware
+STAR    Starcraft
+SEXP    Starcraft Expansion
+DRTL    Diablo Retail
+DSHR    Diablo Shareware
+D2DV    Diablo II
+D2XP    Diablo II Expansion
+W2BN    Warcraft II Battle.net
+WAR3    Warcraft III
+W3XP    Warcraft III Expansion
+CHAT    Chat client
+
+
+Platform Codes:
+IX86    Intel x86
+PMAC    Power Macintosh
+XMAC    MacOS X
+
+
+Network codes:
+UDPN    UDP Network
+IPXN    IPX Network
+BNET    Battle.net
+MODM    Modem
+SCBL    Starcraft Battle.net League
+IPXW
+MSDP

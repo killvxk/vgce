@@ -7,8 +7,8 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 102    BOOL     __cdecl   SNetDestroy()
 103    BOOL     __stdcall SNetEnumProviders(int (__stdcall *callback)(_DWORD, _DWORD, _DWORD, _DWORD), int mincaps)
 104    BOOL     __stdcall SNetEnumDevices(int (__stdcall *callback)(_DWORD, _DWORD, _DWORD))
-105    BOOL     __stdcall SNetEnumGames(int (__stdcall *callback)(_DWORD, _DWORD, _DWORD), int *hintnextcall)
-106    BOOL     __stdcall SNetDropPlayer(int playerid, int flags)
+105    BOOL     __stdcall SNetEnumGames(int (__stdcall *callback)(DWORD, DWORD, DWORD), int *hintnextcall)
+106    BOOL     __stdcall SNetDropPlayer(int playerid, DWORD flags)
 107    BOOL     __stdcall SNetGetGameInfo(int type, void *src, unsigned int length, int *byteswritten)
 108    BOOL     __stdcall SNetGetNetworkLatency(int measurementtype, int *result)
 109    BOOL     __stdcall SNetGetNumPlayers(int *firstplayerid, int *lastplayerid, int *activeplayers)
@@ -32,23 +32,23 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 127    BOOL     __stdcall SNetSendMessage(unsigned int playerID, void *data, unsigned int databytes)
 128    BOOL     __stdcall SNetSendTurn(void *data, unsigned int databytes)
 129    BOOL     __stdcall SNetSetBasePlayer(unsigned int a1)
-130    BOOL     __stdcall SNetSetGameMode(int a1)       // Pointer?
+130    BOOL     __stdcall SNetSetGameMode(char *mode)
 131    int      __stdcall SNetUnregisterEventHandler(unsigned int a1, void *callback)
 
 133    BOOL     __stdcall SNetEnumGamesEx(int a1, int a2, int (__fastcall *callback)(_DWORD, _DWORD, _DWORD), int *hintnextcall)
 134    int      __stdcall SNetSendServerChatCommand(char *command)
 135    BOOL     __stdcall SNet135(signed int a1, int a2, int a3)
 136    BOOL     __stdcall SNet136(int a1, int a2, int a3)
-137    BOOL     __stdcall SNet137(int a1)    // SNetGetPlayerNames?
+137    BOOL     __stdcall SNetGetPlayerNames(DWORD flags)
 138    BOOL     __stdcall SNetCreateLadderGame(int a1, int a2, int a3, int a4, int a5, int a6, const void *MemSrc, int MemSize, int a9, char *playerName, int params, int *playerID)
 139    BOOL     __stdcall SNetReportGameResult(unsigned int a1, int size, int a3, int a4, int a5)
 140    BOOL     __stdcall SNetCheckDataFile(int a1, int a2, int a3, int a4)
-141    int      __stdcall SNetSendLeagueCommand(char *cmd, int a2)
+141    int      __stdcall SNetSendLeagueCommand(char *cmd, void *callback)
 142    int      __stdcall SNetSendReplayPath(int a1, int a2, char *replayPath)
 143    int      __stdcall SNet143(int a1)
-144    BOOL     __stdcall SNet144(int a1)    // conjunction with 139        // SNetGetPlayerNames
+144    BOOL     __stdcall SNet144(int a1)    // conjunction with 139
 145    int      __stdcall SNetLeagueLogout(char *bnetName)
-146    int      __stdcall SNet146(int *curPlayerID, size_t nameSize)        // send/recieve text message?
+146    int      __stdcall SNet146(int *curPlayerID, size_t nameSize)
 
 200                       SDlgInit()
 201    HDC      __stdcall SDlgBeginPaint(HWND window, LPPAINTSTRUCT ps)
@@ -61,18 +61,18 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 208    int      __stdcall SDlgDialogBoxIndirectParam(HMODULE hModule, LPCSTR lpName, HWND hWndParent, LPVOID lpParam, LPARAM lParam)
 209    int      __stdcall SDlgDialogBoxParam(HMODULE hModule, LPCSTR lpName, HWND hWndParent, LPVOID lpParam, LPARAM lParam)
 210    int      __stdcall SDlgDrawBitmap(HWND window, HGDIOBJ a2, HRGN hrgnSrc2, int a4, int a5, int a6, char a7)
-211    
+211    BOOL     __stdcall SDlgEndDialog(HWND hDlg, HANDLE nResult)
 212    BOOL     __stdcall SDlgEndPaint(HWND hWnd, PAINTSTRUCT *lpPaint)
 213    int      __stdcall SDlgKillTimer(HWND hDlg, int state)
 214    int      __stdcall SDlgSetBaseFont(int a1, int a2, int a3, int a4, char *Source)
-215    int      __stdcall SDlgSetBitmapI(int a1, int a2, char *Str2, int a4, int a5, int a6, int a7, int a8, int a9, int a10)
-216    int      __stdcall SDlgSetControlBitmaps(HWND parentwindow, int a2, int a3, int a4, int a5, int arg14, int a7)
+215    int      __stdcall SDlgSetBitmapI(HWND hWnd, int a2, char *Str2, int mask1, int flags, int a6, int a7, int a8, int a9, int mask2)
+216    int      __stdcall SDlgSetControlBitmaps(HWND parentwindow, int a2, int a3, int a4, void *buffer, int flags, int mask)
 217    int      __stdcall SDlgSetCursor(HWND hWnd, LONG dwNewLong, int a3, int a4)
 218    int      __stdcall SDlgSetSystemCursor(int a1, int a2, int a3, signed int a4)
 219    int      __stdcall SDlgSetTimer(HWND hDlg, int state, int time, int a4)
 220    int      __cdecl   SDlgUpdateCursor()
 221    int      __stdcall SDlgBltToWindowE(HWND hWnd, HRGN a2, char *a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10)
-222    int      __stdcall SDlgSetBitmapE(int a1, int a2, char *src, int a4, int a5, int a6, int a7, signed int a8, int a9, signed int a10)
+222    int      __stdcall SDlgSetBitmapE(HWND hWnd, int a2, char *src, int mask1, int flags, int a6, int a7, int width, int a9, int mask2)
 223    char *   __stdcall SDlgSetLocale(int category, const char *locale)
 224    int      __stdcall Ordinal224(int a1)    // BNET/League related
 
@@ -81,7 +81,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 252    BOOL     __stdcall SFileCloseArchive(HANDLE hArchive)
 253    BOOL     __stdcall SFileCloseFile(HANDLE hFile)
 254    int      __stdcall SFileDdaBegin(HANDLE directsound, int a2, int a3)
-255    int      __stdcall SFileDdaBeginEx(HANDLE directsound, signed int a2, unsigned int a3, unsigned __int32 lDistanceToMove, signed int a5, signed int a6, int a7)
+255    int      __stdcall SFileDdaBeginEx(HANDLE directsound, DWORD flags, DWORD mask, unsigned __int32 lDistanceToMove, signed __int32 volume, signed int a6, int a7)
 256    BOOL     __cdecl   SFileDdaDestroy()
 257    BOOL     __stdcall SFileDdaEnd(HANDLE directsound)
 258    BOOL     __stdcall SFileDdaGetPos(HANDLE directsound, int a2, int a3)
@@ -100,7 +100,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 271    LONG     __stdcall SFileSetFilePointer(HANDLE hFile, LONG filePos, LONG *filePosHigh, DWORD dwMethod)
 272    LCID     __stdcall SFileSetLocale(LCID lcLocale)
 273    BOOL     __stdcall SFileGetBasePath(char *result, int maxSize)
-274    BOOL     __stdcall SFileSetIoErrorMode(int a1, int a2)
+274    BOOL     __stdcall SFileSetIoErrorMode(int mode, void *callback)
 275    BOOL     __stdcall SFileGetArchiveName(HANDLE hArchive, char *name, int length)
 276    BOOL     __stdcall SFileGetFileName(HANDLE hFile, char *buffer, int length)
 277    int      __stdcall SFileGetArchiveInfo(int a1, int a2, int a3)
@@ -138,18 +138,18 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 315    BOOL     __stdcall SBltROP3Tiled(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10)
 
 320                       SBmpInit()
-321    BOOL     __stdcall SBmpDecodeImage(int a1, signed int *buffer, unsigned int a3, int a4, int a5, int a6, int a7, int a8, int a9)
+321    BOOL     __stdcall SBmpDecodeImage(int type, signed int *srcbuffer, unsigned int a3, int a4, void *dstbuffer, int size, int a7, int a8, int a9)
 322                       SBmpDestroy()
-323    BOOL     __stdcall SBmpLoadImage(const char *fileName, int a2, int a3, int a4, int a5, int width, int height)
+323    BOOL     __stdcall SBmpLoadImage(const char *fileName, int a2, void *buffer, int buffersize, int width, int height, int depth)
 324    BOOL     __stdcall SBmpSaveImage(const char *fileName, int paletteentries, int bitdepth, unsigned __int16 width, unsigned __int16 height, int bitmapbits)
-325    HANDLE   __stdcall SBmpAllocLoadImage(const char *fileName, int a2, int a3, int a4, int a5, int a6, int a7, int (__stdcall *a8)(_DWORD))
+325    HANDLE   __stdcall SBmpAllocLoadImage(const char *fileName, int a2, int a3, void *buffer, char *logfile, int a6, int a7, int (__stdcall *allocFunction)(DWORD))
 326    BOOL     __stdcall SBmpSaveImageEx(const char *fileName, int paletteentries, int bitdepth, unsigned __int16 width, unsigned __int16 height, int bitmapbits, int reserved)
 
 330                       SCodeInit()
 331    BOOL     __stdcall SCodeCompile(char *directives1, char *directives2, char *loopstring, unsigned int maxiterations, unsigned int flags, HANDLE *handle)
-332    BOOL     __stdcall SCodeDelete(int handle)
+332    BOOL     __stdcall SCodeDelete(HANDLE *handle)
 333                       SCodeDestroy()
-334    int      __cdecl   SCodeExecute(int a1, int a2)
+334    int      __cdecl   SCodeExecute(HANDLE *handle, int a2)
 335    BOOL     __stdcall SCodeGetPseudocode(int scodestring, int buffer, size_t buffersize)
 
 340                       SDrawInit()
@@ -223,33 +223,33 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 429    BOOL    __stdcall SReg429(char *keyname, DWORD dwflags, DWORD dwIndex, char *, size_t)           // SRegDeleteKey or SRegDeleteValue ?
 430    BOOL    __stdcall SReg430(char *keyname, int, DWORD cSubKeys)                                    // SRegDeleteKey or SRegDeleteValue ?
 431    BOOL    __stdcall STransBlt(int a1, int a2, int a3, int a4, int a5)
-432    BOOL    __stdcall STransBltUsingMask(int a1, int a2, int a3, int a4, int a5)
+432    BOOL    __stdcall STransBltUsingMask(int a1, int a2, int a3, int width, int a5)
 433    BOOL    __stdcall STransCreateI(int a1, int a2, int a3, signed int a4, int a5, int a6, int a7)
 434    BOOL    __stdcall STransDelete(int handle)
 435                      STransDestroy()
 436    BOOL    __stdcall STransDuplicate(int handle, int source)
 437    BOOL    __stdcall STransIntersectDirtyArray(int handle, int dirtyarraymask, unsigned __int8 dirtyarray, int sourcemask)
 438    BOOL    __stdcall STransInvertMask(int handle, int sourcemask)
-439    BOOL    __stdcall STransLoadI(char *filename, int a5, int a6, int handle)
+439    BOOL    __stdcall STransLoadI(char *filename, int a2, int a3, int handle)
 440    BOOL    __stdcall STransSetDirtyArrayInfo(signed int depth, int depth2, int height, int width)
 441    BOOL    __stdcall STransUpdateDirtyArray(int a1, char a2, int a3, int a4, int a5, int a6) // dirtyarray, dirtyvalue, transparency
-442    BOOL    __stdcall STrans442(int, int, int, char *, size_t)       // STransIsPixelInMask? STransGetBoundingRect?
-443    BOOL    __stdcall STransCombineMasks(int, int, int, int, int, int)
-444    BOOL    __stdcall STransCreateI(int, int, int, int, int, int, int)
-445    BOOL    __stdcall STransCreateE(int, int, int, int bpp, int, int bufferSize, int)
-446    BOOL    __stdcall STrans446(int, int, int, int, int, int, int)       // STransIsPixelInMask? STransGetBoundingRect?
-447    BOOL    __stdcall STransLoadE(char *filename, int, int, int handle)
+442    BOOL    __stdcall STrans442(int a1, int a2, int a3, char *a4, size_t a5)       // STransIsPixelInMask? STransGetBoundingRect?
+443    BOOL    __stdcall STransCombineMasks(int a1, int a2, int a3, int a4, int a5, int a6)
+444    BOOL    __stdcall STransCreateI(int a1, int a2, int a3, int a4, int a5, int a6, int a7)
+445    BOOL    __stdcall STransCreateE(int a1, int a2, int a3, int bpp, int a5, int bufferSize, int a7)
+446    BOOL    __stdcall STrans446(int a1, int a2, int a3, int a4, int a5, int a6, int a7)       // STransIsPixelInMask? STransGetBoundingRect?
+447    BOOL    __stdcall STransLoadE(char *filename, int a2, int a3, int handle)
 
 450                      SVidInit()
 451    BOOL    __cdecl   SVidDestroy()
-452    BOOL    __stdcall SVidGetSize(int video, int a2, int a3, int a4)
-453    BOOL    __stdcall SVidInitialize(int arg0)
-454    BOOL    __stdcall SVidPlayBegin(char *filename, int arg4, int a3, int a4, int a5, int a6, int a7)
+452    BOOL    __stdcall SVidGetSize(HANDLE video, int width, int height, int zero)
+453    BOOL    __stdcall SVidInitialize(HANDLE video)
+454    BOOL    __stdcall SVidPlayBegin(char *filename, int arg4, int a3, int a4, int a5, int a6, HANDLE video)
 455    BOOL    __stdcall SVidPlayBeginFromMemory(void *destbuffer, int destsize, int arg4, int a3, int a4, int a6, int sourcebytes, int sourceptr) // flags, paletteuse
 456    BOOL    __cdecl   SVidPlayContinue()
-457    BOOL    __stdcall SVidPlayContinueSingle(int video, int a2, int a3)
-458    BOOL    __stdcall SVidPlayEnd(int video)
-459    BOOL    __stdcall SVidSetVolume(int video, int a2, int a3, int type)
+457    BOOL    __stdcall SVidPlayContinueSingle(HANDLE video, int a2, int a3)
+458    BOOL    __stdcall SVidPlayEnd(HANDLE video)
+459    BOOL    __stdcall SVidSetVolume(HANDLE video, int a2, int a3, int type)
 460                      SErrInit()
 461    int     __stdcall SErrDisplayError(DWORD dwErrCode, char *logfile, int logline, int location, int exitCode, UINT uExitCode)
 462    int     __stdcall SErrGetErrorStr(DWORD dwErrCode, char *buffer, size_t bufferchars)
@@ -469,4 +469,9 @@ Values for Registry Flags:
 {{{
 0 = "Software\\Battle.net\\"
 2 = "Software\\Blizzard Entertainment\\"
+}}}
+
+Values for SNet player flags
+{{{
+40000006 = Drop
 }}}

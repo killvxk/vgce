@@ -1,11 +1,12 @@
+Note: In most cases, the Siege Tank (Siege Mode) and Siege Tank (Tank Mode) are summed up before compared.
+
 0x00 - goto
 Description: Jump to %1(block).
 
 
-
 0x01 - notowns_jump
 Description: If computer doesn't have a %1(unit), jump to %2(block).
-Notes: Can be any unit. All units must be 0.
+Notes: Can be any unit.
 
 
 0x02 - wait
@@ -26,7 +27,7 @@ Description: Starts the AI Script for area town management.
 
 0x05 - expand
 Description: Run code at %2(block) for expansion number %1(byte).
-Notes: Different behaviour at 5000 ore and 3000 gas.
+Notes: The AI will not expand if it has 5000 ore and 3000 gas or more.
 
 
 0x06 - build
@@ -57,7 +58,6 @@ Default Priority: 30
 0x0B - attack_clear
 Description: Clear the attack data.
  
-
 
 0x0C - attack_add
 Description: Add %1(byte) %2(military) to the current attacking party.
@@ -299,7 +299,17 @@ Description: If enemy unit is within %1 (byte) (unknown measure), jump to %2 (bl
 
 0x3B - get_oldpeons
 Description: This command takes %1(byte) number of workers from the main to move to the expansion. Should be used only after the expansion is completed.
- 
+Notes: Will not grab workers that are running any of the following orders:
+        HarvestGas3
+        HarvestMinerals3
+        Harvest3
+        Build1
+        Build4
+        Build2
+        DroneLand
+        DroneBuild
+        DroneStartBuild
+        
 
 
 0x3C - groundmap_jump
@@ -338,8 +348,8 @@ Description: The use of this command is unknown. Takes %1(military).
 
 
 0x43 - creep
-Description: Place towers using %1(byte) placement scheme (undefined).
- 
+Description: Place towers using %1(byte) style.
+Notes: Less or equal to 4 causes the AI to build structures close together, and values greater than 4 causes the AI to build structures farther apart.
 
 
 0x44 - panic
@@ -409,7 +419,7 @@ Description: Attack an enemy expansion.
 
 0x4E - wait_train
 Description: Wait until computer commands %1(byte) %2(military).
- 
+
 
 
 0x4F - set_attacks

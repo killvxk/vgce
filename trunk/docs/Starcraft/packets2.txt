@@ -791,7 +791,7 @@ CLASS 2 ONLY
 ----------------------------------------------------
 == 0x07 -  Load Game ==
 {{{
-      u32       unknown
+      u32       time
       cstring   name
 }}}
 CLASS 2 ONLY
@@ -799,7 +799,7 @@ CLASS 2 ONLY
 ----------------------------------------------------
 == 0x06 - Save Game ==
 {{{
-      u32       unknown
+      u32       time
       cstring   name
 }}}
 CLASS 2 ONLY

@@ -1,0 +1,74 @@
+Replay commands:
+
+    /replay show kills                      Shows the number of kills.
+    /replay show razings                    Shows the number of razings.
+    /replay show slaughter                  Shows the slaughter leaderboard.
+    /replay show resources                  Shows the resources.
+    /replay show minerals                   Shows the minerals.
+    /replay show gas                        Shows the gas.
+    /replay show score                      Shows the total score.
+    /replay show score units                Shows the units score.
+    /replay show score buildings            Shows the buildings score.
+    /replay show score kills                Shows the kills score.
+    /replay show score razings              Shows the razings score.
+    /replay show score user                 Shows the custom score.
+    /replay hide                            Hides the leaderboard.
+
+    
+Global Hotkeys:
+
+    F1                  Opens Help menu
+    ALT+H               Opens Help menu
+
+    F10                 Opens Game Menu
+    ALT+M               Opens Game Menu
+
+    CTRL+I              Inverts the fog of war on the minimap.
+    Tab                 Inverts the fog of war on the minimap.
+
+    SHIFT+Tab           Cycles through unit colouring schemes
+    Spacebar            Centers the screen on the last action that took place. Start location if none have occured.
+    F2                  Recalls saved screen position F2.
+    F3                  Recalls saved screen position F3.
+    F4                  Recalls saved screen position F4.
+    SHIFT+F2            Saves screen position F2.
+    SHIFT+F3            Saves screen position F3.
+    SHIFT+F4            Saves screen position F4.
+
+    #                   Selects the assigned unit group.
+    CTRL+#              Assignes the selected unit group to the numeric hotkey.
+    SHIFT+#             Adds the selected units to the hotkey group.
+    ALT+#               Selects and moves the screen to the assigned unit group.
+
+    CTRL+S              Toggles Sound
+    CTRL+M              Toggles Music
+
+    CTRL+J              Sends text to Allies
+    CTRL+Enter          Sends text to Allies
+    SHIFT+Enter         Sends text to All.
+    Enter               Sends text.
+    ESC                 Closes text box.
+    
+    CTRL+Q              Opens the Quit Mission Menu
+    ALT+Q               Opens the Quit Mission Menu
+    CTRL+X              Opens the Exit Program Menu
+    ALT+X               Opens the Exit Program Menu
+    ALT+F4              Opens the Exit Program Menu
+
+    CTRL+C              Centers the screen on the currently selected unit
+    ALT+C               Centers the screen on the currently selected unit
+    ALT+O               Opens the Options Menu
+    ALT+S               Opens the Save Game Dialog
+
+    PrtSc               Saves a screenshot.
+
+    
+Commandline:
+
+    ddemulate       Fixes vista problem.
+    nosound         Disables game sound.
+
+
+Registry Keys:
+
+[Software\\Blizzard Entertainment\\Starcraft]

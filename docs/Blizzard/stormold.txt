@@ -212,14 +212,14 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 418    BOOL    __stdcall SMsgPopRegisterState(int type)
 419    BOOL    __stdcall SMsgPushRegisterState(int type)
 420    BOOL    __stdcall SMsg420(int a1, int a2, int a3)     // Register SMSI
-421    BOOL    __stdcall SRegLoadData(char *keyname, char *valuename, HKEY phkResult, LPBYTE lpData, int a5, LPDWORD lpcbData)
-422    BOOL    __stdcall SRegLoadString(char *keyname, char *valuename, char a3, char *buffer, size_t buffersize)
-423    BOOL    __stdcall SRegLoadValue(char *keyname, char *valuename, int a3, int value)
-424    BOOL    __stdcall SRegSaveData(char *keyname, char *valuename, BYTE flags, BYTE *lpData, DWORD cbData)
+421    BOOL    __stdcall SRegLoadData(char *keyname, char *valuename, int size, LPBYTE lpData, BYTE flags, LPDWORD lpcbData)
+422    BOOL    __stdcall SRegLoadString(char *keyname, char *valuename, BYTE flags, char *buffer, size_t buffersize)
+423    BOOL    __stdcall SRegLoadValue(char *keyname, char *valuename, BYTE flags, int value)
+424    BOOL    __stdcall SRegSaveData(char *keyname, char *valuename, int size, BYTE *lpData, DWORD cbData)
 425    BOOL    __stdcall SRegSaveString(char *keyname, char *valuename, BYTE flags, char *string)
 426    BOOL    __stdcall SRegSaveValue(char *keyname, char *valuename, BYTE flags, DWORD result)
-427    BOOL    __stdcall SRegGetBaseKey(char flags, char *buffer, size_t bufferchars)        // Gets subkey names
-428    BOOL    __stdcall SRegDeleteValue(char *keyname, char *valuename, HKEY phkResult)
+427    BOOL    __stdcall SRegGetBaseKey(BYTE flags, char *buffer, size_t bufferchars)        // Gets subkey names
+428    BOOL    __stdcall SRegDeleteValue(char *keyname, char *valuename, BYTE flags)
 429    BOOL    __stdcall SReg429(char *keyname, DWORD dwflags, DWORD dwIndex, char *, size_t)           // SRegDeleteKey or SRegDeleteValue ?
 430    BOOL    __stdcall SReg430(char *keyname, int, DWORD cSubKeys)                                    // SRegDeleteKey or SRegDeleteValue ?
 431    BOOL    __stdcall STransBlt(int a1, int a2, int a3, int a4, int a5)

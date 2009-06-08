@@ -72,3 +72,38 @@ Commandline:
 Registry Keys:
 
 [Software\\Blizzard Entertainment\\Starcraft]
+Recent Maps
+speed
+mscroll
+kscroll
+m_mscroll
+m_kscroll
+music
+sfx
+tipnum
+intro
+introX
+unitspeech
+unitnoise
+bldgnoise
+tip
+trigtext
+usechatcolors
+Game Subtype
+Game Type
+Last Created Game Name
+Game Speed
+Custom Type
+StarCD
+Gamma
+ColorCycle
+UnitPortraits
+CPUThrottle
+Sound Memory Cache
+ForceLowMem
+ForceHighMem
+
+
+[Software\\Battle.net\\Configuration]
+Override Battle.net gateways
+Battle.net gateways

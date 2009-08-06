@@ -97,8 +97,16 @@ CLASS 1
 
 ----------------------------------------------------
 0x53 -  DEFAULT CASE 2 (unknown command) INVALID
+CLASS 1
+
+----------------------------------------------------
 0x52 -  DEFAULT CASE (unknown command) INVALID
+CLASS 1
+
+----------------------------------------------------
 0x51 - INVALID
+
+
 ----------------------------------------------------
 0x50 - Unknown
 {{{
@@ -118,6 +126,8 @@ CLASS 1
 		unsigned long (file size?)
 		unsigned long (file hash?)
 		string (file name)
+	*ID 2 - Unknown*
+	*ID 3 - Unknown*
 	*ID 4 - Transfer data*
 	      u8   (unknown)
 	      unsigned long (file offset ?)
@@ -126,6 +136,7 @@ CLASS 1
 	*ID 5 - Request data*
 	      u8   (unknown)
 	      unsigned long (file offset ?)
+	*ID 6 - Unknown*
 }}}
 INVALID
 
@@ -134,10 +145,20 @@ INVALID
 {{{
       u8	Type
 		{
-		
+			0x00 = "You have been banned."
+			0x01 = "The game creator closed all available slots."
+			0x02 = "The game host has left."
+			0x03 = "Unable to join game."
+			0x04 = "Save game file not found."
+			0x05 = "Unable to write scenario file."
+			0x06 = "You cannot join this game because it is a different version of Starcraft."
+			0x07 = "You are not able to join this game. It was not created with the same CD that spawned your copy of StarCraft."
+			0x08 = "Unable to authenticate map."
+			0x09 = "You have been booted."			// Default case
 		}
 }}}
 INVALID
+CLASS 1
 
 ----------------------------------------------------
 0x4D -  		(unban player?)
@@ -145,6 +166,7 @@ INVALID
 
 }}}
 INVALID
+CLASS 1
 
 ----------------------------------------------------
 == 0x4C - Lobby Chat ==
@@ -152,13 +174,14 @@ INVALID
       cstring   message
 }}}
 INVALID
+CLASS 1
 
 ----------------------------------------------------
 == 0x4B - Force Name Transfer ==
 {{{
       // 120 bytes - undefined
 }}}
-INVALID
+CLASS 1
 
 ----------------------------------------------------
 == 0x4A - Player/Force Data Transfer ==
@@ -228,16 +251,15 @@ INVALID
       u8   (Player 11 owning Force)
       u8   (Player 12 owning Force)
 
-      8 bytes (unknown)
 }}}
-INVALID
-
+CLASS 1
 ----------------------------------------------------
 == 0x49 - Information Request ==
 {{{
       u32   (Information Byte; 6 = File Name, 7 = File Data ??)
 }}}
 CLASS 5
+CLASS 1
 
 ----------------------------------------------------
 0x48 -  Unknown
@@ -260,7 +282,7 @@ INVALID CLASS 2
 ----------------------------------------------------
 == 0x45 - Swap Players ==
 {{{
-	u8  dourceSlot
+	u8  sourceSlot
 	u8  destinationSlot
 }}}
 CLASS 1 ONLY
@@ -333,7 +355,7 @@ CLASS 1 ONLY
 ----------------------------------------------------
 == 0x3C - Start Game ==
 {{{
-     No parameters.
+     // No parameters.
 }}}
 CLASS 1 ONLY
 
@@ -389,14 +411,14 @@ CLASS 2 ONLY AND REPLAY
 ----------------------------------------------------
 == 0x34 - Cancel Addon ==
 {{{
-   No parameters.
+   // No parameters.
 }}}
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
 == 0x33 - Cancel Upgrade ==
 {{{
-   No parameters.
+   // No parameters.
 }}}
 CLASS 2 ONLY AND REPLAY
 
@@ -410,7 +432,7 @@ CLASS 2 ONLY AND REPLAY
 ----------------------------------------------------
 == 0x31 - Cancel Research ==
 {{{
-   No parameters.
+   // No parameters.
 }}}
 CLASS 2 ONLY AND REPLAY
 
@@ -556,7 +578,7 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-0x1D - "Nothing" ?
+== 0x1D - Nothing ==
 {{{
     // No parameters.
 }}}
@@ -671,16 +693,16 @@ CLASS 2 ONLY AND REPLAY
 ----------------------------------------------------
 == 0x0F - Change Game Speed ==
 {{{
-      u8   speed
-        {
-            0x00 = "Slowest",
-            0x01 = "Slower",
-            0x02 = "Slow",
-            0x03 = "Normal",
-            0x04 = "Fast",
-            0x05 = "Faster",
-            0x06 = "Fastest"
-        }
+    u8   speed
+    {
+        0x00 = "Slowest",
+        0x01 = "Slower",
+        0x02 = "Slow",
+        0x03 = "Normal",
+        0x04 = "Fast",
+        0x05 = "Faster",
+        0x06 = "Fastest"
+    }
 }}}
 CLASS 2 ONLY AND REPLAY
 
@@ -770,7 +792,7 @@ CLASS 2 ONLY
 ----------------------------------------------------
 == 0x07 -  Load Game ==
 {{{
-      u32       unknown
+      u32       time
       cstring   name
 }}}
 CLASS 2 ONLY
@@ -778,7 +800,7 @@ CLASS 2 ONLY
 ----------------------------------------------------
 == 0x06 - Save Game ==
 {{{
-      u32       unknown
+      u32       time
       cstring   name
 }}}
 CLASS 2 ONLY

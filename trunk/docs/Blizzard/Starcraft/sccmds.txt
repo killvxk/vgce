@@ -71,6 +71,14 @@ Commandline:
 
 Registry Keys:
 
+[Software\\Blizzard Entertainment\\Starcraft\\StarEdit\\Recent Files]
+
+
+[Software\\Blizzard Entertainment\\Starcraft\\StarEdit\\Settings]
+LicenseAccepted
+UndoLevels
+
+
 [Software\\Blizzard Entertainment\\Starcraft]
 Recent Maps
 speed
@@ -102,8 +110,66 @@ CPUThrottle
 Sound Memory Cache
 ForceLowMem
 ForceHighMem
+InstallPath
+
+
 
 
 [Software\\Battle.net\\Configuration]
 Override Battle.net gateways
 Battle.net gateways
+
+
+[Software\\Blizzard Entertainment\\Internal]
+Debug Error Output
+Protect Memory
+Debug Memory
+Window Mode
+GemUseImageHelp
+
+
+
+[Software\\Blizzard Entertainment\\Video Player]
+Mode
+
+
+[Software\\Blizzard Entertainment\\LatencyTest]
+MinPacketDelay
+MaxPacketDelay
+CorruptPercent
+
+
+[Software\\Battle.net\\Network Providers]
+Preferred Provider
+
+
+[Software\\Battle.net\\Network Providers\\Serial]
+Baud Rate
+
+
+Any dsound and ddraw keys also apply.
+
+
+Archive Priorities:
+
+patch_rt.mpq    7000
+Broodat.mpq     2500
+Stardat.mpq     2000
+Install.exe     1000
+Broodwar.mpq    1000
+Starcraft.mpq   1000
+League MPQ      0
+SCX/SCM MPQ     0
+
+
+Staredit Commandline:
+
+-n      New Instance. Does not create a new map when opened.
+-r
+-e      Sets the tileset index.
+-t      Sets the default terrain. (Can also be null, non-standard)
+-w      Sets the map's width. (Will crash if not standard)
+-h      Sets the map's height. (Will crash if not standard)
+-f      Opens a map.
+nosound
+ddemulate

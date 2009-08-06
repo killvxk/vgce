@@ -5,8 +5,8 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 100                       SNetInit()
 101    BOOL     __stdcall SNetCreateGame(char *Source, char *a2, char *a3, int a4, int a5, int a6, char *a7, char *a8, int *playerid)
 102    BOOL     __cdecl   SNetDestroy()
-103    BOOL     __stdcall SNetEnumProviders(int (__stdcall *callback)(_DWORD, _DWORD, _DWORD, _DWORD), int mincaps)
-104    BOOL     __stdcall SNetEnumDevices(int (__stdcall *callback)(_DWORD, _DWORD, _DWORD))
+103    BOOL     __stdcall SNetEnumProviders(int (__stdcall *callback)(DWORD, DWORD, DWORD, DWORD), int mincaps)
+104    BOOL     __stdcall SNetEnumDevices(int (__stdcall *callback)(DWORD, DWORD, DWORD))
 105    BOOL     __stdcall SNetEnumGames(int (__stdcall *callback)(DWORD, DWORD, DWORD), int *hintnextcall)
 106    BOOL     __stdcall SNetDropPlayer(int playerid, DWORD flags)
 107    BOOL     __stdcall SNetGetGameInfo(int type, void *src, unsigned int length, int *byteswritten)
@@ -32,10 +32,10 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 127    BOOL     __stdcall SNetSendMessage(unsigned int playerID, void *data, unsigned int databytes)
 128    BOOL     __stdcall SNetSendTurn(void *data, unsigned int databytes)
 129    BOOL     __stdcall SNetSetBasePlayer(unsigned int a1)
-130    BOOL     __stdcall SNetSetGameMode(char *mode)
+130    BOOL     __stdcall SNetSetGameMode(char *a1, char a2)
 131    int      __stdcall SNetUnregisterEventHandler(unsigned int a1, void *callback)
 
-133    BOOL     __stdcall SNetEnumGamesEx(int a1, int a2, int (__fastcall *callback)(_DWORD, _DWORD, _DWORD), int *hintnextcall)
+133    BOOL     __stdcall SNetEnumGamesEx(int a1, int a2, int (__fastcall *callback)(DWORD, DWORD, DWORD), int *hintnextcall)
 134    int      __stdcall SNetSendServerChatCommand(char *command)
 135    BOOL     __stdcall SNet135(signed int a1, int a2, int a3)
 136    BOOL     __stdcall SNet136(int a1, int a2, int a3)
@@ -45,10 +45,10 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 140    BOOL     __stdcall SNetCheckDataFile(int a1, int a2, int a3, int a4)
 141    int      __stdcall SNetSendLeagueCommand(char *cmd, void *callback)
 142    int      __stdcall SNetSendReplayPath(int a1, int a2, char *replayPath)
-143    int      __stdcall SNet143(int a1)
-144    BOOL     __stdcall SNet144(int a1)    // conjunction with 139
+143    int      __stdcall SNetGetLeagueName(int leagueID)                   // not official name
+144    BOOL     __stdcall SNet144(void *buffer)
 145    int      __stdcall SNetLeagueLogout(char *bnetName)
-146    int      __stdcall SNet146(int *curPlayerID, size_t nameSize)
+146    int      __stdcall SNetGetLeaguePlayerName(int *curPlayerID, size_t nameSize)        // not official name
 
 200                       SDlgInit()
 201    HDC      __stdcall SDlgBeginPaint(HWND window, LPPAINTSTRUCT ps)
@@ -66,7 +66,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 213    int      __stdcall SDlgKillTimer(HWND hDlg, int state)
 214    int      __stdcall SDlgSetBaseFont(int a1, int a2, int a3, int a4, char *Source)
 215    int      __stdcall SDlgSetBitmapI(HWND hWnd, int a2, char *Str2, int mask1, int flags, int a6, int a7, int a8, int a9, int mask2)
-216    int      __stdcall SDlgSetControlBitmaps(HWND parentwindow, int a2, int a3, int a4, void *buffer, int flags, int mask)
+216    int      __stdcall SDlgSetControlBitmaps(HWND parentwindow, int *id, int a3, void *buffer2, void *buffer, int flags, int mask)
 217    int      __stdcall SDlgSetCursor(HWND hWnd, LONG dwNewLong, int a3, int a4)
 218    int      __stdcall SDlgSetSystemCursor(int a1, int a2, int a3, signed int a4)
 219    int      __stdcall SDlgSetTimer(HWND hDlg, int state, int time, int a4)
@@ -105,8 +105,8 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 276    BOOL     __stdcall SFileGetFileName(HANDLE hFile, char *buffer, int length)
 277    int      __stdcall SFileGetArchiveInfo(int a1, int a2, int a3)
 278    char     __stdcall SFileSetPlatform(char a1)
-279    int      __stdcall SFileLoadFile(char *filename, int a2, int a3, int a4, int a5)
-280    BOOL     __stdcall SFileUnloadFile(void *buffer)
+279    int      __stdcall SFileLoadFile(char *filename, void *buffer, int buffersize, int a4, int a5)
+280    BOOL     __stdcall SFileUnloadFile(HANDLE hFile)
 281    BOOL     __stdcall SFileLoadFileEx(void *hArchive, char *filename, int a3, int a4, int a5, DWORD searchScope, struct _OVERLAPPED *lpOverlapped)
 282    void     __stdcall SFilePrioritizeRequest(int a1, int a2)
 283    void     __stdcall SFileCancelRequest(int a1)
@@ -140,7 +140,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 320                       SBmpInit()
 321    BOOL     __stdcall SBmpDecodeImage(int type, signed int *srcbuffer, unsigned int a3, int a4, void *dstbuffer, int size, int a7, int a8, int a9)
 322                       SBmpDestroy()
-323    BOOL     __stdcall SBmpLoadImage(const char *fileName, int a2, void *buffer, int buffersize, int width, int height, int depth)
+323    BOOL     __stdcall SBmpLoadImage(const char *fileName, int size, void *buffer, int buffersize, int width, int height, int depth)
 324    BOOL     __stdcall SBmpSaveImage(const char *fileName, int paletteentries, int bitdepth, unsigned __int16 width, unsigned __int16 height, int bitmapbits)
 325    HANDLE   __stdcall SBmpAllocLoadImage(const char *fileName, int a2, int a3, void *buffer, char *logfile, int a6, int a7, int (__stdcall *allocFunction)(DWORD))
 326    BOOL     __stdcall SBmpSaveImageEx(const char *fileName, int paletteentries, int bitdepth, unsigned __int16 width, unsigned __int16 height, int bitmapbits, int reserved)
@@ -174,7 +174,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 359    int      __cdecl   SDrawWaitForVerticalBlank()
 
 372    BOOL     __stdcall SEvtDispatch(DWORD messageID, int a2, int a3, int a4)
-373    BOOL     __stdcall SEvtRegisterHandler(DWORD messageID, unsigned int a2, int event, int a4, int a5)
+373    BOOL     __stdcall SEvtRegisterHandler(DWORD messageID, unsigned int a2, int event, int a4, void *function)
 374    BOOL     __stdcall SEvtUnregisterHandler(DWORD messageID, int a2, int a3, int a4)
 375    BOOL     __stdcall SEvtUnregisterType(DWORD messageID, int type)
 376    BOOL     __stdcall SEvtPopState(DWORD messageID, int type)
@@ -186,13 +186,13 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 382    BOOL    __stdcall SGdiCreateFont(const void *handle, int bits, int width, int height, int filecharwidth, int filecharheight, const void *charsizetable, int windowsfont)
 383    BOOL    __stdcall SGdiDeleteObject(void *handle)
 384    BOOL     __cdecl  SGdiDestroy()
-385    BOOL    __stdcall SGdiExtTextOut(int a1, int a2, int a3, int a4, unsigned int a8, signed int a6, signed int a7, const char *arg1C, unsigned int arg20)
+385    BOOL    __stdcall SGdiExtTextOut(int a1, int a2, int a3, int a4, unsigned int a8, signed int a6, signed int a7, const char *string, unsigned int arg20)
 386    BOOL    __stdcall SGdiImportFont(HGDIOBJ handle, int windowsfont)
 387    BOOL    __stdcall SGdiLoadFont(char *Str, int filecharwidth, int filecharheight, int argC, int a7, int a8)
 388    BOOL    __stdcall SGdiRectangle(int lpSurface, int a2, int a3, int width, int height, int a6)
 389    BOOL    __stdcall SGdiSelectObject(int handle)
 390    BOOL    __stdcall SGdiSetPitch(int pitch)
-391    BOOL    __stdcall SGdiTextOut(int a1, int a2, int a3, unsigned int a8, const char *arg1C, unsigned int arg20)
+391    BOOL    __stdcall SGdiTextOut(int a1, int a2, int a3, unsigned int a8, const char *string, unsigned int arg20)
 392    BOOL    __stdcall SGdi392(int width, int height, int depth, int width2)        // SGdiGetTextExtent?
 393    BOOL    __stdcall Ordinal393(char *string, int, int)
 
@@ -218,13 +218,13 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 424    BOOL    __stdcall SRegSaveData(char *keyname, char *valuename, int size, BYTE *lpData, DWORD cbData)
 425    BOOL    __stdcall SRegSaveString(char *keyname, char *valuename, BYTE flags, char *string)
 426    BOOL    __stdcall SRegSaveValue(char *keyname, char *valuename, BYTE flags, DWORD result)
-427    BOOL    __stdcall SRegGetBaseKey(BYTE flags, char *buffer, size_t bufferchars)        // Gets subkey names
+427    BOOL    __stdcall SRegGetBaseKey(BYTE flags, char *buffer, size_t bufferchars)
 428    BOOL    __stdcall SRegDeleteValue(char *keyname, char *valuename, BYTE flags)
-429    BOOL    __stdcall SReg429(char *keyname, DWORD dwflags, DWORD dwIndex, char *, size_t)           // SRegDeleteKey or SRegDeleteValue ?
-430    BOOL    __stdcall SReg430(char *keyname, int, DWORD cSubKeys)                                    // SRegDeleteKey or SRegDeleteValue ?
-431    BOOL    __stdcall STransBlt(int a1, int a2, int a3, int a4, int a5)
-432    BOOL    __stdcall STransBltUsingMask(int a1, int a2, int a3, int width, int a5)
-433    BOOL    __stdcall STransCreateI(int a1, int a2, int a3, signed int a4, int a5, int a6, int a7)
+429    BOOL    __stdcall SReg429(char *keyname, DWORD dwflags, DWORD dwIndex, char *, size_t)
+430    BOOL    __stdcall SReg430(char *keyname, int, DWORD cSubKeys)
+431    BOOL    __stdcall STransBlt(int handle, int a2, int a3, int a4, int a5)
+432    BOOL    __stdcall STransBltUsingMask(int lpSurface, int a2, int pitch, int width, int handle)
+433    BOOL    __stdcall STransCreateI(int handle, int a2, int a3, signed int a4, int a5, int a6, int a7)
 434    BOOL    __stdcall STransDelete(int handle)
 435                      STransDestroy()
 436    BOOL    __stdcall STransDuplicate(int handle, int source)
@@ -234,7 +234,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 440    BOOL    __stdcall STransSetDirtyArrayInfo(signed int depth, int depth2, int height, int width)
 441    BOOL    __stdcall STransUpdateDirtyArray(int a1, char a2, int a3, int a4, int a5, int a6) // dirtyarray, dirtyvalue, transparency
 442    BOOL    __stdcall STrans442(int a1, int a2, int a3, char *a4, size_t a5)       // STransIsPixelInMask? STransGetBoundingRect?
-443    BOOL    __stdcall STransCombineMasks(int a1, int a2, int a3, int a4, int a5, int a6)
+443    BOOL    __stdcall STransCombineMasks(int handle, int a2, int a3, int a4, int depth, int a6)
 444    BOOL    __stdcall STransCreateI(int a1, int a2, int a3, int a4, int a5, int a6, int a7)
 445    BOOL    __stdcall STransCreateE(int a1, int a2, int a3, int bpp, int a5, int bufferSize, int a7)
 446    BOOL    __stdcall STrans446(int a1, int a2, int a3, int a4, int a5, int a6, int a7)       // STransIsPixelInMask? STransGetBoundingRect?
@@ -266,10 +266,10 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 473    int     __stdcall SCmdGetNum(int a1)
 474    BOOL    __stdcall SCmdGetString(int a1, char* dest, size_t size)
 475    BOOL    __stdcall SCmdProcess(const char **string, int a2, int a3, int a4)
-476    BOOL    __stdcall SCmdRegisterArgList(int, int)
+476    BOOL    __stdcall SCmdRegisterArgList(void *argstruct, int count)
 477    BOOL    __stdcall SCmdRegisterArgument(int a1, int a2, char *str, int a4, int a5, int a6, int a7, int a8)
 478    int     __stdcall SCmd478(int a1)    // called in conjunction with 474
-479    BOOL    __stdcall SCmdProcessCommandLine(int a1, int a2)
+479    BOOL    __stdcall SCmdProcessCommandLine(int count, void *function)
 480                      SMemInit2()
 481    BOOL    __stdcall SMemFindNextBlock(int a1, int a2, int a3, int a4)
 482    BOOL    __stdcall SMemFindNextHeap(int prevheap, int details, int nextheap)
@@ -312,7 +312,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 
 521    int     __stdcall Ordinal521(int a1)
 
-523    void    __stdcall SRgn523(int handle, int a2, int a3, int a4)    // calls 534, called in conjunction with 524
+523    void    __stdcall SRgn523(int handle, RECT *rect, int a3, int a4)
 524    void    __stdcall SRgn524(int handle, int a2)
 525    void    __stdcall SRgn525(int handle)            // related to the above two
 
@@ -402,7 +402,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 625    int      __stdcall SBigNot(void *buffer, int a2)
 626    int      __stdcall SBigOr(void *buffer, int a2, int a3)
 627    int      __stdcall SBigPow(void *buffer, int a2, int a3)
-628    int      __stdcall SBigPowMod(void *buffer, int a2, int a3, int a4)
+628    int      __stdcall SBigPowMod(void *buffer1, void *buffer2, int a3, int a4)
 629    int      __stdcall SBigRand(void *buffer, int a2, int a3)
 630    int      __stdcall SBigSet2Exp(void *buffer, int a2)
 631    int      __stdcall SBigSetOne(void *buffer)
@@ -411,8 +411,8 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 634    int      __stdcall SBigShr(void *buffer, int a2, int a3)
 635    int      __stdcall SBigSquare(void *buffer, int a2)
 636    int      __stdcall SBigSub(void *buffer, int a2, int a3)
-637    int      __stdcall SBigToBinaryArray(void *buffer, int a2, int a3)
-638    int      __stdcall SBigToBinaryBuffer(void *buffer, int a2, int a3, int a4)
+637    int      __stdcall SBigToBinaryArray(void *buffer, int length, int a3)
+638    int      __stdcall SBigToBinaryBuffer(void *buffer, int length, int a3, int a4)
 639    int      __stdcall SBigToBinaryPtr(void *buffer, int a2, int a3)
 640    int      __stdcall SBigToStrArray(void *buffer, int a2, int a3)
 641    int      __stdcall SBigToStrBuffer(void *buffer, char *dst, int count)
@@ -455,7 +455,7 @@ Values for the logline parameter:
 -3  = Handle
 -4  = File
 
-Else it's a File + line number pair.
+Else it's a project File + line number pair.
 }}}
 
 Values for SNetLeaveGame:

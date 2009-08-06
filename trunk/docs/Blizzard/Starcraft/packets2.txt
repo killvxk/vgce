@@ -577,7 +577,7 @@ CLASS 2 ONLY AND REPLAY
 CLASS 2 ONLY AND REPLAY
 
 ----------------------------------------------------
-0x1D - "Nothing" ?
+== 0x1D - Nothing ==
 {{{
     // No parameters.
 }}}
@@ -692,16 +692,16 @@ CLASS 2 ONLY AND REPLAY
 ----------------------------------------------------
 == 0x0F - Change Game Speed ==
 {{{
-      u8   speed
-        {
-            0x00 = "Slowest",
-            0x01 = "Slower",
-            0x02 = "Slow",
-            0x03 = "Normal",
-            0x04 = "Fast",
-            0x05 = "Faster",
-            0x06 = "Fastest"
-        }
+    u8   speed
+    {
+        0x00 = "Slowest",
+        0x01 = "Slower",
+        0x02 = "Slow",
+        0x03 = "Normal",
+        0x04 = "Fast",
+        0x05 = "Faster",
+        0x06 = "Fastest"
+    }
 }}}
 CLASS 2 ONLY AND REPLAY
 

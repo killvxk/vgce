@@ -43,6 +43,7 @@ CUNIT STRUCT
 +0x5C - CUNIT* Target_Order
 +0x60 - DWORD dwShield
 +0x64 - WORD wUnitID
++0x66
 +0x68 - CUNIT* PlayerPrevious
 +0x6C - CUNIT* PlayerNext
 +0x70 - CUNIT* Subunit
@@ -63,6 +64,7 @@ CUNIT STRUCT
 
 +0x93 - BYTE bUnknownState?
 +0x94 - BYTE bCurrentButtonSet
+
 +0x98 - WORD wQueue1
 +0x9A - WORD wQueue2
 +0x9C - WORD wQueue3
@@ -149,9 +151,9 @@ DWORD
 
 	00000100(0x4000000) - Invincible
 
-	00010000(0x10000000) - Speed upgrade
-	00100000(0x20000000) - cooldown upgrade
-	01000000(0x40000000) - 
+	00010000(0x10000000) - Speed Upgrade
+	00100000(0x20000000) - cooldown Upgrade
+	01000000(0x40000000) - Energy Upgrade
 
 +0xE0 - BYTE bResouceType
 +0xE1 - BYTE bWireframeRandomizer

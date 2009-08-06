@@ -27,3 +27,4 @@ MODM    Modem
 SCBL    Starcraft Battle.net League
 IPXW
 MSDP
+ATLK

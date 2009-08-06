@@ -4119,3 +4119,98 @@ numgraspers
 SummaryText
 ModelTypes
 bodytext
+types
+NestTypeEnum
+PersonalityEnum
+vehicle
+VehiclePurposeEnum
+VehicleLocomotionEnum
+InteractiveOrnament
+MigrationPoint
+MigrationPointTypeEnum
+NounTemplates
+ShadowWorlds
+renderBlobShadows
+ShadowNestedMaps
+ShadowWorldMapResolution
+ShadowConvolutionMapRes
+TMMIPLOD
+TMAnisotropic
+EffectsLevel
+MaxParticlesTarget
+EffectsMaxSamples
+particleScale
+particleDensity
+EditorRenderingQuality
+DOFOn
+DofBlurQuality
+skinpaintAmbOccEnabled
+BakeSplatterMeshBudget
+shaderPathLimit
+lightingManagerBands
+ExcludeSecondaryTextures
+planetLODChunkRes
+terrainLODThreshold
+terrainSeabedVB
+terrainReduceFlatQuads
+renderTerrainWaterReflection
+renderTerrainWaterRefraction
+renderTerrainSeabedFullRes
+weatherLevel
+weatherOn
+includeTerrainWorldAsUnderwaterWorld
+allowUnderwaterTerrainObjectsGlobal
+UseAnimWater
+obstacleOcclusionMinAlpha
+obstacleOcclusionAlphaConvergenceSpeed
+GraphicsCacheSize
+playmodePhotoRes
+recordMovieWidth
+recordMovieHeight
+YouTubeKeepLogIn
+BuddiesOnly
+audioPerformanceLevel
+showHintsOn
+maxAnimalsPerStage
+maxActiveCreaturePlantRadius
+maxActiveCreaturePlants
+CityPopulationScale
+EjectedCitizensMax
+maxNPCCivicObjectsPerType
+plgMachineSpec
+CaptureUI
+ShowDialogExplainSporepedia
+ShowDialogExplainPaintLikeThis
+expireOldContent
+archiveExpired
+expireOldContentDays
+downloadCacheSize
+limitFeedUpdate
+limitFeedUpdateDays
+UsePixelAspectRatio
+EmpireColonyMax
+GGENewGameFlowUIv1-flip
+GGENewGameFlowUIv1
+terrainGenerateBrushesPerFrame
+terrainGenerateSingleStep
+terrainGenerateTimeLimit
+packageTitle	0x06ef59e4
+packagePriority	0x06ef59e5
+packageRequirements	0x06ef59e6
+packageID	0x06ef59e7
+packageBlessCheck	0x06ef59e8
+packageProductKey	0x06ef59e9
+packageRegistryKey	0x06ef59ea
+packageEntitleCheck	0x06ef59eb
+packageSignature	0x00000000
+browserAllowSortByAppPack	0x2ac80dad
+browserAllowSortByTime	0xa80283d6
+browserAllowSortByDownloadTime	0xa411ad1a
+browserAllowSortByTitle	0x352db4a9
+browserAllowSortByAuthor	0xdb7e107c
+browserAllowSortByType	0xc329bdc1
+browserAllowSortByPublished	0xb6253939
+browserAllowSortByRelationship	0xc560a3f3
+toolDeselectsOnPlanetExit	0x06df688d
+ufoAllyHitSphereRadius	0x06ba86fb
+roof	0x7BD05F63

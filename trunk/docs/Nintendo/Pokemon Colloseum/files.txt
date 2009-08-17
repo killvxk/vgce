@@ -1,0 +1,23 @@
+thp	- Common Gamecube/Wii video format
+samp - Unknown sound sample format
+
+----------------------------------------------------------
+FSYS
+	char header[4] = 'FSYS';	// 0x00
+	
+	
+	u32 fileSize;				// 0x20
+	
+	followed by file pointer index, file name index, file entry index, file data
+	
+	
+----------------------------------------------------------
+GLLA (.toc)
+	char header[4] = 'GLLA';
+	void unknown;
+	
+	
+----------------------------------------------------------
+
+	
+	

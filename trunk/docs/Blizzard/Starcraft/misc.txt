@@ -24,3 +24,49 @@ MUSIC ID
     22     "music\\title.wav"
     23     "music\\terran2.wav"
     24     "music\\RadioFreeZerg.wav"
+
+    
+AI FLAGS
+    wait_secure      = 0x01,
+    = 0x02,
+    defaultbuild_off = 0x04,
+    transports_off   = 0x08,
+    farms_notiming   = 0x10,
+    campaign         = 0x20,
+    
+    creep            = 0x80
+    
+
+AI FLAGS 2
+    wait_upgrades    = 0x04
+    target_expansion = 0x08
+    
+
+MENU DATA
+    0      "glue\\mainmenu\\"
+    1      "glue\\simulate"
+    2      "glue\\selconn\\"
+    3      "glue\\chatroom\\"
+    4      "glue\\battle.net\\"
+    5      "glue\\login\\"
+    6      "glue\\campaign\\"
+    7      "glue\\ReadyT\\"
+    8      "glue\\ReadyZ\\"
+    9      "glue\\ReadyP\\"
+    10     "glue\\gamesel\\"
+    11     "glue\\create\\"
+    12     "glue\\create\\"
+    13     "glue\\load\\"
+    14     "glue\\score\\"
+    15     "glue\\score\\"
+    16     "glue\\score\\"
+    17     "glue\\score\\"
+    18     "glue\\score\\"
+    19     "glue\\score\\"
+    20     "glue\\modem\\"
+    21     "glue\\direct\\"
+    22     "glue\\campaign\\"
+    23     "glue\\gamemode\\"
+    24     "glue\\gamemode\\"
+    25
+    0      "glue\\generic\\"

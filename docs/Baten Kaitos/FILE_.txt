@@ -1,0 +1,39 @@
+UNCOMPRESSED STRING FILE
+	u32	header = 0x000004E4;
+	u32 stringCount;
+
+	struct entry[stringCount]
+	{
+		u32	uniqueID;
+		u32 offset;		// File offset = (stringCount + 1) * 8
+	}
+
+---------------------------------------------------------------------------------
+COMPRESSED FILE
+	A LZ* type file.
+	Start with header byte to specify which of the following 8 bytes are raw and which use a preset sequence of values.
+	If a header bit is on(checked), then the corresponding byte in the following sequence is raw.
+	If a header bit is off(unchecked), then the corresponding byte gets replaced with 2 bytes that specify the sequence of bytes to use for the uncompressed block.
+	Repeat.
+	
+---------------------------------------------------------------------------------
+INDEX.BIN
+	u32	fileName;   // corresponds to FILE_########
+	u32 fileSize;	// the uncompressed file size
+	u32	fileFlags;	// 0x01 = file, 0x02 = compressed
+	u32 fileID;		// Unknown, hash?
+	
+---------------------------------------------------------------------------------	
+CSF (CUTSCENE FILE)
+	char header[4] = 'CSF ';
+	u32  fileSize;
+	(everything else unknown)
+	
+---------------------------------------------------------------------------------
+CSL (COMPRESSED SOUND LIBRARY)
+	char header[4] = 'CSL ';
+	u32  nEntries;
+	
+	u32 fileOffset[nEntries];		// Offset to file
+	
+---------------------------------------------------------------------------------

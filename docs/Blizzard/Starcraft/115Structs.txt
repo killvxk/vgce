@@ -10,30 +10,32 @@ CUNIT STRUCT
 +0x1A - WORD wCurrentYPos_?
 +0x1C - WORD wX_?
 +0x1E - WORD wY_?
-+0x20 - BYTE bMovementFlags_?
++0x20 - WORD bMovementFlags_?
+	1 - Stuck/Building?
 	2 - Making Building?
 	4 - Moving?
 
 +0x22 - BYTE bFlingyTurnRadius
-+0x23 - BYTE bCurrentDirection_?
++0x23 - BYTE bCurrentDirection
 +0x24 - WORD wFlingyID
-
++0x26 - BYTE bUnknown_26_flingy
 +0x27 - BYTE bFlingyMovementType
 +0x28 - WORD wCurrentXPos
 +0x2A - WORD wCurrentYPos
 +0x2C - DWORD dwX_Halt
 +0x30 - DWORD dwY_Halt
 +0x34 - DWORD dwFlingySpeed
-+0x38 - DWORD dwUnknown_38_Speed
-+0x3C - DWORD dwUnknown_3C_Speed
-
++0x38 - DWORD dwUnknown_38_flingy
++0x3C - DWORD dwUnknown_3C_flingy
++0x40 - DWORD dwUnknown_40_flingy
++0x44 - DWORD dwUnknown_44_flingy
 +0x48 - WORD wFlingyAcceleration
-
++0x4A - WORD wUnknown_4A
 +0x4C - BYTE bPlayerID
 +0x4D - BYTE bMainOrderID
 +0x4E - BYTE bMainOrderState
 +0x4F - BYTE bOrderSignal
-
++0x50 - DWORD dwOrderUnitID
 +0x54 - BYTE bMainOrderTimer
 +0x55 - BYTE bGroundWeaponCooldown
 +0x56 - BYTE bAirWeaponCooldown
@@ -43,28 +45,24 @@ CUNIT STRUCT
 +0x5C - CUNIT* Target_Order
 +0x60 - DWORD dwShield
 +0x64 - WORD wUnitID
-+0x66
++0x66 - WORD wUnknown_66
 +0x68 - CUNIT* PlayerPrevious
 +0x6C - CUNIT* PlayerNext
 +0x70 - CUNIT* Subunit
 +0x74 - CORDER* OrderQueueHead
 +0x78 - CORDER* OrderQueueTail
-
-+0x7C	- Unknown AI Cloak
-
++0x7C - DWORD dwUnknown_7C
 +0x80 - CUNIT* ConnectedUnit
-
 +0x84 - BYTE bNumOfQueuedOrders
 +0x85 - BYTE bUnknown_85_Order_Timer_Seperate
-
++0x86 - WORD wUnknown_86
 +0x88 - WORD wDisplayedUnitID?
-
++0x8A - DWORD dwUnknown_8A
 +0x8E - BYTE bRankIncrease
 +0x8F - BYTE bKillCount
-
-+0x93 - BYTE bUnknownState?
-+0x94 - BYTE bCurrentButtonSet
-
++0x90 - DWORD dwStateFlags
++0x94 - WORD bCurrentButtonSet
++0x96 - WORD wUnknown_96
 +0x98 - WORD wQueue1
 +0x9A - WORD wQueue2
 +0x9C - WORD wQueue3
@@ -72,12 +70,12 @@ CUNIT STRUCT
 +0xA0 - WORD wQueue5
 +0xA2 - WORD wEnergy
 +0xA4 - BYTE bQueueSlot
-
-+0xA6 - BYTE bSecondaryOrderID
++0xA5 - BYTE bUnknown_A5
++0xA6 - WORD wSecondaryOrderID
 	-Cloak, Build, expand creep
-+0xA8 - WORD bHPGainDuringBuild/Repair?
-
++0xA8 - DWORD dwHPGainDuringBuild/Repair?
 +0xAC - WORD wRemainingBuildTime
++0xAE - WORD wUnknown_AE
 
 UNION
 WORD
@@ -116,14 +114,15 @@ CUNIT
 +0xCF - BYTE bResourceAmount
 UNION
 WORD/BYTE
- +0xD0 - WORD wResourceContained/wPowerupDropTargetX
+ +0xD0 - WORD wResourcesContained/wPowerupDropTargetX
  +0xD2 - WORD wPowerupDropTargetY
  +0xD2 - BYTE bResourceIscript
- +0xD3 - BYTE bResourceCount?
 DWORD
  +0xD0 - CUNIT ResourceTarget/NydusConnected
  +0xD0 - CSPRITE NukeDot
 
+ +0xD4 - DWORD dwUnknown_D4
+ +0xD8 - DWORD dwUnknown_D8
 
 +0xDC - DWORD dwStatus
 	00000001(0x1) - Is Completed
@@ -229,16 +228,31 @@ CUNIT
 
 
 CSPRITE STRUCT
++0x0 - CSPRITE* prev
++0x4 - CSPRITE* next
 +0x8 - WORD wSpriteID
-+0xE - BYTE bFlags_E
-
-+0x14 - Move X
-+0x16 - Move Y
++0xA - WORD owner
++0xC - BYTE unknown
++0xD - BYTE visibilityFlags
++0xE - WORD unknown
++0x10 - DWORD unknown
++0x14 - WORD X
++0x16 - WORD Y
++0x18 - CIMAGE* mainGraphic
++0x1C - CIMAGE* overlay
++0x20 - CIMAGE* underlay
 
 
 CIMAGE
++0x0 - CIMAGE* prev
++0x4 - CIMAGE* next
++0x8 - WORD wImageID
++0xA - WORD unknown
++0xC - DWORD unknown
+
 
 CORDER
+
 
 CWEAPON
 +0x0 - CWEAPON* Previous

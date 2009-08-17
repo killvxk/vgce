@@ -32,27 +32,22 @@ Notes: The AI will not expand if it has 5000 ore and 3000 gas or more.
 
 0x06 - build
 Description: Build %2(building) until it commands %1(byte) of them, at priority %3(byte).
-Default priority: 30
 
 
 0x07 - upgrade
 Description: Research upgrade %2(upgrade) up to level %1(byte), at priority %3(byte).
  
 
-
 0x08 - tech
 Description: Research technology %1(technology), at priority %2(byte).
- 
 
 
 0x09 - wait_build
 Description: Wait until computer commands %1(byte) %2(building).
-Default Priority: 30
 
 
 0x0A - wait_buildstart
 Description: Wait until construction of %1(byte) %2(unit) has started.
-Default Priority: 30 
 
 
 0x0B - attack_clear
@@ -61,7 +56,7 @@ Description: Clear the attack data.
 
 0x0C - attack_add
 Description: Add %1(byte) %2(military) to the current attacking party.
- 
+ Maximum force of 64.
 
 
 0x0D - attack_prepare
@@ -71,7 +66,7 @@ Description: Prepare the attack.
 
 0x0E - attack_do
 Description: Attack the enemy with the current attacking party.
-Default Priority: 30
+
 
 
 0x0F - wait_secure
@@ -86,52 +81,52 @@ Description: The use of this command is unknown. Takes no parameter.
 
 0x11 - build_bunkers
 Description: The use of this command is unknown. Takes no parameters.
-Default Priority: 30 
+Builds bunkers.
 
 
 0x12 - wait_bunkers
 Description: The use of this command is unknown. Takes no parameters.
-Default Priority: 60
+Waits for bunkers.
 
 
 0x13 - defensebuild_gg
 Description: Build %1(byte) %2(military) to defend against enemy attacking ground units, when ground units are attacked
- 
+ Maximum count of 20.
 
 
 0x14 - defensebuild_ag
 Description: Build %1(byte) %2(military) to defend against enemy attacking air units, when ground units are attacked
- 
+ Maximum count of 20.
 
 
 0x15 - defensebuild_ga
 Description: Build %1(byte) %2(military) to defend against enemy attacking ground units, when air units are attacked
- 
+ Maximum count of 20.
 
 
 0x16 - defensebuild_aa
 Description: Build %1(byte) %2(military) to defend against enemy attacking air units, when air units are attacked
- 
+ Maximum count of 20.
 
 
 0x17 - defenseuse_gg
 Description: Use %1(byte) %2(military) to defend against enemy attacking ground units, when ground units are attacked
- 
+ Maximum count of 20.
 
 
 0x18 - defenseuse_ag
 Description: Use %1(byte) %2(military) to defend against enemy attacking air units, when ground units are attacked
- 
+ Maximum count of 20.
 
 
 0x19 - defenseuse_ga
 Description: Use %1(byte) %2(military) to defend against enemy attacking ground units, when air units are attacked
- 
+ Maximum count of 20.
 
 
 0x1A - defenseuse_aa
 Description: Use %1(byte) %2(military) to defend against enemy attacking air units, when air units are attacked
- 
+ Maximum count of 20.
 
 
 0x1B - defenseclear_gg
@@ -173,7 +168,7 @@ Description: Make selected player ally
 
 0x22 - default_min
 Description: The use of this command is unknown. Specify Default Minimum. Takes %1(byte) as parameter.
- 
+ Unknown. Something to do with Attack_Clear?
 
 
 0x23 - defaultbuild_off
@@ -264,12 +259,12 @@ Description: Build necessary farms with a correct timing, so nothing is paused b
 
 0x34 - build_turrets
 Description: The use of this command is unknown. Takes no parameters.
- 
+ Builds turrets.
 
 
 0x35 - wait_turrets
 Description: The use of this command is unknown. Takes no parameters.
- 
+ Waits for turrets.
 
 
 0x36 - default_build
@@ -358,7 +353,9 @@ Description: Go to %1(block) when attacked.
 
 
 0x45 - player_need
-Description: If player does not have %1(byte) %2(building[s]), build it, otherwise ignore this op. Priority 80?
+Description: If player does not have %1(byte) %2(building[s]), build it, otherwise ignore this op.
+ Default priority 80.
+ Count must be less than 30.
  
 
 
@@ -440,11 +437,14 @@ Description: Make these units patrol in selected location.
 0x52 - give_money
 Description: Give 2000 ore and gas if owned resources are low.
  Should only be used in campaign scripts
+ Gives 2000 ore if ore is below 500.
+ Gives 2000 gas if gas is below 500.
+ Skips otherwise.
  
 
 
 0x53 - prep_down
-Description: The use of this command is unknown. Takes %1(byte), %2(byte), and %3(military).
+Description: The use of this command is unknown. Takes %1(byte) count, %2(byte) count, and %3(military).
  
 
 
@@ -515,27 +515,27 @@ Description: The use of this command is unknown. Takes %1(byte) and %2(military)
 
 0x61 - kill_thread
 Description: Kill the current thread
- 
+ Takes no parameters
 
 
 0x62 - killable
 Description: Allows the current thread to be killed by another one
- 
+ Takes no parameters
 
 
 0x63 - wait_finishattack
 Description: Wait until attacking party has finished to attack
- (? definition ?) 
+ Takes no parameters
 
 
 0x64 - quick_attack
 Description: Perform a quick attack (attack_prepare and attack_do).
- 
+ Takes no parameters
 
 
 0x65 - junkyard_dog
 Description: Junkyard Dog at selected location
- 
+ Takes no parameters
 
 
 0x66 - fake_nuke
@@ -546,16 +546,16 @@ Description: The use of this command is unknown
 
 0x67 - disruption_web
 Description: Disruption Web at selected location
- 
+ Takes no parameters
 
 
 0x68 - recall_location
 Description: Recall at selected location
- 
+ Takes no parameters
 
 
 0x69 - set_randomseed
-Description: Set random seed to %1(word) %2(word) (The two words are transformed in a 32-bit integer)
+Description: Set random seed to %1(dword)
  
 
 
@@ -573,6 +573,7 @@ Description: Create a nuke.
 0x6C - create_unit
 Description: Create %1(unit) at map position (x,y) where x = %2(word) and y = %3(word)
  Should only be used in campaign scripts
+ Cloaks the unit if it has the tech and ability.
  
 
 

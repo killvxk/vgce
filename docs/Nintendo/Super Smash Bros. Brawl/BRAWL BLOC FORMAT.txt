@@ -1,0 +1,104 @@
+HEADER
+---------------
+
+0x00	ASCII "BLOC"
+0x04	Entries
+0x08	Unknown
+0x0C	Unknown
+0x10	Pointer to entry
+
+	ENTRY HEADER
+	-------------
+	0x00	ASCII "SEPD"
+	0x04	Number of entries
+	0x08+	Pointer to each entry (exclude main header)
+	
+		ENTRY	(0x44)
+		------------
+		0x00	Entity ID
+		0x04	Char[32]	(Entity Name)
+		0x24	Unknown (2)
+		0x26	Unlock Value (0x00 = Default(unlocked); 0x01 = Stage Builder Parts A; 0x02 = Stage Builder Parts B; 0x03 = Stage Builder Parts C)
+		0x27	Unk
+		0x28	Facing (Left=0; Right=1)
+		0x29	Smallest Y size
+		0x2A	Smallest X size
+		0x2B	Extension (0x03 = +1 block space to top and bottom; 0x02 = +1 block space to both sides and top; 0x05 = +1 block space to top)
+		0x2C	Unk (4)
+		0x30	Flip Block ID (4)
+		0x34	Medium is used (0=false; 1=true)
+		0x35	Medium Y Size
+		0x36	Medium X Size
+		0x37	Unk
+		0x38	Large is used (0=false; 1=true)
+		0x39	Large Y Size
+		0x3A	Large X Size
+		0x3B	Unk
+		0x3C	Small Placement Value (2)
+		0x3E	Medium Placement Value (2)
+		0x40	Large Placement Value (2)
+		0x42	Unknown (2)
+
+
+	ENTRY HEADER
+	-------------
+	0x00	ASCII "GSND"
+	0x04	Number of entries
+	0x08+	Pointer to each entry (exclude main header)
+	
+		ENTRY	(0x50)
+		-----------
+		0x00	Unknown
+		0x04	Unknown
+		0x1C	char[32]	Entity Name
+		0x3C	Unknown (2)
+		0x3E	Unknown
+		0x4F	Last
+
+
+
+
+
+======================================================================================================================================
+
+
+
+0x00	Entries in Data 1 (2)
+0x02	Entries in Data 2 (2)
+0x04	Unknown (2)
+0x06	Unknown (2)
+0x08	Pointer to Data 1 (4)
+0x0C	Pointer to Data 2 (4)
+0x10	Pointer to Data 3 (4)
+
+	DATA 1 ENTRY
+	---------
+	0x00	Unknown Float (4)
+	0x04	Unknown Float (4)
+	
+	DATA 2 ENTRY
+	---------
+	0x00	Unknown (2)
+	0x02	Unknown (2)
+	0x04	Unknown (2)
+	0x06	Unknown (2)
+	0x08	Unknown (2)
+	0x0A	Unknown (2)
+	0x0C	Unknown (2)
+	0x0E	Unknown (2)
+
+	DATA 3 ENTRY
+	---------
+	0x00	Unknown (4)
+	0x04	Unknown (4)
+	0x08	Unknown (4)
+	0x0C	Unknown (4)
+	0x10	Unknown (4)
+	0x14	Unknown Float (4)
+	0x18	Unknown Float (4)
+	0x1C	Unknown Float (4)
+	0x20	Unknown Float (4)
+	0x24	Unknown (4)
+	0x28	Unknown (4)
+	0x2C	Char[32] Name
+	0x4C	char[32] Name 2

@@ -1,0 +1,71 @@
+u32	0x4C 4D 63 01
+u32	Size of head
+u32	Pointer to table
+u32	Unknown
+char*	Editor String
+
+0x40	Pointer to Level Entrance Data
+0x44	Size of entrance Data
+0x48	Layer 1 Data Pointer
+0x4C	Size of Layer 1 Data
+0x50	Layer 2 Data/Background
+0x54	Size of Layer 2 Data
+0x58	Sprite Data
+0x5C	Size of sprite data
+0x60	Unknown
+0x64	Size
+0x68	Unknown
+0x6C	Size
+0x70	Unknown
+0x74	Size
+0x78	Unknown
+0x7C	Size
+
+=================================================================
+LEVEL ENTRANCE DATA (64 bytes)
+=================================================================
+	Undefined
+
+=================================================================
+Layer 1 Data (*)
+=================================================================
+u8 * 13		Header Data (unknown)
+
+	(ENTRY; First byte of 0xFF means end)
+	u1	New screen flag
+	u2	Block ID (1)
+	u5	Y Position (Page number of EXT Block ID is 0x00)
+    
+	u4	Block ID (2)
+	u4	X Position (Water, Secondary Exit flags if EXT Block ID is 0x00)
+    
+	u8	Settings 
+
+		(only if EXT block ID is 0x00 and settings is 0x00)
+		u8	Destination Level
+
+		(only if Block ID is 0x22)
+		u8	Map16 Tile ID
+
+=================================================================
+UNKNOWN DATA (* bytes)
+=================================================================
+	Undefined
+
+=================================================================
+SPRITE DATA (*)
+=================================================================
+(HEADER) (1 byte)
+u1	Sprite buoyancy
+u1	Sprite buoyancy (no L2 interactioin)
+u6	Sprite Memory
+
+	(ENTRY; first byte being 0xFF means end) (3 bytes)
+	u4	Y Position
+	u2	Extra Bits
+	u1	Screen Number(2)
+	u1	Y Position(2)
+	u4	X Position
+	u4	Screen Number
+	u8	Sprite Number	
+

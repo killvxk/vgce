@@ -1,41 +1,42 @@
 CAPS.DAT
 
-u32		sectionSize;
-u32		uniqueID;
-cstring	name;
+u32     sectionSize;
+u32     uniqueID;
+cstring name;
 cstring description;
-u32		static1; (0x24 00 00 00)
-u32		Flags1; (0x00 00 00 00) (0x03 00 00 00 if using UDP protocol?)
-u32		unknown3;
-	BNET/SCBL/0000: 	0x00 02 00 00 (512)
-	IPXN/UDPN: 	0xF8 01 00 00 (504)
-	MODM: 		0xB4 00 00 00 (180)
-	
-u32		unknown4; (0x10 00 00 00)
-	
-u32		unknown5;
-	0000:	0x01 00 00 00
-	BNET/IPXN/UDPN:	0x00 01 00 00
-	SCBL:	0x04 00 00 00
-	MODM:	0x02 00 00 00
-	
-u32		unknown6;
-	MODM:	1000
-	BNET/SCBL:	1500
-	UDPN/IPXN:	100000
-	0000:	0x00 00 30 00
-	
-u32		unknown7;
-	BNET/SCBL:	500
-	IPXN/UDPN:	50
-	MODM:	250
-	0000:	0
-	
-u32		unknown8;
-	BNET/MODM/SCBL:	4
-	UDPN/IPXN:	8
-	0000:	30
-	
-u32		unknown9;
-	BNET/UDPN/MODM/SCBL/IPXN:	2
-	0000: 0
+u32     static1; (0x24 00 00 00)
+u32     Flags1;  (0x00 00 00 00) (0x03 00 00 00 if using UDP protocol?)
+
+u32     unknown3;
+    BNET/SCBL/0000: 0x00 02 00 00 (512)
+    IPXN/UDPN:      0xF8 01 00 00 (504)
+    MODM:           0xB4 00 00 00 (180)
+    
+u32     unknown4; (0x10 00 00 00)
+    
+u32     unknown5;
+    0000:           0x01 00 00 00
+    BNET/IPXN/UDPN: 0x00 01 00 00
+    SCBL:           0x04 00 00 00
+    MODM:           0x02 00 00 00
+    
+u32     unknown6;
+    MODM:       1000
+    BNET/SCBL:  1500
+    UDPN/IPXN:  100000
+    0000:       0x00 00 30 00
+    
+u32     unknown7;
+    BNET/SCBL:  500
+    IPXN/UDPN:  50
+    MODM:       250
+    0000:       0
+    
+u32     unknown8;
+    BNET/MODM/SCBL: 4
+    UDPN/IPXN:      8
+    0000:           30
+    
+u32     unknown9;
+    BNET/UDPN/MODM/SCBL/IPXN: 2
+    0000:                     0

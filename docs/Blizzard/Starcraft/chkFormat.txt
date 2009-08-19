@@ -6,7 +6,7 @@ CHK File format specs
 	notes: Only required for VER of 1.04 and above. All game types.
 	Fields:
 		DWORD	Type{	"SWAR",  // 1.04
-				"BWAR"}  // Broodwar
+						"BWAR"}  // Broodwar
 
 "VER "
 	size: Constant 2 bytes.
@@ -14,9 +14,9 @@ CHK File format specs
 	notes: Required in all versions, in all game types.
 	Fields:
 		u16	Version{	0x39, // Beta		// invalid
-					0x3B, // 1.00 Retail
-					0x3F, // 1.04 Hybrid/Extended
-					0xCD} // Broodwar
+						0x3B, // 1.00 Retail
+						0x3F, // 1.04 Hybrid/Extended
+						0xCD} // Broodwar
 
 "DIM "
 	size: Constant 4 bytes.
@@ -33,13 +33,13 @@ CHK File format specs
 	notes: Required in all versions, in all game types.
 	Fields:
 		u16 & 0x07	Tileset{	0x00,	// Badlands
-						0x01,	// Space Platform
-						0x02,	// Installation
-						0x03,	// Ashworld
-						0x04,	// Jungle
-						0x05,	// Desert
-						0x06,	// Arctic
-						0x07}	// Twilight
+							0x01,	// Space Platform
+							0x02,	// Installation
+							0x03,	// Ashworld
+							0x04,	// Jungle
+							0x05,	// Desert
+							0x06,	// Arctic
+							0x07}	// Twilight
 
 "OWNR"
 	size: Constant 12 bytes.
@@ -47,14 +47,14 @@ CHK File format specs
 	notes: Required in all versions, in all game types. Buffer overflow available.
 	Fields:
 		u8[12]		Owner{	0x00,  // Inactive          // valid for CHK setting
-					0x01,  // Computer(game)
-					0x02,  // Human(Occupied)
-					0x03,  // Rescue Passive    // valid for CHK setting
-					0x04,  // Unused
-					0x05,  // Computer          // valid for CHK setting
-					0x06,  // Human(Open)       // valid for CHK setting
-					0x07,  // Neutral           // valid for CHK setting
-					0x08}  // Closed
+							0x01,  // Computer(game)
+							0x02,  // Human(Occupied)
+							0x03,  // Rescue Passive    // valid for CHK setting
+							0x04,  // Unused
+							0x05,  // Computer          // valid for CHK setting
+							0x06,  // Human(Open)       // valid for CHK setting
+							0x07,  // Neutral           // valid for CHK setting
+							0x08}  // Closed
 
 
 "SIDE"
@@ -63,22 +63,22 @@ CHK File format specs
 	notes: Required in all versions, all game types. Buffer overflow available.
 	Fields:
 		u8[12]	race{	0x00,	// Zerg
-				0x01,	// Terran
-				0x02,	// Protoss
-				0x03,	// Invalid
-				0x04,	// Invalid
-				0x05,	// User Select
-				0x06,	// Random
-				0x07}	// Inactive[invalid]
+						0x01,	// Terran
+						0x02,	// Protoss
+						0x03,	// Invalid
+						0x04,	// Invalid
+						0x05,	// User Select
+						0x06,	// Random
+						0x07}	// Inactive[invalid]
 
 "STR "
 	size: Variable size.
 	validation: Must be a size of at least 1 byte.
 	notes: Required in all versions, all game types.
 	Fields:
-		u16			numberOfEntries
+		u16						numberOfEntries
 		u16[numberOfEntries]	stringPointers 	// from section start
-		void *			stringData
+		void *					stringData
 
 "SPRP"
 	size: Constant 4 bytes.
@@ -107,14 +107,14 @@ CHK File format specs
 	Fields:
 		char[1024]	Seed
 		u8[]		Opcode{		0x00,	// XOR's the current hash with the total values of OWNR, SIDE, FORC
-						0x01,	// Adds to the current hash with the total values of OWNR, SIDE, FORC
-						0x02,	// Subtracts from the current hash with the total values of OWNR, SIDE, FORC
-						0x03,
-						0x04,
-						0x05,  // same as 0x04
-						0x06,
-						0x07,
-						default} // do nothing
+								0x01,	// Adds to the current hash with the total values of OWNR, SIDE, FORC
+								0x02,	// Subtracts from the current hash with the total values of OWNR, SIDE, FORC
+								0x03,
+								0x04,
+								0x05,  // same as 0x04
+								0x06,
+								0x07,
+								default} // do nothing
 
 "MTXM"
 	size: Variable

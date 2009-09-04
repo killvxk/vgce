@@ -119,14 +119,15 @@ CLASS 1
       u16  (packet size [after value])
       u16  (transfer ID)
 	
-	*ID 0 - Unknown*
-		6 bytes
-	*ID 1 - File Name*
-		unsigned long (file size?)
-		unsigned long (file hash?)
-		string (file name)
+	*ID 0 - File Response*
+		u16 isCorrectHash
+        u32 fileSize
+	*ID 1 - File Request*
+		u32 fileSize
+		DWORD fileHash
+		cstring fileName
 	*ID 2 - Unknown*
-	*ID 3 - Unknown*
+	*ID 3 - Finished Transfer*
 	*ID 4 - Transfer data*
 	      u8   (unknown)
 	      unsigned long (file offset ?)
@@ -136,6 +137,7 @@ CLASS 1
 	      u8   (unknown)
 	      unsigned long (file offset ?)
 	*ID 6 - Unknown*
+    *ID 8 - Unknown*
 }}}
 INVALID
 
@@ -144,16 +146,16 @@ INVALID
 {{{
       u8	Type
 		{
-			0x00 = "You have been banned."
-			0x01 = "The game creator closed all available slots."
-			0x02 = "The game host has left."
-			0x03 = "Unable to join game."
-			0x04 = "Save game file not found."
-			0x05 = "Unable to write scenario file."
-			0x06 = "You cannot join this game because it is a different version of Starcraft."
-			0x07 = "You are not able to join this game. It was not created with the same CD that spawned your copy of StarCraft."
-			0x08 = "Unable to authenticate map."
-			0x09 = "You have been booted."			// Default case
+			0x00 = "You have been booted."			// Default case
+			0x01 = "You have been banned."
+			0x02 = "The game creator closed all available slots."
+			0x03 = "The game host has left."
+			0x04 = "Unable to join game."
+			0x05 = "Save game file not found."
+			0x06 = "Unable to write scenario file."
+			0x07 = "You cannot join this game because it is a different version of Starcraft."
+			0x08 = "You are not able to join this game. It was not created with the same CD that spawned your copy of StarCraft."
+			0x09 = "Unable to authenticate map."
 		}
 }}}
 INVALID
@@ -255,23 +257,22 @@ CLASS 1
 ----------------------------------------------------
 == 0x49 - Information Request ==
 {{{
-      u32   (Information Byte; 6 = File Name, 7 = File Data ??)
+      u32   (Information Byte; 2 = Game data?, 3 = ???, 6 = File Name, 7 = File Data ??)
 }}}
-CLASS 5
 CLASS 1
 
 ----------------------------------------------------
-0x48 -  Unknown
+0x48 -  Unknown (game started)
 {{{
-     u32  (Unknown)
-     u8   (Unknown [player related])
-     u8   (Unknown [player related])
-     u8   (Unknown [player related])
-     u8   (Unknown [player related])
-     u8   (Unknown [player related])
-     u8   (Unknown [player related])
-     u8   (Unknown [player related])
-     u8   (Unknown [player related])
+     u32  RandomSeed
+     u8   Player 1 Unknown
+     u8   Player 2 Unknown
+     u8   Player 3 Unknown
+     u8   Player 4 Unknown
+     u8   Player 5 Unknown
+     u8   Player 6 Unknown
+     u8   Player 7 Unknown
+     u8   Player 8 Unknown
 }}}
 INVALID CLASS 2
 

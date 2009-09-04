@@ -1,0 +1,180 @@
+0x0040AC21 (pal0_0)
+0x0040B609 (pal9_0)
+0x0040B74C (pal10_0)
+    Caused by: Displaying an invalid graphic. Functions pal_0_0 to pal_17_0.
+    Fix: Limit playframe iscript opcode to the maximum number of frames in the GRP.
+
+0x0040ABCA (pal0_0)
+    Caused by: Using overflow/invalid drawing function (images.dat)
+    
+0x0040B68C (pal9_0)
+    Caused by: Using overflow/invalid remapping data (images.dat)
+
+0x0040E622
+    Caused by: Showing an invalid portrait (flag portrait, show portrait trigger).
+    Crashes when: Unknown. Located somewhere in __vsnprintf's __output function. Something to do with getting the string for the smk file?
+
+0x0041D800
+    Caused by: Scrolling vertically off the edge of the minimap (in a map smaller than the screen size).
+
+0x00460071
+    Caused by: Score(Custom) condition with extended player ID. (reading invalid block of memory)
+
+0x0046007C
+    Caused by: Score(Units) condition with extended player ID. (reading invalid block of memory)
+
+0x00460087
+    Caused by: Score(Buildings) condition with extended player ID. (reading invalid block of memory)
+
+0x00460092
+    Caused by: Score(Units And Buildings) condition with extended player ID. (reading invalid block of memory)
+
+0x004600A4
+    Caused by: Score(Kills) condition with extended player ID. (reading invalid block of memory)
+
+0x004600AF
+    Caused by: Score(Razings) condition with extended player ID. (reading invalid block of memory)
+
+0x004600BA
+    Caused by: Score(Kills And Razings) condition with extended player ID. (reading invalid block of memory)
+
+0x004600CC
+    Caused by: Score(Total) condition with extended player ID. (reading invalid block of memory)
+
+0x00460417
+    Caused by: Deaths(Any Unit) condition with extended player ID. (reading invalid block of memory)
+    
+0x00460428
+    Caused by: Deaths(Men) condition with extended player ID. (reading invalid block of memory)
+
+0x00460432
+    Caused by: Deaths(Buildings) condition with extended player ID. (reading invalid block of memory)
+
+0x0046043C
+    Caused by: Deaths(Factories) condition with extended player ID. (reading invalid block of memory)
+
+0x0046044C
+    Caused by: Deaths(Specific Unit) condition with extended player/unit ID. (reading invalid block of memory)
+
+0x00460537
+    Caused by: Kills(Any Unit) condition with extended player ID. (reading invalid block of memory)
+
+0x00460548
+    Caused by: Kills(Men) condition with extended player ID. (reading invalid block of memory)
+
+0x00460552
+    Caused by: Kills(Buildings) condition with extended player ID. (reading invalid block of memory)
+
+0x0046055C
+    Caused by: Kills(Factories) condition with extended player ID. (reading invalid block of memory)
+
+0x0046056C
+    Caused by: Kills(Specific Unit) condition with extended player/unit ID. (reading invalid block of memory)
+
+0x004605E7
+    Caused by: Accumulate(Ore and Gas) condition with extended player ID. (reading invalid block of memory)
+    
+0x00460662
+    Caused by: Accumulate(Gas) condition with extended player ID. (reading invalid block of memory)
+
+0x0046066B
+    Caused by: Accumulate(Ore) condition with extended player ID. (Reading invalid block of memory)
+
+0x00460768
+    Caused by: Bring/Command(Any Unit) condition with extended player ID. (Reading invalid block of memory)
+    
+0x0046077A
+    Caused by: Bring/Command(Men) condition with extended player ID. (Reading invalid block of memory)
+    
+0x00460785
+    Caused by: Bring/Command(Buildings) condition with extended player ID. (Reading invalid block of memory)
+    
+0x00460790
+    Caused by: Bring/Command(Factories) condition with extended player ID. (Reading invalid block of memory)
+    
+0x004607A1
+    Caused by: Bring/Command(Specific Unit) condition with extended player/unit ID. (Reading invalid block of memory)
+    
+0x00466A2A
+    Caused by: Selecting a unit with an active production bar with a build time of 0.
+    Crashes when: Divided by 0. LOL
+    Fix: Create a case for when the denominator value is 0.
+
+0x0046CFA0
+    Caused by: Briefing action referencing an invalid portrait number.
+    
+0x00477438
+    Caused by: Subunit parameter set on a non-subunit.
+    
+0x004777F3
+    Caused by: Placing a subunit with no main unit.
+    Crashes when: "Turret Guard" attempts to retrieve the parent unit.
+    Fix: Create a case for parent units that are null.
+
+0x0047A834 (pal11_0)
+    Caused by: Images drawing properties set to Unknown11
+    
+0x0047A8C6 (pal11_0)
+    Caused by: Selecting a unit with a positive hp over a negative hp (default/-1000).
+    
+0x0047B0D1      
+    Caused by: Minimap preview when a unit is placed in the no-build zone on a map (under HUD at the bottom).
+    Crashes when: Map attempts to retrieve the unit name string for unit placement error. Strings are not loaded.
+    Fix: Ignore all unit placement errors until after map starts.
+
+0x00480133
+    Caused by: Unit sight range > 11
+    
+0x00484538
+    Caused by: Using the middle mouse button (move the screen) on a map with a width of 20 (exactly one screen).
+    Crashes when: Divide by 0. LOL
+    Fix: Create a case for when the denominator value is 0.
+
+0x00497A10
+    Caused by: SCV weapon behaviour made to fly to target.
+    Crashes when: Attempts to set the target for a subunit that doesn't exist.
+    
+0x00498277
+    Caused by: 2 units in 1 egg property set for non-standard unit.
+
+0x004BBB2B
+    Caused by: Invalid SFX id for unit.
+    
+0x004BCD1D
+    Caused by: Setting a human player's race to invalid.
+    Fix: Create a default case for player's race.
+
+0x004BCEF8
+    Caused by: Loading an invalid map tile.
+    Fix: Create a default case for map tiles.
+
+0x004D57D3
+    Caused by: Placing extended unitID.
+
+0x004D57EE
+    Caused by: Carrier/Reaver using "Train Unit" for an interceptor/scarab instead of "Train Fighter".
+  
+0x004D5A57
+    Caused by: Placing extended unitID.
+    
+0x004D5A67
+    Caused by: Placing extended unitID.
+    
+0x004D7DF5
+    Caused by: Placing sprites that crash (White Circle, Psionic Storm, etc).
+    Crashes when: iscript's sigorder opcode attempts to signal a main unit. However, the sprite is independant.
+    Fix: When graphic has no unit attached, then ignore this op.
+    
+0x004DD66E
+    Caused by: Missing object for a BIN Dialog.
+
+0x004E60CB
+    Caused by: Building fire/blood overlay graphic when building HP is 0.
+    Crashes when: Divided by 0. LOL
+    Fix: Create a case for when the denominator value is 0.
+    
+0x004EBA12
+    Caused by: Killing a worker holding a blank unit as a powerup.
+    Crashes when: Null unit's sprite pointer is referenced. (Sprite pointer is 0.)
+    Fix: Create conditions for sprite pointer of 0.
+    

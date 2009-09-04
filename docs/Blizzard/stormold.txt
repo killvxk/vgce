@@ -19,12 +19,12 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 114    BOOL     __stdcall SNetGetProviderCaps(void *caps)
 115    BOOL     __stdcall SNetGetTurnsInTransit(int *turns)
 116    BOOL     __stdcall SNetInitializeDevice(int a1, int a2, int a3, int a4, int a5)
-117    BOOL     __stdcall SNetInitializeProvider(DWORD providerName, int a2, int a3, int a4, DWORD ThreadID)   // brew reports a2 is an SNP structure with goodies ;o
-118    BOOL     __stdcall SNetJoinGame(int a1, char *a2, char *a3, char *playerName, char *gameName, int *playerid)
+117    BOOL     __stdcall SNetInitializeProvider(DWORD providerName, int *providerData, int *userData, int *a4, int *a5) //ThreadID
+118    BOOL     __stdcall SNetJoinGame(unsigned int a1, char *gameName, char *gamePassword, char *playerName, char *userStats, int *unknown)
 119    BOOL     __stdcall SNetLeaveGame(int type)
 120    BOOL     __stdcall SNetPerformUpgrade(DWORD *upgradestatus)
 121    BOOL     __stdcall SNetReceiveMessage(int *senderplayerid, int *data, int *databytes)
-122    BOOL     __stdcall SNetReceiveTurns(unsigned int a1, int arraysize, void *arraydata, void *arraydatabytes, void *arrayplayerstatus)
+122    BOOL     __stdcall SNetReceiveTurns(int a1, int arraysize, void *arraydata, unsigned int *arraydatabytes, DWORD *arrayplayerstatus)  // arraysize = player count
 123    HANDLE   __stdcall SNetRegisterEventHandler(int type, int event)
 124    BOOL     __cdecl   SNetResetLatencyMeasurements()
 125    int      __stdcall SNetSelectGame(int a1, int a2, int a3, int a4, int a5, int *playerid)
@@ -32,15 +32,15 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 127    BOOL     __stdcall SNetSendMessage(unsigned int playerID, void *data, unsigned int databytes)
 128    BOOL     __stdcall SNetSendTurn(void *data, unsigned int databytes)
 129    BOOL     __stdcall SNetSetBasePlayer(unsigned int a1)
-130    BOOL     __stdcall SNetSetGameMode(char *a1, char a2)
+130    BOOL     __stdcall SNetSetGameMode(DWORD modeFlags, char a2)
 131    int      __stdcall SNetUnregisterEventHandler(unsigned int a1, void *callback)
 
 133    BOOL     __stdcall SNetEnumGamesEx(int a1, int a2, int (__fastcall *callback)(DWORD, DWORD, DWORD), int *hintnextcall)
-134    int      __stdcall SNetSendServerChatCommand(char *command)
+134    int      __stdcall SNetSendServerChatCommand(const char *command)
 135    BOOL     __stdcall SNet135(signed int a1, int a2, int a3)
 136    BOOL     __stdcall SNet136(int a1, int a2, int a3)
 137    BOOL     __stdcall SNetGetPlayerNames(DWORD flags)
-138    BOOL     __stdcall SNetCreateLadderGame(int a1, int a2, int a3, int a4, int a5, int a6, const void *MemSrc, int MemSize, int a9, char *playerName, int params, int *playerID)
+138    BOOL     __stdcall SNetCreateLadderGame(char *gameName, char *gamePassword, char *gameDataString, DWORD gameType, int a5, int a6, u8 *GameTemplateData, u32 GameTemplateSize, u32 playerCount, char *playerName, char *a11, u32 *playerID)
 139    BOOL     __stdcall SNetReportGameResult(unsigned int a1, int size, int a3, int a4, int a5)
 140    BOOL     __stdcall SNetCheckDataFile(int a1, int a2, int a3, int a4)
 141    int      __stdcall SNetSendLeagueCommand(char *cmd, void *callback)
@@ -474,4 +474,21 @@ Values for Registry Flags:
 Values for SNet player flags
 {{{
 40000006 = Drop
+}}}
+
+values for modeFlags of SNetSetGameMode
+{{{
+0x00000001 = Game is private
+0x00000002 = Game is full
+0x00000004 = Game is active
+0x00000008 = Game has started
+0x00000080 = Game is replay
+}}}
+
+values for SNetGetGameInfo type
+{{{
+1 = Game Name
+2 = Game Password
+3 = Full Game Data String (see http://www.bnetdocs.org/?op=doc&did=13)
+4 = Game Mode
 }}}

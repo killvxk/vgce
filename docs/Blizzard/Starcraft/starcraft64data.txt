@@ -1,0 +1,17 @@
+DWORD   dwMagic; // "BOLT"
+u32     unknown1;
+u32     unknown2;
+u32     unknown3;
+
+struct fileIndex
+{
+    DWORD   dwFlags; // number of entries if it is a folder (256 if 0)
+    u32     uncompressedSize;
+    void*   offset; // pointer to the same struct if a folder
+    DWORD   hash; // 0 for folders
+};
+
+enum fileIndexFlags
+{
+    0x80000000 = Uncompressed
+}

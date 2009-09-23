@@ -101,19 +101,19 @@ CHK File format specs
 					0x08}	// Shared Vision
 
 "VCOD"
-	size: Variable Size.
-	validation: Must be greater than or equal to 4 bytes. Must result in a valid checksum.
+	size: Constant Size, determined by resources.
+	validation: Must be equal to the size of the VCOD data in the EXE resources. Must result in a valid checksum.
 	notes: Required in all versions, in all game types.
 	Fields:
 		char[1024]	Seed
-		u8[]		Opcode{		0x00,	// XOR's the current hash with the total values of OWNR, SIDE, FORC
-								0x01,	// Adds to the current hash with the total values of OWNR, SIDE, FORC
-								0x02,	// Subtracts from the current hash with the total values of OWNR, SIDE, FORC
-								0x03,
-								0x04,
-								0x05,  // same as 0x04
-								0x06,
-								0x07,
+		u8[]		Opcode{		0x00,	// XOR's the current hash with the total values of OWNR, SIDE * 256, FORC * 65536
+								0x01,	// Adds to the current hash with the total values of OWNR, SIDE * 256, FORC * 65536
+								0x02,	// Subtracts from the current hash with the total values of OWNR, SIDE * 256, FORC * 65536
+								0x03,   // XOR's the current hash with the VCOD table at index OWNR, SIDE, FORC, and 0
+								0x04,   // same as 0x03
+								0x05,   // same as 0x03
+								0x06,   // Complex function consisting of ORs and shifts.
+								0x07,   // Inverted version of 0x06, switching direction of all shifts.
 								default} // do nothing
 
 "MTXM"

@@ -1,0 +1,93 @@
+SPRITES:
+    520-527 = scourge // Endgame ends in "You have been disconnected." o.o ??
+    528-537 = scourge
+    538-547 = scourge
+    548-557 = scourge
+
+    5280-5289 = nothing
+
+    15280 = Scourge
+    15281 = Scourge
+    15282 = Nothing
+    15283 = Nothing
+    15284 = Scourge
+    15285 = Scourge
+    15286 = Nothing
+    15287 = Nothing
+    15288 = Scourge
+    15289 = Scourge
+
+    7267 = Scourge
+    7268-7276 = Nothing
+
+    
+UNITS:
+    340 = Crash
+    341 = Nothing
+    342 = Crash
+    
+    350 = Nothing
+    351 = Nothing
+    352 = Nothing
+
+    359 = Nothing
+    360 = Nothing
+    361 = Nothing
+    
+    365 = Nothing
+    366 = Nothing
+    367 = Nothing
+    368 = Nothing
+    369 = Nothing
+    370 = Nothing
+    371 = Crash
+    
+    395 = Crash
+    396 = Nothing
+    397 = Crash
+    398 = Crash
+    
+    401 = Nothing
+    402 = Nothing
+    403 = Nothing
+    404 = Crash
+    405 = Nothing
+    406 = Nothing
+    407 = Nothing
+    408 = Nothing
+    409 = Crash
+    410 = Nothing
+    411 = Nothing
+    412 = Nothing
+    413 = Nothing
+    414 = Nothing
+    415 = Nothing
+    
+    419 = Crash
+    420 = Nothing
+    
+    424 = Crash
+    425 = Nothing
+    426 = Nothing
+    427 = Nothing
+    
+    990 = Nothing
+    
+    1989 = Unknown, small fog disappears
+    1990 = Unknown, small fog disappears
+    
+    2009 = Unknown, small fog disappears
+    
+    2029 = Unknown, small fog disappears
+    
+    2459 = Nothing
+    2460 = Nothing
+    
+    2464 = Nothing
+    
+    2865 = Broodling death
+    2866 = Half-built building
+    2867 = Broodling death
+    2868 = Rhynadon, ghost portrait, shields
+    
+    3333 = Scourge, low HP, shields, no movement

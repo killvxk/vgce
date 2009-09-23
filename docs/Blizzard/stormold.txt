@@ -14,13 +14,13 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 109    BOOL     __stdcall SNetGetNumPlayers(int *firstplayerid, int *lastplayerid, int *activeplayers)
 110    BOOL     __stdcall SNetGetOwnerTurnsWaiting(int *turns)
 111    BOOL     __stdcall SNetGetPerformanceData(int counterid, int *countervalue, int *countertype, int *counterscale, LPFILETIME *measurementtime, int *measurementfreq)
-112    BOOL     __stdcall SNetGetPlayerCaps(char a1, int *caps)
+112    BOOL     __stdcall SNetGetPlayerCaps(char playerid, int *caps)
 113    BOOL     __stdcall SNetGetPlayerName(int playerid, char *buffer, size_t buffersize)
 114    BOOL     __stdcall SNetGetProviderCaps(void *caps)
 115    BOOL     __stdcall SNetGetTurnsInTransit(int *turns)
 116    BOOL     __stdcall SNetInitializeDevice(int a1, int a2, int a3, int a4, int a5)
 117    BOOL     __stdcall SNetInitializeProvider(DWORD providerName, int *providerData, int *userData, int *a4, int *a5) //ThreadID
-118    BOOL     __stdcall SNetJoinGame(unsigned int a1, char *gameName, char *gamePassword, char *playerName, char *userStats, int *unknown)
+118    BOOL     __stdcall SNetJoinGame(unsigned int a1, char *gameName, char *gamePassword, char *playerName, char *userStats, int *playerid)
 119    BOOL     __stdcall SNetLeaveGame(int type)
 120    BOOL     __stdcall SNetPerformUpgrade(DWORD *upgradestatus)
 121    BOOL     __stdcall SNetReceiveMessage(int *senderplayerid, int *data, int *databytes)
@@ -37,7 +37,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 
 133    BOOL     __stdcall SNetEnumGamesEx(int a1, int a2, int (__fastcall *callback)(DWORD, DWORD, DWORD), int *hintnextcall)
 134    int      __stdcall SNetSendServerChatCommand(const char *command)
-135    BOOL     __stdcall SNet135(signed int a1, int a2, int a3)
+135    BOOL     __stdcall SNet135(signed int playerID, const void *buffer, unsigned int length)
 136    BOOL     __stdcall SNet136(int a1, int a2, int a3)
 137    BOOL     __stdcall SNetGetPlayerNames(DWORD flags)
 138    BOOL     __stdcall SNetCreateLadderGame(char *gameName, char *gamePassword, char *gameDataString, DWORD gameType, int a5, int a6, u8 *GameTemplateData, u32 GameTemplateSize, u32 playerCount, char *playerName, char *a11, u32 *playerID)
@@ -142,7 +142,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 322                       SBmpDestroy()
 323    BOOL     __stdcall SBmpLoadImage(const char *fileName, int size, void *buffer, int buffersize, int width, int height, int depth)
 324    BOOL     __stdcall SBmpSaveImage(const char *fileName, int paletteentries, int bitdepth, unsigned __int16 width, unsigned __int16 height, int bitmapbits)
-325    HANDLE   __stdcall SBmpAllocLoadImage(const char *fileName, int a2, int a3, void *buffer, char *logfile, int a6, int a7, int (__stdcall *allocFunction)(DWORD))
+325    HANDLE   __stdcall SBmpAllocLoadImage(const char *fileName, int *palette, void **buffer, int *width, int *height, int unused6, int unused7, int (__stdcall *allocFunction)(DWORD))
 326    BOOL     __stdcall SBmpSaveImageEx(const char *fileName, int paletteentries, int bitdepth, unsigned __int16 width, unsigned __int16 height, int bitmapbits, int reserved)
 
 330                       SCodeInit()
@@ -350,7 +350,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 563    int                            __cdecl   SErrIsDisplayingError()
 564    int                            __stdcall SErrPrepareAppFatal(int a1, int a2)
 565    int                            __stdcall SErrSetLogTitleString(int a1)
-566    int                            __stdcall SErrDisplayAppFatal(int a1)
+566    BOOL                           __stdcall SErrDisplayAppFatal(int a1)
 567    LPTOP_LEVEL_EXCEPTION_FILTER   __cdecl   SErrCatchUnhandledExceptions()
 
 569    char *       __stdcall SStrChr(char *string, char c)
@@ -491,4 +491,36 @@ values for SNetGetGameInfo type
 2 = Game Password
 3 = Full Game Data String (see http://www.bnetdocs.org/?op=doc&did=13)
 4 = Game Mode
+}}}
+
+player Struct
+{{{
+struct playerStruct
+{
+    u32 playerid; // +0x00
+    char playerName[]; // +0x08
+    
+    DWORD ipAddress; // +0x10C
+    
+    DWORD dwFlags; // +0x118     // 0x04 = unknown, 0x08 = dropped
+    u32 unknown; // +0x11C
+    u32 tickCount; // +0x120
+    u32 playerBuffer; // +0x124
+    
+    unknown; // +0x17C
+    unknown; // +0x180
+    
+    unknown; // +0x1C4
+    unknown; // +0x1C8
+    
+    unknown; // +0x1D8
+    
+    unknown; // +0x1E2
+    
+    u32 unknown; // +0x20C
+    u16 unknown; // +0x210
+    u8 unknown; // +0x212
+    u8 unknown; // +0x213
+}
+
 }}}

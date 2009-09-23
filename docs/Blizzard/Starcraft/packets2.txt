@@ -262,7 +262,7 @@ CLASS 1
 CLASS 1
 
 ----------------------------------------------------
-0x48 -  Unknown (game started)
+== 0x48 - Game Init ==
 {{{
      u32  RandomSeed
      u8   Player 1 Unknown

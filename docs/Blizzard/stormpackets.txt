@@ -1,0 +1,16 @@
+=Packet Header=
+{{{
+	u32  udptype (0x00)
+	u16  checksum
+	u16  packet length
+	u16  Sent packets to player (seq1)
+	u16  Recieved packets from player (seq2)
+	u8   Command Class
+	u8   Command ID
+	u8   Player ID (-1 = All players)
+	u8   Resend
+	...Packet Data...
+}}}
+
+Dropee: 00000000f36e18000a000500000c0000010000006600000003000000
+Others: 00000000fb12180002000200000c0500026303154400000003000000

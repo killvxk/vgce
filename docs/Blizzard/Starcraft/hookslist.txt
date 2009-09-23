@@ -1,0 +1,88 @@
+Anti.dll
+0x0048CF7E
+0x0041E281
+0x004868F0 // call to CMDRECV_PauseGame
+0x00486A2D // call to CMDRECV_Train
+0x004BE3D8
+0x004BE370 
+0x00486820 // call to CMDRECV_TargetCmd
+0x0048685E // call to CMDRECV_RightClick
+
+BAH.dll
+0x0048E502
+
+Drophack.dll (Jiggie)
+0x004E09A7
+0x004F336F
+0x00486655 // in Game_RECV
+0x1503A74B
+0x0048D0AE
+0x0041E0D0 // in BWFXN_Refresh
+
+Location Hack.dll
+0x0041E281
+0x00470040
+0x00498D49
+
+Panacea.dll
+0x004E09A7
+0x004F336F
+0x00486655 // in Game_RECV
+0x1503A74B
+0x0048D0AE // common draw hook
+0x0041E0D0 // in BWFXN_Refresh
+0x004A30F9 // Drop flags just before SNetDropPlayer
+0x0048E60F
+0x004BF7E5 // in CMDRECV_MinimapPing
+0x00488D50
+0x004EF97D // just before printXY
+0x0041C200
+0x004B98D6 // just before LOBSEND_LobbyChat
+0x004C0A1E // in CMDACT_Select
+0x004BF7D6 // in CMDRECV_MinimapPing
+0x004B995E // in gluChat_startGame (start with no opponents)
+0x004A3349 // in loadTimeoutDlg (null drop timer)
+0x0048E502 // a sub in CMDACT_Build (probably build anywhere)
+0x0048D145 // related to create unit (probably subdue unit placement warning messages)
+0x005022C9 // Screenshot formatting
+0x00450234
+0x004512DA
+0x00490232
+0x004C28D5 // in CMDRECV_Ally
+0x004433E5
+0x00456517
+0x00456534
+0x00456602
+0x004D98FF
+0x004433E7 // points to a unit's sprite data, possibly for drawing the unit
+0x004433EA
+0x004433EF
+0x004A338B
+0x004A3476
+
+Reveal Me.dll
+0x004433E5
+0x004433E7
+0x004433EA
+0x004433EF
+
+Selection Hack.dll
+0x0046FD13
+0x00485BD0 // QueueGameCommand
+0x0046FD18
+0x0046FBF9 // call to CMDACT_Select
+0x0046FBFE
+0x0046F208 // 12 (selection limit)
+0x0047CA14
+0x004A08A4
+
+Spell Matrix.dll
+0x004C036C // call to QueueGameCommand in CMDACT_TargetOrder
+
+Drophack.dll (D3jsp)
+0x0048CF7E // player ID limit
+0x1503A74B
+0x1503A750
+0x004F3280 // unknown game chat
+0x004F3285 // message byte
+0x004512DF

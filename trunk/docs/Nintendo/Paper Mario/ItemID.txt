@@ -1,0 +1,343 @@
+From ARCentral.net
+
+0000 - Invalid Item (thunderbolt)
+0001 - Strange Sack
+0002 - Invalid Item (Integral sign)
+0003 - Invalid Item (spiral)
+0004 - Invalid Item (paper airplane)
+0005 - Invalid Item (boat)
+0006 - Boots
+0007 - Super Boots
+0008 - Ultra Boots
+0009 - Hammer
+000A - Super Hammer
+000B - Ultra Hammer
+000C - Castle Key
+000D - Castle Key
+000E - Castle Key
+000F - Castle Key
+0010 - Red Key
+0011 - Blue Key
+0012 - Storage Key
+0013 - Storage Key
+0014 - Grotto Key
+0015 - Shop Key
+0016 - Steeple Key
+0017 - Steeple Key
+0018 - Station Key
+0019 - Station Key
+001A - Card Key
+001B - Elevator Key
+001C - Elevator Key
+001D - Card Key
+001E - Card Key
+001F - Card Key
+0020 - Card Key
+0021 - Black Key
+0022 - Black Key
+0023 - Black Key
+0024 - Black Key
+0025 - Star Key
+0026 - Palace Key
+0027 - Palace Key
+0028 - Palace Key
+0029 - Palace Key
+002A - Palace Key
+002B - Palace Key
+002C - Palace Key
+002D - Palace Key
+002E - Palace Key
+002F - Palace Key
+0030 - Palace Key
+0031 - House Key
+0032 - Magical Map
+0033 - Contact Lens
+0034 - Blimp Ticket
+0035 - Train Ticket
+0036 - Mailbox SP
+0037 - Super Luigi
+0038 - Super Luigi 2
+0039 - Super Luigi 3
+003A - Super Luigi 4
+003B - Super Luigi 5
+003C - Cookbook
+003D - Moon Stone
+003E - Sun Stone
+003F - Necklace
+0040 - Puni Orb
+0041 - Champ's Belt
+0042 - Poisoned Cake
+0043 - Superbombomb
+0044 - The Letter "p"
+0045 - Old Letter
+0046 - Chuckola Cola
+0047 - Skull Gem
+0048 - Gate Handle
+0049 - Wedding Ring
+004A - Galley Pot
+004B - Gold Ring
+004C - Shell Earrings
+004D - Autograph
+004E - Ragged Diary
+004F - Blanket
+0050 - Vital Paper
+0051 - Briefcase
+0052 - Goldbob Guide
+0053 - Invalid Item (paper w/ award)
+0054 - Invalid Item (paper w/ award)
+0055 - Cog
+0056 - Data Disk
+0057 - Shine Sprite
+0058 - Ultra Stone
+0059 - Invalid Item (Bowser's upgrade meat)
+005A - Invalid Item (Poster w/ Mario)
+005B - Special Card
+005C - Platinum Card
+005D - Gold Card
+005E - Silver Card
+005F - Box
+0060 - Magical Map (Bigger?)
+0061 - Dubious Paper
+0062 - Routing Slip
+0063 - Wrestling Mag
+0064 - Present
+0065 - Blue Potion
+0066 - Red Potion
+0067 - Orange Potion
+0068 - Green Potion
+0069 - fn0ow (star?)
+006A - Lottery Pick
+006B - Battle Trunks
+006C - Up Arrow
+006D - Package
+006E - Attack FX B
+006F - Invalid Item (Lightning Bolt Badge)
+0070 - Invalid Item (Lightning Bolt Badge)
+0071 - Invalid Item (Lightning Bolt Badge)
+0072 - Diamond Star
+0073 - Emerald Star
+0074 - Gold Star
+0075 - Ruby Star
+0076 - Sapphire Star
+0077 - Garnet Star
+0078 - Crystal Star
+0079 - Coin
+007A - Pianta
+007B - Invalid Item (Heart pickup after defeating enemy)
+007C - Invalid Item (Flower pickup after defeating enemy)
+007D - Star Piece
+007E - Gold Bar
+007F - Gold Bar x 3
+0080 - Thunder Bolt
+0081 - Thunder Rage
+0082 - Shooting Star
+0083 - Ice Storm
+0084 - Fire Flower
+0085 - Earth Quake
+0086 - Boo's Sheet
+0087 - Volt Shroom
+0088 - Repel Cape
+0089 - Ruin Powder
+008A - Sleepy Sheep
+008B - POW Block
+008C - Stopwatch
+008D - Dizzy Dial
+008E - Power Punch
+008F - Courage Shell
+0090 - HP Drain
+0091 - Trade Off
+0092 - Mini Mr. Mini
+0093 - Mr. Softener
+0094 - Mushroom
+0095 - Super Shroom
+0096 - Ultra Shroom
+0097 - Life Shroom
+0098 - Dried Shroom
+0099 - Tasty Tonic
+009A - Honey Syrup
+009B - Maple Syrup
+009C - Jammin' Jelly
+009D - Slow Shroom
+009E - Gradual Syrup
+009F - Hot Dog
+00A0 - Cake
+00A1 - Point Swap
+00A2 - Fright Mask
+00A3 - Mystery
+00A4 - Inn Coupon
+00A5 - Whacka Bump
+00A6 - Coconut
+00A7 - Dried Bouquet
+00A8 - Mystic Egg
+00A9 - Golden Leaf
+00AA - Keel Mango
+00AB - Fresh Pasta
+00AC - Cake Mix
+00AD - Hot Sauce
+00AE - Turtley Leaf
+00AF - Horsetail
+00B0 - Peachy Peach
+00B1 - Spite Pouch
+00B2 - Koopa Curse
+00B3 - Shroom Fry
+00B4 - Shroom Roast
+00B5 - Shroom Steak
+00B6 - Mistake
+00B7 - Honey Shroom
+00B8 - Maple Shroom
+00B9 - Jelly Shroom
+00BA - Honey Super
+00BB - Maple Super
+00BC - Jelly Super
+00BD - Honey Ultra
+00BE - Maple Ultra
+00BF - Jelly Ultra
+00C0 - Spicy Soup
+00C1 - Zess Dinner
+00C2 - Zess Special
+00C3 - Zess Deluxe
+00C4 - Zess Dynamite
+00C5 - Zess Tea
+00C6 - Space Food
+00C7 - Icicle Pop
+00C8 - Zess Frappe
+00C9 - Snow Bunny
+00CA - Coconut Bomb
+00CB - Courage Meal
+00CC - Shroom Cake
+00CD - Shroom Crepe
+00CE - Mousse Cake
+00CF - Fried Egg
+00D0 - Fruit Parfait
+00D1 - Egg Bomb
+00D2 - Ink Pasta
+00D3 - Spaghetti
+00D4 - Shroom Broth
+00D5 - Poison Shroom
+00D6 - Choco Cake
+00D7 - Mango Delight
+00D8 - Love Pudding
+00D9 - Meteor Meal
+00DA - Trial Stew
+00DB - Couple's Cake
+00DC - Inky Sauce
+00DD - Omelette meal
+00DE - Koopa Tea
+00DF - Koopasta
+00E0 - Spicy Pasta
+00E1 - Heartful Cake
+00E2 - Peach Tart
+00E3 - Electro Pop
+00E4 - Fire Pop
+00E5 - Honey Candy
+00E6 - Coco Candy
+00E7 - Jelly Candy
+00E8 - Zess Cookie
+00E9 - Healthy Salad
+00EA - Koopa Bun
+00EB - Fresh Juice
+00EC - Invalid Item (Can audience throws at you)
+00ED - Invalid Item (Rock)
+00EE - Invalid Item (Bone)
+00EF - Invalid Item (Hammer)
+00F0 - Power Jump
+00F1 - Multibounce
+00F2 - Power Bounce
+00F3 - Tornado Jump
+00F4 - Shrink Stomp
+00F5 - Sleepy Stomp
+00F6 - Soft Stomp
+00F7 - Power Smash
+00F8 - Quake Hammer
+00F9 - Hammer Throw
+00FA - Piercing Blow
+00FB - Head Rattle
+00FC - Fire Drive
+00FD - Ice Smash
+00FE - Double Dip
+00FF - Double Dip P
+0100 - Charge
+0101 - Charge P
+0102 - Super Appeal
+0103 - Super Appeal P
+0104 - Power Plus
+0105 - Power Plus P
+0106 - P-Up, D-Down
+0107 - P-Up, D-Down P
+0108 - All or Nothing
+0109 - All or Nothing P
+010A - Mega Rush
+010B - Mega Rush P
+010C - Power Rush
+010D - Power Rush P
+010E - P-Down, D-Up
+010F - P-Down, D-Up P
+0110 - Last Stand
+0111 - Last Stand P
+0112 - Defend Plus
+0113 - Defend Plus P
+0114 - Damage Dodge
+0115 - Damage Dodge P
+0116 - HP Plus
+0117 - HP Plus P
+0118 - FP Plus
+0119 - Flower Saver
+011A - Flower Saver P
+011B - Ice Power
+011C - Spike Shield
+011D - Feeling Fine
+011E - Feeling Fine P
+011F - Zap Tap
+0120 - Double Pain
+0121 - Jumpman
+0122 - Hammerman
+0123 - Return Postage
+0124 - Happy Heart
+0125 - Happy Heart P
+0126 - Happy Flower
+0127 - HP Drain
+0128 - HP Drain P
+0129 - FP Drain
+012A - FP Drain P
+012B - Close Call
+012C - Close Call P
+012D - Pretty Lucky
+012E - Pretty Lucky P
+012F - Lucky Day
+0130 - Lucky Day P
+0131 - Refund
+0132 - Pity Flower
+0133 - Pity Flower P
+0134 - Quick Change
+0135 - Peekaboo
+0136 - Timing Tutor
+0137 - Heart Finder
+0138 - Flower Finder
+0139 - Money Money
+013A - Item Hog
+013B - Attack FX R
+013C - Attack FX B
+013D - Attack FX G
+013E - Attack FX Y
+013F - Attack FX P
+0140 - Chill Out
+0141 - First Attack
+0142 - Bump Attack
+0143 - Slow Go
+0144 - Simplifier
+0145 - Unsimplifier
+0146 - Lucky Start
+0147 - L Emblem
+0148 - W Emblem
+0149 - Triple Dip
+014A - Invalid Item (Square w/ Sun inside)
+014B - Invalid Item (Round w/ Lightning inside) (Debug Badge)
+014C - Invalid Item (Shoe with Spikes) (attacks one enemy)
+014D - Invalid Item (Spiked Hammer) (attacks one enemy)
+014E - Invalid Item (Some kind of Hammer) (attacks all enemies from distance)
+014F - Invalid Item (Square w/ Diamond inside)
+0150 - Invalid Item (Square w/ Diamond inside) P
+0151 - Invalid Item (Hexagon w/ C inside) (Super Charge)
+0152 - Invalid Item (Hexagon w/ C inside) P (Super Charge P)
+0153 - 
+0154 - None

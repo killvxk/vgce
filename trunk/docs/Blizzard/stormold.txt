@@ -18,13 +18,13 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 113    BOOL     __stdcall SNetGetPlayerName(int playerid, char *buffer, size_t buffersize)
 114    BOOL     __stdcall SNetGetProviderCaps(void *caps)
 115    BOOL     __stdcall SNetGetTurnsInTransit(int *turns)
-116    BOOL     __stdcall SNetInitializeDevice(int a1, int a2, int a3, int a4, int a5)
-117    BOOL     __stdcall SNetInitializeProvider(DWORD providerName, int *providerData, int *userData, int *a4, int *a5) //ThreadID
+116    BOOL     __stdcall SNetInitializeDevice(int a1, int a2, int a3, int a4, int *verbyte) // apparently not verbyte
+117    BOOL     __stdcall SNetInitializeProvider(DWORD providerName, int *providerData, int *userData, int *a4, int *verbyte) // apparently not verbyte
 118    BOOL     __stdcall SNetJoinGame(unsigned int a1, char *gameName, char *gamePassword, char *playerName, char *userStats, int *playerid)
 119    BOOL     __stdcall SNetLeaveGame(int type)
 120    BOOL     __stdcall SNetPerformUpgrade(DWORD *upgradestatus)
 121    BOOL     __stdcall SNetReceiveMessage(int *senderplayerid, int *data, int *databytes)
-122    BOOL     __stdcall SNetReceiveTurns(int a1, int arraysize, void *arraydata, unsigned int *arraydatabytes, DWORD *arrayplayerstatus)  // arraysize = player count
+122    BOOL     __stdcall SNetReceiveTurns(int a1, int arraysize, void **arraydata, unsigned int *arraydatabytes, DWORD *arrayplayerstatus)  // arraysize = player count
 123    HANDLE   __stdcall SNetRegisterEventHandler(int type, int event)
 124    BOOL     __cdecl   SNetResetLatencyMeasurements()
 125    int      __stdcall SNetSelectGame(int a1, int a2, int a3, int a4, int a5, int *playerid)
@@ -133,7 +133,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 
 311                       SBltDestroy()
 312    BOOL     __stdcall SBltGetSCode(unsigned int maxiterations, char *buffer, size_t buffersize, char *loopstring)
-313    BOOL     __stdcall SBltROP3(int amount, int lpSurface, int width, int height, int width2, int pitch, int a7, unsigned int maxiterations)
+313    BOOL     __stdcall SBltROP3(int maxiterations, int lpSurface, int width, int height, int width2, int pitch, int a7, unsigned DWORD rop)
 314    BOOL     __stdcall SBltROP3Clipped(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10)
 315    BOOL     __stdcall SBltROP3Tiled(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10)
 
@@ -231,7 +231,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 437    BOOL    __stdcall STransIntersectDirtyArray(int handle, int dirtyarraymask, unsigned __int8 dirtyarray, int sourcemask)
 438    BOOL    __stdcall STransInvertMask(int handle, int sourcemask)
 439    BOOL    __stdcall STransLoadI(char *filename, int a2, int a3, int handle)
-440    BOOL    __stdcall STransSetDirtyArrayInfo(signed int depth, int depth2, int height, int width)
+440    BOOL    __stdcall STransSetDirtyArrayInfo(int width, int height, int depth, int bits)
 441    BOOL    __stdcall STransUpdateDirtyArray(int a1, char a2, int a3, int a4, int a5, int a6) // dirtyarray, dirtyvalue, transparency
 442    BOOL    __stdcall STrans442(int a1, int a2, int a3, char *a4, size_t a5)       // STransIsPixelInMask? STransGetBoundingRect?
 443    BOOL    __stdcall STransCombineMasks(int handle, int a2, int a3, int a4, int depth, int a6)
@@ -497,30 +497,48 @@ player Struct
 {{{
 struct playerStruct
 {
-    u32 playerid; // +0x00
-    char playerName[]; // +0x08
-    
-    DWORD ipAddress; // +0x10C
-    
-    DWORD dwFlags; // +0x118     // 0x04 = unknown, 0x08 = dropped
-    u32 unknown; // +0x11C
-    u32 tickCount; // +0x120
-    u32 playerBuffer; // +0x124
-    
-    unknown; // +0x17C
-    unknown; // +0x180
-    
-    unknown; // +0x1C4
-    unknown; // +0x1C8
-    
-    unknown; // +0x1D8
-    
-    unknown; // +0x1E2
-    
-    u32 unknown; // +0x20C
-    u16 unknown; // +0x210
-    u8 unknown; // +0x212
-    u8 unknown; // +0x213
+    playerStruct *prev;  // +0x00
+    playerStruct *next;  // +0x04
+    char playerName[260];// +0x08
+    DWORD ipAddress;     // +0x10C
+    u32 unknown_0x110;        // +0x110
+    u32 unknown_0x114;        // +0x114
+    DWORD dwFlags;       // +0x118  // 0x04 = unknown, 0x08 = dropped
+    u32 unknown_0x11C;        // +0x11C
+    u32 tickCount;       // +0x120
+    u32 playerBuffer;    // +0x124
+    int Ping;            // +0x128
+    BYTE unknown_0x12C[12];  // +0x12C
+    u32 unknown_0x138;  // +0x138
+    BYTE unknown_0x13C[68];  // +0x13C
+    u32 unknown_0x180   // +0x180
+    BYTE unknown_0x184[68]  // +0x184
+    u32 unknown_0x1C8   // +0x1C8
+    BYTE unknown_0x1CC[12]  // +0x1CC
+    u32 unknown_0x1D8         // +0x1D8 // ref'd by SNetDropPlayer
+    BYTE unknown7[48];  // +0x1DC
+    u16 dropReason;        // +0x20C      // Just a guess
+    u16 droppedBy;        // +0x210       // Just a guess
+    BYTE PlayerID;       // +0x212
+                         // +0x213
+                        // +0x214
+}
+
+}}}
+
+caps
+{{{
+struct caps
+{
+  u32 size;
+  u32 unk2;
+  u32 unk3;
+  u32 unk4;
+  u32 unk5;
+  u32 unk6;
+  u32 ping;
+  u32 unk8;
+  u32 unk9;
 }
 
 }}}

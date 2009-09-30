@@ -1,0 +1,52 @@
+Files are called "s" and are in raw text format.
+
+
+Sample file entry:
+
+<Npc>
+   <name>
+       ""   # Model Name -- See list of models
+   </>
+   <tribe>
+       ""   #Alliance
+   </>
+   <position>
+        #X #Y #Z
+   </>
+   <dir>
+        #direction
+   </>
+   <aitype>
+       ""
+   </>
+   <territory_type>
+       ""  #Enum
+           #  NPC_TERRITORY_TYPE_NOTHING
+           #  NPC_TERRITORY_TYPE_CIRCLE
+           #  NPC_TERRITORY_TYPE_SQUARE
+   </>
+   <territory_base>
+        #X #Y #Z
+   </>
+   <territory_loiter>
+        #X #Y #Z
+   </>
+   <territory_homing>
+        #X #Y #Z
+   </>
+   <search_range>
+        #range
+   </>
+   <search_angle>
+        #angle
+   </>
+   <homing_range>
+        #range
+   </>
+   <homing_angle>
+        #angle
+   </>
+   <btl_setup_no>
+       ""   # See list of battle setups
+   </>
+</>

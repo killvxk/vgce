@@ -1,0 +1,73 @@
+// File are called "c".
+
+struct xyzTriplet
+{
+    float x;
+    float y;
+    float z;
+};
+
+struct subCamera
+{
+    char name[32];
+    u32 unknown[8];
+    u32 count1;
+    u32 count2;
+    xyzTriplet unknown1[5];
+    u32 count3;
+    xyzTriplet unknown2[6];
+    u32 count4;
+    u32 count5;
+    u32 count6;
+    u32 count7;
+    u32 count8;
+    u32 count9;
+};
+
+struct surfaceCamera
+{
+    xyzTriplet unknown1[2];
+    u32 unknown2[4];
+};
+
+struct unknownPair
+{
+    u32 u1;
+    u32 u2;
+};
+
+/* NOTES:
+            Seems like there are 9 sections.
+            9 entry counts followed by 9 pointers.
+            0xFFBF3A10 is an unused pointer.
+
+            |MarioSt_CameraRoad|curve# is used for normal movement camera.
+            Any other type is used in events.
+*/
+
+struct Main
+{
+    u32  filesize;
+    char name[64];
+    char version[64];
+    char date[64];
+    
+    u32         initialPositionCount;  // Always 1 ?
+    u32         movementCameraCount;
+    u32         count3;
+    u32         count4;
+    u32         count5;
+    u32         count6;
+    u32         count7;
+    u32         count8;
+    u32         count9;
+    xyzTriplet  *initialPosition;  // unused?
+    subCamera   *movementCamera;
+    u32         *surfaceData;
+    unknownPair *unknown;
+    xyzTriplet  *unknown; // camera animation data
+    xyzTriplet  *unknown; // camera animation data
+    u32         *unknown;
+    u32         *unknown;
+    u32         *unknown;
+}

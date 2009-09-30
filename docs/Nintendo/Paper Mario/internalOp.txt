@@ -1,0 +1,54 @@
+There is a format in the executable file that performs actions according to a structure and opcodes.
+
+struct headerPM2
+{
+    u16 count;
+    u16 opcode;
+    
+    DWORD data[count];
+}
+
+struct headerPM1
+{
+    DWORD opcode;
+    u32 count;
+    
+    DWORD data[count];
+}
+
+Negative data values (ex: -29999985) are like variables
+
+enum opcode
+{
+    end = 0x01;
+    return = 0x02;
+     unk3 = 0x03; // Begin Unknown statement, 1 param
+     unk4 = 0x04; // End Unknown statement
+     unk5 = 0x05; // 1 param variable operation
+     unk6 = 0x06; // no param
+     unk7 = 0x07; // no param
+     unk9 = 0x09; // 1 param
+    wait = 0x0A;
+     if = 0x18; // 2 param variable operation, assumed to be If
+     unk25 = 0x19;
+     unk1D = 0x1D; // 2 param variable operation?
+     unk32 = 0x20; // Begin Unknown statement
+     unk33 = 0x21; // End Unknown statement
+     unk34 = 0x22;
+     unk36 = 0x24;
+     unk50 = 0x32; // 2 param variable operation
+     unk35 = 0x35; // 2 param variable operation
+     unk36 = 0x36;
+     unk3C = 0x3C; // Common in REL files?
+    call_pm1 = 0x43
+    function = 0x5b;
+    goto = 0x5c;
+    call_pm2 = 0x5e;
+     unk5F = 0x5F; // 1 param variable operation
+     unk99 = 0x63;
+     unk6E = 0x6E; // no param
+     unk6F = 0x6F; // 1 param variable operation
+     unk70 = 0x70; // no param
+    debug = 0x71; // Debug string
+
+}

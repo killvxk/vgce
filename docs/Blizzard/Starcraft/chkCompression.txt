@@ -44,7 +44,8 @@ Delete all of these sections.
 
 
 ==>"VCOD"
-Change all 0x05 opcodes to 0x04. Null out bytes while making sure your map is still compatible.
+Change all 0x05 and 0x04 opcodes to 0x03.
+Null all VCOD table entries while retaining the entry at index 0, owner, race, and force of all 12 players.
 
 
 ==>"OWNR"
@@ -232,14 +233,11 @@ Set the number of strings to only the amount of strings used in the map. Resize 
 Merge some string entries. For example: "Preparing Level 1" and "Level 1". "<grey>Holy Shit Defence" and "<green>Holy Shit Defence" can be merged as "<grey><green>Holy Shit Defence" because of the colour tags' special properties.
 A melee map should have a MAXIMUM of two strings.
 If the map contains no strings, set the section size to 0x01.
+Remove all non-printable bytes from strings (0x0D for example).
 
 
 ==>"UPRP"
 Merge similar entries. For example. If you are spawning an Infested Terran with 50% HP, and at another time you are spawning a Carrier with 50% HP AND 8 interceptors, you can merge the two entries since the Infested Terran will ignore the interceptors entry. A similar case could be creating a lifted building and creating a broodling that will run out of energy. The broodling ignores the lifted flag.
-Remove this section if your map is melee only.
-
-
-==>"UPUS"
 Remove this section if your map is melee only.
 
 

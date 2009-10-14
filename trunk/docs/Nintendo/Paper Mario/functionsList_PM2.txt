@@ -1,0 +1,57 @@
+General:
+    0x80050740 = PlayCharacterAnimation(OBJECT, ANIMATIONNAME);
+    0x800EA3F8 = PlayCharacterAnimation2(OBJECT, ANIMATIONNAME);
+    0x8010A32C = RunDamageScript_BiriBiri(-2, SCRIPT);
+    0x8010A388 = RunDamageScript_Fire(-2, SCRIPT);
+    0x8010A500 = RunDamageScript_Normal(-2, SCRIPT);
+    0x8010A55C = RunDamageScript_Ice(-2, SCRIPT);
+    0x8010A26C = DoDamage(-2);
+    0x80106BB8 = PlayBattleAnimation(-2, 20, var1, var2);
+
+Game:
+    0x800AA400 = CreateItem(INSTANCENAME, ITEMID, var1, THROWHEIGHT, var3, DROPTYPE, 0xFFFFFFFF, 0);
+    0x8004EBC0 = GetDropItem(OBJECT, VARIABLE); // Retrieves an item for the object to drop. 0 if there is no drop.
+    0x8004EC34 = GetDropBadge(OBJECT, VARIABLE); // Retrieves a badge for the object to drop. 0 if there is no drop.
+    0x8004E924 = GetCoinDropCount(OBJECT, VARIABLE); // Retrieves the number of coins this object is going to drop.
+    0x8004EB00 = GetHeartDropCount(OBJECT, VARIABLE); // Retrieves the number of hearts this object is going to drop.
+    0x8004EA40 = GetFlowerDropCount(OBJECT, VARIABLE); // Retrieves the number of flowers this object is going to drop.
+    
+Messages:
+    0x8006C3C4 = Exclaim(1, UNKNAME, OBJECT, TYPE, COUNT, X, Y, Z, 30, 0, TIME);
+        enum TYPE {
+            exclaim  = 0x00;
+            question = 0x01;
+            dizzy    = 0x02;
+            coins    = 0x03;
+            thinking = 0x04;
+            angry    = 0x05;
+            radar    = 0x06;
+            blank    = 0x07;
+        }
+    0x800D284C = MessageNoWait(0, NAME, 0, 0);
+    0x800D2090 = MessageYesNo(0, NAME);
+    0x800D23C4 = Message(0, NAME);
+
+Movement:
+    0x80050BCC = FollowThis(OBJECT, TARGET, 0, X, Y, Z, 4);
+    // 0x80051BCC = Jump(OBJECT, X, Y, Z, 300, 0, 0xF24ACA80, 0); // DON'T USE (yet)
+    0x8005082C = SwitchFacingDirection(OBJECT);
+    0x80050550 = StopMovement(OBJECT);
+    0x80052254 = OrderMove(OBJECT, var1, var2, 2000, unk1, 4);
+
+Sound:
+    0x8015235C = PlaySFX(NAME, 0);
+    0x801521DC = PlaySFXFrom(NAME, X, Y, Z, 0);
+    0x80104700 = PlayBattleSFX(-2, NAME, -250000000, 0, -250000000);
+    
+    
+    
+Object Names:
+    "me"
+    "target"
+    "master"
+    "slave_0"
+    "slave_1"
+    "slave_2"
+    "slave_3"
+    "mario"

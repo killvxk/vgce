@@ -1,0 +1,91 @@
+8035A35C    Tornado Jump
+8035BD98    Powerbounce
+8035CAB8    Multibounce
+8035FC84    Quake Hammer
+80361480    Hammer Throw
+80361F80    Fire Drive
+80364D2C    Heal (Mushroom, Maple Syrup, etc.)
+80365C08    Pow Block
+80366650    Fire Flower
+803674D4    Shooting Star
+80367608    Ice Storm
+80367BA0    Earthquake
+803681B8    Boo's Sheet
+8036865C    Volt Shroom
+80368788    Repel Cape
+80368940    Sleepy Sheep
+80368DA8    Stop Watch
+80368FC0    Dizzy Dial
+8036928C    HP Drain
+803697B0    Trade Off
+80369E94    Slow Shroom
+80369FC0    Gradual Syrup
+8036A0B8    Point Swap
+8036A3EC    Fright Mask
+8036A748    Mystery
+8036ACFC    Eat (Hot Sauce, Space Food, etc.)
+8036BF14    Zess Dynamite, Coconut Bomb, etc.
+8036C8D4    Poison Shroom
+8036CAEC    Trial Stew
+
+803794D4    Flurrie Attack (Normal)
+80379FC4    Flurrie Attack (Level 1)
+8037A7E4    Flurrie Attack (Level 2)
+8037B590    Flurrie Attack (Level 3)
+
+8037D190    Yoshi Attack (Normal)
+8037E194    Yoshi Attack (Level 1)
+8037F134    Yoshi Attack (Level 2)
+80380808    Yoshi Attack (Level 3)
+
+803820B0    Ms. Mowz Attack (Normal)
+80383988    Ms. Mowz Attack (Level 2)
+80385918    Ms. Mowz Attack (Level 1)
+8038681C    Ms. Mowz Attack (Level 3)
+
+80388424    Bobbery Attack (Normal)
+8038934C    Bobbery Attack (Level 3)
+8038A4C4    Bobbery Attack (Level 2)
+8038A88C    Bobbery Attack (Level 1)
+
+8038C1E0    Vivian Attack (Normal)
+8038CAF4    Vivian Attack (Level 1)
+8038D1AC    Vivian Attack (Level 2)
+8038D8AC    Vivian Attack (Level 3)
+
+803901D8    Koops Attack (Normal)
+80390E68    Koops Attack (Level 1)
+80391960    Koops Attack (Level 2)
+80392678    Koops Attack (Level 3)
+
+803941A8    Goombella Attack (Normal)
+80394EF0    Goombella Attack (Level 1)
+80395524    Goombella Attack (Level 2)
+803965FC    Goombella Attack (Level 3)
+
+80416BD8    Power Jump
+80416C10    Shrink Stomp
+80416C20    Sleepy Stomp
+80416C30    Soft Stomp
+80416C40    Head Rattle
+80416C5C    Power Smash
+80416C78    Ice Smash
+80416C94    Piercing Blow
+80416CB0    Charge
+80416CE8    Debug (Badge/Item)
+80416E38    Thunder Rage
+80416E54    Thunder Bolt
+80416E70    Ruin Powder
+80416E8C    Power Punch
+80416EA8    Courage Shell
+80416EC4    Mini Mr. Mini
+80416EE0    Mr. Softener
+80416EFC    Tasty Tonic
+80416F18    Spite Pouch
+80416F34    Koopa Curse
+
+
+
+
+
+

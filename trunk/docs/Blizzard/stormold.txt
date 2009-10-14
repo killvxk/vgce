@@ -339,7 +339,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 547    void    __cdecl   SLogPend(int a1, char *a2, char a3)
 548    void    __cdecl   SLogWrite(HANDLE handle, char *format, ...)
 549    void    __stdcall SLog549(int a1, int a2)
-550    void    __stdcall SLog550(HANDLE handle, int a2)
+550    void    __stdcall SLogCriticalLog(HANDLE handle, int a2)  // unofficial name
 551    BOOL    __stdcall SCompCompress(void *a1, int a2, unsigned int a3, signed int amount, int a5, char a6, int a7)
 552    BOOL    __stdcall SCompDecompress(void *a1, int *a2, const void *a3, unsigned int a4)
 553    void    __cdecl   SLogVWrite(HANDLE handle, char *format, ...)

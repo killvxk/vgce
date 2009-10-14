@@ -20,24 +20,35 @@ Negative data values (ex: -29999985) are like variables
 
 enum opcode
 {
+    no_op = 0x00;
     end = 0x01;
     return = 0x02;
      unk3 = 0x03; // Begin Unknown statement, 1 param
      unk4 = 0x04; // End Unknown statement
-     unk5 = 0x05; // 1 param variable operation
-     unk6 = 0x06; // no param
+    push = 0x05;
+    pop = 0x06;
      unk7 = 0x07; // no param
      unk9 = 0x09; // 1 param
     wait = 0x0A;
-     if = 0x18; // 2 param variable operation, assumed to be If
-     unk25 = 0x19;
-     unk1D = 0x1D; // 2 param variable operation?
-     unk32 = 0x20; // Begin Unknown statement
-     unk33 = 0x21; // End Unknown statement
-     unk34 = 0x22;
-     unk36 = 0x24;
-     unk50 = 0x32; // 2 param variable operation
-     unk35 = 0x35; // 2 param variable operation
+    if_e = 0x18;  // These ifs are not in any particular order and are probably wrong.
+    if_ne = 0x19;
+    if_lt = 0x1A;
+    if_le = 0x1B;
+    if_gt = 0x1C;
+    if_ge = 0x1D;
+    if_u1 = 0x1E;
+    if_u2 = 0x1F;
+    else = 0x20;
+    endif = 0x21;
+    switch = 0x22;
+    case_brk = 0x24;
+    case_nobrk = 0x28;
+    default = 0x2A;
+    case_nobrk = 0x2B;
+    break = 0x2E;
+    endswitch = 0x31;
+    setto = 0x32; // Sets a variable to a value
+    add = 0x35; // 2 param variable operation, add or subtract?
      unk36 = 0x36;
      unk3C = 0x3C; // Common in REL files?
     call_pm1 = 0x43

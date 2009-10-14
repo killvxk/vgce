@@ -1,0 +1,2 @@
+    0x80107DF8    = PlaySFXFromSource(OBJECT, SFX_LEFT, SFX_RIGHT, 0, 200, 200);
+    

@@ -16,7 +16,11 @@ Class 1:
     u8  xDestination;
     u32 Unknown2;
     u32 Unknown3;
-    u8  Unknown4[5];
+    u8  Unknown4;
+    u8  Unknown5;
+    u8  Unknown6;
+    u8  Unknown7;
+    u8  Unknown8;
     u16 Size;  
     void data;
   }
@@ -27,6 +31,31 @@ Class 1:
     u8  x;
   }
 
+  0x03  Apply Strength Point
+  {
+    u16 count;
+  }
+  
+  0x04  Apply Magic Point
+  {
+    u16 count;
+  }
+  
+  0x05  Apply Dexterity Point
+  {
+    u16 count;
+  }
+  
+  0x06  Apply Vitality Point
+  {
+    u16 count;
+  }
+  
+  0x08  Unknown item
+  {
+    u8  unknown[29];
+  }
+  
   0x09  Add Item to Inventory
   {
     u8  unknown[29];
@@ -42,9 +71,26 @@ Class 1:
     u8  unknown[21];
   }
   
-  0x0E  Cast Spell?
+  0x0D  Shift Range Weapon Attack
   {
-    u8  unknown[6];
+    u8  y;
+    u8  x;
+  }
+  
+  0x0E  Cast Spell Direction
+  {
+    u8  y;
+    u8  x;
+    u16 SpellID;
+    u16
+  }
+  
+  0x0F  Cast Spell Terrain
+  {
+    u8  y;
+    u8  x;
+    u16 SpellID;
+    u16
   }
   
   0x10  Move to Interact
@@ -54,9 +100,33 @@ Class 1:
     u16 id;
   }
   
-  0x12  Perform Action (Animation)
+  0x12  Melee Weapon Attack
   {
     u16 id;
+  }
+  
+  0x14  Range Weapon Attack
+  {
+    u16 id;
+  }
+  
+  0x16  Target Spell Generic
+  {
+    u16
+    u16
+    u16
+  }
+  
+  0x18  Target Spell Enemy
+  {
+    u16
+    u16
+    u16
+  }
+  
+  0x1A  Resurrect Scroll
+  {
+    u16 target;
   }
   
   0x1D  NPC Chat
@@ -70,6 +140,11 @@ Class 1:
   {
     u8
     u8
+    u16 level;
+  }
+  
+  0x1F  Enter Town Portal
+  {
     u16 level;
   }
   
@@ -91,9 +166,19 @@ Class 1:
     u16 unknown;
   }
   
+  0x27  Unknown item
+  {
+    u8  unknown[29];
+  }
+  
   0x28  Pick Up Item
   {
     u8  unknown[29];
+  }
+  
+  0x29  Unknown Item
+  {
+    u32 ItemID;
   }
   
   0x2A  Remove Item
@@ -135,9 +220,23 @@ Class 1:
     u8  unknown[10];
   }
   
-  0x33  Clear Target
+  0x31  Remove Equipment
   {
-    u16 id;
+    u8  slot;
+      {
+        0x00  Head
+        0x01  Left Ring
+        0x02  Right Ring
+        0x03  Amulet
+        0x04  Left Hand
+        0x05  Right Hand
+        0x06  Body Armor
+      }
+  }
+  
+  0x33  Increase Experience
+  {
+    u16 count;
   }
   
   0x34  Create Item
@@ -152,15 +251,58 @@ Class 1:
     u16 level;
   }
   
+  0x37  Shift Attack
+  {
+    u8  y;
+    u8  x;
+  }
+  
+  0x38  Create Town Portal
+  {
+    u8  y;
+    u8  x;
+    u16
+    u16
+    u16
+  }
+  
+  0x39  Unknown
+  {}
+  
+  0x4D  Heal Other Spell Target
+  {
+    u16 targetID;
+  }
+  
   0x4E  Player Chat
   {
     cstring message;
   }
   
+  0x4F  Set Strength
+  {
+    u16 value;
+  }
+  
+  0x50  Set Magic
+  {
+    u16 value;
+  }
+  
+  0x51  Set Dexterity
+  {
+    u16 value;
+  }
+  
+  0x52  Set Vitality
+  {
+    u16 value;
+  }
+  
   0x53  Rebirth/Disappear
   {}
   
-  0x58  Obtain Quest
+  0x58  Update Quest
   {
     u8
     u8

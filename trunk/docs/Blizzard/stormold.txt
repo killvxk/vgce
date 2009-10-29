@@ -18,8 +18,8 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 113    BOOL     __stdcall SNetGetPlayerName(int playerid, char *buffer, size_t buffersize)
 114    BOOL     __stdcall SNetGetProviderCaps(void *caps)
 115    BOOL     __stdcall SNetGetTurnsInTransit(int *turns)
-116    BOOL     __stdcall SNetInitializeDevice(int a1, int a2, int a3, int a4, int *verbyte) // apparently not verbyte
-117    BOOL     __stdcall SNetInitializeProvider(DWORD providerName, int *providerData, int *userData, int *a4, int *verbyte) // apparently not verbyte
+116    BOOL     __stdcall SNetInitializeDevice(int a1, int a2, int a3, int a4, int *a5)
+117    BOOL     __stdcall SNetInitializeProvider(DWORD providerName, int *providerData, int *userData, int *a4, int *a5) // contains verbyte in providerData
 118    BOOL     __stdcall SNetJoinGame(unsigned int a1, char *gameName, char *gamePassword, char *playerName, char *userStats, int *playerid)
 119    BOOL     __stdcall SNetLeaveGame(int type)
 120    BOOL     __stdcall SNetPerformUpgrade(DWORD *upgradestatus)
@@ -27,9 +27,9 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 122    BOOL     __stdcall SNetReceiveTurns(int a1, int arraysize, void **arraydata, unsigned int *arraydatabytes, DWORD *arrayplayerstatus)  // arraysize = player count
 123    HANDLE   __stdcall SNetRegisterEventHandler(int type, int event)
 124    BOOL     __cdecl   SNetResetLatencyMeasurements()
-125    int      __stdcall SNetSelectGame(int a1, int a2, int a3, int a4, int a5, int *playerid)
+125    int      __stdcall SNetSelectGame(int a1, int a2, int a3, int a4, int a5, int *playerid)  // a2 is a buffer containing the verbyte
 126    BOOL     __stdcall SNetSelectProvider(LPARAM lparam, int a2, int a3, int a4, int a5, int *providerid)
-127    BOOL     __stdcall SNetSendMessage(unsigned int playerID, void *data, unsigned int databytes)
+127    BOOL     __stdcall SNetSendMessage(unsigned int playerID, char *data, unsigned int databytes)
 128    BOOL     __stdcall SNetSendTurn(void *data, unsigned int databytes)
 129    BOOL     __stdcall SNetSetBasePlayer(unsigned int a1)
 130    BOOL     __stdcall SNetSetGameMode(DWORD modeFlags, char a2)

@@ -1,0 +1,16 @@
+0x24  Lobby Chat
+{
+  cstring message;
+}
+
+0x27  Data Transfer
+{
+  u16 size;
+  u16 ID;
+    {
+      0x00 = // Unknown;
+      0x01 = // Map Name, size, checksum;
+      0x03 = // End Session;
+    }
+}
+

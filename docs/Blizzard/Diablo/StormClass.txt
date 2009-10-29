@@ -1,0 +1,169 @@
+Class 2:
+
+  Constantly sending
+  {
+    u32 time;
+  }
+
+
+Class 1:
+
+  Header
+  {
+    u8  yCurrent;
+    u8  xCurrent;
+    u8  yDestination;
+    u8  xDestination;
+    u32 Unknown2;
+    u32 Unknown3;
+    u8  Unknown4[5];
+    u16 Size;  
+    void data;
+  }
+
+  0x01  Move
+  {
+    u8  y;
+    u8  x;
+  }
+
+  0x09  Add Item to Inventory
+  {
+    u8  unknown[29];
+  }
+  
+  0x0A  Player Drop Item
+  {
+    u8  unknown[21];
+  }
+  
+  0x0B  Force Drop Item
+  {
+    u8  unknown[21];
+  }
+  
+  0x0E  Cast Spell?
+  {
+    u8  unknown[6];
+  }
+  
+  0x10  Move to Interact
+  {
+    u8  y;
+    u8  x;
+    u16 id;
+  }
+  
+  0x12  Perform Action (Animation)
+  {
+    u16 id;
+  }
+  
+  0x1D  NPC Chat
+  {
+    u8  y;
+    u8  x;
+    u16 npc; // ?
+  }
+  
+  0x1E  Enter Dungeon
+  {
+    u8
+    u8
+    u16 level;
+  }
+  
+  0x24  Kill Target
+  {
+    u8  y;
+    u8  x;
+    u16 id;
+  }
+  
+  0x25  Deal Damage
+  {
+    u16 targetId;
+    u16 Damage;
+  }
+  
+  0x26  Die
+  {
+    u16 unknown;
+  }
+  
+  0x28  Pick Up Item
+  {
+    u8  unknown[29];
+  }
+  
+  0x2A  Remove Item
+  {
+    u32 ItemID;
+  }
+  
+  0x2B  Open Door
+  {
+    u16 id;
+  }
+  
+  0x2C  Close Door
+  {
+    u16 id;
+  }
+  
+  0x2D  Open Casket/Bookcase/etc
+  {
+    u16 id;
+  }
+  
+  0x2E  Open Chest
+  {
+    u8
+    u8
+    u16 id;
+  }
+  
+  0x2F  Open Barrel
+  {
+    u8
+    u8
+    u16 id;
+  }
+  
+  0x30  Change Equipment
+  {
+    u8  unknown[10];
+  }
+  
+  0x33  Clear Target
+  {
+    u16 id;
+  }
+  
+  0x34  Create Item
+  {
+    u8  unknown[21];
+  }
+  
+  0x35  Teleport
+  {
+    u8  y;
+    u8  x;
+    u16 level;
+  }
+  
+  0x4E  Player Chat
+  {
+    cstring message;
+  }
+  
+  0x53  Rebirth/Disappear
+  {}
+  
+  0x58  Obtain Quest
+  {
+    u8
+    u8
+    u8
+    u8
+  }

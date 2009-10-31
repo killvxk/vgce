@@ -1,0 +1,543 @@
+enum objectType
+{
+  player    = 0x00,
+  npc       = 0x01,
+  interface = 0x02,
+  missile   = 0x03,
+  item      = 0x04,
+  entrance  = 0x05
+};
+
+enum inventorySlot
+{
+  head      = 0x01,
+  amulet    = 0x02,
+  body      = 0x03,
+  leftHand  = 0x04,
+  rightHand = 0x05,
+  leftRing  = 0x06,
+  rightRing = 0x07,
+  belt      = 0x08,
+  boots     = 0x09,
+  gloves    = 0x0A
+};
+
+0x01  Walk to Location
+{
+  u16 x;
+  u16 y;
+}
+
+0x02  Walk to Target Object
+{
+  u32 objectType;
+  u32 objectID;
+}
+
+0x03  Run to Location
+{
+  u16 x;
+  u16 y;
+}
+
+0x04  Run to Target Object
+{
+  u32 objectType;
+  u32 objectID;
+}
+
+0x05  Left Action: Location
+{
+  u16 x;
+  u16 y;
+}
+
+0x06  Left Action: Target Object
+{
+  u32 objectType;
+  u32 objectID;
+}
+
+0x07  Left Action: ?
+
+0x08  Left Action: Location Repeat
+{
+  u16 x;
+  u16 y;
+}
+
+0x09  Left Action: Target Object Repeat
+{
+  u32 objectType;
+  u32 objectID;
+}
+
+0x0A  Left Action: ?
+0x0B  Left Action: ?
+
+0x0C  Right Action: Location
+{
+  u16 x;
+  u16 y;
+}
+
+0x0D  Right Action: Target Object
+{
+  u32 objectType;
+  u32 objectID;
+}
+
+0x0E  Right Action: ?
+
+0x0F  Right Action: Location Repeat
+{
+  u16 x;
+  u16 y;
+}
+
+0x10  Right Action: Target Object Repeat
+{
+  u32 objectType;
+  u32 objectID;
+}
+
+0x11  Right Action: ?
+0x12  Right Action: ?
+
+0x13  Interact with Object
+{
+  u32 objectType;
+  u32 objectID;
+}
+
+0x14  Bubble Chat
+{
+  u16     unknown1;
+  cstring message;
+  cstring target; // unused
+  u8      unknown2;
+}
+
+0x15  Game Chat
+{
+  u16     unknown1;
+  cstring message;
+  cstring target;
+  u8      unknown2;
+}
+
+0x16  Pickup Object
+{
+  u32 objectType;
+  u32 objectID;
+  u32 actionID;
+}
+
+0x17  Drop Item
+{
+  u32 itemID;
+}
+
+0x18  Inventory: Place Item
+{
+  u32 itemID;
+  u32 inventoryX;
+  u32 inventoryY;
+  u32 inventoryPage;
+    {
+      0x00  character
+      0x01  npc
+      0x02  trade
+      0x03  cube
+      0x04  stash
+    }
+}
+
+0x19  Inventory: Pick up Item
+{
+  u32 itemID;
+}
+
+0x1A  Inventory: Equip Item
+{
+  u32 itemID;
+  u32 slot;
+}
+
+0x1B  Inventory: Swap Two-Handed Equipment
+{
+  u32 itemID;
+  u32 slot;
+}
+
+0x1C  Inventory: Unequip Item
+{
+  u16 slot;
+}
+
+0x1D  Inventory:  Swap Equipment
+{
+  u32 itemID;
+  u32 slot;
+}
+
+0x1E  Inventory:  ?
+
+0x1F  Inventory:  Swap Item
+{
+  u32 itemID;
+  u32 replacedItemID;
+  u32 x;
+  u32 y;
+}
+
+0x20  Inventory: Use Item
+{
+  u32 itemID;
+  u32 x;
+  u32 y;
+}
+
+0x21  Inventory:  Stack Item
+{
+  u32 itemID;
+  u32 targetItemID;
+}
+
+0x22  Inventory:  ?
+
+0x23  Belt: Place Item
+{
+  u32 itemID;
+  u32 location;
+}
+
+0x24  Belt: Pick up Item
+{
+  u32 itemID;
+}
+
+0x25  Belt: Swap Item
+{
+  u32 itemID;
+  u32 targetItemID;
+}
+
+0x26  Belt: Use Item
+{
+  u32 itemID;
+  u32 unknown1;
+  u32 unknown2;
+}
+
+0x27  Identify Item
+{
+  u32 targetItemID;
+  u32 baseItemID;
+}
+
+0x28  Insert Gem
+{
+  u32 itemID;
+  u32 targetItemID;
+}
+
+0x29  Add Item to Tome
+{
+  u32 itemID;
+  u32 targetItemID;
+}
+
+0x2A  Add Item to Cube
+{
+  u32 itemID;
+  u32 targetItemID;
+}
+
+0x2B
+0x2C
+0x2D
+0x2E
+
+0x2F  NPC Init
+{
+  u32 objectType;
+  u32 objectID;
+}
+
+0x30  NPC Leave
+{
+  u32 objectType;
+  u32 objectID;
+}
+
+0x31  NPC Talk
+{
+  u32 objectID;
+  u32 textID;
+}
+
+0x32  Buy Item
+{
+  u32 objectID;
+  u32 itemID;
+  u32 itemFlags;
+  u32 price;
+}
+
+0x33  Sell Item
+{
+  u32 objectID;
+  u32 itemID;
+  u32 itemFlags;
+  u32 price;
+}
+
+0x34
+
+0x35  Repair Equipment
+{
+  u32 objectID;
+  u32 itemID;
+  u32 itemFlags;
+  u32 price;
+}
+
+0x36  Hire Mercinary
+{
+  u32 mercinaryID;
+  u32 unknown;
+}
+
+0x37
+
+0x38  Begin Trade
+{
+  u32 tradeType;
+    {
+      0x01  Normal
+      0x02  Gamble
+      0x03  Hire
+    }
+  u32 objectID;
+  u32 unknown;
+}
+
+0x39
+
+0x3A  Spend Stat Point
+{
+  u8  count;
+  u8  type;
+    {
+      0x00  Strength
+      0x01  Energy
+      0x02  Dexterity
+      0x03  Vitality
+    }
+}
+
+0x3B  Spend Skill Point
+{
+  u16 skillID;
+}
+
+0x3C  Set Current Skill
+{
+  u16 skillID;
+  u16 flags;
+    {
+      0x0000 = Right Hand Skill
+      0x0080 = Left Hand Skill
+    }
+  u32 unknown; // always 0xFFFFFFFF
+}
+
+0x3D
+0x3E
+
+0x3F  Character Speech
+{
+  u16 sfxID;
+}
+
+0x40  Update All Quests
+{}
+
+0x41  Revive Self
+{}
+
+0x42
+0x43
+0x44
+0x45
+0x46
+0x47
+0x48
+
+0x49  Use Waypoint
+{
+  u32 waypointID;
+  u32 destinationID;
+}
+
+0x4A
+
+0x4B  Teleport Self
+{
+  u32 unknown1;
+  u32 unknown2;
+}
+
+0x4C
+0x4D
+0x4E
+0x4F
+
+0x4F  Trade
+{
+  u32 requestID;
+    {
+      0x01
+      0x02 Deny Trade Request
+      0x03 Accept Trade Request
+      0x04 Agree to Trade
+      0x05
+      0x06
+      0x07 Disagree to Trade
+      0x08 Refresh
+      0x09
+      0x0A
+      0x0B
+      0x0C
+      0x0D
+      0x0E
+      0x0F
+      0x10
+      0x11
+      0x12 Close Stash
+      0x13 Move Gold To Inventory
+      0x14 Move Gold To Stash
+      0x15
+      0x16
+      0x17 Close Cube
+    }
+  u16 Gold
+}
+
+0x50  Drop Gold
+{
+  u32 playerID;
+  u32 Count;
+}
+
+0x51  Assign Skill Hotkey
+{
+  u16 skillID; // 0x0080 for left hand
+  u16 hotkeyID;
+  u32 unknown; // always 0xFFFFFFFF
+}
+
+0x52
+0x53
+0x54
+0x55
+0x56
+0x57
+
+0x58  Quest Completion
+{
+  u16 questID;
+}
+
+0x59  Move to Interact
+{
+  u32 objectType;
+  u32 objectID;
+  u32 x;
+  u32 y;
+}
+
+0x5A
+0x5B
+0x5C
+0x5D
+
+0x5E  Party
+{
+  u16 ActionID;
+    {
+      0x06  Invite
+      0x07  Deny Invite
+      0x08  Accept Invite
+      0x09  Leave
+    }
+  u32 PlayerID;
+}
+
+0x5F  Face Direction
+{
+  u16 x;
+  u16 y;
+}
+
+0x60  Swap Weapons
+{}
+
+0x61  Mercinary: Give Item
+{
+  u16 unknown;
+}
+
+0x62  Mercinary: Revive
+{
+  u32 mercinaryID;
+}
+
+0x63  Add Item to Belt  // Note: This is Shift+Click on item in inventory.
+{
+  u32 itemID;
+}
+
+0x64
+0x65
+
+0x66  Send Server Info
+{
+  void  unknown;
+}
+
+0x67  Create Game
+{
+  u8  unknown[45];
+}
+
+0x68  Join Game
+{
+  u32   hash;
+  u16   token;
+  u8    characterID;
+  u32   verbyte;
+  u32   unknown1;
+  u32   unknown2;
+  char  name[16];
+}
+
+0x69  Leave Game
+{}
+
+0x6A  Enter Joined Game
+{}
+
+0x6B  Enter Created Game
+{}
+
+0x6C  Character Transfer
+{
+  void  unknown;
+}
+
+0x6D  Keep Alive
+{
+  u8  unknown[12];
+}

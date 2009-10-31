@@ -13,9 +13,9 @@ inGame commands:
     /framerate
     /fps
 
-    @
-    !
-    /
+    @             Performs an in-game whisper. Usage: "@Heinermann Hello World"
+    !             Performs a bubble chat (appears over character's head). Usage: "!Hello World"
+    /             Performs a game command. Usage "/users"
 
 commandline options:
 

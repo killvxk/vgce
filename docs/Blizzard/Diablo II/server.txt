@@ -1,0 +1,245 @@
+0x05  Server Quit
+
+0x06  Server Quit
+
+0x07  Load Floor Tile
+{
+  u16 x;
+  u16 y;
+  u8  floorID;
+}
+
+0x08  Remove Floor Tile
+{
+  u16 x;
+  u16 y;
+  u8  floorID;
+}
+
+0x09  Entrance Assignment
+{
+  u8  objectType;
+  u32 doorwayID;
+  u8  unknown;
+  u16 x;
+  u16 y;
+}
+
+0x0A  Remove Object
+{
+  u8  objectType;
+  u32 objectID;
+}
+
+0x0B  Prep Load Object
+{
+  u8  objectType;
+  u32 objectID;
+}
+
+0x22  Inventory: Grab/Place Tome
+{
+
+}
+
+0x23  Change Skill
+{
+
+}
+
+0x26  Game Chat
+{
+  u8  type
+    {
+      0x01  Normal
+      0x02  Whisper
+      0x05  Bubble
+    }
+  u8  unknown1;
+  u8  unknown2;
+  u8  unknown3;
+  u32 unknown4;
+  cstring userName;
+  cstring message;
+}
+
+0x28  Quest Update
+{
+  u32 unknown1;
+  u32 unknown2;
+  
+  { u8  questState;
+      { 0x0C  //In Progress
+        0x12  //Finished
+      }
+    u8  QuestStanding;
+      { 0x20  //Return for Reward
+        0x80  //Quest Available
+      }
+  } Quest[47];
+}
+
+0x3E  Identify Item
+{
+
+}
+
+0x3F  Inventory:  Use Item
+{
+
+}
+
+0x47  ? // with Game Refresh
+{
+  u16 unknown1;
+  u32 unknown2;
+  u32 unknown3;
+}
+
+0x48  ? // with Game Refresh
+{
+  u16 unknown1;
+  u32 unknown2;
+  u32 unknown3;
+}
+
+0x50  Quest Assist 1
+{
+  u8  unknown[14];
+}
+
+0x51  Create Object
+{
+  u8  objectType;
+  u32 objectID;
+  u16 objectIndex;
+  u16 x;
+  u16 y;
+  u8  state;
+  u8  interaction;
+}
+
+0x52  Quest Assist 2
+{
+  u8  unknown[41];
+}
+
+0x53  Game Refresh
+{
+  u32 unknown1;
+  u8  unknown2;
+  u32 unknown3;
+}
+
+0x63  Open Waypoint Window
+{
+  u32 objectID;
+  u8  unknown1;
+  u8  unknown2;
+  u8  unknown3;
+  u8  unknown4;
+  u32 unknown5;
+  u32 unknown6;
+  u32 unknown7;
+}
+
+0x67  NPC:  Move
+{
+  u32 objectID;
+  u8  actionID;
+  u16 x;
+  u16 y;
+  u16 unknown1;
+  u8  unknown2;
+  u16 unknown3;
+  u8  unknown4;
+}
+
+0x6B  NPC:  Action
+{
+  u32 objectID;
+  u8  actionID;
+  u16 unknown1;
+  u16 unknown2;
+  u16 unknown3;
+  u16 x;
+  u16 y;
+}
+
+0x6C  NPC:  Attack
+{
+  u32 objectID;
+  u16 attackType;
+  u32 targetID;
+  u16 x;
+  u16 y;
+}
+
+0x6D  NPC:  Stop
+{
+  u32 objectID;
+  u16 x;
+  u16 y;
+  u8  liftPercent;
+}
+
+0x7C  Use Town Portal
+{
+
+}
+
+0x8F  Ping Response
+{
+  u8  unknown[32];
+}
+
+0x96  Player: Stop
+{
+  u16 unknown1;
+  u16 unknown2;
+  u16 unknown3;
+  u16 unknown4;
+}
+
+0x97  Swap Weaponset
+{}
+
+0x9C  Inventory: Place Item
+{
+
+}
+
+0x9D  Inventory: Grab/Equip Item
+{
+
+}
+
+0xAC  NPC:  Create NPC  // came into view
+{
+  u32 objectID;
+  u16 type;
+  u16 x;
+  u16 y;
+  u8  lifePercent;
+  u8  npcBytes;
+  u8  npcData[npcBytes];
+}
+
+0xB0  Server Close  // Official Size: 1
+{}
+
+0xB2  ? // Official Size: 53
+0xB3  Unknown // insanity, size is variable? or 255? Same as Character Transfer in client send
+{
+  u8  packetSize;
+  u8  unknown1;
+  u32 unknown2;
+  void  unknown;
+}
+
+0xB4  ? // Official Size: 5
+
+0xFA  ? // Official Size: 16
+0xFB  ? // Official Size: 16, other sizes look like they might be 189 and 357
+0xFC  ? // Official Size: 16
+

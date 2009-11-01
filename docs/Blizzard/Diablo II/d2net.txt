@@ -1,0 +1,28 @@
+int __cdecl D2Net_10004()
+  // Creates a thread that receives and decodes packet data from the in-game server.
+  // Returns either 0, 1, or 2
+  
+int __stdcall D2Net_10029()
+  // Can also be known as _WSAGetLastError(). Just a redirection.
+  
+int __cdecl D2Net_10032()
+  // Destroys the Net client and closes the socket.
+  // Returns a value from WSAGetLastError().
+  
+int __stdcall D2Net_10036(int size, int reserved, unsigned char* buffer)
+  // Sends a packet to the in-game server. Maximum size of 516.
+  // Returns the result of send()
+  
+
+  
+int __userpurge Ordinal10015<eax>(int a1<ebx>, int a2<edi>, char a3, int a4, int buffer, unsigned int length)
+// Sends a packet
+
+
+
+
+D2GAME:
+
+Ordinal10016
+Ordinal10026
+Ordinal10058

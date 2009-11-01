@@ -1,0 +1,36 @@
+int __fastcall Fog_10000(SOCKET s)
+  // Can also be known as _closesocket() since it is a detour
+  // Returns the value of closesocket()
+  
+bool __fastcall Fog_10001()
+  //  Makes an easy call to WSAStartup()
+  //  If WSAStartup() returns 0, this function returns true, otherwise it returns false.
+
+int __stdcall Fog_10002()
+  // Can also be known as _WSACleanup since it is a redirection
+  
+int __fastcall Fog_10050(LPCRITICAL_SECTION lpCriticalSection, DWORD unknown)
+  // Works like EnterCriticalSection with an extra value passed to it.
+  // 
+
+int __fastcall Fog_10224(unsigned char* outbuffer, int outsize, unsigned char* inbuffer, int insize)
+  // Decodes packet data from inbuffer and stores it in outbuffer.
+  // Returns the size of the decoded packet.
+
+
+
+
+signed int __fastcall Ordinal10007(int customsocket, const char *buffer, int len)
+//  Sends a packet.
+
+int __fastcall Ordinal10009(int customsocket, const char *a2, int len)
+  //  Sends a packet.
+  
+signed int __thiscall Ordinal10153(int this, int a2, char *buf, int len)
+// Sends a packet.
+
+int __stdcall Ordinal10157(int a3, int a4, char *buf, int len)
+// Sends a packet.
+
+signed int __stdcall Ordinal10260(int customplayerstruct, char *buf, __int16 size)
+// Sends a packet.

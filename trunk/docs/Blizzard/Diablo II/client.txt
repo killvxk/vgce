@@ -58,7 +58,11 @@ enum inventorySlot
   u32 objectID;
 }
 
-0x07  Left Action: ?
+0x07  Left Action: Hold Target Object
+{
+  u32 objectType;
+  u32 objectID;
+}
 
 0x08  Left Action: Location Repeat
 {
@@ -72,8 +76,14 @@ enum inventorySlot
   u32 objectID;
 }
 
-0x0A  Left Action: ?
+0x0A  Left Action: Hold Target Object Repeat
+{
+  u32 objectType;
+  u32 objectID;
+}
+
 0x0B  Left Action: ?
+{}
 
 0x0C  Right Action: Location
 {
@@ -87,7 +97,11 @@ enum inventorySlot
   u32 objectID;
 }
 
-0x0E  Right Action: ?
+0x0E  Right Action: Hold Target Object
+{
+  u32 objectType;
+  u32 objectID;
+}
 
 0x0F  Right Action: Location Repeat
 {
@@ -101,8 +115,14 @@ enum inventorySlot
   u32 objectID;
 }
 
-0x11  Right Action: ?
+0x11  Right Action: Hold Target Object Repeat
+{
+  u32 objectType;
+  u32 objectID;
+}
+
 0x12  Right Action: ?
+{}
 
 0x13  Interact with Object
 {
@@ -182,6 +202,10 @@ enum inventorySlot
 }
 
 0x1E  Inventory:  ?
+{
+  u32 unknown1;
+  u32 unknown2;
+}
 
 0x1F  Inventory:  Swap Item
 {
@@ -204,7 +228,10 @@ enum inventorySlot
   u32 targetItemID;
 }
 
-0x22  Inventory:  ?
+0x22  Inventory:  Unstack Item
+{
+  u32 itemID;
+}
 
 0x23  Belt: Place Item
 {
@@ -256,28 +283,31 @@ enum inventorySlot
 
 0x2B
 0x2C
-0x2D
+
+0x2D  Deselect
+{}
+
 0x2E
 
-0x2F  NPC Init
+0x2F  NPC: Init
 {
   u32 objectType;
   u32 objectID;
 }
 
-0x30  NPC Leave
+0x30  NPC: Leave
 {
   u32 objectType;
   u32 objectID;
 }
 
-0x31  NPC Talk
+0x31  NPC: Talk
 {
   u32 objectID;
   u32 textID;
 }
 
-0x32  Buy Item
+0x32  NPC:  Buy Item
 {
   u32 objectID;
   u32 itemID;
@@ -285,7 +315,7 @@ enum inventorySlot
   u32 price;
 }
 
-0x33  Sell Item
+0x33  NPC:  Sell Item
 {
   u32 objectID;
   u32 itemID;
@@ -293,9 +323,12 @@ enum inventorySlot
   u32 price;
 }
 
-0x34
+0x34  NPC:  Identify Items
+{
+  u32 objectID;
+}
 
-0x35  Repair Equipment
+0x35  NPC:  Repair Equipment
 {
   u32 objectID;
   u32 itemID;
@@ -303,18 +336,22 @@ enum inventorySlot
   u32 price;
 }
 
-0x36  Hire Mercinary
+0x36  NPC:  Hire Mercinary
 {
+  u32 objectID;
   u32 mercinaryID;
-  u32 unknown;
 }
 
-0x37
+0x37  NPC:  Gamble
+{
+  u32 itemID;
+}
 
 0x38  Begin Trade
 {
   u32 tradeType;
     {
+      0x00  Imbue/Quest
       0x01  Normal
       0x02  Gamble
       0x03  Hire
@@ -323,7 +360,10 @@ enum inventorySlot
   u32 unknown;
 }
 
-0x39
+0x39  ?
+{
+  u32 unknown;
+}
 
 0x3A  Spend Stat Point
 {
@@ -353,8 +393,15 @@ enum inventorySlot
   u32 unknown; // always 0xFFFFFFFF
 }
 
-0x3D
-0x3E
+0x3D  ?
+{
+  u32 objectID;
+}
+
+0x3E  ?
+{
+  u32 unknown;
+}
 
 0x3F  Character Speech
 {
@@ -369,11 +416,37 @@ enum inventorySlot
 
 0x42
 0x43
-0x44
-0x45
-0x46
-0x47
-0x48
+
+0x44  ?
+{
+  u32
+  u32
+  u32
+  u32
+}
+  
+0x45  ?
+{
+  u32
+  u32
+}
+  
+0x46  ?
+{
+  u32
+  u32
+  u32
+}
+  
+0x47  ?
+{
+  u32
+  u32
+  u32
+}
+  
+0x48  NotBusy
+{}
 
 0x49  Use Waypoint
 {
@@ -383,16 +456,23 @@ enum inventorySlot
 
 0x4A
 
-0x4B  Teleport Self
+0x4B  Mercinary Use Waypoint
 {
-  u32 unknown1;
-  u32 unknown2;
+  u32 objectType;
+  u32 objectID;
 }
 
-0x4C
-0x4D
+0x4C  ?
+{
+  u32
+}
+
+0x4D  ?
+{
+  u32
+}
+
 0x4E
-0x4F
 
 0x4F  Trade
 {
@@ -438,9 +518,17 @@ enum inventorySlot
   u32 unknown; // always 0xFFFFFFFF
 }
 
-0x52
-0x53
-0x54
+0x52  ?
+{
+  u32
+}
+
+0x53  ?
+{}
+
+0x54  ?
+{}
+
 0x55
 0x56
 0x57
@@ -450,7 +538,7 @@ enum inventorySlot
   u16 questID;
 }
 
-0x59  Move to Interact
+0x59  Object Move to Interact
 {
   u32 objectType;
   u32 objectID;
@@ -461,7 +549,19 @@ enum inventorySlot
 0x5A
 0x5B
 0x5C
-0x5D
+
+0x5D  Set Player Relationship
+{
+  u8  relationType;
+    {
+      0x01  Looting Rights
+      0x02  Reverse Squelch (Player can't hear you)
+      0x03  Squelch
+      0x04  Hostility
+    }
+  u8  state;  // off/on, 0/1
+  u32 playerID;
+}
 
 0x5E  Party
 {
@@ -499,7 +599,12 @@ enum inventorySlot
   u32 itemID;
 }
 
-0x64
+0x64  ?
+{
+  u32 unknown1;
+  u32 unknown2;
+}
+
 0x65
 
 0x66  Send Server Info
@@ -507,12 +612,12 @@ enum inventorySlot
   void  unknown;
 }
 
-0x67  Create Game
+0x67  Create Game   // official size: 46
 {
   u8  unknown[45];
 }
 
-0x68  Join Game
+0x68  Join Game   // official size: 37
 {
   u32   hash;
   u16   token;
@@ -523,21 +628,21 @@ enum inventorySlot
   char  name[16];
 }
 
-0x69  Leave Game
+0x69  Leave Game    // official size: 1
 {}
 
-0x6A  Enter Joined Game
+0x6A  Enter Joined Game   // official size: 1
 {}
 
-0x6B  Enter Created Game
+0x6B  Enter Created Game  // official size: 1
 {}
 
-0x6C  Character Transfer
+0x6C  Character Transfer    // official sizes: 262, and varies
 {
   void  unknown;
 }
 
-0x6D  Keep Alive
+0x6D  Keep Alive  // official size: 13
 {
   u8  unknown[12];
 }

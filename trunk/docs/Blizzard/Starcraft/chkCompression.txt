@@ -35,11 +35,7 @@ Remove all invalid sections.
 If Broodwar unit settings and extra locations are not required, immediately make your map forced compatibility with Starcraft 1.00. Expansion tilesets, units, and triggers should load correctly.
 
 
-==>"TYPE"
-Delete this section if your map is only 1.00 compatible.
-
-
-==>"IVER", "IVE2", "IOWN", "ISOM", "TILE", "DD2 ", "WAV ", "SWNM"
+==>"IVER", "IVE2", "IOWN", "ISOM", "TILE", "DD2 ", "WAV ", "SWNM", "TYPE"
 Delete all of these sections.
 
 
@@ -70,6 +66,7 @@ Set players 9-12 to 0x00.
 Make sure this section is not larger than mapWidth*mapHeight*2.
 You have the option of removing mapWidth*2+6 bytes from the end of this section without affecting gameplay(black bar at bottom of map).
 If the last tile in this section is a Null tile, remove those 2 bytes. Continue until a non-null tile is found. If your map consists of only Null tiles, you may make this entire section a size of 0.
+Make sure all look-a-like tiles don't have different IDs. Space tile 0 is the same as space tile 1, so space tile 1 can be set to space tile 0.
 
 
 ==>"PUNI"

@@ -6,7 +6,7 @@
 */
 #include "Hack.h"
 
-char hackbuffer[BUFFER_SIZE];
+static char hackbuffer[BUFFER_SIZE];
 
 struct memPatch
 {
@@ -15,17 +15,29 @@ struct memPatch
   u32   patchSize;
 };
 
-SYSTEMTIME time;
-FILE* globalLog;
-DWORD lastAccess;
-HMODULE ThisModule;
+static SYSTEMTIME time;
+static FILE* globalLog;
+static DWORD lastAccess;
+static HMODULE ThisModule;
 
-std::vector<memPatch> changes;
+static std::vector<memPatch> changes;
 
 ///////////////////////////////   LOGGER    //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 void logfast(char* file, const char* format, ...)
 {
+  if (file == NULL)
+  {
+    logError("No file name specified in logfast().");
+    return;
+  }
+
+  if (format == NULL)
+  {
+    logError("No formatting specified in logfast().");
+    return;
+  }
+
   va_list ap;
   va_start(ap, format);
   vsnprintf_s(hackbuffer, BUFFER_SIZE, BUFFER_SIZE, format, ap);
@@ -33,8 +45,7 @@ void logfast(char* file, const char* format, ...)
 
   GetLocalTime(&time);
 
-  FILE* logFile;
-  fopen_s(&logFile, file, "a+");
+  FILE* logFile = _fsopen(file, "a+", _SH_DENYNO);
   fprintf_s(logFile, "[%02d:%02d:%02d:%03d] %s\n", time.wHour, time.wMinute, time.wSecond, time.wMilliseconds, hackbuffer);
   fclose(logFile);
   return;
@@ -42,6 +53,12 @@ void logfast(char* file, const char* format, ...)
 
 void logError(const char* format, ...)
 {
+  if (format == NULL)
+  {
+    logError("No formatting specified in logError().");
+    return;
+  }
+
   va_list ap;
   va_start(ap, format);
   vsnprintf_s(hackbuffer, BUFFER_SIZE, BUFFER_SIZE, format, ap);
@@ -53,12 +70,18 @@ void logError(const char* format, ...)
 
 void logBegin(char* file)
 {
+  if (file == NULL)
+  {
+    logError("No file name specified in logBegin().");
+    return;
+  }
+
   if (globalLog != NULL)
   {
     fprintf_s(globalLog, "\n");
     fclose(globalLog);
   }
-  fopen_s(&globalLog, file, "a+");
+  globalLog = _fsopen(file, "a+", _SH_DENYNO);
   return;
 }
 
@@ -81,10 +104,58 @@ void logTime()
   return;
 }
 
-void logBytes(u8 *data, unsigned int size)
+void logBytes(u8 *data, u32 size)
 {
+  logBytes(globalLog, data, size);
+  return;
+}
+
+void logBytes(FILE* file, u8* data, u32 size)
+{
+  if (file == NULL)
+  {
+    logError("Bad file handle in logBytes().");
+    return;
+  }
+
+  if (data == NULL)
+  {
+    logError("No data specified in logBytes().");
+    return;
+  }
+
+  memset(hackbuffer, 0, BUFFER_SIZE);
   for (u32 i = 0; i < size; i++)
-    logAdd(" %02X", data[i]);
+  {
+    u8 wbyte;
+    __try
+    {
+      wbyte = data[i];
+    }
+    __except(1)
+    {
+      wbyte = 0xFF;
+      logError("Read from invalid memory address 0x%08X[%d] in logBytes().", data, size);
+    }
+    char temp[5];
+    sprintf_s(temp, 4, " %02X", wbyte);
+    strcat_s(hackbuffer, BUFFER_SIZE, temp);
+  }
+  fprintf_s(globalLog, "%s", &hackbuffer[1]);
+  return;
+}
+
+void logBytes(char* file, u8* data, u32 size)
+{
+  if (file == NULL)
+  {
+    logError("No file name specified in logBytes().");
+    return;
+  }
+
+  FILE* logFile = _fsopen(file, "a+", _SH_DENYNO);
+  logBytes(logFile, data, size);
+  fclose(logFile);
   return;
 }
 
@@ -92,6 +163,12 @@ void logAdd(const char *format, ...)
 {
   if (globalLog == NULL)
     return;
+
+  if (format == NULL)
+  {
+    logError("No format specified in logAdd().");
+    return;
+  }
 
   va_list ap;
   va_start(ap, format);
@@ -107,6 +184,7 @@ void logEnd()
   if (globalLog == NULL)
     return;
 
+  fseek(globalLog, 0, SEEK_END);
   fprintf_s(globalLog, "\n");
   fclose(globalLog);
   return;

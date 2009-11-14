@@ -12,7 +12,7 @@
 #include <vector>
 
 #ifndef ThisModuleName
-#define ThisModuleName "Game.exe"
+#define ThisModuleName "Starcraft.exe"
 #endif
 
 // Typedefs
@@ -35,7 +35,9 @@ void logError(const char* format, ...);
 void logBegin(char* file);
 void logBegin();
 void logTime();
-void logBytes(u8 *data, unsigned int size);
+void logBytes(u8* data, u32 size);
+void logBytes(char* file, u8* data, u32 size);
+void logBytes(FILE* file, u8* data, u32 size);
 void logAdd(const char* format, ...);
 void logEnd();
 

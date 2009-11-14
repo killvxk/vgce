@@ -1,13 +1,5 @@
 CHK File format specs
 
-"TYPE"
-	size: Constant 4 bytes
-	Validation: Unknown
-	notes: Only required for VER of 1.04 and above. All game types.
-	Fields:
-		DWORD	Type{	"SWAR",  // 1.04
-						"BWAR"}  // Broodwar
-
 "VER "
 	size: Constant 2 bytes.
 	Validation: Must be size of 2 bytes.

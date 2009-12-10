@@ -1,184 +1,11 @@
-assetbrowser~	0xCA14DE92
-BRPotatoGashes~	0x03B228AC
-BRThorn_river_stamp~	0x04FE03CD
-BR_mntn_cryst_lrge~	0x043AFE76
-BR_SGZB_rdg_suckerfeet_fd~	0x03AB96D7
-buttons_city_buildings~	0xDCC387F5
-buttons_cit_buildings~	0xDCC387F5
-buttons_colony_buildings~	0xB79ACBA1
-cell_part_templates~	0x29A896EB
-citypopups~	0xAA9A8ED7
-colony_limits~	0x7436B54A
-common~	0x011C0BDE
-consequence~	0xD509FFBF
-creatureabilitytemplates~	0xD2FCB262
-creatureeditortemplates~	0xB94BBB7E
-creaturegametuningeasy~	0xB5CD7BF0
-creaturegametuninghard~	0xA82BC155
-creaturegame~	0xAD56080C
-creaturemotivetuningeasy~	0xEF70EE29
-creaturemotivetuninghard~	0x76227EA4
-creatureparticons~	0x02231C8B
-creature_parts~	0x40626000
-editors_building~	0x100D977D
-editors_creature~	0x100D977C
-editors~	0x100D976E
-eventtemplates~	0x2333F729
-front_handle~	0x2E6521F4
-gametuning~	0x02AE0C7E
-global_ui_civ~	0x011C0C1C
-global_ui_creature~	0x106C7116
-global_ui_tribe~	0x011C0C08
-global_ui~	0x011C0BF5
-GP_mntn_crystalline~	0x04472552
-graphics_achievements~	0x260EB59C
-graphics_launchscreen~	0xB02D5A52
-graphics_misc_1~	0x02E9A2CA
-graphics_mvj~	0x0462CCD9
-graphics_partunlock~	0x819D7098
-graphics_pie_menu~	0x011C0C59
-graphics_posse_ui~	0x03D864E7
-graphics_settings~	0x04379514
-graphics_space_badges_and_rares~	0x0542E15D
-locale~	0x02FABF01
-LP_mntn_crystl_low~	0x04335234
-LP_mntn_crystl_med~	0x04335234
-LP_mntn_crystl_ocean~	0x0450504E
-LP_mountain_crystalline_low~	0x04335234
-LP_mountain_lumpy_low~	0x043351A6
-LP_mountain_metadomes_low~	0x04349E40
-LP_mountain_scraped_low~	0x04345322
-LP_mountain_squiggles_low~	0x0433528C
-LP_mountain_striated_low~	0x04334ABB
-LP_mountain_worms_low~	0x04344F9F
-LP_oceans_scalloped_medium~	0x03695283
-LP_Oceans_scalloped_small~	0x0369527A
-militaryvehiclepalette_list~	0x56A27B27
-missionfetchcommodity~	0x33E7F436
-mission_biosphere_collapse~	0xA5423D2B
-mission_grob_teaser_raid~	0xC5243674
-mission_happiness_event~	0x9E1763E9
-mission_raid_ally~	0xF0B62B43
-mission_raid_plunder_event~	0x71BDC5B0
-mission_raid_war~	0x7C392D99
-mission_raid~	0x2E27078E
-not_sure~	0xF109B9F2
-palette_AllParent~	0x19D9A1D5
-palette_tribeAttackTools_List~	0x2CBA1E24
-palette_tribeSocialTools_List~	0x3E28DD31
-palette_tribeTools_List~	0x955C20F1
-side_arrow~	0x7CC96C02
-side_handle~	0x7CC96C02
-spaceevents~	0x02AE1A8E
-spacetools~	0x30608F0B
-spacetrading~	0x034D97FA
-testmodels~	0x44A7F6AF
-Thornlakestamp~	0x04FE03CC
-timelineevents~	0xE1D7164F
-timeline~	0x8C509D6C
-top_handle~	0xD02751DE
-tribaltools~	0xF37C24E6
-tribeevents~	0x182CD6CE
-tribegame~	0xF71FA311
-tribetypes~	0xF29DB649
-ufotools~	0x3064CB38
-verbicons_creatureeditor~	0x9CC3EB58
-verbicons_shopping~	0xEE92AD80
-vignettes_civ_3~	0xBA991155
-vignettes_civ~	0xA080E6CD
-vignettes_tribe~	0x1BA8B527
-verbicons_creaturegame~	0x604B35E7
-verbicons_tribegame~	0x8F223C4C
-verbicons_vehicleeditor~	0xE4F27FFB
 ### Previous items are 'obsolete' ###
-graphics_assetbrowser~	0xCA14DE92
-BR_crescent_gash~	0x03B228AC
-Thorn_riverstamp~	0x04FE03CD
-BR_mountain_crystalline_large~	0x043AFE76
-BR_SGZB_ridges_sckrfeet_fde~	0x03AB96D7
-cityeditbuttons~	0xDCC387F5
-colonyeditbuttons~	0xB79ACBA1
-celleditortemplates
-civpopups~	0xAA9A8ED7
-[colony_limits]	0x7436B54A
-graphics_common~	0x011C0BDE
-graphics_consequence~	0xD509FFBF
-[creatureabilitytemplates]	0xD2FCB262
-creatureeditortemplates
-creaturegametuning_easy
-creaturegametuning_hard
-creaturegame
-motivetuning_easy
-motivetuning_hard
-swatches_creature_parts~	0x02231C8B
-parts~	0x40626000
-graphics_editors_building~	0x100D977D
-graphics_editors_creature~	0x100D977C
-graphics_editors~	0x100D976E
-popuptemplates~	0x2333F729
-DeformAxisForward
-[gametuning]	0x02AE0C7E
-graphics_global_ui_civ~	0x011C0C1C
-graphics_global_ui_creature~	0x106C7116
-graphics_global_ui_tribe~	0x011C0C08
-graphics_global_ui~	0x011C0BF5
-GP_mountain_crystalline~	0x04472552
-icons_achievements~	0x260EB59C
-launchscreen~	0xB02D5A52
-trading~	0x02E9A2CA
-mvj~	0x0462CCD9
-partunlock~	0x819D7098
-pie_menu~	0x011C0C59
-posse_ui~	0x03D864E7
-settings~	0x04379514
-spg_badges~	0x0542E15D
-[locale]	0x02FABF01
-LP_mountain_crystalline_med~	0x04335234
-LP_mountain_crystalline_ocean~	0x0450504E
-LP_mountain_lumpy_medium~	0x043351A6
-LP_mountain_metadomes_med~	0x04349E40
-LP_mountain_scraped_medium~	0x04345322
-LP_mountain_squiggles_med~	0x0433528C
-LP_mountain_striated_medium~	0x04334ABB
-LP_mountain_worms_medium~	0x04344F9F
-LP_Oceans_scalloped_medium~	0x03695283
-LP_oceans_scalloped_small~	0x0369527A
-palette_militaryvehicle_list~	0x56A27B27
-mission_fetch_commodity
-event_biosphere_collapse
-event_grob_teaser_raid
-event_happiness
-event_raid_ally
-event_raidplunder
-event_raid_war
-event_raid
-modtext
-palette_buildingsParent~	0x19D9A1D5
-palette_tribeAttackTools~	0x2CBA1E24
-palette_tribeSocialTools~	0x3E28DD31
-palette_tribeTools~	0x955C20F1
-DeformAxisLeft
-space_missions~	0x02AE1A8E
-[spacetools]	0x30608F0B
-[spacetrading]	0x034D97FA
-Models
-Thornlake_stamp~	0x04FE03CC
-timelineevents
-timeline
-DeformAxisUp
-tribaltools
-tribepopups~	0x182CD6CE
-tribegame
-tribearchetypes_hard
-[ufotools]	0x3064CB38
-CreatureEditorVerbIcons
-ShoppingVerbIcons
-vignettes_tribe_2~	0xBA991155
-Vignettes_Civ
-vignettes_tribe
-CreatureGameVerbicons
-TribeGameVerbicons
-VehicleEditorVerbicons
+0
+1
+110-aphilofieth
+110-aphjhifibt-lr
+110-aphklofibt-lr
+16by10
+2005iannnnngmoea
 42
 42_disabled
 70-fno-12
@@ -250,22 +77,31 @@ aah_voice
 abduct
 Abilities
 abilitiespalette
+AbilityImage
 accessorize
+accessorycivcreatures
 accessorycivshopper
+accessoryspacecreatures
 accessoryspaceshopper
+accessorytribecreatures
 accessorytribeshopper
 acc_civshopper
 acc_spaceshopper
 acc_tribeshopper
 AceofSpace
 Achievement
-achievements
+Achievements
+Achievements~	0x00010010
 achievements~	0x05BEFD27
 activationtype
 Adamant
 adblitz
 add
 AdultSupervision
+advancedraid1
+advancedraid1_easy
+advancedraid1_hard
+AdvantagedCreatures~	0x0002001D
 ad_Ashtray
 ad_crableg
 ad_craters
@@ -285,6 +121,7 @@ air
 airmer
 AirMinistry
 AirTrout
+Air~	0x00020001
 aiscript
 alg
 alg-aluminumcell
@@ -397,6 +234,7 @@ allytorpedosolar3
 allytorpedosolar4
 allytorpedosolar5
 allytorpedosolar6
+All~	0x00020012
 alpha_aggressive
 alpha_friendly
 alterego
@@ -453,6 +291,7 @@ angulardamping
 anim
 animal
 Animals
+Animals~	0x00020006
 animation
 AnimationRemapping
 animations
@@ -488,6 +327,7 @@ apentemasd9
 appconfig
 apppack
 appproperties
+Aqua Militia
 archetype
 archetypeswitch-1
 archetypeswitch-2
@@ -590,6 +430,7 @@ AssetBrowserFeedEdit
 assetbrowserfeeditems
 assetbrowserfeedlists
 assetbrowserfilter
+AssetBrowserGraphics
 assetbrowsersort
 AssetDiscovery
 AssetView
@@ -605,6 +446,20 @@ astonish120_7
 astonish120_8
 astonish120_9
 atk_bite
+atk_bite_norm
+atk_charge
+atk_charge_norm
+atk_charge_over
+atk_spit
+atk_spit_act
+atk_spit_dis
+atk_spit_norm
+atk_spit_over
+atk_strike
+atk_strike_act
+atk_strike_dis
+atk_strike_norm
+atk_strike_over
 atmosphere1
 atmosphere2
 atmosphere3
@@ -736,9 +591,11 @@ baby_splash_v2
 baby_splash_v2_gethit
 baby_splash_v2_nog
 backer
+backgroundmap
 backwards_guitar
 badbaby
 badbaby_disabled
+badData
 badgecollector-1
 badgecollector-10
 badgecollector-2
@@ -756,10 +613,14 @@ badges
 badgesightseer
 badgetraderoutes
 badgeunlocknotification
+badgeunlocktoolreward
 balance
 Balcony
 Ball
+ballistic
 Balloon
+bangpercent
+bangtime
 barbieri
 barbieri1
 barbieri2
@@ -774,10 +635,59 @@ BardHero
 BardHero_disabled
 BardPassion
 BardPassion_disabled
+bard_afraid_v1
+bard_afraid_v2
+bard_angry_v1
+bard_angry_v2
+bard_angry_v3
+bard_angry_v4
+bard_gasp_v1
+bard_gasp_v2
+bard_gasp_v3
+bard_happy_v1
+bard_happy_v2
+bard_happy_v3
+bard_happy_v4
+bard_laugh_v1
+bard_laugh_v2
+bard_neutral_v1
+bard_neutral_v2
+bard_neutral_v3
+bard_neutral_v4
+bard_neutral_v5
+bard_neutral_v6
+bard_sad_v1
+bard_sad_v2
+bard_urgnt_v1
+bard_urgnt_v2
 Bariquill
 base
 basegear
 basicbite
+basicfish
+basicgather
+basichunt
+basicraid1
+basicraid1_easy
+basicraid1_hard
+basicraid2
+basicraid2_easy
+basicraid2_hard
+basicraid3
+basicraid3_easy
+basicraid3_hard
+basicraid4
+basicraid4_easy
+basicraid4_hard
+basicraid5
+basicraid5_easy
+basicraid5_hard
+basicraid7
+basicraid7_easy
+basicraid7_hard
+basicraid8
+basicraid8_easy
+basicraid8_hard
 basic_chassis_01
 basic_chassis_02
 basic_chassis_03
@@ -826,7 +736,10 @@ bcom_woundedroxcr
 bcsa_bored_shakeheadmcxcr
 be
 Beach
+beaker
 beam
+beatplay
+beatplayer
 beatrepeat
 Beeblum
 Beeoh
@@ -1639,6 +1552,12 @@ blackhole
 blackHoleNames~	0x39DE2A45
 blank
 bleSporeguide
+ble_cityhallshopper
+ble_entertainmentshopper
+ble_factoryshopper
+ble_houseshopper
+ble_templateShopper
+Blind Ozzie
 blink
 blinks
 Blissp
@@ -1650,6 +1569,7 @@ block3
 block4
 block5
 blocktemplate
+Blood Skipper
 blowinglowwhistle
 blue1
 blue2
@@ -1666,6 +1586,7 @@ bodyguard-3
 bodyguard-4
 bodyguard-5
 bodytext
+bolt
 bone
 bone_pile
 bone_pile-Hull
@@ -1698,6 +1619,8 @@ bowed_gong2
 bowed_gong3
 bowed_gong4
 box
+BP1_cycle_run
+BP1_cycle_walk
 brain
 Brainer
 brainsurgeon-1
@@ -1793,6 +1716,7 @@ BR_crater_large~	0x036805F7
 BR_crater_medium~	0x036805FA
 BR_crater_smallcluster~	0x03A8FFDD
 BR_crater_small~	0x036812FF
+BR_crescent_gash~	0x03B228AC
 BR_crescent_ridge~	0x03B228AD
 BR_crystal_1~	0x0369508D
 BR_crystal_2~	0x03695097
@@ -1873,6 +1797,7 @@ BR_mesa_cluster~	0x051B1D03
 BR_mesa_single~	0x051B1D02
 BR_mesa_squarish~	0x051B1D04
 BR_mesa~	0x036805F0
+BR_mountain_crystalline_large~	0x043AFE76
 BR_mountain_lumpy_large~	0x043AFE73
 BR_mountain_metadomes_large~	0x043AFE94
 BR_mountain_peaky~	0x036805FD
@@ -1949,6 +1874,7 @@ BR_SGZB_hills_swirled_all~	0x03AB96D0
 BR_SGZB_hills_swirled~	0x03AB96CF
 BR_SGZB_hills_swiss_all~	0x03AB96CD
 BR_SGZB_hills_swiss~	0x03AB96CC
+BR_SGZB_ridges_sckrfeet_fde~	0x03AB96D7
 BR_SGZB_ridges_spiny_all~	0x03AB96D3
 BR_SGZB_ridges_spiny~	0x03AB96D2
 BR_SGZB_ridges_suckerfeet~	0x03AB96D4
@@ -2051,6 +1977,7 @@ buildingNames~	0x6EE78FA7
 buildingPaintSwatch
 buildingrigblocks
 Buildings
+Buildings~	0x00020002
 buildingtemplate
 buildingturret
 building_cityhall
@@ -2058,7 +1985,6 @@ building_entertainment
 building_factory
 building_full
 building_house
-building_parts~	0x40636000
 building_part_morph_x01
 building_part_morph_x02
 building_part_morph_x03
@@ -2280,6 +2206,7 @@ bumpy_stackrocks
 bumpy_tentacle
 bumpy_tribal
 bump_textureMap
+Business Jet
 butn-trg-act
 butn-trg-hl
 butn-trg-norm
@@ -2300,18 +2227,21 @@ button-detail-norm
 button-detail-off
 button-detail-on-act
 button-detail-on-hl
+button-detail-on-norm
 button-eye-act
 button-eye-hl
 button-eye-norm
 button-eye-off
 button-eye-on-act
 button-eye-on-hl
+button-eye-on-norm
 button-feet-act
 button-feet-hl
 button-feet-norm
 button-feet-off
 button-feet-on-act
 button-feet-on-hl
+button-feet-on-norm
 button-generic-act
 button-generic-hitmask
 button-generic-hl
@@ -2324,6 +2254,7 @@ button-hands-norm
 button-hands-off
 button-hands-on-act
 button-hands-on-hl
+button-hands-on-norm
 button-hl
 button-limbs-act
 button-limbs-hl
@@ -2331,6 +2262,7 @@ button-limbs-norm
 button-limbs-off
 button-limbs-on-act
 button-limbs-on-hl
+button-limbs-on-norm
 button-m
 button-mouth-act
 button-mouth-hl
@@ -2338,6 +2270,7 @@ button-mouth-norm
 button-mouth-off
 button-mouth-on-act
 button-mouth-on-hl
+button-mouth-on-norm
 button-next-act
 button-next-hitmask
 button-next-hl
@@ -2352,6 +2285,7 @@ button-weapon-norm
 button-weapon-off
 button-weapon-on-act
 button-weapon-on-hl
+button-weapon-on-norm
 buttons
 buttons_city_vehicle~	0x96BEFF33
 buttons_colony_vehicle~	0xCCB453CF
@@ -2376,6 +2310,7 @@ button_mode-play-on-act
 button_mode-play-on-hl
 buyablecashinfusion
 buyablesafarivacuum
+buytools
 buy_building
 buy_food
 Buzzy
@@ -2535,13 +2470,18 @@ callout_trg_tutorialmodeend
 callout_trg_uicameracontrols
 calltemplate
 cameramaxlerp
+camerarotated
+campfire_powerup
 canmate
 CantAffordTool
 Cap
+Capsasian_Abductor
 captain
 carcass
+card_shuffle_play
 carelessparent
 carelessparent_disabled
+Cargo Hold
 cargopalette
 cargoupgrade1
 cargoupgrade2
@@ -2807,6 +2747,9 @@ celleditorlevel2
 celleditorlevel3
 celleditorlevel4
 celleditorsetup
+CellEditorTemplates
+CellEditorVerbicons
+celleffects
 celleyeballtemplate
 celleyestalktemplate
 celleyetemplate
@@ -2815,7 +2758,9 @@ cellfiltermouthtemplate
 cellgame
 CellGameTemplate
 cellgame_seed_music
+cellgame_seed_music5
 cellgame_seed_music6
+CellGame~	0x00010011
 cellmouthjawtemplate
 cellmouthpokertemplate
 cellmouthtemplate
@@ -2824,18 +2769,20 @@ cellmovementflagellatemplate
 cellmovementjettemplate
 cellmovementtemplate
 cellpartunlock
+cellpartunlockitem
 CellPickups
 cellrigblocks
 cellrigblocktemplate
+Cells~	0x00020003
 celltemplate
 celltocreatureeditor
 celltocreatureeditoringame
 celltocreaturetransition
-cellToCreature_Editor_Palette_Pages~	0x406B6C0A
 cellweaponchemicaltemplate
 cellweaponelectrictemplate
 cellweaponspiketemplate
 cellweapontemplate
+cell_add_eye
 cell_air_bubble_model
 cell_amb
 cell_amb_life_large
@@ -2872,13 +2819,18 @@ cell_beach_underbeach
 cell_bomb
 cell_bomb_target
 Cell_booster
+Cell_boosterSmall
 cell_brain_upgrade
 cell_breakMandible_eventLargeSolidCrack
 cell_bubblepop
 Cell_Buzzy
+Cell_BuzzyAlpha
+Cell_BuzzySmall
 cell_carnivore
+cell_charger
 cell_chase
 Cell_Chomper
+Cell_ChomperSmall
 cell_cilia
 cell_collision_creature_creature_impact
 cell_collision_creature_plant_impact
@@ -2892,6 +2844,7 @@ cell_creature_L0_food_death
 cell_creature_L0_food_decorations
 cell_creature_L0_zoom
 cell_creature_puncture_outflow
+cell_creeper
 cell_death_avatar
 cell_death_avatar_idle
 cell_death_eaten
@@ -2906,6 +2859,8 @@ cell_dmgsolid_spike
 cell_Dodge
 cell_dof_distort
 cell_ducky
+cell_duckyLarge
+cell_duckySmall
 cell_eat
 cell_eatanimal
 cell_eatomnivore
@@ -2937,10 +2892,13 @@ cell_ed_mouth
 cell_ed_move
 cell_ed_poison
 cell_egg
+cell_eggdad
 cell_eggHatch_L0
 cell_eggkid
 cell_eggkidsmall
+cell_eggmom
 cell_elec_release
+cell_empty
 cell_Escape
 cell_Evolve
 cell_Explore
@@ -2952,12 +2910,15 @@ cell_glance_probonprob
 cell_glance_spike
 cell_glance_spikeonspike
 Cell_Goldy
+Cell_GoldySmall
 cell_goto_creature
 cell_goto_editor
 cell_ground_L1
+cell_ground_L2
 cell_ground_L5
 cell_grow
 Cell_Grubby
+Cell_GrubbySmall
 cell_hatch
 cell_hatch_egg
 cell_hatch_ice
@@ -2974,6 +2935,7 @@ cell_hitpoints
 cell_idle
 cell_idle_backgrndguy
 cell_idle_big
+cell_idle_blink
 cell_idle_blink1
 cell_idle_blink1_big
 cell_idle_blink2
@@ -2981,9 +2943,13 @@ cell_idle_blink2_big
 cell_idle_blink3
 cell_idle_blink3_big
 cell_impact
+cell_jar_chemical
 cell_jawhead
+cell_jawheadLarge
+cell_jawheadSmall
 Cell_Jet
 Cell_Jetster
+Cell_JetsterSmall
 cell_landcough
 Cell_Lure
 cell_mate
@@ -2991,6 +2957,8 @@ cell_mate_01
 cell_mate_02
 cell_matingcall
 cell_megamouth
+cell_megamouthLarge
+cell_minnosmall
 cell_motion
 cell_motion_loop
 cell_mouth~	0x11B79301
@@ -3005,6 +2973,7 @@ cell_mov_bank_rt
 cell_mov_cil
 cell_mov_cil_180
 cell_mov_cil_180a
+Cell_mov_cil_180_v2
 cell_mov_cil_180_v3
 cell_mov_cil_180_v4
 cell_mov_cil_180_v5
@@ -3027,15 +2996,18 @@ cell_mov_tobeach_editor_slug
 cell_music
 cell_music_ambience
 Cell_Nosey
+Cell_NoseySmall
 cell_npc_mad
 cell_npc_mad_big
 cell_npc_scared
 cell_npc_startled
+cell_ocatmouth
 cell_ocean_amb_lp
 cell_omnivore
 cell_partdiscover
-cell_parts~	0x40616000
 Cell_Pinky
+Cell_PinkyAlpha
+Cell_PinkySmall
 cell_poison
 cell_poison_flow
 cell_poison_flow_background
@@ -3049,6 +3021,7 @@ cell_poison_release
 cell_Poke
 cell_poked
 cell_poker
+cell_poolball
 cell_pop_bubbleLarge
 cell_pop_bubbleMedium
 cell_pop_bubbleSmall
@@ -3057,14 +3030,21 @@ cell_propulsionCilia
 cell_propulsionFlagella
 cell_propulsionJet
 cell_puffish
+cell_puffishLarge
 cell_puncture
 cell_puncture_spike
 cell_Shock
 Cell_Shyster
+Cell_ShysterAlpha
+Cell_ShysterSmall
 cell_Skewer
+cell_sleeper
 cell_speed
+cell_spikey
+cell_spikeySmall
 cell_squid
 Cell_Squiggly
+Cell_SquigglySmall
 Cell_Stabber
 cell_stabberalpha
 cell_starvivore
@@ -3084,6 +3064,7 @@ cell_vinette
 cell_vo
 cell_vo_small
 cell_weapon_charging~	0x11B79304
+cell_weapon_poison_npc
 cell_weapon~	0x11B79303
 cell_win
 Cell_Zap
@@ -3269,13 +3250,20 @@ ce_page_c2c_limb
 ce_page_cell
 ce_page_detail
 ce_page_detail2
+ce_page_detail_parts
 ce_page_grasper
 ce_page_limb
+ce_page_limb_parts
 ce_page_mouth
+ce_page_mouth_parts
 ce_page_move
+ce_page_move_parts
 ce_page_sense
+ce_page_sense_parts
 ce_page_weapon
+ce_page_weapon_parts
 ce_paint
+ce_prarylane
 ce_printablepad
 ce_sense_antenna_01
 ce_sense_antenna_02
@@ -3513,6 +3501,7 @@ CG_rock6_L3
 CG_rock_L2_radiolarians
 Chaetar
 chanceplayer
+chanceplayer-bass
 chanceplayer-bass-tribe
 changearchetype
 changearchetypetobard
@@ -3579,7 +3568,29 @@ chimney
 choir_01
 Chomper
 Choose
+ChooseCell~	0x0004001A
+ChooseCityHall~	0x00040003
+ChooseColonyAirVehicle~	0x00040012
+ChooseColonyLandVehicle~	0x00040013
+ChooseColonySeaVehicle~	0x00040014
+ChooseCreature~	0x00040015
+ChooseEconomicAirVehicle~	0x00040007
+ChooseEconomicLandVehicle~	0x00040008
+ChooseEconomicSeaVehicle~	0x00040009
+ChooseEntertainmentBuilding~	0x0004000A
+ChooseFactory~	0x0004000B
+ChooseHouse~	0x0004000C
+ChooseMilitaryAirVehicle~	0x0004000D
+ChooseMilitaryLandVehicle~	0x0004000E
+ChooseMilitarySeaVehicle~	0x0004000F
+ChooseMusic~	0x00040002
+ChooseReligiousAirVehicle~	0x00040004
+ChooseReligiousLandVehicle~	0x00040005
+ChooseReligiousSeaVehicle~	0x00040006
+ChooseSpaceship~	0x00040010
+chord-Arp
 chorus_controller_patch
+Christmas Cannon
 Chuchoko
 chunker
 cilia
@@ -3596,12 +3607,14 @@ cip_vehicleEconomic
 cip_vehicleMilitary
 cip_vehicleReligious
 city
+cityeditbuttons~	0xDCC387F5
 CityEditorUI
 citygamebuildingtuning
 citygamegeneraltuning
 citygame_wander
 cityhall
 cityhallshopper
+CityHall~	0x00020004
 CityMusic
 cityNames1~	0x9142CCD6
 cityNames2~	0x940D5CCA
@@ -3615,8 +3628,6 @@ citypurchaseattemptfailed~	0x1E920E12
 citypurchaseready~	0x927DCA97
 CitySpawnPoint
 citystyles~	0x02E4B4CC
-citytribe_Palettes~	0x406B6C64
-citytribe_palette_lists~	0x406B6D64
 cityunderattack~	0x38320B95
 citywalls
 city_building_plop_dust
@@ -3694,8 +3705,10 @@ CivicObjectTemplate
 CivilEngineer
 CivilEngineer_disabled
 civilizationgame
+CivilizationGame~	0x00010014
 CivMissions
 civpopupbase~	0x02BB7AFF
+civpopups~	0xAA9A8ED7
 civscenario
 CivSuperWeaponIcons
 CivTransitionMinigame
@@ -3713,12 +3726,13 @@ civ_attack_vehicle
 civ_balloon
 civ_balloon_string
 civ_basic_explosion
+civ_bassdrum2
 civ_bottle
 civ_breakdown_vehicle
 civ_bribe_shot
 civ_building_damaged
-civ_building_damage_state_1	0x04CB1631
-civ_building_damage_state_2	0x04CB1632
+civ_building_damage_state_1~	0x04CB1631
+civ_building_damage_state_2~	0x04CB1632
 civ_building_defense_shield
 civ_building_defense_shield_hit
 civ_building_defense_shield_weakened
@@ -3795,11 +3809,15 @@ civ_raining_money01
 civ_raining_money02
 civ_repair_building
 civ_selection_building
-civ_selection_building_invalid	0x03F1BF50
+civ_selection_building_invalid~	0x03F1BF50
 civ_selection_destination
 civ_selection_vehicle
+civ_shaker1
+civ_shaker2
+civ_shaker3
 civ_shell_explosion
 civ_shell_explosion_scorch
+civ_snare1
 civ_spice_pump_unpack
 civ_splatter_creature
 civ_surrender_flag
@@ -3996,8 +4014,11 @@ cleaner-4
 cleaner-5
 clear
 cleSporeguide
+cle_buildmode_buildmode
 cle_buildmode_cellabilities
 cle_buildmode_template
+cle_cll15
+cle_cll16
 cle_paintmode
 cle_Paintmode_Template
 cle_paintmode_timetopaint
@@ -4047,6 +4068,7 @@ clgpokersm
 clgspike
 clgspikesm
 clgSporeguide
+clg_carni
 clg_death
 clg_discoverpart
 clg_earnedtraitmeat
@@ -4057,11 +4079,14 @@ clg_eatplant
 clg_evolveineditor
 clg_gamestart
 clg_grow
+clg_herbi
 clg_killedsomething
 clg_meat
 clg_mix
 clg_plant
 CLG_Sporeguide
+clg_startercell
+clg_startercells
 CLG_Template
 clg_welcome
 clickoncity
@@ -4174,10 +4199,45 @@ cl_weapon_spike_01
 cl_weapon_spike_02
 cl_weapon_spike_03
 cl_weapon_spike_04
+cmbt_com_block
+cmbt_com_block_hit
+cmbt_com_block_spear
+cmbt_com_lvl3-4_charge
+cmbt_com_lvl3-4_strike
+cmbt_com_lvl5-6_charge
+cmbt_com_lvl5-6_strike
+cmbt_com_lvl7-8_charge
+cmbt_com_lvl7-8_strike
+cmbt_com_lvl9-10_charge
+cmbt_com_lvl9-10_strike
+cmbt_com_punch
+cmbt_com_slash
 cmbt_com_stick
 cmbt_com_tackle_hit
+cmbt_com_takehit
+cmbt_csa_baby_jump
+cmbt_gen_death_down
+cmbt_gen_death_side
+cmbt_headbutt
+cmbt_hunt_clb_jump_G
+cmbt_hunt_clb_jump_noG
+cmbt_hunt_gethit_jump_hv
 cmbt_idle_combat_nolegs
+cmbt_idle_combat_start
+cmbt_idle_combat_stop
 cmbt_idle_combat_strd
+cmbt_idle_happy_play_jump
+cmbt_mot_item_throw
+cmbt_soc_hunt_axe_hit
+cmbt_soc_hunt_axe_jump
+cmbt_soc_hunt_gethit_preyattack_heavy
+cmbt_soc_hunt_gethit_preyattack_light
+cmbt_soc_hunt_gethit_preyattack_med
+cmbt_soc_hunt_gethit_spin_med
+cmbt_soc_hunt_hit
+cmbt_soc_hunt_jab
+cmbt_soc_hunt_jump
+cmbt_sp_drop_death
 cmeat_bone1
 cmeat_bone2
 cmeat_bone3
@@ -4237,15 +4297,19 @@ Colonization
 colonize
 colonizepalette
 colonyair
+colonyairshopper
+colonyeditbuttons~	0xB79ACBA1
 ColonyEstablished
 colonyfailednospice
 ColonyFailedOverlaps
 ColonyFailedUnderwater
 colonyland
+colonylandshopper
 colonymissions
 colonyoutfit
 colonyplanner
 ColonySea
+colonyseashopper
 colonywater
 colony_building
 colony_civicobject
@@ -4258,6 +4322,7 @@ colony_normaloutfit
 colony_ufo
 colony_vehicle
 colony_walls
+Colony~	0x00020005
 coloratmoblue
 coloratmocyan
 coloratmogreen
@@ -4269,7 +4334,7 @@ coloratmoyellow
 ColorOfMoney
 colorpalette
 colorpicker
-colorpickers~	0x97097E36
+colorpickerconfig
 colorreset
 colorterrainblue
 colorterraincyan
@@ -4498,6 +4563,8 @@ consequence
 consequencesuperpowers
 consequencetrait
 consequencetraits
+contentbrowser~	0x00040001
+ContentValidation
 Continents_large~	0x0507605C
 Continents_medium~	0x0507605B
 Continents_small~	0x0507605A
@@ -4516,6 +4583,8 @@ convince140_6
 convince140_7
 convince140_8
 convince140_9
+Cool Rod
+copsporeguide
 coral_LargeRock1
 coral_LargeRock1-Hull
 coral_LargeRock1_LOD1
@@ -4597,11 +4666,17 @@ creaky6
 creaky7
 creaky8
 creaky9
+Cream Sedan
+CreateChooseCivCreature~	0x00040016
+CreateChooseCreature~	0x00040019
+CreateChooseSpaceCreature~	0x00040017
+CreateChooseTribeCreature ~	0x00040018
 creator
 creator_disabled
 creature
 creatureabilities
 creatureabilitytemplate
+creatureAnim
 creatureanimal
 creatureantennatemplate
 creaturearchetype
@@ -4616,6 +4691,7 @@ CreatureCitizen
 creatureciv
 creaturecivshopper
 creaturecreate
+creaturedata
 creaturedetailtemplate
 creatureeartemplate
 creatureedit
@@ -4627,20 +4703,29 @@ creatureeditorlarge
 creatureeditormedium
 creatureeditorsetup
 creatureeditorsmall
+creatureeditortemplates
+CreatureEditorVerbIcons
 creatureeventstemplate
 creatureeyetemplate
 creaturefintemplate
 creaturefoottemplate
+creaturegame
 creaturegamefruit~	0xE12DDDC2
 creaturegamesetup
 CreatureGameTemplate
 creaturegametuning
+creaturegametuning_easy
+creaturegametuning_hard
+creatureGameVerbIcon
+CreatureGameVerbicons
 creaturegameverbs
 creaturegame_disabled
+CreatureGame~	0x00010012
 creaturegoalcards
 creaturegraspertemplate
 CreatureMissions
 creaturemouthtemplate
+creaturemoved
 creatureNames1~	0xA5F5719B
 creatureNames2~	0x0B243DC0
 creaturenosetemplate
@@ -4655,10 +4740,13 @@ creatureSocial
 creaturespace
 creaturespaceshopper
 creaturesuperpower
+Creatures~	0x00020008
 creaturetribe
 creaturetribeshopper
 creatureweapontemplate
 creaturewingtemplate
+creature_ArmsAndLegs
+creature_details
 creature_dynamicRock_medium_01
 creature_dynamicRock_medium_01-Hull
 creature_dynamicRock_medium_02
@@ -4667,11 +4755,11 @@ creature_dynamicRock_small_01
 creature_dynamicRock_small_01-Hull
 creature_dynamicRock_small_02
 creature_dynamicRock_small_02-Hull
-creature_editor_palette_categories~	0x406B6E0C
-creature_editor_palette_items~	0x406B6D0C
-creature_editor_palette_pages~	0x406B6C0C
-creature_editor_palette~	0x406B6B0C
 creature_events~	0x0EBCFBC7
+creature_eyesAndSenses
+creature_feet
+creature_graspers
+creature_mouths
 creature_music
 creature_newsize10
 creature_newsize11
@@ -4917,7 +5005,10 @@ creature_spine_size56
 creature_spine_size57
 creature_spine_size58
 creature_vo
+creature_weapons
 creditsnames
+creeper
+Creme Brulee Pick-up
 creSporeguide
 CRE_BuildMode
 cre_buildmode_creatingbasics
@@ -4996,6 +5087,7 @@ crg-starving
 crg-superpowerlocked
 crg-unlocktrg-achievementdescription~	0x064D3268
 crg-unlocktrg-achievementTitle~	0x064D3264
+crg-useability
 crg-useabilitybite
 crg-useabilitycharge
 crg-useabilitydance
@@ -5071,6 +5163,8 @@ CRG_Skeleton_Ribs_Pillaged
 CRG_Skull1
 crg_social
 crg_sporeguide
+crg_startercreature
+crg_startercreatures
 CRG_Stick1
 CRG_Template
 crg_to_tribe_musica
@@ -5106,6 +5200,7 @@ crunch8
 crunchc1
 crunchc2
 crunchc3
+Crust Buster
 crystal
 crystal_ashtray
 crystal_conglomerate
@@ -5307,6 +5402,17 @@ csa_mom_sigh
 csa_neutral_pose
 csa_paint
 csa_paint_themes
+csa_part_Abilities
+csa_part_advanced
+csa_part_basics
+csa_part_camera
+csa_part_complexity
+csa_part_editparts
+csa_part_limbs
+csa_part_name
+csa_part_save
+csa_part_shapebody
+csa_part_welcome
 csa_phpto_aggressive
 csa_phpto_armsout
 csa_phpto_cute
@@ -5316,7 +5422,9 @@ csa_phpto_tadahh
 csa_play
 csa_play_animate
 csa_play_babies
+csa_play_background
 csa_play_movies
+csa_play_postcards
 csa_play_save
 csa_react_envir_01
 csa_react_envir_02
@@ -5371,13 +5479,17 @@ cult_13
 cult_14
 cult_15
 cult_16
+cur-harvest
 cur-planner
+cur-wait
 curie
 cursor
 cursor-ban-content
 cursor-ban-mode
+cursor-call
 cursor-camera-translate
 cursor-claim-spicemine
+cursor-comm
 cursor-crg-addposse
 cursor-crg-give
 cursor-crg-give-grn
@@ -5386,16 +5498,22 @@ cursor-crg-pickup
 cursor-crg-putdown
 cursor-crg-throw
 cursor-dance
+cursor-default
+cursor-dragselect
 cursor-eat-carcass
 cursor-eat-fruit
 cursor-eat-omni
 cursor-evolve
+cursor-eyedropper
 cursor-fish
 cursor-gather
+cursor-grab_close
 cursor-heal
+cursor-magicwand
 cursor-mate
 cursor-more
 cursor-no-opt
+cursor-paint
 cursor-spg-abduct-norm
 cursor-spg-abduct-off
 cursor-spg-abduct-on
@@ -5439,7 +5557,8 @@ cursor-trg-domesticate
 cursor-trg-tool-pickup-fish
 cursor-trg-tool-pickup-gather
 cursor-validate
-Cursors~	0x02393C07
+cursor-wait
+cursor-weapon64
 cursor_atk
 cursor_friend
 cursor_goodie-hut
@@ -5458,6 +5577,7 @@ cursor_socialNo
 cursor_spyglass
 Curvy
 cur_ClaimNest
+cute1
 cvg
 cvg-buyunit
 cvg-camrotate
@@ -5567,6 +5687,7 @@ cvg_seavehiclelost
 cvg_spicenodecaptured
 cvg_spicenodelost
 CVG_Sporeguide
+cvg_starterCreature
 CVG_Template
 cvg_traderouteearnedmoney
 cvg_traderoutestarted
@@ -5637,6 +5758,7 @@ data
 Daulle
 ddflist
 death
+Death Metal
 Deathstar
 Deathstar_disabled
 debris_mix1
@@ -5688,12 +5810,17 @@ defensemissile6
 Defenser
 definitionid
 DeformAxisBack
+DeformAxisForward
+DeformAxisLeft
 DeformAxisRight
+DeformAxisUp
 dejavu
 dejavu_disabled
 delayset
 delay_controller
 delay_controller_patch
+delay_interface
+Delivery Truck
 deliverypayment
 demo_effects
 Dense
@@ -5727,6 +5854,31 @@ DiplomatHero_disabled
 Diplomatic
 DiplomatPassion
 DiplomatPassion_disabled
+dipl_afraid_v1
+dipl_afraid_v2
+dipl_angry_v1
+dipl_angry_v2
+dipl_angry_v3
+dipl_angry_v4
+dipl_gasp_v1
+dipl_gasp_v2
+dipl_gasp_v3
+dipl_happy_v1
+dipl_happy_v2
+dipl_happy_v3
+dipl_happy_v4
+dipl_laugh_v1
+dipl_laugh_v2
+dipl_neutral_v1
+dipl_neutral_v2
+dipl_neutral_v3
+dipl_neutral_v4
+dipl_neutral_v5
+dipl_neutral_v6
+dipl_sad_v1
+dipl_sad_v2
+dipl_urgnt_v1
+dipl_urgnt_v2
 Direct
 dirt
 disaster
@@ -5734,6 +5886,7 @@ div
 DivaBette
 DNA_helix
 DNA_helix_small
+Dograffe
 dolb
 Doltasaur
 domes
@@ -5757,15 +5910,20 @@ Doogle
 doombg
 Door
 dot_textureMap
+Double Saucer
 DoubleBeak
 DoubleBuddy
+Downloads~	0x00010017
 DownloadTime
 drinktimes
 Drone
 dropcargo
+DropCursorIcons
 DropOffFailedAnimalLava
 DropOffFailedAnimalSlot
 DropOffFailedAnimalWater
+DropOffFailedCarnivoreSlot
+DropOffFailedFull
 DropOffFailedNeedTscore
 DropOffFailedPlantLava
 DropOffFailedPlantSlot
@@ -5773,10 +5931,15 @@ DropOffFailedPlantWater
 DropOffFailedZooFull
 DropOffSucceededZoo
 droughtgenerator
+drumlooper
 drumloopgroups
 drumloopgroups2
+drumMachine
 drummer
 drums
+drums2
+drumtrack
+drum_router
 dryburundi1
 dryburundi10
 dryburundi11
@@ -5919,6 +6082,32 @@ ecohero-5
 ecologist
 EcologistPassion
 EcologistPassion_disabled
+ecol_afraid_v1
+ecol_afraid_v2
+ecol_angry_v1
+ecol_angry_v2
+ecol_angry_v3
+ecol_angry_v4
+ecol_gasp_v1
+ecol_gasp_v2
+ecol_gasp_v3
+ecol_happy_v1
+ecol_happy_v2
+ecol_happy_v3
+ecol_happy_v4
+ecol_laugh_v1
+ecol_laugh_v2
+ecol_neutral_v1
+ecol_neutral_v2
+ecol_neutral_v3
+ecol_neutral_v4
+ecol_neutral_v5
+ecol_neutral_v6
+ecol_sad_v1
+ecol_sad_v2
+ecol_urgnt_v1
+ecol_urgnt_v2
+ecoMelody
 ecom_grumbleroxcr
 Economic
 economicair
@@ -5929,6 +6118,7 @@ economicsea
 economicseashopper
 economicWater
 Economic_turret
+Economic~	0x0002000B
 economist
 economist-1
 economist-2
@@ -5972,6 +6162,7 @@ edi-errornolimbs
 edi-errornomouth
 edi-errornotpainted
 edi-erroroutofbounds
+edi-erroroverbudget
 edi-errorstatsoutofrange
 edi-errortoosmall
 edi-errortoosmallabsolutez
@@ -6016,7 +6207,6 @@ editor_dance_event
 editor_delete
 editor_paintspray_shake
 editor_pin
-editor_setup~	0x40600100
 ed_bite_lvl01
 ed_bite_lvl02
 ed_bite_lvl03
@@ -6028,6 +6218,10 @@ ed_cell_jet
 ed_cell_spike
 ed_charge_lvl01
 ed_charm_lvl01
+ed_charm_lvl02
+ed_charm_lvl03
+ed_charm_lvl04
+ed_charm_lvl05
 ed_dance
 ed_dance1
 ed_dance2
@@ -6077,7 +6271,9 @@ eepic_pickup_v1roxcr
 eepic_roar_v2roxcr
 eepic_stomp_v1roxcr
 eepic_throw_v1roxcr
+effect
 effectivedist
+effectmap
 effects-puff
 effects-star
 effects-tiles
@@ -6085,6 +6281,11 @@ effectsviewer
 egen_epic_roarroxcr
 egen_epic_roar_v1roxcr
 egg
+eggdad
+eggkid
+eggmom
+egg_eggkid
+egg_eggkidsmall
 egg_mix1
 egg_mix10
 egg_mix2
@@ -6118,6 +6319,8 @@ egg_rolling9
 einstein
 ElbowTuning
 Electric
+Elevated Hall
+Elevated Mill
 Elmakt
 emp
 empire-1
@@ -6131,6 +6334,7 @@ EmpireDestroyed
 EmpireGrows
 EmpireShrinks
 empirestartlocations
+Empires~	0x00020009
 empty
 Enduracer
 enemycannon1
@@ -6176,6 +6380,7 @@ enemytorpedosolar3
 enemytorpedosolar4
 enemytorpedosolar5
 enemytorpedosolar6
+enemyufodestroyed
 energymegapotion
 energypotion
 energyupgrade1
@@ -6187,6 +6392,7 @@ enobang
 enoloopedpad
 entertainment
 entertainmentshopper
+Entertainment~	0x0002000C
 epiccarcass
 epiccell_biterock
 epiccell_chokes
@@ -6249,6 +6455,7 @@ epic_idle_walk_lookat_start
 epic_losetarget_v1
 epic_pickup_nog_v1
 epic_pickup_v1
+epic_player
 epic_roar_v1
 epic_roar_v2
 epic_stomp_v1
@@ -6288,10 +6495,22 @@ eventlog_trg
 eventmask
 eventtemplate
 eventtext
+event_biosphere_collapse
+event_filter
+event_grob_teaser_raid
+event_happiness
+event_raid
+event_raidplunder
+event_raid_ally
+event_raid_war
+Everything~	0x00010001
+Evil Monkey
 Example
 excludedsubstrings1~	0x894C6A89
 excludedWords~	0x262F7123
 Exclusion
+ExitGame~	0x0001000A
+ExittoMainMenu~	0x0001000B
 Explore
 explorer-1
 explorer-2
@@ -6303,11 +6522,13 @@ explosion_shockwave
 Extinction
 eye
 eyeball
+eyeguy
 eye~	0xB00F0FE9
 F-100
 FabergeYacht
 factory
 factoryshopper
+Factory~	0x0002000D
 fader
 fadetime
 fading_fall_guitar
@@ -6366,6 +6587,9 @@ feedlistmissionlog
 feed_all
 feed_buddies
 feed_MyCreations
+feed_MySporecasts
+feed_sad_battle
+feed_tags
 feed_template
 fermi
 Ferpu
@@ -6654,6 +6878,7 @@ fe_skinpaint_floratheme_34
 fe_skinpaint_floratheme_35
 fe_skinpaint_floratheme_36
 fhorn-long
+Field Trip
 field_bouncing
 field_bouncingb
 field_double_piano
@@ -6665,6 +6890,7 @@ fileextensions~	0x01C7AC81
 filter
 filterguitar2
 filterguitar3
+filterlfo
 filter_guitar
 filter_guitar1
 filter_guitar2
@@ -6672,6 +6898,8 @@ filter_guitar3
 filter_guitar4
 fin
 findaliens
+FindBuddy~	0x00010005
+FindSporecast~	0x00010006
 Find_Mate
 Find_NPC
 fireCloud_textureMap
@@ -6696,6 +6924,7 @@ fish_dump_notool
 fish_dump_notool_nog
 fish_fail
 fish_idle
+fish_idle_start
 fish_loop
 fish_loop_nog
 fish_pull
@@ -6705,6 +6934,7 @@ fish_spear_idle_01
 fish_spear_nog
 fish_start
 fish_start_nog
+fish_succ_1
 fish_succ_2
 fish_succ_3
 flag
@@ -6724,12 +6954,13 @@ float
 flockingtuning
 Floor
 flora
+floraeditor
 floraeditorsetup
+Floral Skiff
 FloraLarge
 FloraMedium
 FloraSmall
-flora_editor_palette_pages~	0x406B6C14
-flora_parts~	0x40666000
+Flora~	0x0002000E
 Flower
 Flower1
 Flowers1
@@ -6967,6 +7198,7 @@ frd_vi_notool_02h_03tm
 frd_vi_notool_02i_03tm
 frd_vi_notool_02j_03tm
 freeze_frame_mask
+Freight Jet
 french_largerock1
 french_largerock1-Hull
 french_largerock1_LOD1
@@ -7012,6 +7244,7 @@ frnd_notool_01_03tm
 frnd_notool_02_03tm
 frnd_notool_02_05tm
 frnd_notool_02_07tm
+From Sea to Space
 frontpagenews
 frontpagenews_disabled
 Froofa
@@ -7102,7 +7335,9 @@ Fruit_Super_01_LOD1
 frustrated_roar
 FullInventory
 FunFun
+funkydrumma2
 Furry
+Future City Center
 fux
 fux2
 gaal
@@ -7123,6 +7358,8 @@ galacticgod
 galacticgod_disabled
 GalacticObject
 galactic_cloud1
+galactic_core_stevea
+galactic_core_steveb
 GalaxyGameEntry
 galaxyview
 galaxy_long
@@ -7413,9 +7650,12 @@ getmoney_small
 getoutofufo
 get_tool
 get_tool_nog
+get_tool_rack
+get_tool_rack_noG
 gge
 gge-galaxy-button
 gge-outfitters-button
+gge-pickstar
 gge-settings-button
 gge-space-button
 gge-sporepedia-button
@@ -7494,11 +7734,13 @@ globaltemplate
 globaltuning
 globaluicell-3
 globaluigge-9
+global_interface
 global_router
 global_template
 global_ui_city~	0x011C0C2B
 glow
 gnome
+Golden Ship
 goldenidol
 goldenstatue
 goldentouch-1
@@ -7667,6 +7909,7 @@ GP_mesa_plates~	0x035DACE6
 GP_mountains_eroded~	0x03AA3195
 GP_mountains_feathered~	0x03D70093
 GP_mountains_pebbles~	0x03E3004D
+GP_mountain_crystalline~	0x04472552
 GP_mountain_lumpy~	0x04472549
 GP_mountain_metadomes~	0x04472560
 GP_mountain_pyramids~	0x039FBFFC
@@ -7732,7 +7975,23 @@ granite_smallRock2-Hull
 granite_smallRock2_LOD1
 Grapevine~	0x04874B99
 graphics_atlas~	0x31A44893
+graphics_common~	0x011C0BDE
+graphics_consequence~	0xD509FFBF
+graphics_editors_building~	0x100D977D
+graphics_editors_creature~	0x100D977C
+graphics_editors~	0x100D976E
+graphics_global_ui_civ~	0x011C0C1C
+graphics_global_ui_creature~	0x106C7116
+graphics_global_ui_tribe~	0x011C0C08
+graphics_global_ui~	0x011C0BF5
+graphics_launchscreen~	0xB02D5A52
+graphics_misc_1~	0x02E9A2CA
 graphics_misc_2~	0x0354663B
+graphics_mvj~	0x0462CCD9
+graphics_partunlock~	0x819D7098
+graphics_pie_menu~	0x011C0C59
+graphics_posse_ui~	0x03D864E7
+graphics_settings~	0x04379514
 grasp
 grasper
 graspers
@@ -7745,6 +8004,7 @@ grass_shitaake_strip
 grass_tex1
 grass_tex2
 gravitationwave
+Green Tank
 GreenBottlefly
 greencrystal_denseday
 greencrystal_sparseday
@@ -7894,6 +8154,31 @@ Grove
 Grow
 grox
 groxparts
+grox_afraid_v1
+grox_afraid_v2
+grox_angry_v1
+grox_angry_v2
+grox_angry_v3
+grox_angry_v4
+grox_gasp_v1
+grox_gasp_v2
+grox_gasp_v3
+grox_happy_v1
+grox_happy_v2
+grox_happy_v3
+grox_happy_v4
+grox_laugh_v1
+grox_laugh_v2
+grox_neutral_v1
+grox_neutral_v2
+grox_neutral_v3
+grox_neutral_v4
+grox_neutral_v5
+grox_neutral_v6
+grox_sad_v1
+grox_sad_v2
+grox_urgnt_v1
+grox_urgnt_v2
 Grubby
 guitar
 gunner
@@ -7909,10 +8194,12 @@ happy
 happyraylevel1
 happyraylevel2
 happyraylevel3
+Harmonious Helper
 harp
 Harvester
 hascollision
 hashealing
+hasmoney
 hasnest
 Hat
 haunted100_1
@@ -7961,6 +8248,7 @@ heavy_city7_proc
 heavy_city8
 heavy_city8_proc
 Hellios
+help
 herbivore
 herbivore1
 herbivore1-5
@@ -7983,6 +8271,52 @@ herbi_incity_react_v2
 herbi_incity_react_v3
 herbi_incity_scared
 herbi_incity_walkscared
+he_canvas_01
+he_canvas_01_LOD1
+he_canvas_01_LOD2
+he_canvas_02
+he_canvas_02_LOD1
+he_canvas_02_LOD2
+he_canvas_03
+he_canvas_03_LOD1
+he_canvas_03_LOD2
+he_carn_01
+he_carn_01_LOD1
+he_carn_01_LOD2
+he_carn_02
+he_carn_02_LOD1
+he_carn_02_LOD2
+he_carn_03
+he_carn_03_LOD1
+he_carn_03_LOD2
+he_destroyed
+he_destroyed_LOD1
+he_destroyed_LOD2
+he_herb_01
+he_herb_02
+he_herb_03
+he_omni_01
+he_omni_02
+he_omni_03
+he_simple_01
+he_simple_01_LOD1
+he_simple_01_LOD2
+he_simple_02
+he_simple_02_LOD1
+he_simple_02_LOD2
+he_simple_03
+he_simple_03_LOD1
+he_simple_03_LOD2
+he_template
+he_yurt_01
+he_yurt_01_LOD1
+he_yurt_01_LOD2
+he_yurt_02
+he_yurt_02_LOD1
+he_yurt_02_LOD2
+he_yurt_03
+he_yurt_03_LOD1
+he_yurt_03_LOD2
 hh-1
 hh-10
 hh-11
@@ -8010,11 +8344,13 @@ highchime2
 highchime3
 highResSphere
 hilbert
+Hill Climber
 hint
 hintsALG
 hintsCLG
 HintsCRG
 hintsCVG
+hintsEdi
 hintsSPG
 HintsTRG
 hints~	0x0522DE06
@@ -8022,6 +8358,7 @@ hinttemplates
 hirepeats
 hitpointoverride
 hitpoints
+Holy Harbinger
 HolyAvatar
 Home
 hope
@@ -8035,13 +8372,18 @@ Hot
 hotcloudray
 hotcloudvacuum
 house
+House of Piety
 houseshopper
+House~	0x00020013
+hunted
 hunttimes
+hunt_celebrate
 hunt_clb_jump_g
 hunt_clb_jump_nog
 hunt_gethit_jump_hv
 hunt_meat_drop
 hunt_meat_drop_nog
+hunt_meat_hack
 hunt_meat_pickup
 hutstyles
 hymnbell
@@ -8073,6 +8415,7 @@ icon-relation-supermad-strip
 icon-sporebuck
 icon-stick-strip
 icon-ufo
+icons_achievements~	0x260EB59C
 icon_creature
 icon_cultural
 icon_house
@@ -8304,6 +8647,8 @@ interstellar_long
 interstell_drive_a
 interstell_drive_b
 interstell_drive_c
+Intrepid Informer
+Irksome Inquisitor
 ironcreature
 ironcreature_disabled
 isminiboss
@@ -8347,6 +8692,7 @@ joint8
 joint9
 joker-1
 joke_01
+Jollyblot Bar
 jowwi
 jump
 jump1
@@ -8357,6 +8703,8 @@ jump4
 jump5
 jumptemplate
 Junk
+Junk Saucer
+K'thint
 Kabutomushi
 Katon
 Keigh
@@ -8380,7 +8728,9 @@ land
 landfall
 landfall_disabled
 land_vehicles
+Land~	0x00020014
 Lantern
+largegift
 laser
 laserlevel1
 laserlevel2
@@ -8441,6 +8791,7 @@ Light
 Lillo
 Limb
 LimbRigblocktemplate
+limbTuningTemplate
 limb_arminsect_01assembly
 limb_armlongassembly
 limb_assemblyarm1
@@ -8560,7 +8911,11 @@ list-group
 list-length
 list-nth
 llama
+loadablecivcreatures
+loadablespacecreatures
+loadabletribecreatures
 loadbanger
+loadStore
 localappproperties
 localproperties
 localstartup
@@ -8624,7 +8979,45 @@ log_roll6
 log_roll7
 log_roll8
 log_roll9
+Long Tail
 loobo
+look_up
+loottable
+loot_beach
+loot_bonesp
+loot_booster
+loot_Buzzy
+loot_BuzzyAlpha
+loot_chomper
+loot_ducky
+loot_eggdad
+loot_eggkid
+loot_eggmom
+loot_goldy
+loot_grubby
+loot_ice
+loot_jawhead
+loot_jetster
+loot_megamouth
+loot_nosey
+loot_pinky
+loot_PinkyAlpha
+loot_placeholder
+loot_plant
+loot_poker
+loot_puffish
+loot_random
+loot_rock
+loot_rock_chunk
+loot_shyster
+loot_ShysterAlpha
+loot_spikey
+loot_squid
+loot_squiggly
+loot_stabber
+loot_stabberalpha
+loot_unlocks
+loot_water
 LossLeader
 Lost
 LostAlly
@@ -8725,19 +9118,29 @@ LP_mesas_stepped_small~	0x038D2CA8
 LP_mountains_pebbles_large~	0x03E30048
 LP_mountains_pebbles_medium~	0x03E30046
 LP_mountains_pebbles_small~	0x03E30043
+LP_mountain_crystalline_med~	0x04335234
+LP_mountain_crystalline_ocean~	0x0450504E
+LP_mountain_lumpy_medium~	0x043351A6
 LP_mountain_lumpy_ocean~	0x0450504C
+LP_mountain_metadomes_med~	0x04349E40
 LP_mountain_metadomes_ocean~	0x0450505B
 LP_mountain_ramp~	0x03C6F4D9
+LP_mountain_scraped_medium~	0x04345322
 LP_mountain_scraped_ocean~	0x04505058
 LP_mountain_sierra_large~	0x03F68C92
 LP_mountain_sierra_medium~	0x03F68C95
 LP_mountain_sierra_small~	0x03F68C98
+LP_mountain_squiggles_med~	0x0433528C
 LP_mountain_squiggles_ocean~	0x04505052
+LP_mountain_striated_medium~	0x04334ABB
 LP_mountain_striated_ocean~	0x04505049
+LP_mountain_worms_medium~	0x04344F9F
 LP_mountain_worms_ocean~	0x04505055
 LP_nautilus~	0x0383BD0F
 LP_oceans_melted~	0x03825FD0
 LP_oceans_scalloped_large~	0x0369528D
+LP_Oceans_scalloped_medium~	0x03695283
+LP_oceans_scalloped_small~	0x0369527A
 LP_oceans_soft_large~	0x036AB4E4
 LP_oceans_soft_medium~	0x036AB4E1
 LP_oceans_soft_small~	0x036AB4DE
@@ -8789,17 +9192,21 @@ macaw4
 macaw5
 madsad
 Magic8Ball
+MajChoirMm
 majorcivcapturesnpccity
 majorcivdestroyed
 makeally
 makenewsporecastdialog
+MakeSporecast~	0x00010004
 mandible
+Mangrove Floater
 manifestdestiny
 manifestdestiny_disabled
 Marbled_dunes~	0x0480DD50
 march_01
 march_02
 marimba2
+marimbaTEST
 markertype
 mars
 Marshmallow
@@ -8845,12 +9252,15 @@ Mask
 master
 mastervolume~	0x4483E856
 mated
+matefast
 matemusic
 materialParams
 material_map
+mate_cell
 maxispassword
 MaxisScout
 MaxisScout_Disabled
+Maxis~	0x00010003
 maxPitch
 maxpopulation
 maxpower
@@ -8869,6 +9279,9 @@ mediumrock2
 Megamouth
 melinst1
 melplayer12
+melplayer5
+melplayer9
+melplayer_interface
 melplayer_router
 menu
 menu_comm
@@ -8878,6 +9291,7 @@ merchant-3
 merchant-4
 merchant-5
 mercury
+Merry Monk
 mesas
 mesas_arizona
 mesas_claymation
@@ -8901,6 +9315,7 @@ metalcloud
 Meteorite1
 MeteorStrike
 middletraittemplate
+Mighty Slip Ship
 migrate
 migrationpoint
 MigrationPointTypeEnum
@@ -8912,6 +9327,7 @@ mig_walk_01
 mig_walk_02
 mig_walk_03
 mig_walk_bay
+mild
 Milifish
 Military
 militaryair
@@ -8923,6 +9339,7 @@ militaryseashopper
 militarywater
 military_template
 MIlitary_turret
+Military~	0x00020015
 mil_01
 mil_02
 mil_03
@@ -8940,6 +9357,7 @@ mil_17
 mil_18
 mil_19
 mil_sa
+MinChoirMm
 minderase
 mined
 mineraltemplate
@@ -8955,12 +9373,14 @@ minimap-resource
 minimap-unknown-nest
 MinimapIcons
 minimapuse
+minno1
 minPitch
 minus
 Misc
 mission
 missionary
 missionary_disabled
+missionbutton
 missioncomplete
 missionista-1
 missionista-2
@@ -8968,6 +9388,11 @@ missionista-3
 missionista-4
 missionista-5
 MissionLog
+missionlogbutton
+missionlogfeed
+missionlogitem
+missionlogtab
+missionlogTemplate
 missionmanager
 missions_completed
 missions_inprogress
@@ -8987,6 +9412,7 @@ mission_eradicate_city_citizens
 mission_fetch_animal
 mission_fetch_artifact
 mission_fetch_civ_citizen
+mission_fetch_commodity
 mission_fetch_empire_citizen
 mission_fetch_plant
 mission_fetch_tribe_citizen
@@ -9029,12 +9455,17 @@ mixmode_planetcontext
 mixmode_simulationpause
 mixmode_solarcontext
 mixmode_spacegame
+mixmode_test
 mixmode_tribegame
+mixmode_userpause
 mix_blackhole
+mix_cell_beach_music
+mix_cell_to_crg
 mix_civ_transition
 mix_comm_health_energy
 mix_comm_panel_music
 mix_event_ambience_effect_group
+mix_event_card_shuffler
 mix_event_cell_vo
 mix_event_cell_vo_small
 mix_event_crg_ufo
@@ -9134,17 +9565,22 @@ model
 modelFruitStormed1
 modelFruitStormed1-Hull
 modelFruitStormed1_LOD1
+Models
 modeltypes
 modelviewer
 Modpoppy
+modtext
 Money
+Money Bug
 MoneyDrop
-money_spent	0x03E7E349
+money_spent~	0x03E7E349
 Monkeydoob
 monolith
 Moon
 motiontype
 motivetuning
+motivetuning_easy
+motivetuning_hard
 mot_carcass_baby_cry
 mot_carcass_baby_int
 mot_carcass_baby_scared
@@ -9206,7 +9642,6 @@ mot_item_setonhead
 mot_item_switchhands
 mot_item_throw
 mot_item_throw_mouth
-
 mot_liedown_l_end
 mot_liedown_l_loop1
 mot_liedown_l_start
@@ -9335,6 +9770,7 @@ mushroom_sandstone
 mushroom_swiss
 mushroom_tribal
 music
+Music Airship
 music_brain_upgrade
 music_building_editor
 music_cell_beach_end
@@ -9365,6 +9801,7 @@ music_cin_trg_npcappear
 music_cin_trg_upgrade
 music_cin_tribe_start
 music_city_planner
+music_civ_accessories
 music_civ_lose
 music_civ_recruit
 music_civ_recruita
@@ -9378,6 +9815,9 @@ music_crg_cin_waterdeath
 music_crg_claimnest
 music_crg_migrate
 music_crg_to_trg
+music_cr_prem_01
+music_cr_prem_02
+music_cr_prem_03
 music_csa_dance
 music_editora
 music_editor_dance
@@ -9426,6 +9866,7 @@ music_fight_toms7
 music_fight_toms8
 music_fight_toms9
 music_gge_cell_trans
+music_harvester_editor
 music_loadscreen
 music_load_screen
 music_mahnamahna_01
@@ -9437,7 +9878,9 @@ music_planet
 music_sfx_civ_to_space_a
 music_sfx_civ_to_space_b
 music_shopping
+music_shopping_gen
 music_shopping_sample
+music_space_accessories
 music_space_trade
 music_space_trade_loop
 music_space_war_end
@@ -9452,13 +9895,18 @@ music_spg_cin_pcap_econ
 music_spg_cin_pcap_mili
 music_sting_babyborn
 music_stone_storage1
+music_trade
 music_trg_to_civ_end
 music_trg_to_civ_start
 music_tribe_editor
 music_tribe_social
 music_ufo_editor
+music_vehc_eco_editor
 music_vehc_editor
+music_vehc_rel_editor
+Music~	0x00020016
 Mustang
+mus_trg_campfire_powerup
 mus_trg_death_sting
 mutation
 mvj_music
@@ -9473,13 +9921,18 @@ mv_jump_norm
 mv_sight
 mv_sneak
 mv_sneak_norm
+MyCreations~	0x00010002
 MyGame
+MySpecies
 MySpore
+MySporePage~	0x00010007
 Mystery
 MyStuff
 mytest
 names
 napalm
+Nations~	0x00020007
+Nenos
 Nessie
 Nest
 nesttypeenum
@@ -9496,6 +9949,7 @@ nest_claim_dance_1
 nest_claim_dance_2
 nest_claim_dance_3
 neutralcell
+neutralCells
 neutralcell_01
 neutralcell_02
 neutralcell_03
@@ -9505,6 +9959,7 @@ newcityappears
 newcrystal
 newcube
 newdomes
+newdrums
 newlayers
 newline
 newmesas
@@ -9543,6 +9998,7 @@ norepeat
 normal
 nose
 Nosey
+Notable Blaster
 notea2
 notec3
 noted2
@@ -9563,10 +10019,14 @@ npcsmallsocial
 npcsocial
 npc_attack_loop
 npc_city_transition
+npc_idle
+npc_mad
+npc_moving
 npc_raid_loop
 npc_ravage_food
 npc_ravage_food_nog
 npc_recruit_loop
+npc_scared
 Null
 numcreatures
 numfeet
@@ -9582,6 +10042,7 @@ OhTheHumanity
 OhTheHumanity_disabled
 old_model
 olieturn
+Omega R2v6
 omnivore
 omnivoretemplate
 omni_incity
@@ -9590,6 +10051,55 @@ onebang
 onecount
 oneshot
 Oogie
+oogie_crawl1
+oogie_crawl10
+oogie_crawl11
+oogie_crawl12
+oogie_crawl13
+oogie_crawl14
+oogie_crawl15
+oogie_crawl16
+oogie_crawl17
+oogie_crawl18
+oogie_crawl19
+oogie_crawl2
+oogie_crawl20
+oogie_crawl21
+oogie_crawl22
+oogie_crawl23
+oogie_crawl24
+oogie_crawl25
+oogie_crawl26
+oogie_crawl27
+oogie_crawl28
+oogie_crawl29
+oogie_crawl3
+oogie_crawl30
+oogie_crawl4
+oogie_crawl5
+oogie_crawl6
+oogie_crawl7
+oogie_crawl8
+oogie_crawl9
+oogie_grass1
+oogie_grass10
+oogie_grass11
+oogie_grass12
+oogie_grass13
+oogie_grass14
+oogie_grass15
+oogie_grass16
+oogie_grass17
+oogie_grass18
+oogie_grass2
+oogie_grass3
+oogie_grass4
+oogie_grass5
+oogie_grass6
+oogie_grass7
+oogie_grass8
+oogie_grass9
+oogie_motion
 openclose~	0x89E06A31
 openingmovies
 open_vi
@@ -9599,9 +10109,12 @@ open_vi_civ_03
 open_vi_civ_04
 open_vi_civ_05
 open_vi_civ_06
+OptionAudioPerformance
+optionDOF
 optionproperties
 options
 options_sporeguide
+Options~	0x00010009
 or
 orange1
 orange2
@@ -9641,7 +10154,6 @@ OShuttle
 other
 outfitdata
 outfitters_sporeguide
-outfitter_palette_pages~	0x406B6CC8
 OutpostPlaced
 owl_a1
 owl_a2
@@ -9678,13 +10190,16 @@ Paddle
 Paddleplane
 paint
 paintbuddy
+Painted Lady
 PaintLike
 PaintLikeThis
 paintswatch
 Palace
+palalshopper
 palatinosanseabold
 paletteconfig
 palette_AllBuildings_List~	0xF01B7ED6
+palette_buildingsParent~	0x19D9A1D5
 palette_cityDecorations_List~	0xEA165314
 palette_citydecoration_Parent~	0xA216CDA7
 palette_colonyVehicle_List~	0x7F05F61F
@@ -9693,7 +10208,11 @@ palette_CulturalVehicle_Parent~	0x3A13B231
 palette_economicvehicle_list
 palette_economicvehicle_list~	0x9C1B2351
 palette_economicVehicle_Parent~	0x28A9F38E
+palette_militaryvehicle_list~	0x56A27B27
 palette_militaryVehicle_Parent~	0xB2665E48
+palette_tribeAttackTools~	0x2CBA1E24
+palette_tribeSocialTools~	0x3E28DD31
+palette_tribeTools~	0x955C20F1
 palmgreaser
 palmgreaser_disabled
 pandiero1
@@ -9720,20 +10239,13 @@ pandiero6
 pandiero7
 pandiero8
 pandiero9
+paneltemplate
+panlfo
 partimage
 PartUnlock
 party
+Party Flying Ship
 part_animations~	0x047BF35F
-part_models_lod1~	0x40606100
-part_models~	0x40606000
-part_models~\ce_details_glasses.rw4
-part_models~\ce_details_wing_04.rw4
-part_models~\ce_mouth_mandible_carnivore_04.rw4
-part_skin_textures~	0x406A2100
-part_skin_textures~\#240A35B6.rw4
-part_skin_textures~\#3BAA2D23.rw4
-part_skin_textures~\#F0842B08.rw4
-part_skin_textures~\ce_details_mod_diffuse.rw4
 Passive
 Pastry
 Patamahawk
@@ -9778,6 +10290,7 @@ PathologicalCheater
 PathologicalCheater_Disabled
 patplayer5
 patplayer9
+patplayer_interface
 patplayer_router
 pattern
 patternseed
@@ -9796,8 +10309,11 @@ peace_bass7
 peace_bass8
 peace_bass9
 Pengu
+Penitent Prophet
+Perched Hall
 perfwarnings
 persistent_sounds
+Personal Castle
 personalityenum
 Phant
 photographer
@@ -9813,6 +10329,7 @@ piano_3
 piano_4
 piano_5
 piano_6
+Pick-up Truck
 pickles
 pickle_largeRock1
 pickle_largeRock1-Hull
@@ -9884,6 +10401,7 @@ Pinky
 pinninggeometry
 pinningnormal
 Pip
+Pipe Tank
 Pipes
 PirateAmbush
 placebioprotector
@@ -9893,6 +10411,7 @@ placeembassy
 placehappinessbooster
 placeholder
 placeloyaltybooster
+placeObject
 placespicestorage
 placeuberturret
 plains_day_bird1
@@ -9998,6 +10517,7 @@ planetpicasso-5
 planets
 planetscan
 planetscripts~	0xE38475D9
+Planets~	0x0002001C
 planetupliftedtociv
 planetupliftedtospace
 planetupliftedtotribe
@@ -10074,11 +10594,14 @@ PlayerCity
 PlayerCityMusic
 PlayerStructureDestroyed
 playertribe
+player_cell
+player_idle
+player_moving
 playmode
 playmodesetup
 playOpeningMovie
 Plitinian_Stinger
-plop_error	0x03E7E341
+plop_error~	0x03E7E341
 plume
 plus
 PlusEA
@@ -10164,6 +10687,8 @@ poisonrange
 Poker
 pollinatorsettings~	0x021403E6
 pollinator_properties~	0x021D4B8C
+poolball
+popuptemplates~	0x2333F729
 portal
 portal2
 portal2_auto
@@ -10212,8 +10737,10 @@ pray_02
 pray_03
 PreserveOrientation
 printWiki
+probbuilder
 probmel
 proboscis
+probPlayer
 profileview
 projectile
 properties
@@ -10225,6 +10752,7 @@ protonmissilelevel2
 protonmissilelevel3
 Psygnus
 Publish
+Published
 puffish
 PUI-icon-ghost-question-mark
 pulselevel1
@@ -10248,6 +10776,7 @@ Quadriprop
 quantumtorpedo
 questmaster
 questmaster_disabled
+Queston
 Quidee
 Quilted_hills_Global~	0x068A389A
 Quilted_hills_Uniform~	0x068A389D
@@ -10293,6 +10822,7 @@ RamjetHornet
 rand-norepeat
 randnorepeat
 randomNameGen~	0x0461227D
+randwalk
 rare
 rare-bardscroll01
 rare-bardscroll02
@@ -10462,6 +10992,7 @@ rare-zealotscrollgroup
 RareCollected
 raredrop_incity
 raredrop_intribe
+RareImage
 rares
 Rattlesnake
 rattlesnake_largerock1
@@ -10505,14 +11036,19 @@ Ray
 ReachedMaxColonies
 readme
 Receivegift
+RecentDownloads~	0x00010018
+RecommendedCreatures~	0x0002001B
 recruit_arrive
 recruit_convert_trg
 recruit_indifferent
 recruit_loop
 recruit_sendoff
 recruit_tribe
+recruit_watching
 redsea
+Regal Rainbow
 reggrid2
+RegionFilter_be_details
 RegionFilter_BE_Structure
 RegionFilter_VE_Body
 RegionFilter_VE_Details
@@ -10525,9 +11061,11 @@ relationship3friendly
 relationship4allied
 Relationships
 RelationshipStrip
+Relationships~	0x0001000D
 relentless
 relentless_disabled
 Religious
+Religious~	0x0002000A
 repair
 repairmegapotion
 repairpotion
@@ -10557,6 +11095,7 @@ ribbon_test_path_test~	0x042B1A01
 ribbon_test_scale_alpha_test~	0x041108E2
 ribbon_test_width_test~	0x0434932F
 right
+Righteous Roamer
 ringdove1
 ringdove2
 ring_textureMap
@@ -10669,6 +11208,7 @@ Roc
 rockdefault
 Rocks
 RockStack
+rocktemplate
 rock_roll1
 rock_roll10
 rock_roll11
@@ -10770,6 +11310,8 @@ rotate1
 rotatecamera
 Round
 rpulse
+rrange
+RubelliteFighter
 runReplace
 runtime
 runtimeanimations
@@ -10808,6 +11350,7 @@ sandstone_smallRock1_LOD1
 sandstone_smallRock2
 sandstone_smallRock2-Hull
 sandstone_smallRock2_LOD1
+SaveGame~	0x0001000C
 sa_chestpieces_01
 sa_chestpieces_01-Hull
 sa_chestpieces_02
@@ -10858,6 +11401,7 @@ scalecity
 scalehut
 scalemultiplier
 scaletomidi
+scaletomidi2
 scallops
 scallops_arizona
 scallops_claymation
@@ -10873,6 +11417,8 @@ scan
 scanfetch
 scanfetch_fetch
 scanfetch_scan
+scans
+Scans~	0x0001000F
 scared
 scarf_bundle_01
 scepter
@@ -10881,6 +11427,31 @@ scientistHero
 scientistHero_disabled
 ScientistPassion
 ScientistPassion_disabled
+scie_afraid_v1
+scie_afraid_v2
+scie_angry_v1
+scie_angry_v2
+scie_angry_v3
+scie_angry_v4
+scie_gasp_v1
+scie_gasp_v2
+scie_gasp_v3
+scie_happy_v1
+scie_happy_v2
+scie_happy_v3
+scie_happy_v4
+scie_laugh_v1
+scie_laugh_v2
+scie_neutral_v1
+scie_neutral_v2
+scie_neutral_v3
+scie_neutral_v4
+scie_neutral_v5
+scie_neutral_v6
+scie_sad_v1
+scie_sad_v2
+scie_urgnt_v1
+scie_urgnt_v2
 scifibg
 scifi_woosh1
 scifi_woosh2
@@ -10920,6 +11491,7 @@ scroll-thumb-bkgrnd-hrz
 scroll-thumb-hrz
 ScrollFrameVerticalGeneric
 scsa_actn_punch
+Scuba Tank
 sculptingpalette
 sculpt_basic_level_large
 sculpt_basic_level_medium
@@ -10990,6 +11562,7 @@ sea
 SeaMonster
 Seaport_levelRange_brush~	0x05DBAB76
 SeaPredator
+SearchOnline~	0x00010016
 searchradius
 seashell
 seashell1
@@ -10998,14 +11571,17 @@ seashell3
 seashell4
 Seashell_hills_Global~	0x068A3810
 Seashell_hills_Uniform~	0x068A3889
+Sea~	0x00020017
 second_flasg_guitar
 seedcycler
+seed_storage
 selectbox
 selection_disk
 selectmemberfromui
 selectone
 select_civilian
 sell
+Sellistery
 sell_food
 sense
 sense1-5
@@ -11030,6 +11606,7 @@ sepic_com_spit
 Sequester
 seti
 settings
+sfx_actampfile
 sfx_amb_wind_far_lp
 sfx_baby_grow_up
 sfx_base
@@ -11115,6 +11692,8 @@ sfx_foot_slide_dirt
 sfx_foot_stomp_dirt
 sfx_galactic_core_end
 sfx_galactic_core_start
+sfx_galactic_core_stevea
+sfx_galactic_core_steveb
 sfx_galactic_core_steve_appears
 sfx_galactic_core_steve_leaves
 sfx_gen_death
@@ -11187,44 +11766,44 @@ SG_ack_ack_rocket
 SG_ack_ack_shake_flash
 SG_antimatter_explosion_center
 SG_antimatter_weapon
-SG_asteroidBelt_diameter_100	0x03F54AD9
-SG_asteroidBelt_diameter_120	0x03F54ADA
-SG_asteroidBelt_diameter_140	0x03F54ADB
-SG_asteroidBelt_diameter_160	0x03F54ADC
-SG_asteroidBelt_diameter_180	0x03F54ADD
-SG_asteroidBelt_diameter_200	0x03F54ADE
-SG_asteroidBelt_diameter_220	0x03F54ADF
-SG_asteroidBelt_diameter_240	0x03F54AE0
-SG_asteroidBelt_diameter_260	0x03F54AE1
-SG_asteroidBelt_diameter_280	0x03F54AE2
-SG_asteroidBelt_diameter_60	0x03F54AD7
-SG_asteroidBelt_diameter_80	0x03F54AD8
+SG_asteroidBelt_diameter_100~	0x03F54AD9
+SG_asteroidBelt_diameter_120~	0x03F54ADA
+SG_asteroidBelt_diameter_140~	0x03F54ADB
+SG_asteroidBelt_diameter_160~	0x03F54ADC
+SG_asteroidBelt_diameter_180~	0x03F54ADD
+SG_asteroidBelt_diameter_200~	0x03F54ADE
+SG_asteroidBelt_diameter_220~	0x03F54ADF
+SG_asteroidBelt_diameter_240~	0x03F54AE0
+SG_asteroidBelt_diameter_260~	0x03F54AE1
+SG_asteroidBelt_diameter_280~	0x03F54AE2
+SG_asteroidBelt_diameter_60~	0x03F54AD7
+SG_asteroidBelt_diameter_80~	0x03F54AD8
 SG_black_hole_normalblobs_4pack
 SG_citizen_panic
-SG_civ_worship_city	0x03AB4734
-SG_civ_worship_city_continuous	0x03AB4732
+SG_civ_worship_city_continuous~	0x03AB4732
+SG_civ_worship_city~	0x03AB4734
 SG_civ_worship_mesmerized
-SG_civ_worship_rejection	0x03AB4735
-SG_civ_worship_rejection_continuous	0x03AB4733
+SG_civ_worship_rejection_continuous~	0x03AB4733
+SG_civ_worship_rejection~	0x03AB4735
 SG_colony_territory
 SG_colony_territory_bad
 sg_comet
 SG_galacticCore
-SG_galaxy_messages	0x035DD6E7
-SG_galaxy_mission_line	0x049CA7B6
-SG_galaxy_travel_trail	0x03AB4709
-SG_gasGiant_01	0x03F54A4F
-SG_gasGiant_02	0x03F54A50
-SG_gasGiant_03	0x03F54A51
-SG_gasGiant_04	0x03F54A52
-SG_gasGiant_05	0x03F54A53
-SG_gasGiant_06	0x03F54A54
-SG_gasGiant_07	0x03F54A55
-SG_gasGiant_08	0x03F54A56
-SG_gasGiant_09	0x03F54A57
-SG_gasGiant_10	0x03F54A58
-SG_gasGiant_11	0x03F54A59
-SG_gasGiant_12	0x03F54A5A
+SG_galaxy_messages~	0x035DD6E7
+SG_galaxy_mission_line~	0x049CA7B6
+SG_galaxy_travel_trail~	0x03AB4709
+SG_gasGiant_01~	0x03F54A4F
+SG_gasGiant_02~	0x03F54A50
+SG_gasGiant_03~	0x03F54A51
+SG_gasGiant_04~	0x03F54A52
+SG_gasGiant_05~	0x03F54A53
+SG_gasGiant_06~	0x03F54A54
+SG_gasGiant_07~	0x03F54A55
+SG_gasGiant_08~	0x03F54A56
+SG_gasGiant_09~	0x03F54A57
+SG_gasGiant_10~	0x03F54A58
+SG_gasGiant_11~	0x03F54A59
+SG_gasGiant_12~	0x03F54A5A
 sg_grob_01
 sg_grob_02
 sg_grob_03
@@ -11251,18 +11830,18 @@ SG_laser_lvl_3_beam
 SG_laser_lvl_3_beam_impact
 SG_laser_lvl_3_scorch
 SG_laser_lvl_3_water
-SG_localPlanetRing_01	0x03F526F5
-SG_localPlanetRing_02	0x03F526F6
-SG_localPlanetRing_03	0x03F526F7
-SG_localPlanetRing_04	0x03F526F8
-SG_localPlanetRing_05	0x03F526F9
-SG_localPlanetRing_06	0x03F526FA
-SG_localPlanetRing_07	0x03F526FB
-SG_localPlanetRing_08	0x03F526FC
-SG_localPlanetRing_09	0x03F526FD
-SG_localPlanetRing_10	0x03F526FE
-SG_localPlanetRing_11	0x03F526FF
-SG_localPlanetRing_12	0x03F52700
+SG_localPlanetRing_01~	0x03F526F5
+SG_localPlanetRing_02~	0x03F526F6
+SG_localPlanetRing_03~	0x03F526F7
+SG_localPlanetRing_04~	0x03F526F8
+SG_localPlanetRing_05~	0x03F526F9
+SG_localPlanetRing_06~	0x03F526FA
+SG_localPlanetRing_07~	0x03F526FB
+SG_localPlanetRing_08~	0x03F526FC
+SG_localPlanetRing_09~	0x03F526FD
+SG_localPlanetRing_10~	0x03F526FE
+SG_localPlanetRing_11~	0x03F526FF
+SG_localPlanetRing_12~	0x03F52700
 SG_mission_eradicate_diseasedCreature
 SG_mission_first_contact_attract
 SG_mission_first_contact_failure_type1
@@ -11310,49 +11889,49 @@ sg_rares_decal_fossil_07
 sg_rares_decal_fossil_08
 sg_rares_decal_fossil_09
 sg_rares_decal_fossil_10
-SG_rares_sparkle	0x048FABBD
-SG_recruiter_failed_multi	0x03AB4731
-SG_recruiter_multi	0x03AB4730
-SG_solarPlanetRing_gasGiant_01	0x03F52CC5
-SG_solarPlanetRing_gasGiant_02	0x03F52CC6
-SG_solarPlanetRing_gasGiant_03	0x03F52CC7
-SG_solarPlanetRing_gasGiant_04	0x03F52CC8
-SG_solarPlanetRing_gasGiant_05	0x03F52CC9
-SG_solarPlanetRing_gasGiant_06	0x03F52CCA
-SG_solarPlanetRing_gasGiant_07	0x03F52CCB
-SG_solarPlanetRing_gasGiant_08	0x03F52CCC
-SG_solarPlanetRing_gasGiant_09	0x03F52CCD
-SG_solarPlanetRing_gasGiant_10	0x03F52CCE
-SG_solarPlanetRing_gasGiant_11	0x03F52CCF
-SG_solarPlanetRing_gasGiant_12	0x03F52CD0
-SG_solarPlanetRing_terrestrial_01	0x03F52C6B
-SG_solarPlanetRing_terrestrial_02	0x03F52C6C
-SG_solarPlanetRing_terrestrial_03	0x03F52C6D
-SG_solarPlanetRing_terrestrial_04	0x03F52C6E
-SG_solarPlanetRing_terrestrial_05	0x03F52C6F
-SG_solarPlanetRing_terrestrial_06	0x03F52C70
-SG_solarPlanetRing_terrestrial_07	0x03F52C71
-SG_solarPlanetRing_terrestrial_08	0x03F52C72
-SG_solarPlanetRing_terrestrial_09	0x03F52C73
-SG_solarPlanetRing_terrestrial_10	0x03F52C74
-SG_solarPlanetRing_terrestrial_11	0x03F52C75
-SG_solarPlanetRing_terrestrial_12	0x03F52C76
-SG_solar_planet_clouds_mediumAtmo	0x6B306EEB
-SG_solar_planet_clouds_thickAtmo	0x6B306EEA
-SG_solar_planet_clouds_thinAtmo	0x6B306EEC
+SG_rares_sparkle~	0x048FABBD
+SG_recruiter_failed_multi~	0x03AB4731
+SG_recruiter_multi~	0x03AB4730
+SG_solarPlanetRing_gasGiant_01~	0x03F52CC5
+SG_solarPlanetRing_gasGiant_02~	0x03F52CC6
+SG_solarPlanetRing_gasGiant_03~	0x03F52CC7
+SG_solarPlanetRing_gasGiant_04~	0x03F52CC8
+SG_solarPlanetRing_gasGiant_05~	0x03F52CC9
+SG_solarPlanetRing_gasGiant_06~	0x03F52CCA
+SG_solarPlanetRing_gasGiant_07~	0x03F52CCB
+SG_solarPlanetRing_gasGiant_08~	0x03F52CCC
+SG_solarPlanetRing_gasGiant_09~	0x03F52CCD
+SG_solarPlanetRing_gasGiant_10~	0x03F52CCE
+SG_solarPlanetRing_gasGiant_11~	0x03F52CCF
+SG_solarPlanetRing_gasGiant_12~	0x03F52CD0
+SG_solarPlanetRing_terrestrial_01~	0x03F52C6B
+SG_solarPlanetRing_terrestrial_02~	0x03F52C6C
+SG_solarPlanetRing_terrestrial_03~	0x03F52C6D
+SG_solarPlanetRing_terrestrial_04~	0x03F52C6E
+SG_solarPlanetRing_terrestrial_05~	0x03F52C6F
+SG_solarPlanetRing_terrestrial_06~	0x03F52C70
+SG_solarPlanetRing_terrestrial_07~	0x03F52C71
+SG_solarPlanetRing_terrestrial_08~	0x03F52C72
+SG_solarPlanetRing_terrestrial_09~	0x03F52C73
+SG_solarPlanetRing_terrestrial_10~	0x03F52C74
+SG_solarPlanetRing_terrestrial_11~	0x03F52C75
+SG_solarPlanetRing_terrestrial_12~	0x03F52C76
+SG_solar_planet_clouds_mediumAtmo~	0x6B306EEB
+SG_solar_planet_clouds_thickAtmo~	0x6B306EEA
+SG_solar_planet_clouds_thinAtmo~	0x6B306EEC
 SG_space_defense_ray
 SG_space_defense_ray_impact
 SG_star_16pack
-SG_star_rollover	0x035D6701
-SG_star_selected	0x035D6AAD
+SG_star_rollover~	0x035D6701
+SG_star_selected~	0x035D6AAD
 SG_Star_Strip
 sg_surrender
-SG_tribe_aggro	0x03AB4728
-SG_tribe_worship_planet	0x03AB4727
-SG_tribe_worship_rejection	0x03AB4726
-SG_tribe_worship_rejection_continuous	0x03AB4724
-SG_tribe_worship_village	0x03AB4725
-SG_tribe_worship_village_continuous	0x03AB4723
+SG_tribe_aggro~	0x03AB4728
+SG_tribe_worship_planet~	0x03AB4727
+SG_tribe_worship_rejection_continuous~	0x03AB4724
+SG_tribe_worship_rejection~	0x03AB4726
+SG_tribe_worship_village_continuous~	0x03AB4723
+SG_tribe_worship_village~	0x03AB4725
 SG_turret_laser_beam
 SG_turret_laser_impact
 SG_UFO_abducted_creature_perishes_biosphere_full
@@ -11437,9 +12016,10 @@ SG_ufo_scan_HitWater
 SG_ufo_scan_muzzle
 SG_ufo_scan_planet
 SG_ufo_shield
-SG_ufo_tribe_worship_fireworks	0x03AB4729
+SG_ufo_tribe_worship_fireworks~	0x03AB4729
 Sha
 ShadowLight
+Shady Baroo
 Shaell
 shakern_walk_to_soc
 shaker_grasper_overlay
@@ -11455,6 +12035,31 @@ shaman_heal_01
 shaman_heal_01_nog
 shaman_idle_01
 shaman_idle_02
+sham_afraid_v1
+sham_afraid_v2
+sham_angry_v1
+sham_angry_v2
+sham_angry_v3
+sham_angry_v4
+sham_gasp_v1
+sham_gasp_v2
+sham_gasp_v3
+sham_happy_v1
+sham_happy_v2
+sham_happy_v3
+sham_happy_v4
+sham_laugh_v1
+sham_laugh_v2
+sham_neutral_v1
+sham_neutral_v2
+sham_neutral_v3
+sham_neutral_v4
+sham_neutral_v5
+sham_neutral_v6
+sham_sad_v1
+sham_sad_v2
+sham_urgnt_v1
+sham_urgnt_v2
 shapetype
 SharedHealthBar
 shield
@@ -11497,14 +12102,19 @@ shootingstar4
 shopping
 shoppingTemplate
 ShoppingToEditorTransition
+ShoppingVerbIcons
 Shortfuss
 shorty
 shoulderpad
+showstats
 shrine
 shrine2
 shrine3
+Shrub~	0x00020011
 shuffle
 shuffler
+shuffler_eapd
+shuffler_rhythm
 shuffle_loader
 shuffle_player
 Shyster
@@ -11516,6 +12126,7 @@ sightseer-3
 sightseer-4
 sightseer-5
 sighttemplate
+Sigma Seas
 sign
 Silken_hills_Global~	0x068A38B0
 Silken_hills_Uniform~	0x068A38B3
@@ -11526,6 +12137,7 @@ sine-short
 sing
 Singtoo
 Singwon
+six-eyedBob
 Skatinator
 skel
 skeleton
@@ -11787,6 +12399,7 @@ skinpaint_floradetail_walrusTopside
 skinpaint_floradetail_zebra
 Skull1
 Skulls1
+Sky Trade
 skybox
 Skyles
 slash~	0xB00F0FF2
@@ -11809,6 +12422,8 @@ slide_large9
 slimebass
 slugger
 slugger_disabled
+SlumHouse
+smallgift
 SmallHerd
 smallrock1
 smallrock2
@@ -11818,6 +12433,7 @@ smallsoftgran3
 smallsoftgran4
 smallsoftgran5
 smallsoftgran6
+SmallTree~	0x00020010
 Smasher
 smoothTemplate
 Smooth_hills_Global~	0x068A38A2
@@ -11840,6 +12456,11 @@ socialpalette
 socialpower
 SocialRainbow
 socialtemplate~	0xC795A817
+social_dance
+social_dance_norm
+social_gest_norm
+social_pose_norm
+social_vocal_norm
 soc_angry_to_curious
 soc_annoyed_reject
 soc_baby_death
@@ -12237,12 +12858,17 @@ sortbyvehiclehealth
 sortbyvehiclemilitarypower
 sortbyvehiclespeed
 sorttemplate
+Soul Rally
 sound
 soundDebug
 soundtable
 space
+Space Fighter
 spaceaccessorieseditorsetup
 SpaceActiveTool
+spacebadgeitem
+spacebadges_category
+spacebadges_list
 spacecamera
 spacecolony
 spacecombat
@@ -12253,8 +12879,10 @@ spacegalacticconstants
 spacegalaxyeffect
 spacegame
 SpaceGameTemplate
+spacegame_badges
 spacegame_disabled
 spacegame_tools
+SpaceGame~	0x00010015
 spacegraphics
 spaceNames
 spacenpcai~	0x249E8357
@@ -12262,6 +12890,9 @@ spacenpcarchetypes~	0x40020B6F
 SpacePlanetTooltip
 spacepopups~	0x131A9F54
 spacerareitem
+spaceRares_Category
+spaceRares_list
+spaceraretemplate
 spacerelationship
 spacescenario
 spaceshipcreator_buildmode
@@ -12269,6 +12900,7 @@ spaceshipcreator_paintmode
 SpaceshipCreator_Sporeguide
 spaceshipcreator_Template
 spaceshipcreator_welcome
+Spaceships~	0x00020018
 spacesolarsystem
 SpaceStarRollover
 SpaceStarTooltip
@@ -12278,6 +12910,7 @@ spacetoolpalette~	0x30608F0C
 spacetools_Abilities
 spacetools_Atmospheric
 spacetools_cargo
+spacetools_category
 spacetools_colonize
 spacetools_color
 spacetools_combat
@@ -12295,6 +12928,7 @@ space_battle_music	0x03D6FA49
 space_conversations~	0x055ADA23
 space_diplomacy~	0xC8FBF7D7
 space_misc_items~	0x037D494E
+space_missions~	0x02AE1A8E
 space_music
 space_music_cinematics
 space_music_patch
@@ -12386,6 +13020,7 @@ special
 speciestuning
 speech_01
 speed
+Speed Trading
 speed0
 speed1
 speed1-5
@@ -12540,6 +13175,7 @@ spg_addedtleveltoplanet
 spg_alien_citywalls_destroyed_01
 spg_alien_citywalls_destroyed_02
 spg_alien_ship_destroyed
+spg_badges~	0x0542E15D
 spg_bard
 spg_bard_easy
 spg_bard_hard
@@ -12614,6 +13250,7 @@ spg_shaman_tool
 spg_spicetraded
 spg_sporeguide
 spg_startedwar
+spg_starterCreature
 spg_template
 spg_tracklimit
 spg_trader
@@ -12697,6 +13334,7 @@ spore
 sporeaddict
 sporeaddict_disabled
 Sporecasts
+SporeCatalog~	0x00010008
 sporecurrencyea
 sporefan
 sporefan_disabled
@@ -12735,6 +13373,7 @@ sprinttemplate
 spulse
 spurts
 SpView
+Spy Coupe
 sp_abduction_loop
 sp_abduction_start
 sp_death_lava
@@ -12779,6 +13418,7 @@ sp_starved_loop
 sp_wave_goodbye
 Square
 Squee
+squid
 Squiggly
 ssoc_charm_lvl01
 ssoc_charm_lvl02
@@ -12885,9 +13525,11 @@ start_vi_civ_02
 start_vi_civ_03
 start_vi_civ_04
 start_vi_civ_05
+starving
 starvivore
 starvivoretemplate
 star_radius5_mottledYellow
+State Sanctionned
 static2-1
 static2-10
 static2-11
@@ -12945,6 +13587,7 @@ stealth3
 stealth4
 stealth5
 stealthtemplate
+Steel Wasp
 steeltribe
 steeltribe_disabled
 stepmel
@@ -12953,6 +13596,7 @@ stereotester
 stick
 Stick1
 Sticks1
+Sting Ray Ship
 Stitches~	0x0456A935
 stock_01
 stone_01
@@ -13002,6 +13646,7 @@ stone_hit9
 stormlevel
 storm_cold
 storm_hot
+storm_mild
 Stortion
 story201
 StoryBookPlanet
@@ -13026,6 +13671,14 @@ stroked_violin5
 stroked_violin6
 stroked_violin7
 Structure
+str_charger
+str_puncture
+str_unlock_chemical
+str_unlock_cilia
+str_unlock_electric
+str_unlock_jet
+str_unlock_proboscis
+str_unlock_spike
 stun
 subbass-long
 subbass-short
@@ -13083,6 +13736,8 @@ super_trap_poisoned_03
 super_trap_sniff
 Survivor
 Survivor_Disabled
+Swamp Mafia
+Swamp Skipper
 swatchdefault
 swatches_building_paints~	0xB10F04D4
 swatches_building_parts~	0x02231FE7
@@ -13090,6 +13745,7 @@ swatches_celltocreature_parts~	0x0588D86E
 swatches_cell_paints~	0xB224E099
 swatches_cell_parts~	0xB1B0F42E
 swatches_creature_paints~	0xB0F89E18
+swatches_creature_parts~	0x02231C8B
 swatches_flora_paints~	0xF13D3D23
 swatches_flora_parts~	0x023AD4C1
 swatches_tribal_parts~	0x91B125E5
@@ -13156,11 +13812,15 @@ t2c_mob_warchant_v2
 t2c_vignette
 ta
 tacnuke
+tae_creaturecivshopper
+tae_creaturespaceshopper
+tae_creaturetribeshopper
 tae_paint
 tae_testdrive
 tae_thebasics
 Tags
 Tahiti~	0x0490CD18
+TallTree~	0x0002000F
 tama1
 tama10
 tama11
@@ -13232,6 +13892,7 @@ tangent_spinner6
 tangent_spinner7
 tangent_spinner8
 Tankette
+TargetSpecies
 Tarreza
 Taupriberia
 tax_01
@@ -13351,6 +14012,7 @@ techno110_6
 techno110_7
 techno110_8
 techno110_9
+telemetry_template
 telescope_01
 tempclose
 template
@@ -13369,6 +14031,7 @@ templatepalettecellskinpaint
 templatePaletteDefinition
 templatepalettepaint
 templatePalettePaintCategory
+templatepalettepaintpage
 templatepalettepartialthemepage
 templatepaletteparts
 templatepalettepartspage
@@ -13450,29 +14113,66 @@ Terrestrial_river_L~	0x043C9600
 Terrestrial_river_M~	0x043C95FD
 Terrestrial_river_S~	0x043C95F9
 territoryradius
+ter_carni_eategg
 ter_cell_poked
 ter_com_celebrate_v3
+ter_com_react_lost
 ter_com_wounded
+ter_cv_curm_happy_v1
 ter_drop_v1
 ter_drop_v2
 ter_eat_swallow
+ter_gen_baby_cry
 ter_gen_greeting_01
 ter_give_mouth
 ter_give_mouth_loop
 ter_give_mouth_receive
 ter_give_mouth_stop
 ter_hungry_point
+ter_hungry_v1
+ter_idle_baby_look
+ter_idle_carni_yawn
+ter_idle_chief_inspect02
 ter_idle_gen
+ter_idle_herbi_rollindust
+ter_Idle_upset_03
 ter_item_drop_mouth
 ter_item_pickup
+ter_item_throw
+ter_liedown_L_end
+ter_liedown_L_loop1
+ter_liedown_L_start
 ter_lightbulb_v1
+ter_mot_fruit_eat_chew
 ter_mot_fruit_eat_mouth
 ter_mot_item_drop
+ter_mot_item_give
+ter_mot_item_give_loop
+ter_mot_item_give_stop
 ter_mot_item_push
+ter_mot_item_receive
+ter_mot_passout
+ter_mot_passout_getup
+ter_mot_passout_loop
 ter_mot_pickfruithand_eat
 ter_mot_pickfruitmouth_eat
 ter_pickedup_v1
+ter_soc_friendly_to_bestf
+ter_soc_hunt_spear_spin
+ter_soc_hunt_spear_spin_mouth
+ter_soc_hurrayclap
+ter_soc_idle_happy2
+ter_soc_idle_sad1
+ter_soc_obj_accept
+ter_soc_obj_give
+ter_soc_trans_bestfriends
 ter_soc_zomgwtf
+ter_sp_posture_dislike_v3
+ter_sp_posture_fear_v3
+ter_sp_posture_hate_v1
+ter_sp_posture_love_v1
+ter_sp_posture_worship_v1
+ter_sp_reaction_hate
 test
 testachievement
 testachievement-achievementDescription~	0xB70E2D38
@@ -13482,6 +14182,7 @@ tester
 testmodel
 testModelEffect
 TestModelLOD
+testnames
 testorientation
 testpattern
 testseaportlevel
@@ -13503,12 +14204,19 @@ te_light_test
 te_orangelight_test
 te_purplelight_test
 te_redlight_test
+Th'chack
+The Arkimedes
+The Illuminator
 theHorde
 thehorde_disabled
+TheInspector
 theme
 ThemeTemplate
 thief
 thief_disabled
+This is not a spy ship
+Thistle Tower
+Thornlake_stamp~	0x04FE03CC
 thorny
 thorny_ashtray
 thorny_conglomerate
@@ -13525,18 +14233,24 @@ thorny_tentacle
 Thorn_hillstamp_1~	0x04FE03C9
 Thorn_hillstamp_2~	0x04FE03CA
 Thorn_hillstamp_3~	0x04FE03CB
+Thorn_riverstamp~	0x04FE03CD
 thru
 Thumbs
 ticks
 Tikimoonsta
 Time
+timeline
+timelineEvent
+timelineevents
 timeline_scrub
+Timeline~	0x0001000E
 tiny-noise
 Tiphany
 titaniumcivilization
 titaniumcivilization_disabled
 title
 titletext
+tm
 tool
 toolalreadyhavesquire
 toolAMBomb
@@ -13585,6 +14299,7 @@ toolenergymegapotion
 toolenergypotion
 toolepicize
 toolEradicate
+toolfieldtemplate
 toolfirepit1
 toolfirepit2
 toolfirepit3
@@ -13608,6 +14323,7 @@ toolhealth3
 toolhealth4
 toolhealth5
 toolheatray
+toolhitgrobaware-ssteel
 toolHorn
 toolhotcloudray
 ToolHotCloudVacuum
@@ -13734,6 +14450,7 @@ totalattack
 totalsocial
 totempole
 Tower
+TowerOfAirship
 TowTruckTutorial
 trackbadge
 tracklist_router2
@@ -13754,7 +14471,34 @@ traderouteestablished
 traderouterejected
 TraderPassion
 TraderPassion_disabled
+Trading Shrimp
+Trading Slip
 tradingItem
+trad_afraid_v1
+trad_afraid_v2
+trad_angry_v1
+trad_angry_v2
+trad_angry_v3
+trad_angry_v4
+trad_gasp_v1
+trad_gasp_v2
+trad_gasp_v3
+trad_happy_v1
+trad_happy_v2
+trad_happy_v3
+trad_happy_v4
+trad_laugh_v1
+trad_laugh_v2
+trad_neutral_v1
+trad_neutral_v2
+trad_neutral_v3
+trad_neutral_v4
+trad_neutral_v5
+trad_neutral_v6
+trad_sad_v1
+trad_sad_v2
+trad_urgnt_v1
+trad_urgnt_v2
 transitions
 transmissioncancelconditions~	0x0609C229
 traprange
@@ -13801,6 +14545,7 @@ trg-medic-achievementDescription~	0x20000016
 trg-medic-achievementTitle~	0x20000006
 trg-minimapuse
 trg-Mission
+trg-mustbeincombat
 trg-notenoughfoodforbaby
 trg-notenoughfoodforgift
 trg-notenoughfoodtofeedanimal
@@ -13814,6 +14559,9 @@ trg-socialnoaudience
 trg-socialtutorial
 trg-socialwrongtarget
 trg-socialwrongtool
+trg-suirhorn1
+trg-suirhorn2
+trg-suirhorn3
 trg-superpowerlocked
 trg-thehorde
 trg-thehorde-achievementDescription~	0x20000014
@@ -13876,6 +14624,7 @@ trg_eating_meat
 trg_eating_seaweed
 trg_egggathered
 trg_failure
+trg_firebomb
 trg_fire_campfire2
 trg_fish
 trg_fishgathered
@@ -13937,6 +14686,8 @@ trg_social_maraca
 TRG_SpearOrnament
 TRG_Sporeguide
 trg_start
+trg_starterCreature
+trg_starterCreatures
 trg_stealing_tool1
 trg_surrender_flag
 TRG_Template
@@ -13998,6 +14749,8 @@ tribal120_9
 tribalaccessorieseditorcsa
 tribalaccessorieseditorsetup
 tribalaccessoriesrigblocks
+tribaltools
+tribal_Accessories
 tribal_chest
 tribal_details
 tribal_disabled
@@ -14024,7 +14777,6 @@ tribal_mediumRock1_LOD1
 tribal_mediumRock2
 tribal_mediumRock2-Hull
 tribal_mediumRock2_LOD1
-tribal_outfit_parts~	0x40686000
 tribal_resource_pile
 tribal_shoulders
 tribal_smallRock1
@@ -14051,11 +14803,15 @@ tribe5
 tribeabilities
 tribearchetypes
 tribearchetypes_easy
+tribearchetypes_hard
 TribeCamera
 tribecreature
 tribeeventstemplate
+tribegame
 TribeGameTemplate
+TribeGameVerbicons
 tribegame_disabled
+TribeGame~	0x00010013
 tribegivesmoney
 tribegivesunit
 tribehut
@@ -14065,6 +14821,7 @@ tribeplanner
 tribeplanner_Template
 tribeplanner_thetribalplanner
 tribeplans
+tribepopups~	0x182CD6CE
 triberelationship0
 triberelationship1
 triberelationship2
@@ -14072,6 +14829,7 @@ triberelationship3
 triberelationship4
 TribeSpawnPoint
 tribesuperpower
+Tribes~	0x0002001A
 tribetool
 tribeToolUpgrade
 tribetuning
@@ -14089,6 +14847,8 @@ tribe_chat_icon_hunt
 tribe_chat_icon_recruit
 tribe_chieftain_staff
 tribe_dance1
+tribe_dancetemplate
+tribe_didgeridootemplate
 tribe_drummer
 tribe_drums
 tribe_drums3
@@ -14098,7 +14858,10 @@ tribe_drum_main_enum
 tribe_drum_main_groups
 tribe_events~	0xE7CA1F54
 tribe_fish1
+tribe_fishtemplate
 tribe_gather3
+tribe_gathertemplate
+tribe_horntemplate
 tribe_hunt
 tribe_hunt1
 tribe_hunt1_special
@@ -14109,6 +14872,7 @@ tribe_hunt3_special
 tribe_hunttemplate
 tribe_identity_multi
 tribe_instrument
+tribe_maracatemplate
 tribe_music
 tribe_my_tribe
 tribe_normaloutfit
@@ -14185,6 +14949,7 @@ tt_heal_home_02_dmglo
 tt_heal_home_02_dmgmd
 tt_heal_home_02_LOD1
 tt_heal_home_02_LOD2
+tt_horn_field
 tt_Horn_home
 tt_Horn_home_dmghi
 tt_Horn_home_dmglo
@@ -14348,7 +15113,9 @@ ui_mission_complete
 ui_open
 ui_rollover
 ui_space
+ui_space_alert
 ui_spg_target_error
+ui_sporepedia_card_appear
 ui_spore_loadpill
 ui_trg_action_accept
 ui_trg_action_mouseover
@@ -14387,6 +15154,7 @@ upgrade_water_vi_03
 upgrade_water_vi_04
 upright_bass2
 urgah
+urn
 usecount
 UserCreated
 Useridle
@@ -14394,6 +15162,9 @@ usetool
 uzi
 V-Fighter
 vacuum
+validcivcreatures
+validspacecreatures
+validtribecreatures
 Valkyrie
 vast_city
 vast_city1
@@ -14791,6 +15562,7 @@ vcsa_react_envir_04insain
 vcsa_sit_v1insain
 VE
 ved_charge_lvl01roxcr
+vehc_drummer2
 vehicle
 vehicleairtemplate
 vehicleBalloonTemplate
@@ -14819,6 +15591,7 @@ vehicleeconomicair
 vehicleeconomicland
 vehicleeconomicwater
 vehicleeditortemplates
+VehicleEditorVerbicons
 vehicleFlagTemplate
 vehicleharvester
 vehicleHealth
@@ -14851,6 +15624,7 @@ vehiclesabotaged
 vehicleSailTemplate
 vehicleSkiTemplate
 vehicleSpeed
+Vehicles~	0x00020019
 vehicletemplate
 vehiclewatertemplate
 vehicleWeaponDirectTemplate
@@ -14880,7 +15654,6 @@ vehicle_militaryair
 vehicle_militaryland
 vehicle_militarypower
 vehicle_militarysea
-vehicle_parts~	0x40646000
 vehicle_part_morph_x01
 vehicle_part_morph_x02
 vehicle_part_morph_x03
@@ -15082,6 +15855,7 @@ vehicle_ufo
 vehicle_vehicletypetemplate
 venus
 Venza
+verbcharging
 verbicons
 verbtrays
 VerdeVentura
@@ -15928,9 +16702,12 @@ vidle_soc_stanceinsain
 vignettes_1~	0x05523DDC
 vignettes_2~	0x0564C4AF
 vignettes_3~	0x7DCC4E7E
+Vignettes_Civ
 vignettes_civ_1~	0x04866DB0
 vignettes_creature~	0x0564C4D5
+vignettes_tribe
 vignettes_tribe_1~	0x055172D5
+vignettes_tribe_2~	0xBA991155
 vignette_model_gambling_cup_blue
 vignette_model_gambling_cup_red
 vignette_model_gambling_cup_yellow
@@ -15989,10 +16766,24 @@ vig_herbi_sleep
 vig_herbi_sniffbutt
 vig_roastmarshmallow
 vig_roastmarshmallow_nog
+Viking Drums
 villagepeople
 villagepeople_disabled
 vinylbass
 vlesporeguide
+vle_colonyairshopper
+vle_colonylandshopper
+vle_colonyseashopper
+vle_culturalairshopper
+vle_culturallandshopper
+vle_culturalseashopper
+vle_economicairshopper
+vle_economiclandshopper
+vle_economicseashopper
+vle_militaryairshopper
+vle_militarylandshopper
+vle_militaryseashopper
+vle_templateshopper
 vmlt_vi_march_01amamain
 vmlt_vi_march_02amamain
 vmot_eathandbirain
@@ -16067,6 +16858,7 @@ volcanoes_spikes
 volcano_caldera_01
 volcano_caldera_large
 vraid_sneakmamain
+Vroom Bless
 vrun_panic_loop2mamain
 vshaman_attack_01insain
 vshaman_heal_01insain
@@ -16247,10 +17039,36 @@ WarriorHero
 WarriorHero_disabled
 WarriorPassion
 WarriorPassion_disabled
+warr_afraid_v1
+warr_afraid_v2
+warr_angry_v1
+warr_angry_v2
+warr_angry_v3
+warr_angry_v4
+warr_gasp_v1
+warr_gasp_v2
+warr_gasp_v3
+warr_happy_v1
+warr_happy_v2
+warr_happy_v3
+warr_happy_v4
+warr_laugh_v1
+warr_laugh_v2
+warr_neutral_v1
+warr_neutral_v2
+warr_neutral_v3
+warr_neutral_v4
+warr_neutral_v5
+warr_neutral_v6
+warr_sad_v1
+warr_sad_v2
+warr_urgnt_v1
+warr_urgnt_v2
 Wasp
 watchfulparent
 watchfulparent_disabled
 water
+Water Hawk
 waterdistance
 weapon
 weapon_01
@@ -16293,6 +17111,7 @@ wrinkle_test_01
 ww
 xaxis
 Xhonett
+Xploder
 xplosion_distant
 YankeeClipper
 yaxis
@@ -16319,325 +17138,74 @@ zoom
 zoom1
 zoomcamera
 Zurb
+[colony_limits]	0x7436B54A
+[creatureabilitytemplates]	0xD2FCB262
+[Cursors]	0x02393C07
+[gametuning]	0x02AE0C7E
+[locale]	0x02FABF01
+[spacetools]	0x30608F0B
+[spacetrading]	0x034D97FA
+[ufotools]	0x3064CB38
 _final
-feed_MySporecasts
-cle_buildmode_buildmode
-tribal_Accessories
-spacebadges_list
-button-weapon-on-norm
-button-eye-on-norm
-button-mouth-on-norm
-button-hands-on-norm
-button-feet-on-norm
-button-limbs-on-norm
-button-detail-on-norm
-atk_bite_norm
-atk_spit_norm
-atk_spit
-atk_charge
-atk_charge_norm
-atk_strike
-atk_strike_norm
-BP1_cycle_walk
-BP1_cycle_run
-creatureGameVerbIcon
-atk_spit_act
-atk_strike_act
-atk_spit_dis
-atk_strike_dis
-atk_spit_over
-atk_charge_over
-atk_strike_over
-CellEditorVerbicons
-social_pose_norm
-social_dance
-social_dance_norm
-social_gest_norm
-social_vocal_norm
-telemetry_template
-validcivcreatures
-accessorycivcreatures
-validspacecreatures
-loadabletribecreatures
-accessoryspacecreatures
-scans
-clg_startercells
-crg_startercreature
-crg_startercreatures
-clg_startercell
-cvg_starterCreature
-trg_starterCreatures
-trg_starterCreature
-spg_starterCreature
-storm_mild
-1
-ui_space_alert
-toolhitgrobaware-ssteel
-badgeunlocktoolreward
-enemyufodestroyed
-DropOffFailedFull
-DropOffFailedCarnivoreSlot
-MySpecies
-TargetSpecies
-RareImage
-AbilityImage
-loottable
-backgroundmap
-epic_player
-loot_plant
-loot_shyster
-loot_placeholder
-loot_eggmom
-loot_unlocks
-loot_jawhead
-loot_beach
-loot_stabber
-loot_grubby
-loot_squid
-loot_pinky
-loot_booster
-loot_random
-loot_rock
-loot_spikey
-loot_ice
-effect
-effectmap
-celleffects
-loot_goldy
-npc_scared
-loot_chomper
-loot_puffish
-loot_rock_chunk
-loot_poker
-loot_nosey
-player_idle
-npc_idle
-npc_mad
-loot_eggkid
-loot_water
-loot_ducky
-loot_jetster
-cmbt_headbutt
-grox_happy_v1
-grox_happy_v2
-grox_happy_v3
-grox_happy_v4
-grox_angry_v1
-grox_angry_v2
-grox_angry_v3
-grox_angry_v4
-grox_sad_v1
-grox_sad_v2
-creeper
-cle_cll15
-cle_cll16
-egg_eggkid
-look_up
-loot_megamouth
-loot_squiggly
-str_puncture
-creatureAnim
-ed_charm_lvl02
-ed_charm_lvl03
-ed_charm_lvl04
-ed_charm_lvl05
-poolball
-cell_poolball
-loot_bonesp
-cell_creeper
-ce_prarylane
-npc_moving
-player_moving
-bolt
-cell_empty
-cute1
-egg_eggkidsmall
-Cell_NoseySmall
-Cell_PinkySmall
-Cell_ShysterSmall
-Cell_SquigglySmall
-Cell_PinkyAlpha
-Cell_ShysterAlpha
-Cell_JetsterSmall
-cell_jawheadSmall
-Cell_GrubbySmall
-cell_ground_L2
-Cell_GoldySmall
-cell_duckySmall
-Cell_ChomperSmall
-Cell_BuzzyAlpha
-Cell_BuzzySmall
-Cell_boosterSmall
-loot_BuzzyAlpha
-loot_Buzzy
-loot_PinkyAlpha
-loot_ShysterAlpha
-loot_stabberalpha
-badData
-player_cell
-get_tool_rack
-cell_eggmom
-cell_eggdad
-cell_duckyLarge
-loot_eggdad
-cell_jawheadLarge
-cell_megamouthLarge
-cell_puffishLarge
-str_charger
-neutralCells
-cell_spikey
-cell_spikeySmall
-beaker
-ter_hungry_v1
-Cell_mov_cil_180_v2
-cmbt_com_block
-mate_cell
-cell_sleeper
-cmbt_com_takehit
-cell_charger
-grox_gasp_v1
-grox_gasp_v2
-grox_gasp_v3
-grox_laugh_v2
-grox_laugh_v1
-cmbt_com_block_spear
-cmbt_com_lvl3-4_charge
-cmbt_com_lvl5-6_charge
-cmbt_com_lvl7-8_charge
-cmbt_com_lvl9-10_charge
-cmbt_com_lvl3-4_strike
-cmbt_com_lvl5-6_strike
-cmbt_com_lvl7-8_strike
-cmbt_com_lvl9-10_strike
-cmbt_com_block_hit
-grox_afraid_v1
-grox_afraid_v2
-grox_urgnt_v1
-grox_urgnt_v2
-cmbt_idle_combat_start
-cmbt_com_punch
-cmbt_idle_combat_stop
-cmbt_hunt_gethit_jump_hv
-cmbt_mot_item_throw
-cmbt_soc_hunt_gethit_spin_med
-grox_neutral_v1
-grox_neutral_v2
-grox_neutral_v3
-grox_neutral_v4
-grox_neutral_v5
-grox_neutral_v6
-cmbt_soc_hunt_gethit_preyattack_light
-cmbt_hunt_clb_jump_G
-cmbt_sp_drop_death
-ter_item_throw
-ter_soc_hurrayclap
-ter_mot_item_give
-ter_mot_item_receive
-ter_idle_baby_look
-ter_sp_posture_dislike_v3
-cmbt_soc_hunt_jab
-ter_sp_posture_hate_v1
-ter_mot_fruit_eat_chew
-cmbt_soc_hunt_axe_jump
-ter_idle_chief_inspect02
-ter_soc_obj_give
-ter_mot_item_give_stop
-ter_com_react_lost
-cmbt_soc_hunt_jump
-cmbt_csa_baby_jump
-ter_idle_herbi_rollindust
-ter_sp_posture_fear_v3
-cmbt_soc_hunt_hit
-cmbt_hunt_clb_jump_noG
-ter_mot_item_give_loop
-ter_idle_carni_yawn
-cmbt_soc_hunt_gethit_preyattack_med
-cmbt_gen_death_down
-ter_soc_hunt_spear_spin
-fish_succ_1
-fish_idle_start
-get_tool_rack_noG
-ter_soc_trans_bestfriends
-cmbt_idle_happy_play_jump
-ter_gen_baby_cry
-cmbt_gen_death_side
-ter_mot_passout
-cmbt_soc_hunt_axe_hit
-cmbt_com_slash
-ter_soc_idle_sad1
-recruit_watching
-cmbt_soc_hunt_gethit_preyattack_heavy
-ter_mot_passout_getup
-hunt_meat_hack
-ter_soc_idle_happy2
-hunt_celebrate
-ter_cv_curm_happy_v1
-ter_soc_hunt_spear_spin_mouth
-ter_sp_posture_worship_v1
-ter_soc_obj_accept
-ter_liedown_L_loop1
-ter_liedown_L_end
-ter_carni_eategg
-ter_liedown_L_start
-ter_Idle_upset_03
-ter_sp_posture_love_v1
-ter_sp_reaction_hate
-ter_soc_friendly_to_bestf
-ter_mot_passout_loop
-str_unlock_spike
-str_unlock_electric
-str_unlock_chemical
-str_unlock_jet
-str_unlock_cilia
-str_unlock_proboscis
-cell_add_eye
-cell_jar_chemical
-cell_idle_blink
-limbTuningTemplate
-RegionFilter_be_details
-templatepalettepaintpage
-basicraid1
-basicraid2
-basicraid3
-basicraid4
-basicraid5
-basicraid7
-basicraid8
-basicraid1_easy
-basicraid2_easy
-basicraid3_easy
-basicraid4_easy
-basicraid5_easy
-basicraid7_easy
-basicraid8_easy
-basicraid1_hard
-basicraid2_hard
-basicraid3_hard
-basicraid4_hard
-basicraid5_hard
-basicraid7_hard
-basicraid8_hard
-advancedraid1
-advancedraid1_easy
-advancedraid1_hard
-basicfish
-basicgather
-buytools
-basichunt
-smallgift
-largegift
-matefast
-missionbutton
-creature_weapons
-creature_mouths
-creature_graspers
-creature_feet
-creature_details
-creature_ArmsAndLegs
-creature_eyesAndSenses
-spacetools_category
-spacebadges_category
-spaceRares_list
-spaceRares_Category
-cellpartunlockitem
-spacebadgeitem
+mask_button
+clg_strike
+icon-social-strip
+std_hand
+caretick
+cursor_edit
+discovery
+std_help
+std_ibeam
+std_none
+std_sizewe
+std_sizens
+std_sizeall
+std_center
+step-1
+step-2
+step-3
+step-4
+step-5
+sporebuck
+weather_1
+weather_2
+weather_3
+weather_4
+weather_5
+junkfood_1
+junkfood_2
+junkfood_3
+junkfood_4
+junkfood_5
+rockroll_1
+rockroll_2
+rockroll_3
+rockroll_4
+rockroll_5
+ShadowLightTemplate
+ShadowLightBuildingEditor
+ShadowLightCreatureEditor
+ShadowLightFloraEditor
+ShadowLightUFOeditor
+ShadowLightHutEditor
+EditorDefault
+DefaultHighlight
+TestSh
+ShadowLightVehicleEditor
+VehicleEditor
+SideCam
+creature_game
+stats_omni_icon
+stats_herbi_icon
+stats_carni_icon
+stats_no_mouth_icon
+stats_attack_icon
+stats_motion_icon
+stats_health_icon
+stats_movement_icon
+stats_social_icon
+stats_veg_icon
+stats_economic_icon
+stats_religious_icon
+stats_military_icon
+stats_meat_icon

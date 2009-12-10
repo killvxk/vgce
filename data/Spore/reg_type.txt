@@ -1,95 +1,96 @@
-trigger	0x024A0E52
-### Previous items are 'obsolete' ###
-txt	0x024A0E52
-prop	0x00B1B104
-gmdl	0x00E6BCE5
-plt	0x011989B7
-creature_traits	0x01AD2416
+advect
+ani
+animation
+animlist
+backgroundmap
+ball
+bat
+bem
+bld
+bmp	0x2F7D0005
 building_traits	0x01AD2417
-vehicle_traits	0x01AD2418
-gmsh	0x01C135DA
-trait_pill	0x01C3C4B3
+carnivore
+cell
+cfg
+cheat	0x024A0E52
+chemical
+cilia
+cll
+cnv	0x055ADA24
+creaturedata
+creature_traits	0x01AD2416
+crt
 css	0x0248F226
+cur	0x02393756
+dat
+density
+eapd	0x022D2C83
+effectmap
+electric
+filter
+flag
+flagella
+flr
 formation	0x02523258
-ttf	0x027C5CEF
-summary	0x02D5C9AF
-summary_pill	0x02D5C9B0
-locale	0x02FAC0B6
-pollen_metadata	0x030BDEE3
+gait
+gear
+gif	0x2F7D0007
+globals
+gmdl	0x00E6BCE5
+gmsh	0x01C135DA
+herbivore
+hkx
 hm	0x0376C3DA
 htra	0x0472329B
-xhtml	0x065266B7
-raster	0x2F4E681C
+jaw
+jet
 jpeg	0x2F7D0002
-png	0x2F7D0004
-bmp	0x2F7D0005
-tga	0x2F7D0006
-gif	0x2F7D0007
-tlsa	0x4AEB6BC6
-pctp	0x7C19AA7A
-xml	0xCF6C21B8
 layout	0xEFBDA3FF
-dat	0x12952634
-bem	0x1A99B06B
-bat	0x1E99B626
-xls	0x1F639D98
-bld	0x2399BE55
-vcl	0x24682294
-spui	0x250FE9A2
-gait	0x25DF0112
-utxt	0x2B6CAB5F
-crt	0x2B978C46
-vp6	0x376840D7
-cfg	0x37979F71
-psd	0x3C77532E
-mcl	0x3C7E0F63
-cll	0x3D97A8E4
-ani	0x3F9C28B5
-flr	0x438F6347
-hkx	0x448AE7E2
-ufo	0x476A98C7
-pfx	0x497767B9
-density	0x5C74D18B
-py	0x617715C4
-pd	0x617715D9
-world	0x9B8E862F
-cell	0xDFAD9F51
-animation	0xEE17C6AD
-cnv	0x055ADA24
-rw4	0x2F4E681B
-cur	0x02393756
-globals	0x2A3CE5B7
-structure	0x4B9EF6DC
-populate	0xDA141C1B
-origin	0xA659762B
-gear	0x45E82E50
-light	0x735CF023
-sign	0x26FEA3BE
-windmill	0x22CAC325
-flag	0xAEB95D5B
-xaxis	0x067489DC
-yaxis	0x3bc16bcd
-zaxis	0x01D369EE
-ball	0x69F9E3F6
-stalk	0x4A66DE36
-filter	0x77B380C3
-jaw	0x2E8647BD
-poker	0x6ED040F4
-cilia	0x83324B49
-flagella	0x77FBB925
-jet	0x2A86410A
-chemical	0x0DAE69D1
-electric	0xC1B86F04
-spike	0x002AE8E9
-structure	0x4B9EF6DC
-eapd	0x022D2C83
-wall	0x7DB16DB9
-round	0x543C4F0F
-herbivore	0x2DFB4F9F
-omnivore	0x5CD23F68
-carnivore	0xA28A67E8
-loottable	0xD92AF091
-backgroundmap	0x612b3191
-effectmap	0x433FB70C
-advect	0x04805684
+light
+locale	0x02FAC0B6
+loottable
+mcl
+omnivore
+origin
 part	0x5CAA5E28
+partscaps
+pd
+pfx
+plt	0x011989B7
+png	0x2F7D0004
+poker
+pollen_metadata	0x030BDEE3
+populate
+prop	0x00B1B104
+psd
+py
+raster	0x2F4E681C
+round
+rw4	0x2F4E681B
+sign
+spike
+spui
+stalk
+structure
+summary	0x02D5C9AF
+summary_pill	0x02D5C9B0
+table	0x03055F61
+tga	0x2F7D0006
+trait_pill	0x01C3C4B3
+ttf	0x027C5CEF
+txt	0x029E333B
+ufo
+utxt	0x2B6CAB5F
+vcl
+vehicle_traits	0x01AD2418
+vp6
+wall
+windmill
+world
+xaxis
+xhtml	0x065266B7
+xls
+xml	0xCF6C21B8
+yaxis
+zaxis
+fixed

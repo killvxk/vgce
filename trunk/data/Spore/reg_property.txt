@@ -4540,3 +4540,12 @@ youTubeUploadHost	0x055e9027
 YTPassword	0x05664BF6
 YTUserName	0x05664BF5
 zoomVal	0x01D0C413
+FoodChainLevel
+NumToImpressForBestFriends
+NumToImpressForFriendly
+NumToImpressForCurious
+EvoPointReward
+NumToKillForExtinction
+DelayScanCinematic1
+DelayScanCinematic2
+PaletteIDTribeHerbivore

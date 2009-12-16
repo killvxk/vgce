@@ -1,10 +1,8 @@
 /*
  Code written by Adam Heinermann
  Last Updated: October 31st, 2009
- Not for sale.
- Want to remove this? Go fuck yourself. Noob.
 */
-#include "Hack.h"
+#include "HackUtil.h"
 
 static char hackbuffer[BUFFER_SIZE];
 

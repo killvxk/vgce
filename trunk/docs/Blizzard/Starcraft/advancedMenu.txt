@@ -1,0 +1,7 @@
+0 = Intro (SMK)
+4 = Menu
+5 = Restart Game
+6 = Surrender
+7 = Surrender
+8 = Credits
+9 = Epilogue

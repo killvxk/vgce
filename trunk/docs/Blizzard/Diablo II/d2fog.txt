@@ -1,0 +1,112 @@
+Fog.#10023 - Posts assertion failure lines to debug file
+Fog.#10029 - Posts line to debug file
+
+@10042 - Alloc client thread memory
+@10043 - Free client thread memory
+@10045 - Alloc server thread memory from pool
+@10046 - Free server thread memrory from pool
+@10102 - Mpq equivalent for fopen();
+@10103 - Mpq equivalent for fclose();
+@10104 - Mpq equivalent for fread();
+@10115 - Get save directory path
+@10126 - Alloc bitstream [D2S] buffer
+@10127 - Get available byte position in bitstream [D2S]
+@10128 - Write bits to bitstream [D2S]
+@10129 - Read bits from bitstream [D2S] (signed)
+@10130 - Rwad bits from bitstream [D2S] (unsigned) 
+
+Fog.#10227 - Checks if playing LoD or Classic
+Fog.#10229 - Calculates the checksum for save data 
+
+10000       // FogCloseSocket
+10001       // FogWSAStartup
+10002       // FogWSACleanup
+10003       // FogSafesockOpen
+10004       // FogSafesockOpenEx
+10005       // FogSafesockClose
+10006       // FogRecv
+10007       // FogSend
+10008       // FogSelect
+10009       // FogSendTimeout
+10010       // FogEnterCriticalSection
+10011       // FogLeaveCriticalSection
+10012       // FogGetPeerName
+10013       // FogConnect?
+10014       // FogNetworkToString
+10015       // FogStringToNetwork
+
+10017       // Fog ioctlsocket
+10018       // FogPrintf
+
+
+10028       // FogError     ErrorManager
+10029       // Fatal1
+10030       // Fatal2
+10031       // Fatal3
+
+10033       // Deadlock Stack Dump
+10034       // Stack Dump
+10035       // FogOutputDebugString
+10036       // Fog Log
+
+10039       // get something
+
+10041       // set something
+10042       AllocClientThreadMemory();
+10043       FreeClientThreadMemory();
+
+10045       AllocServerThreadMemory(); 
+10046       FreeServerThreadMemory(); 
+
+10048       nullSub
+10049       nullSub
+10050       // FogValidateEnterCriticalSection
+10051       // FogValidateExitCriticalSection
+10052       // exception
+10053       nullSub
+10054       nullSub
+
+10126       InitBitBuffer();
+10127       BitBufAvailBytePos();
+10128       WriteBits();
+10129       ReadBitsSigned(); 
+10130       ReadBits();
+
+10230
+10231       // ErrorManager
+10232       nullSub
+10233       // FogGetCurrentProcess
+10234       // Fog Logger
+10235       // Fog Logger
+10236       nullSub
+10237       // FogGetCurrentThread
+10238       // FogFatal
+10239       // FogGetModuleFileName
+10240       nullSub
+10241       nullSub
+10242       nullSub
+10243       nullSub
+10244
+10245       // FogNetToHost
+10246
+10247       // FogNetToHost2
+10248
+10249
+10250
+10251       FogValidateCriticalSection(%d)
+10252
+10253       
+10254
+10255
+10256       PERFORMANCE_FREQUENCY_TICKS_PER_MICROSEC
+10257       PERFORMANCE_FREQUENCY_TICKS_PER_MILLISEC
+10258       gcsCriticalSectionTimer
+10259       gdwBitMasks
+10260       // FogSend
+10261       gdwInvBitMasks
+10262       // FogGetSocketName
+10263       // Exceptions_Crashdump
+10264       nullSub
+10265
+10266       gfTimeCriticalSections
+10267       gqwCriticalSectionTimer

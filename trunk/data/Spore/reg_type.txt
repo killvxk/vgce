@@ -12,7 +12,7 @@ building_traits	0x01AD2417
 carnivore
 cell
 cfg
-cheat	0x024A0E52
+txt	0x024A0E52
 chemical
 cilia
 cll
@@ -48,7 +48,7 @@ jpeg	0x2F7D0002
 layout	0xEFBDA3FF
 light
 locale	0x02FAC0B6
-loottable
+LootTable
 mcl
 omnivore
 origin
@@ -94,3 +94,5 @@ xml	0xCF6C21B8
 yaxis
 zaxis
 fixed
+random_creature
+look_table

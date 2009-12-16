@@ -1,0 +1,150 @@
+Debug cheats for the space team.
+-addCargo animal|plant|rare <name>  add 10 of the species to your cargo
+-addCargo slot <count>         add count number of empty slots to the player's inventory
+-listempires                   lists known empires with their stars and empires.
+-solarrollover                 toggles the debug solar rollover.
+-picking                       toggles debug display of hit spheres.
+-debugUI                       toggles debug UI panel.
+-trade                         bring up the trade panel for the local empire.
+-rares                         bring up the rares ui.
+-flyto bh                      fly to nearest black hole
+       pp                                     proto-planetary
+       gc                                     galactic core
+       oo                                     binary oo star
+       og                                     binary og star
+       om                                     binary om star
+       gg                                     binary gg star
+       gm                                     binary gm star
+       mm                                     binary mm star
+       civ                                    civ planet's star
+       tribe                                  tribe planet's star
+       empire                                 empire planet's star
+       grob or grox                           grox star
+       sol                                    earth's star
+       star <name>                            specified star
+       home                                   player's starting star
+-oursystem                     fly to 'our' system (have Earth, etc.).
+-day <seconds>                 sets the duration of the solar day for the current planet.
+-siderealDay <seconds>         sets the duration of the planetary revolution.
+-speedUI                       toggles speed UI
+-testTravel distance here|core sees if all the stars are reachable
+-year <seconds>                sets the duration of the planetary orbit.
+-zones                         toggles debug display of hot, livable, and icy zones.
+-setRelationship <value>       sets the relationship score between the player and the current starsystem.
+-alex                          setup space to demo whatever alex has recently been working on.
+-demo                          setup space to demo whatever morgan is currently asking for. also bound to ctrl-alt-a .
+-vtune                         enable vtune capture 
+-dumpEventTimes                dump amount of time currently spent rolling on the event
+-allEmpires                    show all empires when the empire filter is on. 'omniscience' 
+-reach <radius> <jumpsize>     show stars reachable in radius using jump size
+-initStarRecords <radius>      init all star records around you 
+-initPlanetRecords <radius>    init all star and planet records around you for maximum stress on the system
+-lateGame <statename>          set the game to a state similar to what would exist after playing for hours. 
+    <no longer in use. instead use: tester -run TestScript lategame\stage1 >
+-debug counts                  show number of empires, stars, planets
+-debug relationship            shows relationships etc.
+-debug planet                  shows terraforming info, etc.
+-dump planets                  output counts by tech and type
+-wildlife <radius>             output flora/fauna found within a radius
+-setarchetype <personality>    sets the personality of the empire on the current planet. <personality> is one of: warrior, trader, scientist, shaman, bard, zealot, diplomat, ecologist, grob. do not use this on your own species. (see 'spacearchetype' cheat)
+-setempiretrait <trait>        sets the trait of the empire on the current planet. <trait>: Stingy, Generous, AccidentProne
+-money <value>                 set amount of money the player has
+-dumprel                       prints out all relationships pairs
+-enableGetOut                  enables get out and walk around during demo mode
+-forceautosave                 Toggle whether to force autosave in SPG.
+                                   If true, I will always autosave.
+                                   If false, I use the value in AppProperties.txt.
+-startEvent <EventName>        Starts the event controlled by the universe simulator.
+-clearplanet',9,9,9,9,9,'Clears the low-lod nouns from the active planet and forces the creation of a new scenario.
+,9,9,9,9,9,9,9,'Can only be used from solar and galaxy contexts.
+-runcinematic <name>           Run a specific cinematic.
+-rename star/planet <name>     Rename the active star or planet.
+-addAllies <count>             Adds the specified number of allied ships, making an empire into an ally for each one.
+-planet <script>               Uses the specified planet script for the next suitable planet generated
+-listcomm                      Lists the pending comm events.
+
+Debug cheats for Raids.
+raid -start <bomberCount> will attack the current planet with the specified ships
+raid -stop will clear out any attacking UFOs on the planet
+raid -plunder will attack create a pirate plundering event
+raid -repair repair all of the rubbled buildings on the planet
+raid -turrets fills all cities on the planet with max turrets
+
+
+tool enable <fileName>         - makes the tool available (See Data\GameplayConfig\SpaceGame\Tools, <fileName> should not have .prop)
+tool enable all                - makes all tools available
+tool disable <fileName>        - makes the tool unavailable
+tool charge <fileName> <count> - adds the given number of charges of the specified tool
+tool set <setname>             - wipes all tools and replaces them with those found in the array given, which must be in ToolConfig.prop
+tool list                      - dump all tools in the player's inventory
+
+Debug cheats for Ari.
+-demo         will make changes for ari's demo.
+-monolith     make monolith easier to work with.
+-preroll      force a preroll in the solarview only.
+-ctmg         a batch file-like cheat for playing the civ transition mini-game.
+-war          make an arbitrary empire declare war with the player.
+
+
+The Empire Growth Sim Cheat.
+<no argument>.... Get the current state of the simulator
+galaxy........... Swap the galaxy effect to improve empire visibility
+tick <val>....... Set the simulation tick frequency (in minutes)
+alwaysrun........ Toggle whether or not the simulation always run
+pause............ Toggle whether or not the sim is paused
+grow............. Toggle whether or not the sim only grow empires
+shrink........... Toggle whether or not the sim only shrinks empires
+empires.......... Toggle whether or not to show all (i.e. unvisited) empires
+
+Debug cheats for Badge. each call registers a single event,you may need multiple calls to unlock badges.
+colonize <num>     tell badgemanager you set up a colony.
+rare     <num>     you found a rare
+eco      <num>     you averted an eco disaster
+alliance <num>     tell badgemanager you formed an alliance.
+explore  <num>     tell badgemanager you visited a new star.
+terraform<num>     tell badgemanager you terraformed a planet.
+empire   <num>     tell badgemanager you discovered an empire.
+war      <num>     tell badgemanager you started a war.
+fetch    <num>     tell badgemanager you completed a fetch mission.
+eradicate<num>     tell badgemanager an eradicate mission was completed.
+foodweb  <num>     tell badgemanager a foodweb was completed.
+mission  <num>     complete missions
+trade    <num>     complete trades
+archetypes<num>    tell badgemanager you switched archetypes n times 
+defend   <num>     tell badgemanager you defended a friend.
+defeatgrob         tell badgemanager you defeated gRob.
+allygrob           tell badgemanager you allied with gRob.
+
+
+mission [create <type>]          - creates a mission of type
+        [remove <instance id>]   - removes the mission specified by mission id
+        [complete <instance id>] - completes the mission successfully
+        [abort <instance id>]    - aborts the mission
+        [fail <instance id>]     - fails the mission
+        [list]                   - lists all missions
+        [debugdraw | dd]         - debug draws lines between source star/planet and target star/planet
+        [next <type>]            - sets the type for the next mission
+        [ui]                     - opens main mission UI
+
+
+options for manipulating the terraforming game.
+terraform   -abduct                                                  - abduct all plants and animals
+  -biomecolors                                             - toggles between artist and color-blind-friendly biome colors 
+  -plantsFlood | -plantsKill                               - adds all / removes all plants
+  (-atmosphere | -temperature) <value> [<velocity>]        - sets atmosphere / temperature to a specified value (and its velocity, opt.)
+  -water <value>                                           - sets water level (within a clamped range)
+  -bullseye                                                - toggle drawing of 3D bullseye visualization.
+  -waterLava                                               - toggle drawing of 3D water and lava height.
+  -pause                                                   - toggles the terraform sim (all planets)
+  -freeze                                                  - stops the terraform sim on this planet (use a tool to restart)
+  -stopcheats                                              - causes the terraform sim to execute normally
+  -ariwip                                                  - used for toggle Ari's work in progress
+  -biosphere                                               - debug text for flora and fauna
+  -cubemap <e | j | a>                                     - toggles appearance of Ed's, Jeff's or Ari's cube map
+  -cubemap species                                         - toggles full-planet visualization of species density
+  -cubemap plants                                          - toggles full-planet visualization of densities for all plants
+  -cubemep animals                                         - toggles full-planet visualization of densities for all animals
+  -eradicate <row> <column>                                - eradicate species in specified row (1-3) & column (1-6) of planet terraforming grid
+  -ufo                                                     - executes UFO Celebration Moment (TM)
+
+  

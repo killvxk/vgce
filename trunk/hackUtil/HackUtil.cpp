@@ -16,7 +16,6 @@ struct memPatch
 static SYSTEMTIME time;
 static FILE* globalLog;
 static DWORD lastAccess;
-static HMODULE ThisModule;
 
 static std::vector<memPatch> changes;
 
@@ -26,13 +25,13 @@ void logfast(char* file, const char* format, ...)
 {
   if (file == NULL)
   {
-    logError("No file name specified in logfast().");
+    logError("No file name specified for logfast()");
     return;
   }
 
   if (format == NULL)
   {
-    logError("No formatting specified in logfast().");
+    logError("No formatting specified for logfast()");
     return;
   }
 
@@ -53,7 +52,7 @@ void logError(const char* format, ...)
 {
   if (format == NULL)
   {
-    logError("No formatting specified in logError().");
+    logError("No formatting specified for logError()");
     return;
   }
 
@@ -61,8 +60,7 @@ void logError(const char* format, ...)
   va_start(ap, format);
   vsnprintf_s(hackbuffer, BUFFER_SIZE, BUFFER_SIZE, format, ap);
   va_end(ap);
-
-  logfast("Errors.log", hackbuffer);
+  logfast("Errors.log", "%s", hackbuffer);
   return;
 }
 
@@ -70,7 +68,7 @@ void logBegin(char* file)
 {
   if (file == NULL)
   {
-    logError("No file name specified in logBegin().");
+    logError("No file name specified for logBegin().");
     return;
   }
 
@@ -112,13 +110,13 @@ void logBytes(FILE* file, u8* data, u32 size)
 {
   if (file == NULL)
   {
-    logError("Bad file handle in logBytes().");
+    logError("Bad file handle for logBytes().");
     return;
   }
 
   if (data == NULL)
   {
-    logError("No data specified in logBytes().");
+    logError("No data specified for logBytes().");
     return;
   }
 
@@ -147,7 +145,7 @@ void logBytes(char* file, u8* data, u32 size)
 {
   if (file == NULL)
   {
-    logError("No file name specified in logBytes().");
+    logError("No file name specified for logBytes().");
     return;
   }
 
@@ -164,7 +162,7 @@ void logAdd(const char *format, ...)
 
   if (format == NULL)
   {
-    logError("No format specified in logAdd().");
+    logError("No format specified for logAdd()");
     return;
   }
 
@@ -190,12 +188,33 @@ void logEnd()
 ///////////////////////////////   IMPORTS   //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 
-IMAGE_THUNK_DATA32* GetImportsList(char* sourceModule, char* importModule)
+IMAGE_IMPORT_DESCRIPTOR* _GetImportDescriptor(const char *logline, HMODULE module)
 {
-  char *tempModuleName;
-  if (sourceModule == NULL)
-    tempModuleName = ThisModuleName;
-  else
+  IMAGE_DOS_HEADER *mzhead = (IMAGE_DOS_HEADER*)module;
+  if (mzhead->e_magic != IMAGE_DOS_SIGNATURE)
+  {
+    logError("Could not locate MZ header (%s).", logline);
+    return NULL;
+  }
+  IMAGE_NT_HEADERS32 *pehead = (IMAGE_NT_HEADERS32*)(mzhead->e_lfanew + (u32)module);
+  if (pehead->Signature != IMAGE_NT_SIGNATURE)
+  {
+    logError("Could not locate PE header (%s).", logline);
+    return NULL;
+  }
+  IMAGE_IMPORT_DESCRIPTOR *imports = (IMAGE_IMPORT_DESCRIPTOR*)(pehead->OptionalHeader.DataDirectory[1].VirtualAddress + (u32)module);
+  if (imports == NULL)
+  {
+    logError("Could not locate imports section (%s).", logline);
+    return NULL;
+  }
+  return imports;
+}
+
+IMAGE_THUNK_DATA32* _GetImportsList(const char *logline, char* sourceModule, char* importModule)
+{
+  char *tempModuleName = NULL;
+  if (sourceModule != NULL)
     tempModuleName = sourceModule;
 
   HMODULE tempModule;
@@ -203,29 +222,14 @@ IMAGE_THUNK_DATA32* GetImportsList(char* sourceModule, char* importModule)
 
   if (tempModule == NULL)
   {
-    logError("Could not obtain module handle of \"%s\" in GetImportsList().", tempModuleName);
+    logError("Could not obtain module handle of \"%s\" (%s).", tempModuleName, logline);
     return NULL;
   }
 
-  IMAGE_DOS_HEADER *mzhead = (IMAGE_DOS_HEADER*)tempModule;
-  if (mzhead->e_magic != IMAGE_DOS_SIGNATURE)
-  {
-    logError("Could not locate MZ header in GetImportsList().");
-    return NULL;
-  }
-  IMAGE_NT_HEADERS32 *pehead = (IMAGE_NT_HEADERS32*)(mzhead->e_lfanew + (u32)tempModule);
-  if (pehead->Signature != IMAGE_NT_SIGNATURE)
-  {
-    logError("Could not locate PE header in GetImportsList().");
-    return NULL;
-  }
-  IMAGE_IMPORT_DESCRIPTOR *imports = (IMAGE_IMPORT_DESCRIPTOR*)(pehead->OptionalHeader.DataDirectory[1].VirtualAddress + (u32)tempModule);
+  IMAGE_IMPORT_DESCRIPTOR *imports = _GetImportDescriptor(logline, tempModule);
   if (imports == NULL)
-  {
-    logError("Could not locate imports section in GetImportsList().");
     return NULL;
-  }
-
+  
   for (u32 i = 0; imports[i].Name != 0; i++)
   {
     if (lstrcmpiA((char*)(imports[i].Name + (u32)tempModule), importModule) == 0)
@@ -234,44 +238,27 @@ IMAGE_THUNK_DATA32* GetImportsList(char* sourceModule, char* importModule)
   return NULL;
 }
 
-IMAGE_THUNK_DATA32* GetImportsList(char* importModule)
+IMAGE_THUNK_DATA32* _GetImportsList(const char *logline, char* importModule)
 {
-  return GetImportsList(NULL, importModule);
+  return _GetImportsList(logline, NULL, importModule);
 }
 
-DWORD* GetFunctionsList(char* sourceModule, char* importModule)
+DWORD* _GetFunctionsList(const char *logline, char* sourceModule, char* importModule)
 {
-  char *tempModuleName;
-  if (sourceModule == NULL)
-    tempModuleName = ThisModuleName;
-  else
+  char *tempModuleName = NULL;
+  if (sourceModule != NULL)
     tempModuleName = sourceModule;
 
   HMODULE tempModule = GetModuleHandleA(tempModuleName);
   if (tempModule == NULL)
   {
-    logError("Could not obtain module handle of \"%s\" in GetFunctionsList().", tempModuleName);
+    logError("Could not obtain module handle of \"%s\" (%s).", tempModuleName, logline);
     return NULL;
   }
 
-  IMAGE_DOS_HEADER *mzhead = (IMAGE_DOS_HEADER*)tempModule;
-  if (mzhead->e_magic != IMAGE_DOS_SIGNATURE)
-  {
-    logError("Could not locate MZ header in GetFunctionsList().");
-    return NULL;
-  }
-  IMAGE_NT_HEADERS32 *pehead = (IMAGE_NT_HEADERS32*)(mzhead->e_lfanew + (u32)tempModule);
-  if (pehead->Signature != IMAGE_NT_SIGNATURE)
-  {
-    logError("Could not locate PE header in GetFunctionsList().");
-    return NULL;
-  }
-  IMAGE_IMPORT_DESCRIPTOR *imports = (IMAGE_IMPORT_DESCRIPTOR*)(pehead->OptionalHeader.DataDirectory[1].VirtualAddress + (u32)tempModule);
+  IMAGE_IMPORT_DESCRIPTOR *imports = _GetImportDescriptor(logline, tempModule);
   if (imports == NULL)
-  {
-    logError("Could not locate imports section in GetFunctionsList().");
     return NULL;
-  }
 
   for (u32 i = 0; imports[i].Name != 0; i++)
   {
@@ -281,43 +268,41 @@ DWORD* GetFunctionsList(char* sourceModule, char* importModule)
   return NULL;
 }
 
-DWORD* GetFunctionsList(char* importModule)
+DWORD* _GetFunctionsList(const char *logline, char* importModule)
 {
-  return GetFunctionsList(NULL, importModule);
+  return _GetFunctionsList(logline, NULL, importModule);
 }
 
 bool PatchImport(char* sourceModule, char* importModule, LPCSTR function, void* patchFunction)
 {
   if (function == NULL)
   {
-    logError("Did not specify a function in PatchImport().");
+    logError("Did not specify a function for PatchImport().");
     return false;
   }
 
-  char *tempModuleName;
-  if (sourceModule == NULL)
-    tempModuleName = ThisModuleName;
-  else
+  char *tempModuleName = NULL;
+  if (sourceModule != NULL)
     tempModuleName = sourceModule;
 
   HMODULE tempModule = GetModuleHandleA(tempModuleName);
   if (tempModule == NULL)
   {
-    logError("Could not obtain module handle of \"%s\" in PatchImport().", tempModuleName);
+    logError("Could not obtain module handle of \"%s\" for PatchImport().", tempModuleName);
     return false;
   }
 
-  IMAGE_THUNK_DATA32* importOrigin = GetImportsList(sourceModule, importModule);
+  IMAGE_THUNK_DATA32* importOrigin = _GetImportsList(FILELINE, sourceModule, importModule);
   if (importOrigin == NULL)
   {
-    logError("Could not locate Imports Section for \"%s\" in %s in PatchImport().", importModule, sourceModule);
+    logError("Could not locate Imports Section for \"%s\" in %s for PatchImport().", importModule, sourceModule);
     return false;
   }
 
-  DWORD* importFunction = GetFunctionsList(sourceModule, importModule);
+  DWORD* importFunction = _GetFunctionsList(FILELINE, sourceModule, importModule);
   if (importOrigin == NULL)
   {
-    logError("Could not locate Functions list for \"%s\" in %s in PatchImport().", importModule, sourceModule);
+    logError("Could not locate Functions list for \"%s\" in %s for PatchImport().", importModule, sourceModule);
     return false;
   }
 
@@ -327,7 +312,7 @@ bool PatchImport(char* sourceModule, char* importModule, LPCSTR function, void* 
     {
       if (IMAGE_ORDINAL32(importOrigin[i].u1.Ordinal) == IMAGE_ORDINAL32((DWORD)function))
       {
-        WriteMem(&importFunction[i], &patchFunction, 4);
+        _WriteMem(FILELINE, &importFunction[i], &patchFunction, 4);
         return true;
       }
     }
@@ -335,16 +320,16 @@ bool PatchImport(char* sourceModule, char* importModule, LPCSTR function, void* 
     {
       if (lstrcmpiA(function, (char*)&(((PIMAGE_IMPORT_BY_NAME)importOrigin[i].u1.AddressOfData)->Name)) == 0)
       {
-        WriteMem(&importFunction[i], &patchFunction, 4);
+        _WriteMem(FILELINE, &importFunction[i], &patchFunction, 4);
         return true;
       }
     }
   }
   
   if ((DWORD)function < 0xFFFF)
-    logError("Could not locate import of ordinal %d (0x%X) in %s in PatchImport().", (DWORD)function, (DWORD)function, tempModuleName);
+    logError("Could not locate import of ordinal %d (0x%X) in %s for PatchImport().", (DWORD)function, (DWORD)function, tempModuleName);
   else
-    logError("Could not locate import of function \"%s\" in %s in PatchImport().", function, tempModuleName);
+    logError("Could not locate import of function \"%s\" in %s for PatchImport().", function, tempModuleName);
 
   return false;
 }
@@ -354,13 +339,12 @@ bool PatchImport(char* importModule, LPCSTR function, void* patchFunction)
   return PatchImport(NULL, importModule, function, patchFunction);
 }
 
-
-FARPROC GetImport(char* importModule, LPCSTR function)
+FARPROC _GetImport(const char *logline, char* importModule, LPCSTR function)
 {
   HMODULE module = GetModuleHandleA(importModule);
   if (module == NULL)
   {
-    logError("Could not find module \"%s\" in GetImport().", importModule);
+    logError("Could not find module \"%s\"", importModule, logline);
     return NULL;
   }
 
@@ -368,9 +352,9 @@ FARPROC GetImport(char* importModule, LPCSTR function)
   if (rval == NULL)
   {
     if ((DWORD)function < 0xFFFF)
-      logError("Could not find ordinal %d (0x%X) in module %s in GetImport().", (DWORD)function, (DWORD)function, importModule);
+      logError("Could not find ordinal %d (0x%X) in module %s (%s).", (DWORD)function, (DWORD)function, importModule, logline);
     else
-      logError("Could not find function \"%s\" in module %s in GetImport().", function, importModule);
+      logError("Could not find function \"%s\" in module %s (%s).", function, importModule, logline);
     return NULL;
   }
 
@@ -380,7 +364,7 @@ FARPROC GetImport(char* importModule, LPCSTR function)
 ///////////////////////////////   MEMORY   //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 
-void WriteNops(void* dest, u32 size)
+void _WriteNops(const char *logline, void* dest, u32 size)
 {
   memPatch tempPatch;
   tempPatch.location = dest;
@@ -395,19 +379,19 @@ void WriteNops(void* dest, u32 size)
   } 
   __except(1)
   {
-    logError("Wrote to invalid memory address 0x%08X[%d] in WriteNops().", (u32)dest, size);
+    logError("Wrote to invalid memory address 0x%08X[%d] (%s).", (u32)dest, size, logline);
   }
   VirtualProtect(dest, size, lastAccess, &lastAccess);
   return;
 }
 
-void WriteNops(u32 dest, u32 size)
+void _WriteNops(const char *logline, u32 dest, u32 size)
 {
-  WriteNops((void*)dest, size);
+  _WriteNops(logline, (void*)dest, size);
   return;
 }
 
-void WriteMem(void* dest, void* source, u32 size)
+void _WriteMem(const char *logline, void* dest, void* source, u32 size)
 {
   memPatch tempPatch;
   tempPatch.location = dest;
@@ -415,11 +399,11 @@ void WriteMem(void* dest, void* source, u32 size)
   memcpy_s(tempPatch.patch, 128, dest, size);
   changes.push_back(tempPatch);
 
-  WriteMemRaw(dest, source, size);
+  _WriteMemRaw(logline, dest, source, size);
   return;
 }
 
-void WriteMemRaw(void* dest, void* source, u32 size)
+void _WriteMemRaw(const char *logline, void* dest, void* source, u32 size)
 {
   VirtualProtect(dest, size, PAGE_EXECUTE_READWRITE, &lastAccess);
   __try
@@ -428,58 +412,58 @@ void WriteMemRaw(void* dest, void* source, u32 size)
   } 
   __except(1)
   {
-    logError("Wrote to invalid memory address 0x%08X[%d] in WriteMemRaw().", (u32)dest, size);
+    logError("Wrote to invalid memory address 0x%08X[%d] (%s).", (u32)dest, size, logline);
   }
   VirtualProtect(dest, size, lastAccess, &lastAccess);
   return;
 }
 
-void WriteMem(u32 dest, void* source, u32 size)
+void _WriteMem(const char *logline, u32 dest, void* source, u32 size)
 {
-  WriteMem((void*)dest, source, size);
+  _WriteMem(logline, (void*)dest, source, size);
   return;
 }
 
-void WriteMemRaw(u32 dest, void* source, u32 size)
+void _WriteMemRaw(const char *logline, u32 dest, void* source, u32 size)
 {
-  WriteMemRaw((void*)dest, source, size);
+  _WriteMemRaw(logline, (void*)dest, source, size);
   return;
 }
 
-void JmpPatch(void* dest, void* patch)
+void _JmpPatch(const char *logline, void* dest, void* patch)
 {
   u8 temp[5];
   temp[0] = 0xE9;
   *(int*)&temp[1] = (int)dest - (int)patch - 5;
-  WriteMem(dest, temp, 5);
+  _WriteMem(logline, dest, temp, 5);
   return;
 }
 
-void JmpPatch(u32 dest, void* patch)
+void _JmpPatch(const char *logline, u32 dest, void* patch)
 {
-  JmpPatch((void*)dest, patch);
+  _JmpPatch(logline, (void*)dest, patch);
   return;
 }
 
-void CallPatch(void* dest, void* patch)
+void _CallPatch(const char *logline, void* dest, void* patch)
 {
   u8 temp[5];
   temp[0] = 0xE8;
   *(int*)&temp[1] = (int)dest - (int)patch - 5;
-  WriteMem(dest, temp, 5);
+  _WriteMem(logline, dest, temp, 5);
   return;
 }
 
-void CallPatch(u32 dest, void* patch)
+void _CallPatch(const char *logline, u32 dest, void* patch)
 {
-  CallPatch((void*)dest, patch);
+  _CallPatch(logline, (void*)dest, patch);
   return;
 }
 
-void Revert()
+void _Revert(const char *logline)
 {
   for each (memPatch i in changes)
-    WriteMemRaw(i.location, i.patch, i.patchSize);
+    _WriteMemRaw(logline, i.location, i.patch, i.patchSize);
   changes.clear();
   return;
 }

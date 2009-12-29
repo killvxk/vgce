@@ -1,0 +1,90 @@
+EXECUTION ERROR CODES:
+
+1000: Another instance is already running.
+1001: Could not start the renderer. Please ensure your display is set to 32 bits.
+1002: Could not create the Graphics Device. DirectX is unavailable.
+
+1004: Could not find the Data directory.
+1005: ?
+
+1010: It is recommended that you update your graphics card drivers to avoid compatibility issues.
+1011: It is required that you upgrade your graphics card drivers to avoid serious issues with the game.
+1012: The game has issues with this card in multi GPU mode.
+
+2000: Configuration Script Failed.
+2001: The system is below our min spec, and we cannot run at all.
+2002: The system is below our min spec, and you may experience graphical, performance, or audio issues.
+2003: You are running a version of Vista that has issues with graphics cards with large amounts of VRAM.
+
+
+GL ERROR CODES:
+
+5511: The system clock time/date is invalid.  Please verify the time and date on your computer and try again.
+5512: The system clock time/date continues to be invalid. Please verify the time and date on your computer and try again.
+5513: The license definitions are invalid. Please refer to your customer service website to resolve this issue.
+5514: The registration code is invalid for this product. Find your registration code either in your confirmation email, your game manual/product packaging, or game card.
+5515: For security reasons, only a limited number of concurrently active licenses are allowed.  This limit has been reached. Please wait until one of the other licenses auto-expires, then try again.
+5516: The registration code is invalid for this product. Find your registration code either in your confirmation email, your game manual/product packaging, or game card.
+5517: A license can not be retrieved for this game.  Please try again later.
+5531: The game seems to be improperly configured so it is unable to start. Please reinstall your game.
+5532: The game is not able to start properly. Please reinstall your game.
+5533: The game seems to be tampered with.  Please reinstall your game.
+5534: There is a problem with verifying ownership of your game.  Please wait a few minutes and try again.
+5535: The license seems to be improperly configured. Please wait a few minutes and try again.
+5536: The license server is down. Please wait a few minutes and try again.
+5560: The game's registry seems to be improperly configured so it is unable to launch. Please reinstall your game.
+5570: The game installation has become corrupt.  Please reinstall.
+5571: The game seems to be missing configuration files so it is unable to launch. Please reinstall your game.
+5572: The game's configuration file is corrupt. Please reinstall your game.
+5573: There is a problem with verifying ownership of your game.  Please verify your game registration code and reinstall your game.
+5574: The game needs access to the internet in order to verify ownership of this game.  Please ensure that your computer is online and try again.
+5575: Thank you for your interest in this game; however, the trial period for this game has ended.  To continue playing, please purchase the full version.”
+5580: Out of system resources. Please reboot your computer and try again.
+5600: The game can not establish a connection with the internet.  Please verify that you are online and try again.
+5601: There seems to be a problem connecting to the license servers.  Please reinstall and try again.
+5602: There seems to be a problem contacting the license server.  Ensure your internet connection is active and try again in a few minutes.
+5603: There seems to be a problem with the license server.  Please try again in a few minutes.
+5604: There seems to be a problem with establishing a connection to the internet.  Please shutdown other applications and try again or reboot your computer.
+5622: For security reasons, only a limited number of machines can ever be licensed by a single purchase.  This limit has been reached. Please purchase another registration code, reinstall, and then try again.
+5627: This game's registration code is invalid.  Please reinstall the game.
+5631: This game is not configured to be released at this time.  Please try later.
+
+
+SECUROM ERROR CODES:
+
+1000: SoftICE
+2000: Some debugging tool was detected.
+3000: SoftICE
+4000: Some debugging tool was detected.
+5000: Some file monitor or Registry monitor was detected.
+5001: Disk Monitor (SysInternals)
+5002: OllyDebug
+5003: IDA Pro
+5004: SoftIce
+5005: Kakeeware API monitor
+5006: Syser debugger
+5007: Anti-Blaxx
+5008: Starforce Nightmare
+5009: Virtual CD Hide
+5010: SR7.Stop
+5011: LordPE process dumper
+5012: Bustrace
+5013: Starf*ck
+5014: Safedisc4 hider
+5015: Some API monitor was detected.
+5016: Some File Monitor was detected.
+5017: Some Registry Monitor was detected.
+5018: Prot.Stop
+5019: Curerom
+5020: Sys Analyser
+5021: PE Browse
+5022: SD4Sucks
+5023: YASU or ACID
+5024: Process Explorer (SysInternals)
+5025: Process Monitor (SysInternals)
+6000: Some tool is hooking SecuRom
+7000: An emulation tool modified PC settings
+7001: An emulation tool modified PC settings (HKEY_LOCAL_MACHINE\SYSTEM\MountedDevices\)
+8001-8003: Some debugging tool was detected.
+8004-8006: SoftIce
+8007-8017: Some debugging tool was detected.

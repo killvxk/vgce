@@ -1,0 +1,121 @@
+
+EXISTING CONSOLE COMMANDS
+  reloadUI
+  timingInfo
+  port
+  charmport
+  worldport
+  setrawpos
+  showplayer
+  togglehelm
+  togglecloak
+  HeapUsage
+  ObjUsage
+  pitchLimit
+  logout
+  whois
+  fontcolor
+  bgcolor
+  highlightcolor
+  fontsize
+  font
+  consolelines
+  clear
+  proportionaltext
+  spacing
+  settings
+  default
+  closeconsole
+  repeat
+  AppendLogToFile
+  help
+  quit
+  ver
+  set
+  cvar_reset
+  cvar_default
+  cvarlist
+  gxRestart
+  showDetailDoodads
+  maxLOD
+  showCull
+  setShadow
+  waterRipples
+  waterParticulates
+  showShadow
+  showLowDetail
+  showSimpleDoodads
+  detailDoodadAlpha
+  characterAmbient
+  SkySunGlare
+
+
+REMOVED CONSOLE COMMANDS
+  perf
+  MemUsage
+  HeapUsage2
+  setmap
+  
+  
+COMMANDLINE OPTIONS
+  -800x600              Starts the program in 800 x 600 resolution.
+  -1024x768             Starts the program in 1024 x 768 resolution.
+  -1280x960             Starts the program in 1280 x 960 resolution.
+  -1280x1024            Starts the program in 1280 x 1024 resolution.
+  -1600x1200            Starts the program in 1600 x 1200 resolution.
+  -16bit                
+  -uptodate
+  -nosound              Starts the program with no sound.
+  -soundchaos
+  -nofixlag
+  -d16
+  -d24
+  -d32
+  -windowed             Starts the program in windowed mode.
+  -hwdetect             Performs hardware detection and makes changes to all settings based on your hardware.
+  -console
+  -gxoverride
+
+  -d3d
+  -datadir
+  -nolagfix
+  -loadfile
+  -gametype
+  -opengl
+  -swtnl
+  -timedemo
+  -rez
+  -depth
+  -detail
+  -sound
+  -fullscreen           Starts the program in full screen mode.
+  -22050
+  -nowarnings
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

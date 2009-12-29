@@ -1,8 +1,6 @@
 /*
  Code written by Adam Heinermann
  Last Updated: October 31st, 2009
- Not for sale.
- Want to remove this? Go fuck yourself. Noob.
 */
 
 #include <stdio.h>
@@ -10,10 +8,6 @@
 #include <fstream>
 #include <windows.h>
 #include <vector>
-
-#ifndef ThisModuleName
-#define ThisModuleName "Starcraft.exe"
-#endif
 
 // Typedefs
 typedef unsigned __int8  u8 ;
@@ -29,6 +23,10 @@ typedef signed   __int64 s64;
 // Variables
 #define BUFFER_SIZE 1024
 
+#define __TOSTRING(l) #l
+#define _TOSTRING(l) __TOSTRING(l)
+#define FILELINE __FILE__ ":" _TOSTRING(__LINE__)
+
 // Logger
 void logfast(char* file, const char* format, ...);
 void logError(const char* format, ...);
@@ -42,23 +40,48 @@ void logAdd(const char* format, ...);
 void logEnd();
 
 // Imports
-IMAGE_THUNK_DATA32* GetImportsList(char* sourceModule, char* importModule);
-IMAGE_THUNK_DATA32* GetImportsList(char* importModule);
-DWORD* GetFunctionsList(char* sourceModule, char* importModule);
-DWORD* GetFunctionsList(char* importModule);
+#define GetImportDescriptor(m) _GetImportDescriptor(FILELINE, m)
+IMAGE_IMPORT_DESCRIPTOR* _GetImportDescriptor(const char *logline, HMODULE module);
+IMAGE_THUNK_DATA32*      _GetImportsList(const char *logline, char* sourceModule, char* importModule);
+IMAGE_THUNK_DATA32*      _GetImportsList(const char *logline, char* importModule);
+DWORD*                   _GetFunctionsList(const char *logline, char* sourceModule, char* importModule);
+DWORD*                   _GetFunctionsList(const char *logline, char* importModule);
+/* These functions are not specifically made for public use */
+
 bool PatchImport(char* sourceModule, char* importModule, LPCSTR function, void* patchFunction);
 bool PatchImport(char* importModule, LPCSTR function, void* patchFunction);
-FARPROC GetImport(char* importModule, LPCSTR function);
+/* Creates a detour for the specified import function in any loaded module */
+
+#define GetImport(i,f) _GetImport(FILELINE, i, f)
+FARPROC                _GetImport(const char *logline, char* importModule, LPCSTR function);
+/* Retrieves the address of the imported function from the specified module */
 
 // Memory
-void WriteNops(void* dest, u32 size);
-void WriteNops(u32 dest, u32 size);
-void WriteMem(void* dest, void* source, u32 size);
-void WriteMem(u32 dest, void* source, u32 size);
-void JmpPatch(void* dest, void* patch);
-void JmpPatch(u32 dest, void* patch);
-void CallPatch(void* dest, void* patch);
-void CallPatch(u32 dest, void* patch);
-void Revert();
-void WriteMemRaw(void* dest, void* source, u32 size);
-void WriteMemRaw(u32 dest, void* source, u32 size);
+#define WriteNops(d,s) _WriteNops(FILELINE, d, s)
+void _WriteNops(const char *logline, void* dest, u32 size);
+void _WriteNops(const char *logline, u32 dest, u32 size);
+/* Writes NOPs to the specified destination */
+
+#define WriteMem(d,s,l) _WriteMem(FILELINE, d, s, l)
+void _WriteMem(const char *logline, void* dest, void* source, u32 size);
+void _WriteMem(const char *logline, u32 dest, void* source, u32 size);
+/* Writes data to the specified destination from the source */
+
+#define JmpPatch(d,p) _JmpPatch(FILELINE, d, p)
+void _JmpPatch(const char *logline, void* dest, void* patch);
+void _JmpPatch(const char *logline, u32 dest, void* patch);
+/* Writes a jump to the specified patch at the destination */
+
+#define CallPatch(d,p) _CallPatch(FILELINE, d, p)
+void _CallPatch(const char *logline, void* dest, void* patch);
+void _CallPatch(const char *logline, u32 dest, void* patch);
+/* Writes a call to the specified patch at the destination */
+
+#define Revert() _Revert(FILELINE)
+void _Revert(const char *logline);
+/* Reverts all changes made with any function except for WriteMemRaw */
+
+#define WriteMemRaw(d,s,l) _WriteMemRaw(FILELINE, d, s, l)
+void _WriteMemRaw(const char *logline, void* dest, void* source, u32 size);
+void _WriteMemRaw(const char *logline, u32 dest, void* source, u32 size);
+/* Writes to memory and does not include the change in the changes list */

@@ -67,7 +67,10 @@ Commandline:
 
     ddemulate       Fixes vista problem.
     nosound         Disables game sound.
-
+    pirate          (Earlier versions only)
+    nospawn         (Earlier versions only)
+    rdtsc           (Earlier versions only)
+    
 
 Registry Keys:
 

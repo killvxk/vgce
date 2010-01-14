@@ -40,7 +40,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 135    BOOL     __stdcall SNet135(signed int playerID, const char *buffer, unsigned int length)
 136    BOOL     __stdcall SNet136(int a1, int a2, int a3)
 137    BOOL     __stdcall SNetGetPlayerNames(DWORD flags)
-138    BOOL     __stdcall SNetCreateLadderGame(char *gameName, char *gamePassword, char *gameDataString, DWORD gameType, int a5, int a6, u8 *GameTemplateData, u32 GameTemplateSize, u32 playerCount, char *playerName, char *a11, u32 *playerID)
+138    BOOL     __stdcall SNetCreateLadderGame(char *gameName, char *gamePassword, char *gameDataString, DWORD gameType, int a5, int a6, char *GameTemplateData, int GameTemplateSize, int playerCount, char *playerName, char *a11, int *playerID)
 139    BOOL     __stdcall SNetReportGameResult(unsigned int a1, int size, int a3, int a4, int a5)
 140    BOOL     __stdcall SNetCheckDataFile(int a1, int a2, int a3, int a4)
 141    int      __stdcall SNetSendLeagueCommand(char *cmd, char *callback)
@@ -92,7 +92,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 260    BOOL     __stdcall SFileDdaInitialize(HANDLE directsound)
 261    BOOL     __stdcall SFileDdaSetVolume(HANDLE directsound, signed int bigvolume, signed int volume)
 262    BOOL     __cdecl   SFileDestroy()
-263    BOOL     __stdcall SFileEnableDirectAccess(HANDLE hFile)
+263    BOOL     __stdcall SFileEnableDirectAccess(BOOL access)
 264    BOOL     __stdcall SFileGetFileArchive(HANDLE hFile, HANDLE archive)
 265    LONG     __stdcall SFileGetFileSize(HANDLE hFile, LPDWORD lpFileSizeHigh)
 266    BOOL     __stdcall SFileOpenArchive(char *archivename, DWORD dwPriority, DWORD dwFlags, HANDLE *handle)
@@ -137,7 +137,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 
 311                       SBltDestroy()
 312    BOOL     __stdcall SBltGetSCode(unsigned int maxiterations, char *buffer, size_t buffersize, char *loopstring)
-313    BOOL     __stdcall SBltROP3(int maxiterations, int lpSurface, int width, int height, int width2, int pitch, int a7, unsigned DWORD rop)
+313    BOOL     __stdcall SBltROP3(int maxiterations, int lpSurface, int width, int height, int width2, int pitch, int a7, DWORD rop)
 314    BOOL     __stdcall SBltROP3Clipped(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10)
 315    BOOL     __stdcall SBltROP3Tiled(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10)
 
@@ -264,9 +264,9 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 465    void    __stdcall SErrSetLastError(DWORD dwErrCode)
 466    void    __stdcall SErrReportNamedResourceLeak(char *resourceName, int a2)
 467    void    __stdcall SErrReportResourceLeak(char *resourceName)
-468    BOOL    __stdcall SErrSuppressErrors(BOOL suppressErrors)
-469    void    __stdcall SErrRegisterHandler(int)
-470    void    __stdcall SErrUnregisterHandler(int)
+468    void    __stdcall SErrSuppressErrors(BOOL suppressErrors)
+469    void    __stdcall SErrRegisterHandler(int a1)
+470    void    __stdcall SErrUnregisterHandler(int a1)
 471    unsigned int __stdcall Storm471(void *a1, unsigned int a2, int a3)   // WC3
 472    BOOL    __stdcall SCmdGetBool(int a1)
 473    int     __stdcall SCmdGetNum(int a1)
@@ -313,7 +313,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 514    BOOL    __stdcall SMsgUnregisterKeyUp(int a1, int a2, int a3)     // SMSK
 515    BOOL    __stdcall SMsgUnregisterMessage(int a1, int a2, int a3)     // SMSG
 516    int     __stdcall SMsg516(int a1)                 // calls 412.. WC3 does weird stuff here
-517    BOOL    __stdcall SMsgSetDefaultWindow(int a1)
+517    BOOL    __stdcall SMsgSetDefaultWindow(HWND window)
 518    HWND    __cdecl   SMsgGetDefaultWindow()
 519    BOOL    __stdcall SMsg519(int a1, int a2, int a3)         // Unregister SMSI
 
@@ -361,7 +361,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 562    BOOL    __cdecl   SErrDisplayErrorFmt(DWORD dwMessageId, char *logfile, int logline, int unk, UINT uExitCode, char *format, ...)
 563    int     __cdecl   SErrIsDisplayingError()
 564    void    __stdcall SErrPrepareAppFatal(int a1, int a2)
-565    void    __cdecl   SErrSetLogTitleString(struct _RTL_CRITICAL_SECTION* a1)  // ????
+565    void    __cdecl   SErrSetLogTitleString(char* title)
 566    BOOL    __stdcall SErrDisplayAppFatal(int a1)
 567    LPTOP_LEVEL_EXCEPTION_FILTER   __cdecl   SErrCatchUnhandledExceptions()
 568    void         __cdecl   Storm568(struct _RTL_CRITICAL_SECTION *a1)    // WC3

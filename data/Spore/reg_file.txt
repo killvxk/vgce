@@ -1,4 +1,3 @@
-### Previous items are 'obsolete' ###
 0
 1
 110-aphilofieth
@@ -17273,15 +17272,15 @@ tribe_healtemplate
 tribe_tooltemplate
 CRG_migration
 spg_terraform
-EditorTrip
-Bell
-Cursor-Grab_Open
-Gloss
+editortrip
+bell
+cursor-grab_open
+gloss
 CRG_french_smallrock1
 CRG_french_largerock1
-CRG_partunlock
-CVG_partunlock
-CRG_potatoeye_smallrock1
+crg_partunlock
+cvg_partunlock
+crg_potatoeye_smallrock1
 decal_french
 decal_ashtray
 decal_arizona
@@ -17359,7 +17358,7 @@ Xplode7
 Xplode8
 Xplode9
 Xplode10
-BuildingMission
+buildingmission
 ColorSwatch_Color
 ColorSwatch_Frame
 ColorSwatch_FrameGlow
@@ -17369,3 +17368,6 @@ ColorSwatch_DefaultFrameGlow
 ColorSwatch_Shine
 ColorSwatch_DefaultShine
 ColorSwatch_ExpansionBackground
+defaultDeformHandle
+ula_salute01
+ula_salute02

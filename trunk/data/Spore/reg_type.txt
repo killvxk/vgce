@@ -12,7 +12,7 @@ building_traits	0x01AD2417
 carnivore
 cell
 cfg
-txt	0x024A0E52
+trigger	0x024A0E52
 chemical
 cilia
 cll
@@ -78,9 +78,9 @@ table	0x03055F61
 tga	0x2F7D0006
 trait_pill	0x01C3C4B3
 ttf	0x027C5CEF
-txt	0x029E333B
+utxt	0x029E333B
 ufo
-utxt	0x2B6CAB5F
+txt
 vcl
 vehicle_traits	0x01AD2418
 vp6

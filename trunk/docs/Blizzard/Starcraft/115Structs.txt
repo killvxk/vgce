@@ -76,6 +76,14 @@ CUNIT STRUCT
 +0xA8 - DWORD dwHPGainDuringBuild/Repair?
 +0xAC - WORD wRemainingBuildTime
 +0xAE - WORD wUnknown_AE
++0xB0 - WORD wLoadSlot1
++0xB2 - WORD wLoadSlot2
++0xB4 - WORD wLoadSlot3
++0xB6 - WORD wLoadSlot4
++0xB8 - WORD wLoadSlot5
++0xBA - WORD wLoadSlot6
++0xBC - WORD wLoadSlot7
++0xBE - WORD wLoadSlot8
 
 UNION
 WORD
@@ -89,6 +97,7 @@ CUNIT
 	IF Scarab/Interceptor - Parent
 	IF Building - Addon
 	IF Worker - Powerup Carried
+  
 UNION
 WORD
  +0xC4 - WORD wAddonBuildID
@@ -96,6 +105,7 @@ WORD
 CUNIT*
  +0xC4 - CUNIT* Unit_Unknown_2
 	IF Scarab/Interceptor - Next Unit in Parent Hangar
+  
 UNION
 BYTE
  +0xC8 - BYTE bScarabCount/bTechID
@@ -112,6 +122,7 @@ CUNIT
 +0xCD - BYTE bUpgradeLevel
 +0xCE - BYTE bIsCarryingSomething?/Going to carry something?/Targeting Resources?
 +0xCF - BYTE bResourceAmount
+
 UNION
 WORD/BYTE
  +0xD0 - WORD wResourcesContained/wPowerupDropTargetX
@@ -121,8 +132,8 @@ DWORD
  +0xD0 - CUNIT ResourceTarget/NydusConnected
  +0xD0 - CSPRITE NukeDot
 
- +0xD4 - DWORD dwUnknown_D4
- +0xD8 - DWORD dwUnknown_D8
+ +0xD4 - CUNIT *dwUnknown_D4
+ +0xD8 - CUNIT *dwUnknown_D8
 
 +0xDC - DWORD dwStatus
 	00000001(0x1) - Is Completed
@@ -158,7 +169,8 @@ DWORD
 +0xE1 - BYTE bWireframeRandomizer
 +0xE2 - BYTE bSecondaryOrderState
 +0xE3 - BYTE bUnknown_E3_Counter_Down
-
++0xE4 - DWORD dwVisibilityStatus
++0xE8 - DWORD dwUnknown_E8
 +0xEC - CUNIT* CurrentBuildUnit
 
 UNION
@@ -335,7 +347,7 @@ Units.dat Advanced flags:
  - 2000 - Contain Gas/Resource Container
  - 4000 - Robotic
  - 8000 - Detector
-
+ 
  - 10000 - Organic
  - 20000 - Creep
  - 40000 - Unused
@@ -344,7 +356,7 @@ Units.dat Advanced flags:
  - 200000 - Spell/Mana
  - 400000 - Perm Cloak
  - 800000 - NPC/Access?Pickup Item?
-
+   
  - 1000000 - Morph from Unit?/Check SUPPLY CouNT
  - 2000000 - Med overlay
  - 4000000 - Large overlay

@@ -1,4 +1,4 @@
-AaShotsPerTurret	0x0244EA3D
+AAShotsPerTurret	0x0244EA3D
 abductSpeedHighAltitude	0x065BA2DC
 abductSpeedLowAltitude	0x065BA2CC
 accessoryEffectSmoke	0x051DD6A1
@@ -4602,3 +4602,6 @@ eggScaleMultiplier
 creatureSightRadius
 creatureSightAngle
 creatureMaxHealth
+image-left-h3
+cameraDeadZone
+cameraMinLerp

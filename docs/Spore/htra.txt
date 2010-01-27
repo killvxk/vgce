@@ -1,0 +1,29 @@
+/* HTRA Files appear to be a table */
+
+/* This portion is in Big Endian */
+struct bigEndianHeader
+{
+  u32   fileSize;  // This equals actualFileSize/4 - 1
+}
+
+/* This portion is in Little Endian */
+struct header
+{
+  DWORD magic;    // ASCII "HTRA"
+  u32   unknown1; // 1
+  u32   unknown2; // 2
+  u32   fileSize; // This equals actualFileSize/4 - 1
+  u32   entryCount; // Number of entries
+  
+} Header;
+
+struct entry
+{
+  u32 index
+  u32 value;
+  u32 unknown;
+  u32 type; // Enum
+  {
+    typeFloat = 5,
+  }
+} entries[Header.entryCount];

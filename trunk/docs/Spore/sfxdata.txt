@@ -1,0 +1,13 @@
+/* Format is Big Endian 
+    Applies to #01A527DB files */
+
+struct header
+{
+  u8  unk1;
+  u8  unk2;
+  u16 sampleRate;
+  u32 unk2;
+  u32 unk3;
+  u32 dataSize;   // -12
+  u32 unknown;
+}

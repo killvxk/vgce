@@ -90,7 +90,7 @@ namespace HackUtil
   void CallPatch(u32 dest, void* patch);
   /* Writes a call to the specified patch at the destination */
 
-  void Revert(const char *logline);
+  void Revert();
   /* Reverts all changes made with any function except for WriteMemRaw */
 
   void WriteMemRaw(void* dest, void* source, u32 size);

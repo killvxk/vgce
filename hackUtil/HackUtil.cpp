@@ -375,7 +375,7 @@ namespace HackUtil
       
     u8 temp[5];
     temp[0] = 0xE9;
-    *(int*)&temp[1] = (int)dest - (int)patch - 5;
+    *(int*)&temp[1] = (int)patch - (int)dest - 5;
     WriteMem(dest, temp, 5);
     return;
   }
@@ -393,7 +393,7 @@ namespace HackUtil
 
     u8 temp[5];
     temp[0] = 0xE8;
-    *(int*)&temp[1] = (int)dest - (int)patch - 5;
+    *(int*)&temp[1] = (int)patch - (int)dest - 5;
     WriteMem(dest, temp, 5);
     return;
   }

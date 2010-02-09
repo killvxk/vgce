@@ -53,8 +53,8 @@ namespace HackUtil
   void append(FILE *file, const char* format, ...);
   /* Appends unmodified text to a file (does not follow with a newline) */
   
-  void logBytes(FILE *file, u8 *data, u32 size)
-  void logBytes(char *fileName, u8 *data, u32 size)
+  void logBytes(FILE *file, u8 *data, u32 size);
+  void logBytes(char *fileName, u8 *data, u32 size);
   /* Converts a series of bytes to text(hexadecimal format) and appends them to a file */
 
 // Imports

@@ -95,7 +95,7 @@ namespace HackUtil
     vsnprintf_s(hackbuffer, HU_BUFFER_SIZE, HU_BUFFER_SIZE, format, ap);
     va_end(ap);
     
-    fprintf_s(file, "%s\n", time.wHour, time.wMinute, time.wSecond, time.wMilliseconds, hackbuffer);
+    fprintf_s(file, "%s\n", hackbuffer);
     return;
   }
   
@@ -129,7 +129,7 @@ namespace HackUtil
     vsnprintf_s(hackbuffer, HU_BUFFER_SIZE, HU_BUFFER_SIZE, format, ap);
     va_end(ap);
     
-    fprintf_s(file, "%s", time.wHour, time.wMinute, time.wSecond, time.wMilliseconds, hackbuffer);
+    fprintf_s(file, "%s", hackbuffer);
     return;
   }
   

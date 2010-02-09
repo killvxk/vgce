@@ -1,11 +1,22 @@
-/*
- Code written by Adam Heinermann
- Last Updated: October 31st, 2009
+/*  HackUtil is a set of functions that make the use of common "hacking" functions easier.
+    Copyright (C) 2010  Adam Heinermann
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <stdio.h>
 #include <string>
-#include <fstream>
 #include <windows.h>
 #include <vector>
 
@@ -21,67 +32,68 @@ typedef signed   __int32 s32;
 typedef signed   __int64 s64;
 
 // Variables
-#define BUFFER_SIZE 1024
+#define HU_BUFFER_SIZE 1024
 
 #define __TOSTRING(l) #l
 #define _TOSTRING(l) __TOSTRING(l)
 #define FILELINE __FILE__ ":" _TOSTRING(__LINE__)
 
-// Logger
-void logfast(char* file, const char* format, ...);
-void logError(const char* format, ...);
-void logBegin(char* file);
-void logBegin();
-void logTime();
-void logBytes(u8* data, u32 size);
-void logBytes(char* file, u8* data, u32 size);
-void logBytes(FILE* file, u8* data, u32 size);
-void logAdd(const char* format, ...);
-void logEnd();
+namespace HackUtil
+{
+// Logging
+  void timeLog(const char *filename, const char* format, ...);
+  void timeLog(FILE *file, const char* format, ...);
+  /* Appends a line of text that contains a formatted time stamp */
+  
+  void log(const char *filename, const char* format, ...);
+  void log(FILE *file, const char* format, ...);
+  /* Appends a line of text to a file (follows with a newline) */
+  
+  void append(const char *filename, const char* format, ...);
+  void append(FILE *file, const char* format, ...);
+  /* Appends unmodified text to a file (does not follow with a newline) */
+  
+  void logBytes(FILE *file, u8 *data, u32 size)
+  void logBytes(char *fileName, u8 *data, u32 size)
+  /* Converts a series of bytes to text(hexadecimal format) and appends them to a file */
 
 // Imports
-#define GetImportDescriptor(m) _GetImportDescriptor(FILELINE, m)
-IMAGE_IMPORT_DESCRIPTOR* _GetImportDescriptor(const char *logline, HMODULE module);
-IMAGE_THUNK_DATA32*      _GetImportsList(const char *logline, char* sourceModule, char* importModule);
-IMAGE_THUNK_DATA32*      _GetImportsList(const char *logline, char* importModule);
-DWORD*                   _GetFunctionsList(const char *logline, char* sourceModule, char* importModule);
-DWORD*                   _GetFunctionsList(const char *logline, char* importModule);
-/* These functions are not specifically made for public use */
+  IMAGE_IMPORT_DESCRIPTOR* _GetImportDescriptor(HMODULE module);
+  IMAGE_THUNK_DATA32*      _GetImportsList(char* sourceModule, char* importModule);
+  DWORD*                   _GetFunctionsList(char* sourceModule, char* importModule);
+  /* These functions are not specifically made for public use */
 
-bool PatchImport(char* sourceModule, char* importModule, LPCSTR function, void* patchFunction);
-bool PatchImport(char* importModule, LPCSTR function, void* patchFunction);
-/* Creates a detour for the specified import function in any loaded module */
+  bool PatchImport(char* sourceModule, char* importModule, LPCSTR name, void* patchFunction);
+  bool PatchImport(char* importModule, LPCSTR name, void* patchFunction);
+  bool PatchImport(char* sourceModule, char* importModule, int ordinal, void* patchFunction);
+  bool PatchImport(char* importModule, int ordinal, void* patchFunction);
+  /* Creates a detour for the specified import function in any loaded module */
 
-#define GetImport(i,f) _GetImport(FILELINE, i, f)
-FARPROC                _GetImport(const char *logline, char* importModule, LPCSTR function);
-/* Retrieves the address of the imported function from the specified module */
+  FARPROC GetImport(char* importModule, LPCSTR name);
+  FARPROC GetImport(char* importModule, int ordinal);
+  /* Retrieves the address of the imported function from the specified module */
 
 // Memory
-#define WriteNops(d,s) _WriteNops(FILELINE, d, s)
-void _WriteNops(const char *logline, void* dest, u32 size);
-void _WriteNops(const char *logline, u32 dest, u32 size);
-/* Writes NOPs to the specified destination */
+  void WriteNops(void* dest, u32 size);
+  void WriteNops(u32 dest, u32 size);
+  /* Writes NOPs to the specified destination */
 
-#define WriteMem(d,s,l) _WriteMem(FILELINE, d, s, l)
-void _WriteMem(const char *logline, void* dest, void* source, u32 size);
-void _WriteMem(const char *logline, u32 dest, void* source, u32 size);
-/* Writes data to the specified destination from the source */
+  void WriteMem(void* dest, void* source, u32 size);
+  void WriteMem(u32 dest, void* source, u32 size);
+  /* Writes data to the specified destination from the source */
 
-#define JmpPatch(d,p) _JmpPatch(FILELINE, d, p)
-void _JmpPatch(const char *logline, void* dest, void* patch);
-void _JmpPatch(const char *logline, u32 dest, void* patch);
-/* Writes a jump to the specified patch at the destination */
+  void JmpPatch(void* dest, void* patch);
+  void JmpPatch(u32 dest, void* patch);
+  /* Writes a jump to the specified patch at the destination */
 
-#define CallPatch(d,p) _CallPatch(FILELINE, d, p)
-void _CallPatch(const char *logline, void* dest, void* patch);
-void _CallPatch(const char *logline, u32 dest, void* patch);
-/* Writes a call to the specified patch at the destination */
+  void CallPatch(void* dest, void* patch);
+  void CallPatch(u32 dest, void* patch);
+  /* Writes a call to the specified patch at the destination */
 
-#define Revert() _Revert(FILELINE)
-void _Revert(const char *logline);
-/* Reverts all changes made with any function except for WriteMemRaw */
+  void Revert(const char *logline);
+  /* Reverts all changes made with any function except for WriteMemRaw */
 
-#define WriteMemRaw(d,s,l) _WriteMemRaw(FILELINE, d, s, l)
-void _WriteMemRaw(const char *logline, void* dest, void* source, u32 size);
-void _WriteMemRaw(const char *logline, u32 dest, void* source, u32 size);
-/* Writes to memory and does not include the change in the changes list */
+  void WriteMemRaw(void* dest, void* source, u32 size);
+  void WriteMemRaw(u32 dest, void* source, u32 size);
+  /* Writes to memory and does not include the change in the changes list */
+};

@@ -271,6 +271,7 @@ CWEAPON
 +0x4 - CWEAPON* Next
 +0x8 - DWORD dwUnknown
 +0xC - CSPRITE* Sprite
+
 +0x58 - WORD wTargetGroundX
 +0x5A - WORD wTargetGroundY
 +0x5C - CUNIT* TargetUnit

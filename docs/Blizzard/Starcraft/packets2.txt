@@ -296,6 +296,11 @@ CLASS 2
 {{{
         u8  slot
         u8  owner
+        {
+            computer = 0,
+            open     = 1,
+            closed   = 2
+        };
 }}}
 CLASS 2
 

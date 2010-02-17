@@ -27,8 +27,8 @@ CUNIT STRUCT
 +0x34 - DWORD dwFlingySpeed
 +0x38 - DWORD dwUnknown_38_flingy
 +0x3C - DWORD dwUnknown_3C_flingy
-+0x40 - DWORD dwUnknown_40_flingy
-+0x44 - DWORD dwUnknown_44_flingy
++0x40 - DWORD dwFlingyCurrentSpeedX
++0x44 - DWORD dwFlingyCurrentSpeedY
 +0x48 - WORD wFlingyAcceleration
 +0x4A - WORD wUnknown_4A
 +0x4C - BYTE bPlayerID
@@ -115,6 +115,7 @@ BYTE
 CUNIT
  +0xC8 - CUNIT* Unit_Unknown_2
 	IF Scarab/Interceptor - Previous in Parent's Hangar
+  
 +0xCC - BYTE b_Unknown
 	-IF Interceptor/Scarab - InHanger?
 	-IF CreepUnit - timer between creep expansions
@@ -181,6 +182,7 @@ WORD/CUNIT
 CUNIT
  +0xF8 - CUNIT* PreviousPsiProvider
  +0xFC - CUNIT* NextPsiProvider
+ 
 +0x100 - DWORD dwPath_Unknown
 
 +0x106 - BYTE bUnused_106
@@ -244,10 +246,11 @@ CSPRITE STRUCT
 +0x4 - CSPRITE* next
 +0x8 - WORD wSpriteID
 +0xA - WORD owner
-+0xC - BYTE unknown
-+0xD - BYTE visibilityFlags
-+0xE - WORD unknown
-+0x10 - DWORD unknown
++0xC - BYTE visibilityFlags
++0xD - BYTE elevationLevel
++0xE - BYTE unknown_0xE
++0xF - BYTE selectionTimer
++0x10 - DWORD index
 +0x14 - WORD X
 +0x16 - WORD Y
 +0x18 - CIMAGE* mainGraphic

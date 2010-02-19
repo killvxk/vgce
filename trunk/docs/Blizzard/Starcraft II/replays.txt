@@ -1,0 +1,39 @@
+Replays are MPQ archives containing various pieces of data.
+
+REPLAY.GAME.EVENTS
+  Contains the game events (select, order, right click, etc).
+
+REPLAY.INFO
+  Contains header information. Mostly packed?
+
+  struct playerHead
+  {
+    u8    unknown1;
+    u8    length;
+    char  name[length]
+    u32   unknown2;
+  } players[16];
+  
+  The rest is currently unknown. Looks like some of it is compressed, and there's also a large string specifying the map.
+  
+
+REPLAY.MESSAGE.EVENTS
+  Contains information from chat messages and other non-game impact commands.
+  
+  struct chatMessage
+  {
+    u16   unknown (frame?)
+    u8    playerID;
+    u8    unknown (send type? [to all, to allies, etc])
+    u8    length;
+    char  message[length];
+  }
+  
+REPLAY.SMARTCAM.EVENTS
+  Assuming camera data for first-person replays.
+
+REPLAY.SYNC.EVENTS
+  Assuming this file maintains synchronization for more reliable data.
+
+SAVE.JPG
+  A preview of the map that was played on.

@@ -4,35 +4,53 @@ REPLAY.GAME.EVENTS
   Contains the game events (select, order, right click, etc).
 
 REPLAY.INFO
-  Contains header information. Mostly packed?
+  Contains header information.
 
   struct replayInfo
   {
+    u8     playerCount;
     struct playerHead
     {
-      u8    unknown1;
       u8    length;
       char  name[length]
-      u32   unknown2;
-    }     players[16];
-    u16   unknown1;     // creation date/time ??
-    u32   unknown2;     // creation date/time ??
+      u8    unknown;  // padding I guess?
+      u32   unknown;
+    }     players[playerCount];
+    
+    u8    unknown1;
+    u32   unknown2;
     u8    gtLen;
-    char  gameType[gtLen];
-    u16   unknown3;     // creation date/time ??
-    u32   unknown4;     // creation date/time ??
-    u32   unknown5;     // creation date/time ??
-    u32   unknown6;     // creation date/time ??
+    char  gameType[gtLen];  // This is only a guess
+    u8    unknown3;
+    u8    unknown4;
+    u8    unknown5;   // This value must be <= 4
+    u16   unknown6;
+    u32   unknown7;
+    u32   unknown8;
+    u8    unknown9;   // This value must be <= 0x1F
     u8    mapLen;
     char  mapFileName[mapLen];
-    u32   constant1;    // 0x6ED518ED
-    u32   constant2;    // 0x000050F8
-    u32   constant3;    // 0xDF07BB00
-    ... /* bunch of shit, probably map settings */
+    u32   unknown10;
+    u16   unknown11;    // This value must be 0
+    u16   unknown12;
+    u8    unknown13;
+    u8    unknown14;    // This value must be <= 7
+    u16   unknown15;    // This value must be <= 0xBB
     
+    ... /* Unknown. Assuming map/game settings. */
+    
+    char[]  mapTitle;
+    u8      playerDisplayCount;
+    struct  playerDisplay
+    {
+      u8    nameLen;
+      char  playerName[nameLen];
+      u8    raceLen;
+      char  raceName[raceLen];
+      u8    colorLen;
+      char  color[colorLen];  // Format is "a,r,g,b"; a is unused
+    }   displayPlayers[playerDisplayCount]
   }
-  The rest is currently unknown. Looks like some of it is compressed, and there's also a large string specifying the map.
-  Note: Replay files are hashed and verified.
 
 REPLAY.MESSAGE.EVENTS
   Contains information from chat messages and other non-game impact commands.

@@ -6,16 +6,33 @@ REPLAY.GAME.EVENTS
 REPLAY.INFO
   Contains header information. Mostly packed?
 
-  struct playerHead
+  struct replayInfo
   {
-    u8    unknown1;
-    u8    length;
-    char  name[length]
-    u32   unknown2;
-  } players[16];
-  
+    struct playerHead
+    {
+      u8    unknown1;
+      u8    length;
+      char  name[length]
+      u32   unknown2;
+    }     players[16];
+    u16   unknown1;     // creation date/time ??
+    u32   unknown2;     // creation date/time ??
+    u8    gtLen;
+    char  gameType[gtLen];
+    u16   unknown3;     // creation date/time ??
+    u32   unknown4;     // creation date/time ??
+    u32   unknown5;     // creation date/time ??
+    u32   unknown6;     // creation date/time ??
+    u8    mapLen;
+    char  mapFileName[mapLen];
+    u32   constant1;    // 0x6ED518ED
+    u32   constant2;    // 0x000050F8
+    u32   constant3;    // 0xDF07BB00
+    ... /* bunch of shit, probably map settings */
+    
+  }
   The rest is currently unknown. Looks like some of it is compressed, and there's also a large string specifying the map.
-  
+  Note: Replay files are hashed and verified.
 
 REPLAY.MESSAGE.EVENTS
   Contains information from chat messages and other non-game impact commands.

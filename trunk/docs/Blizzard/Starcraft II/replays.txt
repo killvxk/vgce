@@ -55,15 +55,6 @@ REPLAY.INFO
 REPLAY.MESSAGE.EVENTS
   Contains information from chat messages and other non-game impact commands.
   
-  struct chatMessage
-  {
-    u16   unknown (frame?)
-    u8    playerID;
-    u8    unknown (send type? [to all, to allies, etc])
-    u8    length;
-    char  message[length];
-  }
-  
 REPLAY.SMARTCAM.EVENTS
   Assuming camera data for first-person replays.
 

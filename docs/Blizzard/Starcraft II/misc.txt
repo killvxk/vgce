@@ -1,0 +1,4 @@
+EndGame values
+  0x06    = Desync
+  0x0A    = Replay Desync
+  Default = Dropped

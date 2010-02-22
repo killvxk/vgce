@@ -1,0 +1,63 @@
+// Note: Coordinates like x/y use some unknown type (they are not floats).
+
+struct eventHead
+{
+  u8  seq;  // ignored if less than 16 ??
+  u8  playerID; // & 0x1F   // 00011111b is the player, 11100000b is unknown
+  u8  opcode;
+}
+
+
+-----
+[0x00]  Text Message
+  {
+    u8    len;
+    char  message[len];
+  }
+  // replay.message.events
+-----
+[0x06]  Alliance
+  {
+    u8  unknown[8];
+  }
+  // replay.game.events
+-----
+[0x80]  Unknown_0x80
+  {
+    u16 unknown1;
+    u16 unknown2;
+  }
+  // replay.message.events
+-----
+[0x81]  Move Screen
+  {
+    u32     unknown;
+    u32     unknown;
+    u32     unknown;
+    u32     unknown;
+    u32     flags;
+  }
+  // replay.game.events
+-----
+[0x83]  Minimap Ping
+  {
+    u32 x;
+    u32 y;
+  }
+  // replay.message.events
+-----
+[0xAC]  Select
+  {
+    u32   unknown1;
+    u8    unknown2;
+    u8    unknown3;
+    u8    unknown4;
+    u8    unknown5;
+    u8    unknown6;
+    u16   unknown7;
+    u8    count;
+    u32   units[count];
+    u32   unknown8;
+  }
+  // replay.game.events
+-----

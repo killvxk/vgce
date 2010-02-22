@@ -2,7 +2,7 @@
 
 struct eventHead
 {
-  u8  seq;  // ignored if less than 16 ??
+  u8  seq;  // ignored if (0 < seq < 16)
   u8  playerID; // & 0x1F   // 00011111b is the player, 11100000b is unknown
   u8  opcode;
 }
@@ -16,16 +16,38 @@ struct eventHead
   }
   // replay.message.events
 -----
+[0x05]  Game Start
+  {
+    // No Parameters
+  }
+  // replay.game.events
+-----
 [0x06]  Alliance
   {
     u8  unknown[8];
   }
   // replay.game.events
 -----
-[0x80]  Unknown_0x80
+[0x0B]  Unknown_0x0B  // order?
   {
-    u16 unknown1;
-    u16 unknown2;
+    u32   unknown1;
+    u32   unknown2;
+    u32   unknown3;
+    u32   unknown4;
+  }
+  // NOTE: The size of this is variable. Unknown.
+  // replay.game.events
+-----
+[0x1B]  Player Init/Joined
+  {
+    // No parameters
+  }
+  // replay.game.events
+-----
+[0x80]  Global/System Message
+  {
+    u16 unknown;
+    u16 messageID;  // unknown reference
   }
   // replay.message.events
 -----
@@ -46,18 +68,23 @@ struct eventHead
   }
   // replay.message.events
 -----
+[0x89]  Unknown_0x89
+  {
+    u32   unknown;
+  }
+  //  replay.game.events
+-----
 [0xAC]  Select
   {
-    u32   unknown1;
-    u8    unknown2;
-    u8    unknown3;
-    u8    unknown4;
-    u8    unknown5;
-    u8    unknown6;
-    u16   unknown7;
-    u8    count;
-    u32   units[count];
-    u32   unknown8;
+    u8  unknown1;
+    u8  unknown2;
+    u8  unknown3;
+    u8  unknown4;
+    u8  unknown5;
+    u8  unknown6;
+    u8  unknown7;
+    u8  count;
+    u32 units[count];
   }
   // replay.game.events
 -----

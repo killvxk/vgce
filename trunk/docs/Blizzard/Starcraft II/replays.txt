@@ -17,14 +17,22 @@ REPLAY.INFO
       u32   unknown;
     }     players[playerCount];
     
-    u8    unknown1;
-    u32   unknown2;
-    u8    gtLen;
-    char  gameType[gtLen];  // This is only a guess
-    u8    unknown3;
+    u32   unknown1;  // date or seed
+    u8    unknown2;  // date or seed
+    u8    unkDLen;
+    char  unkDefault[unkDLen];  // Dunno wtf this is
+    u8    allianceLocked;   // 0x01 if alliances are locked
     u8    unknown4;
     u8    unknown5;   // This value must be <= 4
-    u16   unknown6;
+    u8    unknown6;
+    u8    gameSpeed;
+          {
+            slower = 0x00
+            slow   = 0x01,
+            normal = 0x02,
+            fast   = 0x03,
+            faster = 0x04
+          }
     u32   unknown7;
     u32   unknown8;
     u8    unknown9;   // This value must be <= 0x1F
@@ -37,9 +45,15 @@ REPLAY.INFO
     u8    unknown14;    // This value must be <= 7
     u16   unknown15;    // This value must be <= 0xBB
     
-    ... /* Unknown. Assuming map/game settings. */
+    ... /* Unknown. Assuming map/game settings. No convention?? */
     
-    char[]  mapTitle;
+    u32     unknown19;  // date or seed
+    u8      unknown20;  // date or seed
+    u8      unknown21;
+    u32     unknown22;
+    u8      titleLen;
+    char    mapTitle[titleLen];
+    u8      unknown23;
     u8      playerDisplayCount;
     struct  playerDisplay
     {
@@ -52,6 +66,14 @@ REPLAY.INFO
     }   displayPlayers[playerDisplayCount]
   }
 
+  playerdata  // I can't really position this since it is variable
+  {
+    u16 color;
+    u8  race;
+    u8  handicap;
+    
+  }
+  
 REPLAY.MESSAGE.EVENTS
   Contains information from chat messages and other non-game impact commands.
   

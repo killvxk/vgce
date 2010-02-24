@@ -1,0 +1,21 @@
+EAbilStopCmd  = 0x04
+{
+  Stop  = 0,
+  HoldFire  = 1,
+  Cheer = 2,
+  Dance = 3,
+  Unknown = -1,
+  Count = 4
+}
+
+EAbilMoveCmd  = 0x06
+{
+  Move  = 0,
+  Patrol  = 1,
+  HoldPos = 2,
+  AcquireMove = 3,
+  Turn  = 4,
+  Unknown = -1,
+  Count = 5
+}
+

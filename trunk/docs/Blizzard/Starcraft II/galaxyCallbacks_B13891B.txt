@@ -19,3 +19,7 @@ void    AISpellPriority(unitgroup src, unitgroup dst);
 unit    AIGetScout(int player, int index, unit prev);
 void    AIWaveChange(int, wave, int, int);
 unit    AIEarlyDefScout(int player, unit prev);
+
+fixed   _unknown1(int, unit);
+void    _unknown2(int, unit, unitgroup);
+bool    _TriggerCallback(bool testConds, bool runActions);

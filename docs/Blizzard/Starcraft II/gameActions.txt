@@ -2,14 +2,21 @@
 
 struct eventHead
 {
-  u8  seq;  // ignored if (0 < seq < 16)
+  u8  seq;  // ignored if (0 < seq < 16) there are some special cases too that have yet to be defined
   u8  playerID; // & 0x1F   // 00011111b is the player, 11100000b is unknown
   u8  opcode;
 }
 
 
 -----
-[0x00]  Text Message
+[0x00]  Send Text To All
+  {
+    u8    len;
+    char  message[len];
+  }
+  // replay.message.events
+-----
+[0x02]  Send Text To Allies
   {
     u8    len;
     char  message[len];
@@ -28,19 +35,56 @@ struct eventHead
   }
   // replay.game.events
 -----
-[0x0B]  Unknown_0x0B  // order?
+[0x0B]  Unknown_0x0B  // Use Ability
   {
-    u32   unknown1;
-    u32   unknown2;
-    u32   unknown3;
-    u32   unknown4;
+    u8  unk1;
+    u8  unk2;
+    u8  unk3;
+    u8  unk4;
+    u8  unk5;
+    u8  AbilCategory;
+    u8  AbilCmd;
+    u8  unk8;
+    u32 unknown3;
+    u32 unknown4;
   }
   // NOTE: The size of this is variable. Unknown.
+  // replay.game.events
+-----
+[0x16]  Trade Resources
+  {
+    u32 unk1;
+    u32 unk2;
+    u32 unk3;
+    u32 mineralsRequested; // & 0x7F
+    u32 gasRequested; // & 0x7F
+    u32 unk4;
+  }
   // replay.game.events
 -----
 [0x1B]  Player Init/Joined
   {
     // No parameters
+  }
+  // replay.game.events
+-----
+[0x1D]  Hotkey slot 1
+  {
+    u16 type;
+    {
+      save    = 0x00,
+      recall  = 0x02
+    }
+  }
+  // replay.game.events
+-----
+[0x2D]  Hotkey slot 2
+  {
+    u16 type;
+    {
+      save    = 0x00,
+      recall  = 0x02
+    }
   }
   // replay.game.events
 -----
@@ -68,7 +112,7 @@ struct eventHead
   }
   // replay.message.events
 -----
-[0x89]  Unknown_0x89
+[0x89]  Unknown_0x89    // Followup on select
   {
     u32   unknown;
   }
@@ -77,14 +121,19 @@ struct eventHead
 [0xAC]  Select
   {
     u8  unknown1;
-    u8  unknown2;
+    u8  selectNone;
     u8  unknown3;
     u8  unknown4;
-    u8  unknown5;
-    u8  unknown6;
-    u8  unknown7;
-    u8  count;
-    u32 units[count];
+    u8  unknown5; // dominantUnitType?
+    
+    if (!selectNone)
+    {
+      u8  unkCount1;
+      u8  unkCount2;
+      u8  countTotal;
+      u32 units[countTotal];
+    }
   }
   // replay.game.events
 -----
+

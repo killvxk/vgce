@@ -5,7 +5,7 @@ REPLAY.GAME.EVENTS
 
 REPLAY.INFO
   Contains header information.
-
+  
   struct replayInfo
   {
     u8     playerCount;
@@ -21,11 +21,11 @@ REPLAY.INFO
     u8    unknown2;  // date or seed
     u8    unkDLen;
     char  unkDefault[unkDLen];  // Dunno wtf this is
-    u8    allianceLocked;   // 0x01 if alliances are locked
+    u8    allianceLocked;   // (allianceLocked & 0x01) if alliances are locked
     u8    unknown4;
     u8    unknown5;   // This value must be <= 4
     u8    unknown6;
-    u8    gameSpeed;
+    u8    gameSpeed;  // must be (gameSpeed & 0x07)
           {
             slower = 0x00
             slow   = 0x01,
@@ -49,10 +49,10 @@ REPLAY.INFO
     
     u32     unknown19;  // date or seed
     u8      unknown20;  // date or seed
-    u8      unknown21;
-    u32     unknown22;
-    u8      titleLen;
-    char    mapTitle[titleLen];
+    u32     unknown21;
+    u8      titleLen1;
+    u8      titleLen2;
+    char    mapTitle[(titleLen1 << 2) + titleLen2];
     u8      unknown23;
     u8      playerDisplayCount;
     struct  playerDisplay

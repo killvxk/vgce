@@ -7,6 +7,7 @@ struct eventHead
   u8  opcode;
 }
 
+// Note: Kind of looks like opcode is really just &0x0F; Not everything matches up though
 
 -----
 [0x00]  Send Text To All
@@ -38,15 +39,32 @@ struct eventHead
 [0x0B]  Unknown_0x0B  // Use Ability
   {
     u8  unk1;
-    u8  unk2;
-    u8  unk3;
+    u8  unitCountToSubtract;
+    u8  unitCountToAdd;
     u8  unk4;
     u8  unk5;
     u8  AbilCategory;
     u8  AbilCmd;
     u8  unk8;
-    u32 unknown3;
-    u32 unknown4;
+    u8  unk9;
+    u8  unk10;
+    u8  unk11;
+    u8  unk12;
+    u8  unk13;
+    u8  unk14;
+    u8  unk15;
+
+    if (unk15 > 0)
+    {
+      u8  unk15_2;
+    }
+
+    u8  unk16;
+    u32 x;      // ?
+    u32 y;      // ?
+    u32 z;      // ?
+    u32 unitID; // ?
+    
   }
   // NOTE: The size of this is variable. Unknown.
   // replay.game.events
@@ -79,6 +97,76 @@ struct eventHead
   // replay.game.events
 -----
 [0x2D]  Hotkey slot 2
+  {
+    u16 type;
+    {
+      save    = 0x00,
+      recall  = 0x02
+    }
+  }
+  // replay.game.events
+-----
+[0x3D]  Hotkey slot 3
+  {
+    u16 type;
+    {
+      save    = 0x00,
+      recall  = 0x02
+    }
+  }
+  // replay.game.events
+-----
+[0x4D]  Hotkey slot 4
+  {
+    u16 type;
+    {
+      save    = 0x00,
+      recall  = 0x02
+    }
+  }
+  // replay.game.events
+-----
+[0x5D]  Hotkey slot 5
+  {
+    u16 type;
+    {
+      save    = 0x00,
+      recall  = 0x02
+    }
+  }
+  // replay.game.events
+-----
+[0x6D]  Hotkey slot 6
+  {
+    u16 type;
+    {
+      save    = 0x00,
+      recall  = 0x02
+    }
+  }
+  // replay.game.events
+-----
+[0x7D]  Hotkey slot 7
+  {
+    u16 type;
+    {
+      save    = 0x00,
+      recall  = 0x02
+    }
+  }
+  // replay.game.events
+-----
+[0x8D]  Hotkey slot 8
+  {
+    u16 type;
+    {
+      save    = 0x00,
+      recall  = 0x02
+    }
+  }
+  // replay.game.events
+-----
+[0x9D]  Hotkey slot 9
   {
     u16 type;
     {
@@ -121,12 +209,11 @@ struct eventHead
 [0xAC]  Select
   {
     u8  unknown1;
-    u8  selectNone;
+    u8  unknown2;
     u8  unknown3;
-    u8  unknown4;
-    u8  unknown5; // dominantUnitType?
-    
-    if (!selectNone)
+    u16 unknown4; // dominantUnitType?
+
+    if (unknown4 != 0)
     {
       u8  unkCount1;
       u8  unkCount2;
@@ -136,4 +223,3 @@ struct eventHead
   }
   // replay.game.events
 -----
-

@@ -8,6 +8,8 @@ EAbilStopCmd  = 0x04
   Count = 4
 }
 
+Train = 0x05
+
 EAbilMoveCmd  = 0x06
 {
   Move  = 0,

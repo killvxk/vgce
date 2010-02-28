@@ -2,3 +2,25 @@ EndGame values
   0x06    = Desync
   0x0A    = Replay Desync
   Default = Dropped
+  
+
+const int c_playerTypeNone = 0;
+const int c_playerTypeUser = 1;
+const int c_playerTypeComputer = 2;
+const int c_playerTypeNeutral = 3;
+const int c_playerTypeHostile = 4;
+const int c_playerTypeReferee = 5;
+const int c_playerTypeSpectator = 6;
+
+const int c_teamColorDiffuse = 0;
+const int c_teamColorEmissive = 1;
+
+const int c_playerAny = -1;
+const int c_maxPlayers = 32;
+const int c_noMaxCount = 0;
+
+RANDOM = 0,
+TERRAN = 1,
+PROTOSS = 2,
+ZERG = 3,
+

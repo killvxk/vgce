@@ -1,0 +1,68 @@
+Members of Unit
+
+<FlagArray index="" value="1"/>
+  Values for index:     Bounce
+                        Turnable
+                        Movable
+                        Worker
+                        CreateVisible
+                        Unclickable
+                        Uncommandable
+                        Unhighlightable
+                        Untooltipable
+                        Unselectable
+                        Untargetable
+                        Uncursorable
+                        Hero
+                        IndividualSubgroups
+                        NoDraw
+                        PreventReveal
+                        PreventDefeat
+                        PreventDestroy
+                        DefeatReveal
+                        Uncloakable
+                        Missile
+                        Undetectable
+                        Unradarable
+                        UseLineOfSight
+                        PressForwardDisabled
+                        KillCredit
+                        TownAlert
+                        Invulnerable
+                        Destructible
+                        Cloaked
+                        Buried
+                        NoScore
+                        IgnoreTerrainZInit
+                        TurnBeforeMove
+                        AlwaysThreatens
+                        NoDeathEvent
+                        NoPortraitTalk
+                        TownCamera
+                        AIThreatGround
+                        AIThreatAir
+                        AILifetime
+                        AISiege
+                        AIDefense
+                        AICaster
+                        AISupport
+                        ShowResources
+                        ArmorDisabledWhileConstructing
+                        Pawnable
+
+<Collide index="" value="1"/>
+  Values for index:     Ground
+                        Air
+                        
+<Attributes index="" value="1"/>
+  Values for index:     Light
+                        Armored
+                        Biological
+                        Mechanical
+                        Robotic
+                        Psionic
+                        Massive
+                        Structure
+                        Hover
+                        Heroic
+                        

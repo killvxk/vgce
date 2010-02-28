@@ -1,0 +1,119 @@
+<PlacedObjects
+  version
+>
+  <Unit
+    id            Unique ID for the object.
+    variation     The variation of the object (unknown).
+    position      The position(coordinates) of the object.
+    rotation      The rotation of the object.
+    scale         The scale of the object ("x,y,z").
+    section       No idea.
+    unitType      The unit type, from UnitData.xml.
+    player        The player ID/owner. Default 0/Neutral.
+    resources     The amount of resources for the unit.
+  />
+  
+  <Point
+    id            Unique ID for the object.
+    variation     The variation of the object (unknown).
+    position      The position(coordinates) of the object.
+    rotation      The rotation of the object.
+    scale         The scale of the object ("x,y,z").
+    section       No idea.
+    type          The type of point.
+    name          The name of the point for trigger use.
+    color
+    model
+    animProps
+    sound
+    attachId
+    objectId
+    objectType
+    pathingSoftRadius
+    pathingHardRadius
+  />
+  
+  <Camera
+    id            Unique ID for the object.
+    variation     The variation of the object (unknown).
+    position      The position(coordinates) of the object.
+    rotation      The rotation of the object.
+    scale         The scale of the object ("x,y,z").
+    section       No idea.
+    name          The name of the camera for trigger use.
+    color
+    target        The target coordinates that the camera points to.
+  />
+  
+  <Doodad
+    id            Unique ID for the object.
+    variation     The variation of the object (unknown).
+    position      The position(coordinates) of the object.
+    rotation      The rotation of the object.
+    scale         The scale of the object ("x,y,z").
+    section       No idea.
+    type          The type of doodad.
+    tintColor
+  />
+  
+  <CameraValue
+    index         Values for index:     "FieldOfView", "AngleOfAttack", "Rotation"
+    value
+  />
+  
+  <Group
+    id
+    type
+    name
+    loot
+  />
+  
+  <GroupObject
+    id
+  />
+  
+  <PatrolPoint
+    id
+    waitTime
+  />
+  
+  <Flag
+    index         Values for index:     "UnitNoCreate", "PointHidden", "HeightOffset", "HeightAbsolute", "UnitHidden", "ForcePlacement", "DeferModelLoad", "CameraLockSource", "NoDoodadFootprint", "CameraHidden"
+    value
+  />
+  
+  <Texture
+    slot
+    props
+    link
+  />
+  
+  <Spawn
+    diff
+    chance
+    respawnChance
+    respawnTime
+  />
+  
+  <Resources
+    index
+    value
+  />
+  
+  <AIRebuild
+    index
+    value
+  />
+  
+  <AIActive
+    index
+    value
+  />
+  
+  <AIFlag
+    index
+    value
+  />
+  
+  
+</PlacedObjects>

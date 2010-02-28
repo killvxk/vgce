@@ -1,0 +1,68 @@
+struct  MapInfo
+{
+  DWORD   magic;  // 'MapI'
+  u32     unknown1;   //  0x15
+  u32     width;
+  u32     height;
+  u32     unknown2;   // version?? depth??
+  u32     unknown3;   // subversion??
+  char    tileset[];
+  char    title[];
+  u32     boundryLeft;
+  u32     boundryBottom;
+  u32     boundryRight;
+  u32     boundryTop;
+  u32     unknown4;
+  u32     unknown5;
+  char    loaderImagePath[];
+  u32     loaderImageFormat;  // enum names are made-up
+          {
+            stretch_none       = 0x00,
+            stretch_fullscreen = 0x01,
+            stretch_widescreen = 0x02
+          }
+  u32     unknown6; // (-1)
+  u32     unknown7;
+  u32     unknown8;
+  u32     unknownWidth;
+  u32     unknownHeight;
+  u32     unknown9;
+  u32     unknown10;
+  u8      playerCount;
+  struct playerStruct
+  {
+    u8      isUnused; // ?
+    u8      pUnk1;
+    u8      pUnk2;
+    u8      index;
+    u8      owner;
+            {
+              c_playerTypeNone      = 0,
+              c_playerTypeUser      = 1,
+              c_playerTypeComputer  = 2,
+              c_playerTypeNeutral   = 3,
+              c_playerTypeHostile   = 4,
+              c_playerTypeReferee   = 5,
+              c_playerTypeSpectator = 6
+            }
+    u8      pUnk3;
+    u8      pUnk4;
+    u8      pUnk5;
+    u32     unknown;  // -1 if no name or default name
+    char    playerName[];
+    u8      pUnk6;
+    u8      pUnk7;
+    u8      pUnk8;
+    u8      pUnk9;
+    u8      pUnk10;
+    u8      pUnk11;
+    u8      pUnk12;
+    u8      pUnk13;
+    u8      pUnk14;
+    u8      pUnk15;
+  } [playerCount];
+  
+  // unknown
+}
+
+// Looking for race, team, color, difficulty

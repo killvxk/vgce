@@ -69,6 +69,16 @@ struct eventHead
   // NOTE: The size of this is variable. Unknown.
   // replay.game.events
 -----
+[0x0D]  Hotkey slot 0
+  {
+    u16 type;
+    {
+      save    = 0x00,
+      recall  = 0x02
+    }
+  }
+  // replay.game.events
+-----
 [0x16]  Trade Resources
   {
     u32 unk1;

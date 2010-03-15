@@ -1,0 +1,19 @@
+char  archiveName[24];
+u32   unk_18;
+u32   unk_1C;
+u32   entryCount;
+u32   unk_24;
+u32   unk_28;
+
+struct entry
+{
+  u16   flags;    // 0x01 = folder
+  u16   stringLen;
+  u32   itemCount1;
+  u32   itemCount2;
+  u32   compressedSize;
+  u32   uncompressedSize;
+  u32   unk3;
+  u32   location;
+  char  name[stringLen];
+} entries[entryCount];

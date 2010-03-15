@@ -48,7 +48,7 @@ struct  MapInfo
     u8      pUnk3;
     u8      pUnk4;
     u8      pUnk5;
-    u32     unknown;  // -1 if no name or default name
+    u32     playerColor;  // -1 for default
     char    playerRace[];   // Null if random. Defined in "GameData\RaceData.xml"
     u8      pUnk6;
     u8      pUnk7;

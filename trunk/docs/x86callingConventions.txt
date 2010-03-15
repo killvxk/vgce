@@ -1,0 +1,14 @@
+__thiscall
+  First arg(this) passed in ecx.
+
+__stdcall, _stdcall
+  Everything pushed.
+
+__fastcall, _fastcall
+  First 2 args passed in ecx(a1), edx(a2).
+
+__cdecl, _cdecl
+  Everything pushed. Stack pointer not updated in function.
+
+
+Non-standard calling conventions are the result of the MSVC or other compiler's optimizations.

@@ -1,0 +1,10 @@
+-install
+-uninstall
+-service
+-manual
+-account
+-password
+
+-cdnkey
+-cdnticket
+-ipforcdn

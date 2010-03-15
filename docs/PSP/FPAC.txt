@@ -1,0 +1,9 @@
+DWORD magic; // 'FPAC'
+u32   unknown; // alignment? 0x02 (file alignment is 0x800)
+
+struct entry
+{
+  u32 fileSize;
+  u16 flags;      // 0x01 for file
+  u16 fileIndex;  // *alignment + 0x1000 for file offset
+}

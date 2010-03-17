@@ -62,7 +62,8 @@ Global Hotkeys:
 
     PrtSc               Saves a screenshot.
 
-    
+    CTRL+R              Toggle leaderboard display. (Only show the leader, or show all players)
+
 Commandline:
 
     ddemulate       Fixes vista problem.

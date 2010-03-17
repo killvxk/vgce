@@ -1,0 +1,178 @@
+Function decoration starts with '?'
+  ?name@@
+  ?name@class@@
+
+Beginning is a prefix character:
+  private             A
+  private             B
+  private static      C
+  private static      D
+  private virtual     E
+  private virtual     F
+
+  protected           I
+  protected           J
+  protected static    K
+  protected static    L
+  protected virtual   M
+  protected virtual   N
+
+  public              Q
+  public              R
+  public static       S
+  public static       T
+  public virtual      U
+  public virtual      V
+
+                      Y
+  __interrupt         Z
+
+Followed by suffix character:
+                      A
+  const               B
+  volatile            C
+  const volatile      D
+  
+  volatile            G
+  const volatile      H
+  
+  const               J
+  volatile            K
+  const volatile      L
+  
+Next is calling convention:
+  __cdecl                   A
+  __cdecl __saveregs        B
+  __pascal                  C
+  __pascal __saveregs       D
+  __thiscall                E
+  __thiscall __saveregs     F
+  __stdcall                 G
+  __stdcall __saveregs      H
+  __fastcall                I
+  __fastcall __saveregs     J
+  __clrcall                 K
+  __clrcall __saveregs      L
+  __msfastcall              M
+  
+Next is the return value, and following are the function parameters/modifiers:
+  &                   A#    Where # is a suffix.
+  & volatile          B#    Where # is a suffix.
+  signed char         C
+  char                D
+  unsigned char       E
+  short               F
+  unsigned short      G
+  int                 H
+  unsigned int        I
+  long                J
+  unsigned long       K
+  __segment           L
+  float               M
+  double              N
+  long double         O
+  *                   P#    Where # is a suffix.
+  * const             Q#    Where # is a suffix.
+  * volatile          R#    Where # is a suffix.
+  * const volatile    S#    Where # is a suffix.
+  
+  void                X
+
+And the ending:
+  ...) throw()        Z
+  ...) throw(void)    ZX
+  ...)                ZZ
+  ) throw()           @
+  ) throw(void)       @X
+  )                   @Z
+  
+
+Operator decoration starts with '??#' where # is an alphanumeric value
+  ??#name@@
+  ??#name@class@@
+
+Operator values:
+  constructor()       0
+  ~destructor()       1
+  operator new()      2
+  operator delete()   3
+  operator=()         4
+  operator>>()        5
+  operator<<()        6
+  operator!()         7
+  operator==()        8
+  operator!=()        9
+  operator[]()        A
+  operator char *()   B
+  operator->()        C
+  operator*()         D
+  operator++()        E
+  operator--()        F
+  operator-()         G
+  operator+()         H
+  operator&()         I
+  operator->*()       J
+  operator/()         K
+  operator%()         L
+  operator<()         M
+  operator<=()        N
+  operator>()         O
+  operator>=()        P
+  operator,()         Q
+  operator()()        R
+  operator~()         S
+  operator^()         T
+  operator|()         U
+  operator&&()        V
+  operator||()        W
+  operator*=()        X
+  operator+=()        Y
+  operator-=()        Z
+  operator=/()        _0
+  operator=%()        _1
+  operator=>>()       _2
+  operator=<<()       _3
+  operator=&()        _4
+  operator=|()        _5
+  operator=^()        _6
+  `vftable'()         _7
+  `vbtable'()         _8
+  `vcall'()           _9
+  `typeof'()          _A
+  `local static guard'()    _B
+  
+  `vbase destructor()                         _D
+  `vector deleting destructor'()              _E
+  `default constructor closure'()             _F
+  `scaler deleting destructor'()              _G
+  `vector constructor iterator'()             _H
+  `vector destructor iterator'()              _I
+  `vector vbase constructor iterator'()       _J
+  `virtual displacement map()                 _K
+  `eh vector constructor iterator'()          _L
+  `eh vector destructor iterator'()           _M
+  `eh vector vbase constructor iterator'()    _N
+  `copy constructor closure'()                _O
+  `udt returning'                             _P#   Where # is another operator value
+  ()                                          _Q
+  
+  `local vftable'()                           _S
+  `local vftable constructor closure'()       _T
+  operator new[]()                            _U
+  operator delete[]()                         _V
+  `omni callsig'()                            _W
+  `placement delete closure'()                _X
+  `placement delete[] closure'()              _Y
+  
+  `managed vector constructor iterator'()         __A
+  `managed vector destructor iterator'()          __B
+  `eh vector copy constructor iterator'()         __C
+  `eh vector vbase copy constructor iterator'()   __D
+  `dynamic initializer for 'function''()          __E
+  `dynamic atexit destuctor for 'function''()     __F
+  `vector copy constructor iterator'()            __G
+  `vector vbase copy constructor iterator'()      __H
+  `managed vector copy constructor iterator'()    __I
+  `local static thread guard'()                   __J
+  
+  

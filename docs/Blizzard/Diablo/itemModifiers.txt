@@ -1,0 +1,110 @@
+struct wordModifier       // sizeof 0x30
+{
+  char  *name;
+  int   type;
+  int   minValue;
+  int   maxValue;
+  char  unknown1[8];
+  int   unknown2;
+  int   unknown3;
+  int   unknown4;
+  int   unknown5;
+  int   unknown6;
+  int   unknown7;
+};
+
+enum  wordModifierTypes
+{
+  add_ChanceToHit            = 0,
+  sub_ChanceToHit            = 1,
+  add_DamagePer              = 2,
+  sub_DamagePer              = 3,
+  add_ToHitAndDamagePer      = 4,
+  sub_ToHitAndDamagePer      = 5,
+  add_Armor                  = 6,
+  sub_Armor                  = 7,
+  add_ResistFire             = 8,
+  add_ResistLightning        = 9,
+  add_ResistMagic            = 10,
+  add_ResistAll              = 11,
+  
+  add_SpellLevel             = 14,
+  add_Charges                = 15,
+  set_FireDamage             = 16,
+  set_LightningDamage        = 17,
+  
+  add_Strength               = 19,
+  sub_Strength               = 20,
+  add_Magic                  = 21,
+  sub_Magic                  = 22,
+  add_Dexterity              = 23,
+  sub_Dexterity              = 24,
+  add_Vitality               = 25,
+  sub_Vitality               = 26,
+  add_AllStats               = 27,
+  sub_AllStats               = 28,
+  add_DamageFromEnemies      = 29,
+  sub_DamageFromEnemies      = 30,
+  add_Life                   = 31,
+  sub_Life                   = 32,
+  add_Mana                   = 33,
+  sub_Mana                   = 34,
+  add_Durability             = 35,
+  sub_Durability             = 36,
+  set_Indestructable         = 37,
+  add_LightRadius            = 38,
+  sub_LightRadius            = 39,
+  
+  set_MultiShot              = 41,
+  set_FireArrowDamage        = 42,
+  set_LightningArrowDamage   = 43,
+  // blank                   = 44,
+  set_Throns                 = 45,
+  set_LoseAllMana            = 46,
+  set_NoHeal                 = 47,
+  
+  set_FireballDamage         = 50,
+  
+  set_AbsorbTrapDamage       = 52,
+  set_Knockback              = 53,
+  set_HitNoHeal              = 54,
+  set_LeachMana              = 55,
+  set_LeachLife              = 56,
+  set_PenetrateArmor         = 57,
+  set_AttackSpeed            = 58,
+  set_HitRecovery            = 59,
+  set_FastBlock              = 60,
+  add_DamagePt               = 61,
+  set_RandomArrowSpeed       = 62,
+  set_UnusualItemDamage      = 63,
+  set_Durability             = 64,
+  set_NoStrengthReq          = 65,
+  set_Charges                = 66,
+  set_FasterAttackSwing      = 67,
+  set_OneHanded              = 68,
+  set_DamageVsDeamons        = 69,
+  set_ResistAll              = 70,
+  
+  set_LoseHP                 = 72,
+  set_LifeStealing           = 73,
+  set_Infravision            = 74,
+  // armorClass              = 75,
+  set_LightningDamage        = 76,
+  set_ChargedBolts           = 77,
+  set_ResistFire             = 78,
+  // armorClass              = 79,
+  sub_ResistFire             = 80,
+  sub_ResistLightning        = 81,
+  sub_ResistMagic            = 82,
+  sub_ResistAll              = 83,
+  set_OccasionalTripleDamage = 84,
+  set_DecayingDamage         = 85,
+  set_2xMonst1xYou           = 86,
+  set_HugeDamageRand         = 87,
+  set_LowDurHighDamage       = 88,
+  set_ToHitAndDamagePer      = 89,
+  set_ExtraACvsDemons        = 90,
+  set_ExtraACvsUndead        = 91,
+  set_MoveManaToLife         = 92,
+  set_MoveLifeToMana         = 93,
+};

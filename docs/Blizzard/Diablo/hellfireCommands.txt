@@ -1,0 +1,54 @@
+Command Line Options (Can also be stored in "command.txt"):
+  dd_emulate          Direct Draw: Emulate
+  dd_backbuf          Direct Draw: Backbuffer
+  ds_noduplicates     Direct Sound: No Duplicates
+  Theoquest           Enables a quest that was previously left out.
+  Cowquest            Enables a quest that was previously left out.
+  NestArt             
+  Bardtest            Enables the Bard in the character selection.
+  Multitest           Enables Multiplayer mode.
+  Barbariantest       Enables the Barbarian in the character selection.
+
+  
+Registry Keys:
+  Fast Walk
+  Intro
+  Gamma Correction
+  Sound Volume
+  Music Volume
+
+  
+MPQ Archive Priorities:
+  diabdat.mpq         1000
+  patch_rt.mpq        2000
+  hellfire.mpq        8000
+  hfmonk.mpq          8100
+  hfbard.mpq          8110
+  hfbarb.mpq          8120
+  hfmusic.mpq         8200
+  hfvoice.mpq         8500
+  hfopt1.mpq          8600
+  hfopt2.mpq          8610
+  character/save      28672
+
+  
+Keyboard Shortcuts (Documented):
+    F1:    Open Help Screen
+    Esc:   Display Main Menu
+    Tab:   Display Auto-map
+    Space: Hide all info screens
+    S: Open Speedbook
+    B: Open Spellbook
+    I: Open Inventory screen
+    C: Open Character screen
+    Q: Open Quest log
+    F: Reduce screen brightness
+    G: Increase screen brightness
+    Z: Zoom Game Screen
+    + / -: Zoom Automap
+    
+    1 - 8: Use Belt item
+    F5, F6, F7, F8:     Set hot key for skill or spell
+    Shift + Left Click: Attack without moving
+    
+    

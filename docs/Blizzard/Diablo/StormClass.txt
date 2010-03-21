@@ -85,7 +85,7 @@ Class 1:
     u16
   }
   
-  0x0F  Cast Spell Terrain
+  0x0F  Cast Spell Ground
   {
     u8  y;
     u8  x;
@@ -105,7 +105,17 @@ Class 1:
     u16 id;
   }
   
+  0x13  Unknown Melee Weapon
+  {
+    u16 id;
+  }
+  
   0x14  Range Weapon Attack
+  {
+    u16 id;
+  }
+  
+  0x15  Unknown Range Weapon
   {
     u16 id;
   }
@@ -124,11 +134,21 @@ Class 1:
     u16
   }
   
-  0x1A  Resurrect Scroll
+  0x1A  Cast Spell Object
   {
     u16 target;
   }
-  
+
+  0x1B  Unknown
+  {
+    u16
+  }
+
+  0x1C  Unknown
+  {
+    u16
+  }
+
   0x1D  NPC Chat
   {
     u8  y;
@@ -178,12 +198,16 @@ Class 1:
   
   0x29  Unknown Item
   {
-    u32 ItemID;
+    u8  y;
+    u8  x;
+    u16 ItemID;
   }
   
   0x2A  Remove Item
   {
-    u32 ItemID;
+    u8  y;
+    u8  x;
+    u16 ItemID;
   }
   
   0x2B  Open Door
@@ -302,6 +326,11 @@ Class 1:
   0x53  Rebirth/Disappear
   {}
   
+  0x55  Cast Spell Object2
+  {
+    u16 target;
+  }
+
   0x58  Update Quest
   {
     u8
@@ -309,3 +338,43 @@ Class 1:
     u8
     u8
   }
+  
+  0x5B  Restart in Town
+  {}
+
+  0x5C  Unknown
+  {
+    u8
+    u8
+    u16
+    u16
+    u16
+  }
+  
+  0x5F  Unknown
+  {
+    u8
+    u8
+    u16
+  }
+  
+  0x61  Unknown
+  {}
+  
+  0x63  Unknown
+  {}
+  
+  0x64  Unknown
+  {}
+  
+  0x65  Unknown
+  {
+    u8 
+    u8 
+    u16
+    u16
+  }
+  
+  0x66  Unknown
+  {}
+  

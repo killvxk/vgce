@@ -1,0 +1,11 @@
+0       = Intro Cinematic
+1       = Go ingame
+3       = ingame
+4       = Change Menu
+5       = Set something then go ingame
+6       = Change Menu to Score screen
+7       = Change Menu to Score screen
+8       = Credits
+9       = Epilog
+10      = Play Cinematic with Intro
+default = error

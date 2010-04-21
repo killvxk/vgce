@@ -1,0 +1,19 @@
+Slave                     200
+Peasant/Peon              300
+Squire/Rogue              400
+Footman/Grunt             800
+Corporal/Slasher         1600
+Sergeant                 2400
+Lieutenant/Commander     3200
+Captain                  4000
+Major                    4800
+Knight/Raider            5200
+General                  5600
+Brigadier/Master         6000
+Marshall                 6400
+Lord/Slayer              6800
+Duke/Dictator            7200
+War Leader/War Chief     9600
+Demigod                 11400
+God                     11880
+Designer                12000

@@ -1,0 +1,31 @@
+namespace Commands
+{
+  enum Enum
+  {
+    unknown_1           = 1,    // sizeof 3
+  
+    BuildStructure      = 4,  //  sizeof 4
+    Cancel2             = 5,  //  sizeof 3
+    TargetOrderGround   = 6,  //  sizeof 7
+    TargetOrderUnk      = 7,    // sizeof 3
+    Cancel1             = 8,    // sizeof 3
+    InstantOrder        = 9,  // sizeof 11
+    CancelConstruction  = 10, //  sizeof 5
+    Upgrade             = 11, //  sizeof 4
+    Train               = 12, //  sizeof 4
+    CancelTrain         = 13, //  sizeof 3
+    Menu                = 14, //  sizeof 5
+    SendMessage         = 15, //  sizeof 36
+    CheatCode           = 16, //  sizeof 7
+    Unknown_17          = 17  //  sizeof 21
+
+  };
+  
+  struct CheatCode       // 16
+  {   DWORD codeFlags;  };
+  
+  struct TargetOrderGround    // 6
+  {   WORD  x;
+      WORD  y;  };
+      
+};

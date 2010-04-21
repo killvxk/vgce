@@ -1,0 +1,33 @@
+namespace Orders
+{
+  enum Enum
+  {
+    Stop                  = 2,
+    Move                  = 3,
+    Attack                = 4,
+    _Attack5              = 5,
+    _Attack6              = 6,
+    _Attack7              = 7,
+    _Attack8              = 8,
+
+    Harvest               = 10,
+    Return                = 11,
+    
+    Repair                = 14,
+
+    Healing               = 17,
+    Vision                = 18,
+    Invisibility          = 19,
+    RaiseDead             = 20,
+    UnholyArmor           = 21,
+    SummonWaterElemental  = 22,
+    SummonDaemon          = 23,
+    SummonSpider          = 24,
+    SummonScorpion        = 25,
+    RainOfFire            = 26,
+    CloudOfPoison         = 27,
+    
+    RebuildTownHall       = 30,
+    unknownLastEntry      = 31
+  };
+};

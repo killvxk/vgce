@@ -1,0 +1,72 @@
+enum  Owner
+{
+  Player1 = 0,
+  Player2 = 1,
+  Player3 = 2,
+  Player4 = 3,
+  Neutral = 4
+}
+
+enum  TileFlags
+{
+  Unwalkable    = 0x80
+};
+
+enum  UnitAvailability
+{
+  MASK_Footman    = 0x0001,
+  MASK_Peon       = 0x0002,
+  MASK_Catapault  = 0x0004,
+  MASK_Knight     = 0x0008,
+  MASK_Archer     = 0x0010,
+  MASK_Support    = 0x0020,
+  MASK_Summoner   = 0x0040,
+  MASK_Farm       = 0x0080,
+  MASK_Barracks   = 0x0100,
+  MASK_Church     = 0x0200,
+  MASK_Tower      = 0x0400,
+  MASK_TownHall   = 0x0800,
+  MASK_LumberMill = 0x1000,
+  MASK_Stables    = 0x2000,
+  MASK_Blacksmith = 0x4000,
+  MASK_Castle     = 0x8000,
+};
+
+struct saveFile
+{
+  char  saveName[32];     // Note: It is not safe to use more
+                          //       than 18 characters as it
+                          //       induces a Buffer Overflow.
+                          // Usually followed by a "0x00 0x1A"
+  DWORD unknown_20;       // Must be 0x00020000
+  DWORD unused_24;        // appears to be unused
+  DWORD game;             // Always 'War1'    @ 0x28
+  WORD  version;          // 0x43 (67) for the version I used
+  WORD  multiplayer;      //      @ 0x2E
+  char  unknown_30[566];
+  DWORD gameSpeed;        // 0 = slowest, 6 = fastest
+  DWORD musicVolume;      // 0-100%
+  DWORD soundVolume;      // 0-100%
+  DWORD mouseScroll;      // 0 = slowest, 6 = fastest
+  DWORD keyScroll;        // 0 = slowest, 6 = fastest
+  WORD  unitAvailability; // Masked     @ 0x5AA
+  char  unknown_5AC[52];  // Unknown; entry for each unit
+  WORD  unknown_5E0[19];  //
+  DWORD Lumber[5];        // Lumber for each player   @ 0x606
+  DWORD Gold[5];          // Gold fot each player   @ 0x61A
+  
+  // ~~~~ Unknown ~~~~ // messing with this stuff is
+                       // not wise; UI-related things
+  
+  WORD  tiles[64*64];           //  @ 0x1362
+  WORD  tileFlags[64*64];       // @ 0x3362
+  DWORD tileSomething[64*64];   // Didn't notice anything in particular   @ 0x5362
+  BYTE  fogOfWar[64*64*2];      // @ 0x9362
+  Unit  units[200];             // sizeof 92   @ 0xB362
+  struct unknown_FB42[100];     // sizeof 38   @ 0xFB42
+};
+
+//3806
+
+
+

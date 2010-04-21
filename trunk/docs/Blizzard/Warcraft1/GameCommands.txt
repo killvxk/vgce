@@ -1,0 +1,69 @@
+[Command Line]:
+  file=             Use an alternate config file. "config.war" is the default.
+  dlink             Use alternate direct link mode.
+  xtrapkts=         Specifies number of extra packets to use.
+  pktspeed=         Specifies the speed at which packets should be sent.
+
+  
+[Cheat Codes]:
+  sally shears                0x00000001    Reveal Fog of War
+  hurry up guys               0x00000002    Enable fast build
+  there can be only one       0x00000004    Invincibility and massive damage
+  eye of newt                 0x00000008    Receive all Spells
+  iron forge                  0x00000010    Receive all Upgrades
+  pot of gold                 0x00000020    Receive 10000 gold and 5000 lumber
+  ides of march               0x00000040    Skip to final campaign
+  crushing defeat             0x00000080    Instant loss
+  yours truly                 0x00000100    Instant win
+  corwin of amber             0x80000000    Enable level skipping
+
+  orc#      Level skipping command. Jumps to orc campaign #. Must be between 1 and 12.
+  human#    Level skipping command. Jumps to human campaign #. Must be between 1 and 12.
+
+  
+[Hotkeys]:
+  -/_         Decrease Game Speed
+  =/+         Increase Game Speed
+  
+  CTRL        Hold for multi-select
+  SHIFT       Hold to add/remove units from group
+  
+  F1          Help
+  F2          Recall Screen Position 1
+  F3          Recall Screen Position 2
+  F4          Recall Screen Position 3
+  SHIFT+F2    Save Screen Position 1
+  SHIFT+F3    Save Screen Position 2
+  SHIFT+F4    Save Screen Position 3
+  F5          Show Minimap
+  F6          Show Units
+  F7          Show Economy
+  F8          Show score and objective
+
+  F10         Menu
+  F11         Save Game
+  F12         Load Game
+  
+  RightClick    Move Screen over mouse cursor
+  Left          Move screen left
+  Right         Move screen right
+  Up            Move screen up
+  Down          Move screen down
+  
+  C               Center on current unit
+  G               Show Building Grid
+  CTRL/ALT +M     Mute Music
+  CTRL/ALT +S     Mute Sound
+  CTRL/ALT +O     Options Menu
+  CTRL/ALT +H     Help
+  CTRL/ALT +X     Exit Menu
+  
+  KP_9        Move Screen Up-Right
+  KP_8        Move Screen Up
+  KP_7        Move Screen Up-Left
+  KP_6        Move Screen Right
+  KP_4        Move Screen Left
+  KP_3        Move Screen Down-Right
+  KP_2        Move Screen Down
+  KP_1        Move Screen Down-Left
+

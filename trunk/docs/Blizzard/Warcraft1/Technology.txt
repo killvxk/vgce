@@ -1,0 +1,18 @@
+namespace Technology
+{
+  enum Enum
+  {
+    /*
+      Shields
+      Arrows
+      Swords
+      Animals
+      MinorSummoning
+      AOESpell
+      MajorSummoning
+      LifeSpell
+      VisionSpell
+      ArmorSpell
+    */
+  };
+};

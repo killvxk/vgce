@@ -1,0 +1,29 @@
+// Applies to DATA.WAR only
+
+struct entry
+{
+  DWORD dwFileSize; // &0xFFFFFF;  Fourth byte is used as a flag: 0x20000000 = compressed
+  char  data[dwFileSize];
+};
+
+struct header
+{
+  DWORD dwArchiveVersion;
+  DWORD dwEntries;
+  entry *sEntry[dwEntries];  // -1 if entry was deleted
+};
+
+
+// Actual C++
+struct _entry
+{
+  DWORD dwFileSize;
+  char  data[1];
+};
+
+struct _header
+{
+  DWORD   dwArchiveVersion;
+  DWORD   dwEntries;
+  _entry  *entry[1];
+};

@@ -1,10 +1,13 @@
--install
--uninstall
--service
--manual
--account
--password
+Arguments
+  -install
+  -uninstall
+  -service
+  -manual
+  -account
+  -password
 
--cdnkey
--cdnticket
--ipforcdn
+  -cdnkey
+  -cdnticket
+  -ipforcdn
+
+Commands

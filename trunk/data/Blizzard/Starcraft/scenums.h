@@ -135,7 +135,7 @@ enum TriggerOrder
     TRGORDER_Attack
 };
 
-enum PlayerTypes
+enum PlayerID
 {
     PLAYER_Player1,
     PLAYER_Player2,
@@ -374,7 +374,7 @@ enum raceID
     RACE_Inactive
 };
 
-enum playerID
+enum playerType
 {
     PLAYER_Inactive,
     PLAYER_ComputerGame,
@@ -621,7 +621,8 @@ enum unitIDs
     UNITID_AnyUnit,
     UNITID_Men,
     UNITID_Buildings,
-    UNITID_Factories
+    UNITID_Factories,
+    UNITID_TrigMax
 };
 
 enum upgradeIDs

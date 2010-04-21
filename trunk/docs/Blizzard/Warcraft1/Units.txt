@@ -1,0 +1,102 @@
+struct Unit
+{
+  short graphicOffset_X;  // 0x00
+  short graphicOffset_Y;  // 0x02
+  DWORD unknown_04;
+  WORD  unknown_06;
+  short minimapOffset_X;  // 0x08
+  short minimapOffset_Y;  // 0x0A
+  DWORD flags;            // 0x0C
+  DWORD unknown_10;
+  int   health;   // 0x14
+  BYTE  unknown_18;
+  BYTE  UnitType;   // 0x19
+  BYTE  unknown_1A;
+  BYTE  Graphic;  // Unknown enum  @ 0x1B
+  BYTE  Owner;  // @ 0x1C
+  BYTE  unknown_1D;
+  BYTE  unknown_1E;
+  BYTE  unknown_1F;
+  BYTE  OrderType;  // @ 0x20
+  BYTE  unknown_21;
+  BYTE  unknown_22;
+  BYTE  unknown_23;
+  DWORD unknown_24;
+  DWORD unknown_28;
+  DWORD unknown_2C;
+  DWORD unknown_30;
+  DWORD unknown_34;
+  DWORD unknown_38;
+  WORD  unknown_3C;
+  WORD  unknown_3E;
+  DWORD unknown_40;
+  DWORD unknown_44;
+  DWORD unknown_48;
+  DWORD unknown_4C;
+  DWORD unknown_50;
+  DWORD goldMineCount;
+  DWORD unknown_58;
+   // end: 0x5C
+} gameUnits[200];
+
+
+namespace Units
+{
+  enum Enum
+  {
+    HMN_Footman    = 0,
+    ORC_Grunt      = 1,
+    HMN_Peasant    = 2,
+    ORC_Peon       = 3,
+    HMN_Catapult   = 4,
+    ORC_Catapult   = 5,
+    HMN_Knight     = 6,
+    ORC_Raider     = 7,
+    HMN_Archer     = 8,
+    ORC_Spearman   = 9,
+    HMN_Conjurer   = 10,
+    ORC_Warlock    = 11,
+    HMN_Cleric     = 12,
+    ORC_Necrolyte  = 13,
+    NPC_Medivh     = 14,
+    NPC_Lothar     = 15,  // wounded
+    NPC_Wounded    = 16,
+    NPC_Griselda   = 17,
+    NPC_Garona     = 18,
+    NPC_Ogre       = 19,
+    Dragon1        = 20,
+    NPC_Spider     = 21,
+    NPC_Slime      = 22,
+    NPC_FireElemental = 23,
+    NPC_Scorpion   = 24,
+    NPC_Brigand    = 25,
+    ORC_Skeleton   = 26,
+    NPC_Skeleton   = 27,
+    ORC_Daemon     = 28,
+    Dragon2        = 29,
+    Dragon3        = 30,
+    HMN_WaterElemental = 31,
+    HMN_Farm       = 32,
+    ORC_Farm       = 33,
+    HMN_Barracks   = 34,
+    ORC_Barracks   = 35,
+    HMN_Church     = 36,
+    ORC_Temple     = 37,
+    HMN_Tower      = 38,
+    ORC_Tower      = 39,
+    HMN_TownHall   = 40,
+    ORC_TownHall   = 41,
+    HMN_Mill       = 42,
+    ORC_Mill       = 43,
+    HMN_Stables    = 44,
+    ORC_Kennel     = 45,
+    HMN_Blacksmith = 46,
+    ORC_Blacksmith = 47,
+    HMN_Stormwind  = 48,
+    ORC_BlackRock  = 49,
+    NPC_GoldMine   = 50,
+    NPC_Blacksmith = 51,
+    Count          = NPC_Blacksmith,
+    None
+  };
+};

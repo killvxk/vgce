@@ -331,6 +331,11 @@ Class 1:
     u16 target;
   }
 
+  0x56  Text Message
+  {
+    char  message[];
+  }
+  
   0x58  Update Quest
   {
     u8

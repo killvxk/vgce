@@ -689,6 +689,32 @@ CLASS 2
 == 0x12 - Use Cheat ==
 {{{
     u32  flags
+    {
+      0x1           Black Sheep Wall
+      0x2           Operation CWAL
+      0x4           Power Overwhelming
+      0x8           Something for Nothing
+      0x10          Show Me The Money
+      0x20
+      0x40          Game Over Man
+      0x80          There is no cow level
+      0x100         Staying Alive
+      0x200         Ophelia
+      0x400
+      0x800         The Gathering
+      0x1000        Medieval Man
+      0x2000        Modify The Phase Variance
+      0x4000        War Aint What it Used to be
+      0x8000
+      0x10000
+      0x20000       Food For Thought
+      0x40000       What's Mine is Mine
+      0x80000       Breathe Deep
+      0x8000000     Ophelia Activated
+      0x20000000    Noglues and/or Ophelia Scenario selected?
+
+      0x28000200    Full Ophelia
+    }
 }}}
 CLASS 2
 
@@ -777,24 +803,24 @@ CLASS 2
 ----------------------------------------------------
 == 0x0B - Shift Deselect ==
 {{{
-	u8          count
-	u16*count  unitMem
+	u8  count;
+	u16 unitMem[count];
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x0A - Shift Select ==
 {{{
-	u8          count
-	u16*count  unitMem
+	u8  count;
+	u16 unitMem[count];
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x09 - Select ==
 {{{
-	u8         count
-	u16*count  unitMem
+	u8  count;
+	u16 unitMem[count];
 }}}
 CLASS 2
 

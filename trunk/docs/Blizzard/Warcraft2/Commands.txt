@@ -1,0 +1,39 @@
+[Cheat Codes and Commandline]
+                                0x1       (hashed as 0x0900C02A)
+  make_it_so                    0x2       (hashed as 0x0A088C5B) Fast-build
+  it_is_a_good_day_to_die       0x4       (hashed as 0x1708F242) Invincibility and massive damage
+  every_little_thing_she_does   0x8       (hashed as 0x1B091606) Infinite Mana
+  deck_me_out                   0x10      (hashed as 0x0B09B983) Receive all Upgrades
+  glittering_prizes             0x20      (hashed as 0x11079E4E) 10000 gold, 5000 lumber, and 5000 oil
+                                0x40      (hashed as 0x150FF32E)
+  you_pitiful_worm              0x80      (hashed as 0x10063796) Defeat
+  unite_the_clans               0x100     (hashed as 0x0F0DE3CB) Victory
+  never_a_winner                0x200     (hashed as 0x0E0B5902) Game never ends
+  
+  hatchet                       0x800     (hashed as 0x07076FA0) Harvest Lumber in 2 hits
+  valdez                        0x1000    (hashed as 0x0601A5AE) 5000 oil
+                                0x2000    (hashed as 0x0909CE59)
+  day                           0x4000    (hashed as 0x030007BD) Displays the message "FEIF"
+                                0x8000    (hashed as 0x030003C3)
+  ucla                          0x10000   (hashed as 0x04001AA1) Displays the message "Go Bruins!"
+  disco                         0x20000   (hashed as 0x05007893) Plays funky music
+  
+  tigerlily                     Enables level-skipping.
+  on_screen                     Reveal entire map
+  
+  human#      Skip to human campaign #. Requires level-skipping enabled.
+  orc#        Skip to orc campaign #. Requires level-skipping enabled.
+  xhuman#     Skip to expansion human campaign #. Requires level-skipping enabled.
+  xorc#       Skip to expansion orc campaign #. Requires level-skipping enabled.
+  title       0x04000000    Unknown
+  showpath    0x10000000    Reveals the entire map while showing fog of war on the minimap.
+  noglues     0x20000000    Unknown
+
+  allowsync   
+  fastdemo    
+  showinfo    Effects appear to have been removed.
+  showmemory  Effects appear to have been removed.
+  nopalette   Toggles Color Cycling.
+  netprof     Effects appear to have been removed.
+  
+  

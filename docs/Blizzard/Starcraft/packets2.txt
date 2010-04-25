@@ -127,37 +127,63 @@ RETURN CODE
 ----------------------------------------------------
 == 0x4F - Map data transfer ==
 {{{
-      u16  (packet size [after value])
-      u16  (transfer ID)
-	
-  *ID 0 - File Response*
-      u16 isCorrectHash
-      u32 filePos
-  *ID 1 - File Request*
-      u32 fileSize
-      DWORD fileHash
-      cstring fileName
-  *ID 2 - Unknown*
-      u8 playerID
-      u32 filePos
-  *ID 3 - Finished Transfer*
-  *ID 4 - Transfer data*
-      u8   (unknown)
-      u32 filePos
-      u16 blockSize
-      void data
-  *ID 5 - Request data*
-      u8   (unknown)
-      u32 filePos
-  *ID 6 - Unknown*
-  *ID 8 - Unknown*
+    u16   segmentSize;
+    {
+      u8    transferType;
+      void  transferData;
+    }
+
+transferData:
+  0x00 -
+    {
+      u8    unknown0;
+      u8    playerID;
+      u8    unknown2;
+      u32   unknown3;
+    }
+  0x01 - 
+    {
+      u8      unknown0;
+      size_t  fileSize;
+      DWORD   fileHash;
+      char    fileName[];
+    }
+  0x02 - 
+    {
+      u8    unknown0;
+      u8    unknown1;
+      u32   unknown2;
+    }
+  0x03 -
+    {
+      u8    unknown0;
+    }
+  0x04 - Data Transfer
+    {
+      u8    unknown0;
+      u8    unknown1;
+      u32   filePosition;
+      u16   blockSize;
+      char  data[blockSize];
+    }
+  0x05 -
+    {
+      u8    unknown0;
+      u8    unknown1;
+      u32   unknown2;
+    }
+  0x06 - Response
+    {
+      u8    unknown0;
+      u8    unknown1;
+    }
 }}}
 CLASS 1
 
 ----------------------------------------------------
 == 0x4E - Boot Player ==
 {{{
-      u8	Type
+    u8  Type
 		{
 			0x00 = "You have been booted."			// Default case
 			0x01 = "You have been banned."

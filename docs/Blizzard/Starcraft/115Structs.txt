@@ -1,10 +1,15 @@
+struct pos
+{
+  WORD  x;
+  WORD  y;
+}
+
 CUNIT STRUCT
 +0x0 - CUNIT* Previous
 +0x4 - CUNIT* Next
 +0x8 - DWORD dwHP
 +0xC - CSPRITE* Sprite
-+0x10 - WORD wMoveToXPos
-+0x12 - WORD wMoveToYPos
++0x10 - pos dstPix      // OFFICIAL
 +0x14 - CUNIT* Target_1
 +0x18 - WORD wCurrentXPos_?
 +0x1A - WORD wCurrentYPos_?
@@ -15,7 +20,7 @@ CUNIT STRUCT
 	2 - Making Building?
 	4 - Moving?
 
-+0x22 - BYTE bFlingyTurnRadius
++0x22 - BYTE ubMaxTurn      // OFFICIAL NAME
 +0x23 - BYTE bCurrentDirection
 +0x24 - WORD wFlingyID
 +0x26 - BYTE bUnknown_26_flingy
@@ -27,8 +32,8 @@ CUNIT STRUCT
 +0x34 - DWORD dwFlingySpeed
 +0x38 - DWORD dwUnknown_38_flingy
 +0x3C - DWORD dwUnknown_3C_flingy
-+0x40 - DWORD dwFlingyCurrentSpeedX
-+0x44 - DWORD dwFlingyCurrentSpeedY
++0x40 - DWORD xSpeed              // OFFICIAL NAME
++0x44 - DWORD ySpeed              // OFFICIAL NAME
 +0x48 - WORD wFlingyAcceleration
 +0x4A - WORD wUnknown_4A
 +0x4C - BYTE bPlayerID
@@ -56,7 +61,7 @@ CUNIT STRUCT
 +0x84 - BYTE bNumOfQueuedOrders
 +0x85 - BYTE bUnknown_85_Order_Timer_Seperate
 +0x86 - WORD wUnknown_86
-+0x88 - WORD wDisplayedUnitID?
++0x88 - WORD uiUnitType   // OFFICIAL NAME
 +0x8A - DWORD dwUnknown_8A
 +0x8E - BYTE bRankIncrease
 +0x8F - BYTE bKillCount
@@ -256,15 +261,36 @@ CSPRITE STRUCT
 +0x18 - CIMAGE* mainGraphic
 +0x1C - CIMAGE* overlay
 +0x20 - CIMAGE* underlay
+    // contains 
+          pImageTail
 
-
-CIMAGE
-+0x0 - CIMAGE* prev
-+0x4 - CIMAGE* next
-+0x8 - WORD wImageID
-+0xA - WORD unknown
-+0xC - DWORD unknown
-
+00000000 CIMAGE          struc ; (sizeof=0x40)
+00000000 prev            dd ?                    ; offset
+00000004 next            dd ?                    ; offset
+00000008 id              dw ?                    ; enum imagesID
+0000000A paletteType     db ?
+0000000B direction       db ?                    ; base 10
+0000000C flags           dw ?
+0000000E horizontalOffset db ?                   ; base 10
+0000000F verticalOffset  db ?                    ; base 10
+00000010 iscriptHeader   dw ?
+00000012 iscriptOffset   dw ?
+00000014 iscriptUnknown_14 dw ?
+00000016 iscriptAnim     db ?                    ; enum iscriptAnims
+00000017 iscriptWait     db ?                    ; base 10
+00000018 frameSet        dw ?                    ; base 10
+0000001A frameIndex      dw ?                    ; base 10
+0000001C unknown_1C      dd ?                    ; offset
+00000020 field_20        dd ?
+00000024 field_24        dd ?
+00000028 field_28        dd ?
+0000002C GRPFile         dd ?                    ; offset
+00000030 colouringData   dd ?
+00000034 DrawFunction    dd ?                    ; offset // OFFICIAL
+00000038 renderFunction2 dd ?                    ; offset
+0000003C spriteOwner     dd ?                    ; offset
+00000040 CIMAGE          ends
+  // Also has "update"
 
 CORDER
 
@@ -332,23 +358,28 @@ Ignore Armor	0 - 515be0		100%(256) - 515be4	100%(256) - 515be8	100%(256) - 515be
 
 EMP = Inner Splash controls radius of effect
 
+Unit->Flags
+  0x4         IsBuilding
+  
+  0x40000000  IsHallucination
+
 Units.dat Advanced flags:
 
- - 1 - Building 
- - 2 - Addon
+ - 1 - UF_IS_BLDG               // official name
+ - 2 - UF_IS_ADDON              // official name
  - 4 - Flyer
- - 8 - Worker
- - 10 - Subunit
- - 20 - Flying Building
+ - 8 - IsWorker
+ - 10 - IsTurret
+ - 20 - IsMobileBuilding
  - 40 - Hero
  - 80 - Regen HP
 
  - 100 - Ani Idle?
- - 200 - Cloak
+ - 200 - IsCloaker
  - 400 - 2 in 1
  - 800 - Neut Access?Neutral?Single Entity.
  - 1000 - Resource Depot
- - 2000 - Contain Gas/Resource Container
+ - 2000 - IsResourceSrc
  - 4000 - Robotic
  - 8000 - Detector
  

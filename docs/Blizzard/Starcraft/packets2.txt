@@ -333,22 +333,22 @@ CLASS 2
 ----------------------------------------------------
 == 0x43 - Force Change UMS ==
 {{{
-	u8  force
+	BYTE bNewTeam       // official name
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x42 - Force Change Melee ==
 {{{
-	u8  force
+	BYTE bNewTeam;      // official name
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x41 - Race Change ==
 {{{
-	u8  slot
-	u8  race
+	BYTE  bSlot;       // official name
+	BYTE  bNewRace;    // official name
 }}}
 CLASS 2
 
@@ -379,11 +379,11 @@ CLASS 2
 ----------------------------------------------------
 == 0x3E - Game Slot Modification ==
 {{{
-	u8  slot
-	u8  playerID
-	u8  owner
-	u8  race
-	u8  force
+	BYTE  bSlot;  // official name
+	u8  playerID;
+	BYTE  nType;      // official name
+	BYTE  bNewRace;   // official name
+	BYTE  nTeam;      // official name
 }}}
 CLASS 2
 
@@ -402,94 +402,115 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-0x3B - Unknown (Same as 0x3A) (Unused)
+0x3B - Voice Squelch 2 (Unused)
 {{{
-	u8  Unknown
+	u8  playerID;
 }}}
 CLASS 2
 
 ----------------------------------------------------
-0x3A - Unknown (Unused)
+0x3A - Voice Squelch 1 (Unused)
 {{{
-	u8  Unknown
+	u8  playerID;
 }}}
 CLASS 2
 
 ----------------------------------------------------
-0x39 - Unknown Disable Something (Unused)
+0x39 - Voice Enable 2 (Unused)
 {{{
    // No parameters.
 }}}
 CLASS 2 
 
 ----------------------------------------------------
-0x38 - Unknown Enable Something (Unused)
+0x38 - Voice Enable 1 (Unused)
 {{{
    // No parameters.
 }}}
 CLASS 2 
 
 ----------------------------------------------------
-== 0x37 - Game Hash == (determines syncronized gameplay, sent every ~0.2 seconds or before any order)
+== 0x37 - Sync ==
 {{{
-   6 bytes - Unknown
+    BYTE  SyncID;   // less than 16?
+    BYTE  Type;   // types are from beta
+    {
+      0:  Unknown
+      1:  Unit Complete
+      2:  Fliny Complete
+      3:  Thingy Complete
+      4:  Resources
+      5:  Game Seed
+      6:  Rand Val
+      7:  Upgrades
+      8:  Technologies
+      9:  Selected Units
+      10: Grouped Units
+      11: Alliances
+      12: Triggers
+      13: Square Map
+      14: Fast Unit
+      15: Fast Game Data
+      +:  Unknown
+    }
+    DWORD Data;
 }}}
 CLASS 2 
 
 ----------------------------------------------------
-== 0x36 - Stim ==
+== 0x36 - Stim Pack ==
 {{{
    // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x35 - Building Morph ==
+== 0x35 - Zerg Bldg Morph ==
 {{{
 	u16  unitType
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x34 - Cancel Addon ==
+== 0x34 - Stop Addon (Cancel Addon) ==
 {{{
    // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x33 - Cancel Upgrade ==
+== 0x33 - Order Stop Upgrade (Cancel Upgrade) ==
 {{{
    // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x32 - Upgrade ==
+== 0x32 - Order Upgrade ==
 {{{
-	u8   upgradeID
+	u8   upgradeType;
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x31 - Cancel Research ==
+== 0x31 - Order Stop Research (Cancel Research) ==
 {{{
    // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x30 - Research ==
+== 0x30 - Order Research ==
 {{{
-	u8   techID
+	u8   techType;
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x2F - Lift ==
+== 0x2F - Lift Off ==
 {{{
-	s16  x      // unused?
-	s16  y      // unused?
+	s16  x;
+	s16  y;
 }}}
 CLASS 2
 
@@ -501,7 +522,7 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-== 0x2D - Unburrow ==
+== 0x2D - Deburrow (Unburrow) ==
 {{{
 	u8   type   // Unknown
 }}}
@@ -526,16 +547,16 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-== 0x2A - Merge Archon ==
+== 0x2A - Summon Archon (Merge) ==
 {{{
    // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x29 - Unload ==
+== 0x29 - Exit Transport ==
 {{{
-	u16  unitMemory
+	u16  unitID;
 }}}
 CLASS 2
 
@@ -551,21 +572,21 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-== 0x27 - Train Fighter ==
+== 0x27 - Build Fighter ==
 {{{
    // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x26 - Siege ==
+== 0x26 - Siege Mode ==
 {{{
 	u8   type   // unknown
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x25 - Unsiege ==
+== 0x25 - Tank Mode ==
 {{{
 	u8   type   // unknown
 }}}
@@ -574,7 +595,7 @@ CLASS 2
 ----------------------------------------------------
 0x24 -  INVALID
 ----------------------------------------------------
-== 0x23 - Unit Morph ==
+== 0x23 - Morph (Unit) ==
 {{{
 	u16  unitType
 }}}
@@ -595,21 +616,21 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-== 0x20 - Cancel Train ==
+== 0x20 - Order Stop Build (Cancel Train) ==
 {{{
 	u16  unitID
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x1F - Train ==
+== 0x1F - Order Build (Train) ==
 {{{
 	u16  unitType
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x1E - Return Cargo ==
+== 0x1E - Order Return ==
 {{{
 	u8   type
         {
@@ -620,28 +641,28 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-== 0x1D - Nothing ==
+== 0x1D - Order Nothing ==
 {{{
     // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x1C - Reaver Stop ==
+== 0x1C - Order Stop Trilobyte (Reaver) ==
 {{{
      // No parameters
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x1B - Carrier Stop ==
+== 0x1B - Order Stop Carrier ==
 {{{
      // No parameters
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x1A - Stop ==
+== 0x1A - Order Stop ==
 {{{
 	u8   type
         {
@@ -652,14 +673,14 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-== 0x19 - Cancel Unit Morph ==
+== 0x19 - Order Kill Egg (Cancel Morph) ==
 {{{
    // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x18 - Cancel Construction ==
+== 0x18 - Order Kill (Cancel Construction) ==
 {{{
    // No parameters.
 }}}
@@ -669,14 +690,14 @@ CLASS 2
 0x17 - INVALID
 0x16 - INVALID
 ----------------------------------------------------
-== 0x15 - Target Command ==
+== 0x15 - Action ==
 {{{
-	s16  x
-	s16  y
-	u16  unitMem
-	u16  unitType
-	u8   orderID
-	u8   type
+	s16  x;
+	s16  y;
+	u16  unitMem;
+	u16  unitType;
+	u8   action;
+	u8   type;
         {
             0x00    = "Instant Order",
             0x01    = "Queued Order"
@@ -687,9 +708,9 @@ CLASS 2
 ----------------------------------------------------
 == 0x14 - Right Click ==
 {{{
-	s16  x
-	s16  y
-	u16  unitMem
+	s16  x;
+	s16  y;
+	u16  TargetID;
 	u16  unitType
 	u8   type
         {
@@ -700,7 +721,7 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-== 0x13 - Hotkey ==
+== 0x13 - Group Units ==
 {{{
 	u8  type
         {
@@ -712,9 +733,9 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-== 0x12 - Use Cheat ==
+== 0x12 - Cheat ==
 {{{
-    u32  flags
+    u32  lCheat;
     {
       0x1           Black Sheep Wall
       0x2           Operation CWAL
@@ -745,23 +766,23 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-== 0x11 - Resume Game ==
+== 0x11 - Pause Off ==
 {{{
     // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x10 - Pause Game ==
+== 0x10 - Pause On ==
 {{{
     // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x0F - Change Game Speed ==
+== 0x0F - Set Speed ==
 {{{
-    u8   speed
+    u8   bSpeed;
     {
         0x00 = "Slowest",
         0x01 = "Slower",
@@ -775,7 +796,7 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-== 0x0E - Ally ==
+== 0x0E - Set Allies ==
 {{{
 	u2 	(Alliance p1) [0 = enemy, 1= allied, 2 = allied vic]
 	u2 	(Alliance p2) [0 = enemy, 1= allied, 2 = allied vic]
@@ -792,12 +813,12 @@ CLASS 2
 	u2 	(Alliance p11) [0 = enemy, 1= allied, 2 = allied vic]
 	u2 	(Alliance p12) [0 = enemy, 1= allied, 2 = allied vic]
 
-	u8	Unknown/unused
+	u8	Unused
 }}}
 CLASS 2
 
 ----------------------------------------------------
-== 0x0D - Vision ==
+== 0x0D - Set Fog (Vision) ==
 {{{
 	u1	Vision for p1
 	u1	Vision for p2
@@ -817,7 +838,7 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-== 0x0C - Build ==
+== 0x0C - Placebox (Build) ==
 {{{
 	u8   orderID
 	s16  xTile
@@ -827,7 +848,7 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-== 0x0B - Shift Deselect ==
+== 0x0B - Select Delta Del ==
 {{{
 	u8  count;
 	u16 unitMem[count];
@@ -835,7 +856,7 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-== 0x0A - Shift Select ==
+== 0x0A - Select Delta Add ==
 {{{
 	u8  count;
 	u16 unitMem[count];
@@ -843,7 +864,7 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-== 0x09 - Select ==
+== 0x09 - Select Units ==
 {{{
 	u8  count;
 	u16 unitMem[count];
@@ -860,16 +881,16 @@ CLASS 2
 ----------------------------------------------------
 == 0x07 -  Load Game ==
 {{{
-      u32       time
-      cstring   name
+      u32    dwGameID;
+      char   szName[];    // unused?
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x06 - Save Game ==
 {{{
-      u32       time
-      cstring   name
+      u32    time;
+      char   szName[];    // must be less than size of 64
 }}}
 CLASS 2
 

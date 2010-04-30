@@ -437,7 +437,7 @@ CLASS 2
     {
       0:  Unknown
       1:  Unit Complete
-      2:  Fliny Complete
+      2:  Flingy Complete
       3:  Thingy Complete
       4:  Resources
       5:  Game Seed
@@ -902,21 +902,10 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-0x04 - UNDEFINED
-----------------------------------------------------
-0x03 -  Unknown
-{{{
-      // No parameters.
-}}}
-UNDEFINED
-----------------------------------------------------
-0x02 - UNDEFINED (game chat?)
-----------------------------------------------------
-0x01 -  Claim Host ? (game chat?)
-{{{
-      // No parameters.
-}}}
-UNDEFINED
+0x04 - INVALID
+0x03 - INVALID
+0x02 - INVALID
+0x01 - INVALID
 ----------------------------------------------------
 == 0x00 - Game Chat ==
 {{{

@@ -52,7 +52,7 @@
 {{{
 0x00000001 = "Unknown 0"
 0x00000002 = "Disabled"
-0x00000004 = "Unknown 2"
+0x00000004 = "Active"
 0x00000008 = "Visible"
 0x00000010 = "Responds to Events"
 0x00000020 = "Unknown 5"

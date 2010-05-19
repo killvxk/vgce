@@ -13,7 +13,7 @@ Fog.#10029 - Posts line to debug file
 @10127 - Get available byte position in bitstream [D2S]
 @10128 - Write bits to bitstream [D2S]
 @10129 - Read bits from bitstream [D2S] (signed)
-@10130 - Rwad bits from bitstream [D2S] (unsigned) 
+@10130 - Read bits from bitstream [D2S] (unsigned) 
 
 Fog.#10227 - Checks if playing LoD or Classic
 Fog.#10229 - Calculates the checksum for save data 
@@ -35,14 +35,20 @@ Fog.#10229 - Calculates the checksum for save data
 10014       // FogNetworkToString
 10015       // FogStringToNetwork
 
-10017       // Fog ioctlsocket
+10017       // FogSocketIOMode
 10018       // FogPrintf
+10019       // FogSetAppInfo
+10020       // FogSetUnhandledExceptionFilter
 
-
-10028       // FogError     ErrorManager
-10029       // Fatal1
-10030       // Fatal2
-10031       // Fatal3
+10023       // FogAssertionError
+10024       // FogHaltError
+10025       // FogWarningError
+10026       // FogUserError
+10027       // FogDeadlockError
+10028       // FogError     // ErrorManager
+10029       // FogHaltFatal1
+10030       // FogHaltFatal2
+10031       // FogHaltFatal3
 
 10033       // Deadlock Stack Dump
 10034       // Stack Dump
@@ -62,7 +68,7 @@ Fog.#10229 - Calculates the checksum for save data
 10049       nullSub
 10050       // FogValidateEnterCriticalSection
 10051       // FogValidateExitCriticalSection
-10052       // exception
+10052       FogTopLevelExceptionFilter
 10053       nullSub
 10054       nullSub
 

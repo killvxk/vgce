@@ -319,9 +319,9 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 
 521    void    __stdcall Ordinal521(int a1)
 
-523    void    __stdcall SRgn523(int handle, RECT *rect, int a3, int a4)
-524    void    __stdcall SRgn524(int handle, int a2)
-525    void    __stdcall SRgn525(int handle)            // related to the above two
+523    void    __stdcall SRgn523(int handle, RECT *rect, int reserved, int a4)
+524    void    __stdcall SRgnCreate(int handle, int reserved)
+525    void    __stdcall SRgnDelete(int handle)
 
 527    void    __stdcall SRgn527(int handle, int a2, int a3)
 528    void    __stdcall SRgn528i(int handle, int a2, int a3, int a4)  // 534

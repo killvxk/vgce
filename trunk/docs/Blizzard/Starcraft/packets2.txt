@@ -432,28 +432,11 @@ CLASS 2
 ----------------------------------------------------
 == 0x37 - Sync ==
 {{{
-    BYTE  SyncID;   // less than 16?
-    BYTE  Type;   // types are from beta
-    {
-      0:  Unknown
-      1:  Unit Complete
-      2:  Flingy Complete
-      3:  Thingy Complete
-      4:  Resources
-      5:  Game Seed
-      6:  Rand Val
-      7:  Upgrades
-      8:  Technologies
-      9:  Selected Units
-      10: Grouped Units
-      11: Alliances
-      12: Triggers
-      13: Square Map
-      14: Fast Unit
-      15: Fast Game Data
-      +:  Unknown
-    }
-    DWORD Data;
+    BYTE  SyncID;     // SyncID is SyncID >> 4
+    WORD  Hash;
+    BYTE  unk1;
+    BYTE  unk2;
+    BYTE  unk3;
 }}}
 CLASS 2 
 

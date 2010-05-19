@@ -7,7 +7,7 @@
 0x40          Game Over Man
 0x80          There is no cow level
 0x100         Staying Alive
-0x200         Ophelia
+0x200         Ophelia (CHEAT_MAP_JUMPS)
 0x400
 0x800         The Gathering
 0x1000        Medieval Man

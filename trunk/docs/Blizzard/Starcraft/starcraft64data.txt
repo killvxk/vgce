@@ -5,7 +5,7 @@ u32     unknown3;
 
 struct fileIndex
 {
-    DWORD   dwFlags; // number of entries if it is a folder (256 if 0)
+    DWORD   dwFlags; // number of entries if it is a folder (256 if folder is empty)
     u32     uncompressedSize;
     void*   offset; // pointer to the same struct if a folder
     DWORD   hash; // 0 for folders

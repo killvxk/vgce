@@ -87,7 +87,7 @@ CLASS 2
 {{{
     u8  latency
 }}}
-CLASS 2 
+CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x54 - Mission Briefing Start ==
@@ -406,28 +406,28 @@ CLASS 2
 {{{
 	u8  playerID;
 }}}
-CLASS 2
+CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 0x3A - Voice Squelch 1 (Unused)
 {{{
 	u8  playerID;
 }}}
-CLASS 2
+CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 0x39 - Voice Enable 2 (Unused)
 {{{
    // No parameters.
 }}}
-CLASS 2 
+CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 0x38 - Voice Enable 1 (Unused)
 {{{
    // No parameters.
 }}}
-CLASS 2 
+CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x37 - Sync ==
@@ -438,7 +438,7 @@ CLASS 2
     BYTE  unk2;
     BYTE  unk3;
 }}}
-CLASS 2 
+CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x36 - Stim Pack ==
@@ -753,14 +753,14 @@ CLASS 2
 {{{
     // No parameters.
 }}}
-CLASS 2
+CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x10 - Pause On ==
 {{{
     // No parameters.
 }}}
-CLASS 2
+CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x0F - Set Speed ==
@@ -859,7 +859,7 @@ CLASS 2
 {{{
       No parameters.
 }}}
-CLASS 2 
+CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x07 -  Load Game ==
@@ -867,7 +867,7 @@ CLASS 2
       u32    dwGameID;
       char   szName[];    // unused?
 }}}
-CLASS 2
+CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x06 - Save Game ==
@@ -875,14 +875,14 @@ CLASS 2
       u32    time;
       char   szName[];    // must be less than size of 64
 }}}
-CLASS 2
+CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x05 -  Keep Alive ==
 {{{
       // No parameters.
 }}}
-CLASS 2
+CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 0x04 - INVALID

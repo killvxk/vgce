@@ -1,0 +1,8 @@
+layer 0: Cursor
+layer 1: Context Help
+layer 2: UI, Dialogs
+layer 3: 
+layer 4: 
+layer 5: Game (Units/Sprites/Images)
+layer 6: 
+layer 7: 

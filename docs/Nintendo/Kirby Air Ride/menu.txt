@@ -1,0 +1,15 @@
+
+Intro           1
+
+CityTrial       6
+AirRide         7
+TopRide         8
+Cinematic       9
+AirRideEnding   10
+TopRideEnding   11
+CityTrialEnding 12
+
+MemCardUtility  18
+LanMenu         19
+
+Last            41  // invalid

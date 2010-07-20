@@ -1,0 +1,218 @@
+#   initgen.txt     -- Items that are initially part of the level, but are permanently removed when destroyed.
+#   defaultgen.txt  -- Items that are always part of the level, Onions and Olimar's ship for example.
+#   plantsgen.txt   -- Plants (pellets) that grow and re-appear later on.
+#   #-#.txt         -- Items that are generated based on some other variables (day?).
+
+#   The following are samples with modified comments
+==============================================================
+  {item} {0002}
+  {
+		{onyn} 	# item id
+		0.000000 0.000000 0.000000 	# rotation
+		{0001} 	# item local version
+		4 	# onyon index
+        #   Blue    = 0
+        #   Red     = 1
+        #   Yellow  = 2
+        #   Ship    = 4
+		1 	# after boot? true==1
+        # 1 means the item appears after an event takes place
+  }
+==============================================================
+  {item} {0002}
+  {
+		{cave} 	# item id
+		0.000000 -45.000000 0.000000 	# rotation
+		{0002} 	# item local version
+		tutorial_1.txt 
+		units.txt 
+		{t_01} 	# id (for stages.txt)
+		# FogParm
+		{
+			{fg00} 4 1.000000 	# startZ
+			{fg01} 4 1500.000000 	# endZ
+			{fg02} 4 1.500000 	# startTime
+			{fg03} 4 2.000000 	# endTime
+			{fg04} 1 62 	# Red
+			{fg05} 1 77 	# Green
+			{fg06} 1 65 	# Blue
+			{fg07} 4 6000.000000 	# Distance
+			{fg08} 4 200.000000 	# Enter Dist
+			{fg09} 4 205.000000 	# Exit  Dist
+			{_eof} 
+		}
+  }
+==============================================================
+  {item} {0002}
+  {
+		{gate} 	# item id
+		0.000000 -60.000000 0.000000 	# rotation
+		{0002} 	# item local version
+		16000.000000 	#ライフ   Hit Points
+		0 	#Color
+  }
+==============================================================
+  {item} {0002}
+  {
+		{dwfl} 	# item id     Large Paper Bag
+		0.000000 60.000000 0.000000 	# rotation
+		{0002} 	# item local version
+		15 	#沈み人数       Weight/pikmin needed to hold down
+		2 	#type
+        #   Small Block       = 0
+        #   Large Block       = 1
+        #   Large Paper Bag   = 2
+		0 	# 1:seesaw
+		{none} 	# id
+  }
+==============================================================
+  {item} {0002}
+  {
+		{barl} 	# item id       Water drain
+		0.000000 135.000000 0.000000 	# rotation
+		{0000} 	# item local version
+  }
+==============================================================
+  {item} {0002}
+  {
+		{brdg} 	# item id     Interactive Bridge
+		0.000000 0.000000 0.000000 	# rotation
+		{0001} 	# item local version
+		2 	#橋タイプ     Bridge Type
+        #   Short   = 0
+        #   Ramp    = 1
+        #   Long    = 2
+  }
+==============================================================  
+	{item} {0002} 	# dgat
+	{
+		{dgat} 	# item id     Electric Fence
+		0.000000 -130.000000 0.000000 	# rotation
+		{0000} 	# item local version
+		16000.000000 	#ライフ     Hit Points
+	}
+==============================================================  
+	{item} {0002} 	# ujms
+	{
+		{ujms} 	# item id   Tiny insects (releases goop)
+		0.000000 0.000000 0.000000 	# rotation
+		{0000} 	# item local version
+		20 	#うじゃ王数     Number of insects
+	}
+==============================================================    
+	{item} {0002} 	# rock
+	{
+		{rock} 	# item id     The weird spider-egg-thing that grows from the ground
+		0.000000 0.000000 0.000000 	# rotation
+		{0000} 	# item local version
+	}
+==============================================================
+	{item} {0002} 	# weed    Weeds/Rocks (Attackable, releases goop)
+	{
+		{weed} 	# item id
+		0.000000 0.000000 0.000000 	# rotation
+		{0001} 	# item local version
+		100 	#うじゃ王数    Size
+		0 	#石か草か         Type
+        #   Rocks = 0
+        #   Grass = 1
+	}
+==============================================================  
+	{item} {0002} 	# plnt
+	{
+		{plnt} 	# item id     Berry plant
+		0.000000 -90.000000 0.000000 	# rotation
+		{0001} 	# item local version
+		0 	#実タイプ     Type
+        #   Spicy   = 0
+        #   Sour    = 1
+	}
+==============================================================
+	{pelt} {0000} 	# otakara       Pellet/Carryable
+	{
+		3 	# mgr id    Pellet Type
+        #   Pellet                = 0   (Use "Pellet Sample" instead of this)
+        #
+        #
+        #   Treasure              = 3
+        #   Exploration Kit Item  = 4
+		0.000000 0.000000 0.000000 	# rotation
+    {0000} 	# pellet local version
+    87      # Pellet/Treasure Type (ID)
+  }
+==============================================================
+	{pelt} {0000} 	# number      Pellet Sample
+	{
+		0 	# mgr id
+		0.000000 0.000000 0.000000 	# rotation
+    {0000} 	# pellet local version
+    0   # Color
+        #   Blue    = 0
+        #   Red     = 1
+        #   Yellow  = 2
+        #   Purple  = 3
+    1   # Size: 1, 5, 10, or 20
+  }
+==============================================================
+	{navi} {0000} 	# gen base      Unknown
+	{
+		{p000} 4 80.000000 	# スタート向き
+	}
+==============================================================
+	{teki} {0005}     # Enemy/Creature
+  26 		# teki                      Creature Type
+	0 		# teki_birth_type 
+	1 		# teki_num                  Number of creatures
+	0.000000 		# face direction 
+	1 		# 0:point 1:circle          Positions (more than one)
+        #   Scatter   = 0
+        #   Point     = 1
+	100.000000 		# appear radius 
+	0.000000 		  # enemy size 
+	0 # お宝アイテムコード        Seems to be always 0. Others will cause a crash.
+	3 		# Pellet color    Dropped color
+        #   Blue    = 0
+        #   Red     = 1
+        #   Yellow  = 2
+        #   Random  = 3
+	1 		# Pellet size     Dropped size, must be 1, 5, 10, or 20
+	1 		# Pellet Min      Minimum pellet drop count (Maximum 50)
+	2 		# Pellet Max      Maximum pellet drop count (Maximum 50)
+	0.400000 		# Pellet Min    Chance of dropping pellet
+	{????} 		# Version 
+==============================================================
+	{teki} {0005} # Enemy/Creature
+	0 		# teki                    Creature Type
+	0 		# teki_birth_type 
+	1 		# teki_num                Number of creatures
+	0.000000 		# face direction 
+	1 		# 0:point 1:circle        Positions (more than one)
+        #   Scatter   = 0
+        #   Point     = 1
+	100.000000 	# appear radius     Distance between placement clusters
+	1.000000 		# enemy size    No effect?
+	0 # お宝アイテムコード       Seems to be always 0. Others will cause a crash.
+	0 		# Pellet color        Unused in this case
+	10 		# Pellet size         Unused in this case
+	10 		# Pellet Min          Unused in this case
+	10 		# Pellet Max          Unused in this case
+	0.000000 		# Pellet Min    Unused in this case
+	{0001} 		# Version 
+	1		  # pellet type 
+        #   Blue      = 0
+        #   Red       = 1
+        #   Yellow    = 2
+        #   Roulette  = 3
+	10		# pellet size   Must be either 1, 5, 10, or 20
+	2		  # size          Size of the plant
+        #   Bud         = 0
+        #   Stalk       = 1
+        #   Fully grown = 2
+==============================================================
+	{piki} {0001} 	# gen base
+	{
+		{p000} 4 2 	# 色
+		{p001} 4 20 	# 数
+		{p002} 4 0 	# 自活(1=yes)
+	}
+==============================================================

@@ -1,0 +1,12 @@
+GrCZK_SuperJump     7
+GrCZK_Jump          9
+GrCZK_Spin         10
+GrCZK_LocalDead    25
+
+
+
+Gr_YakuKind_Cannon    48
+
+
+
+GrSDK_AirGlider   0

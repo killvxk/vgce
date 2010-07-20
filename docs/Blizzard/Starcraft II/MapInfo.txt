@@ -12,7 +12,7 @@ struct  MapInfo
   u32     boundryBottom;
   u32     boundryRight;
   u32     boundryTop;
-  u32     unknown4;
+  u32     unknown4;   // Z boundry?
   u32     unknown5;
   char    loaderImagePath[];
   u32     loaderImageFormat;  // enum names are made-up

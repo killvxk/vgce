@@ -1,0 +1,109 @@
+[NTSC]
+
+805C4F14    Day?
+
+805C4FC7    Treasure Hoard Entry Flags????
+
+80692D14    Olimar HP (float) (display only)
+
+806B33B8    Challenge Mode Data
+
+806B3710    Challenge Mode P1 High Scores
+806B372C    Challenge Mode P2 High Scores
+
+807017AC    Day?
+
+808E3E80    Treasure Value (Cosmic Archive)
+
+8092F7BC    Exploration Kit Parts (flags)
+
+8092F830    Treasure Count
+8092F834    Spicey Spray Count
+8092F838    Bitter Spray Count
+
+8092F85C    Money
+
+8092F8B4    Number of Blue Pikmin (Leaf)      at Level Start
+8092F8B8    Number of Blue Pikmin (Bud)       at Level Start
+8092F8BC    Number of Blue Pikmin (Flower)    at Level Start
+8092F8C0    Number of Red Pikmin (Leaf)       at Level Start
+8092F8C4    Number of Red Pikmin (Bud)        at Level Start
+8092F8C8    Number of Red Pikmin (Flower)     at Level Start
+8092F8CC    Number of Yellow Pikmin (Leaf)    at Level Start
+8092F8D0    Number of Yellow Pikmin (Bud)     at Level Start
+8092F8D4    Number of Yellow Pikmin (Flower)  at Level Start
+8092F8D8    Number of White Pikmin (Leaf)     at Level Start
+8092F8DC    Number of White Pikmin (Bud)      at Level Start
+8092F8E0    Number of White Pikmin (Flower)   at Level Start
+8092F8E4    Number of Purple Pikmin (Leaf)    at Level Start
+8092F8E8    Number of Purple Pikmin (Bud)     at Level Start
+8092F8EC    Number of Purple Pikmin (Flower)  at Level Start
+8092F8F0    Number of Bulbmin (Leaf)          at Level Start
+8092F8F4    Number of Bulbmin (Bud)           at Level Start
+8092F8F8    Number of Bulbmin (Flower)        at Level Start
+8092F8FC    Number of Carrots (Leaf)          at Level Start
+8092F900    Number of Carrots (Bud)           at Level Start
+8092F904    Number of Carrots (Flower)        at Level Start
+        
+
+8092F97C    Number of Blue Pikmin (Leaf)      in Onion
+8092F980    Number of Blue Pikmin (Bud)       in Onion
+8092F984    Number of Blue Pikmin (Flower)    in Onion
+8092F988    Number of Red Pikmin (Leaf)       in Onion
+8092F98C    Number of Red Pikmin (Bud)        in Onion
+8092F990    Number of Red Pikmin (Flower)     in Onion
+8092F994    Number of Yellow Pikmin (Leaf)    in Onion
+8092F998    Number of Yellow Pikmin (Bud)     in Onion
+8092F99C    Number of Yellow Pikmin (Flower)  in Onion
+8092F9A0    Number of Purple Pikmin (Leaf)    in Ship
+8092F9A4    Number of Purple Pikmin (Bud)     in Ship
+8092F9A8    Number of Purple Pikmin (Flower)  in Ship
+8092F9AC    Number of White Pikmin (Leaf)     in Ship
+8092F9B0    Number of White Pikmin (Bud)      in Ship
+8092F9B4    Number of White Pikmin (Flower)   in Ship
+
+8092F9E0    Areas Available
+
+8092FB70    Piklopedia Entries
+  {
+    u32 creaturesDefeated;
+    u32 pikminLost;
+    u32 visibilityFlag; // 0x01 = visible; 0x02 = old/seen;
+  } [102];
+
+  
+8093A92C    Objects left in area 1 (unearthed pikmin count)
+
+809FADD0    Music Volume (0-10)
+809FADD4    Sound Volume (0-10)
+
+80B04184    Number of Blue Pikmin (Leaf)      in Challenge Mode
+80B04188    Number of Blue Pikmin (Bud)       in Challenge Mode
+80B0418C    Number of Blue Pikmin (Flower)    in Challenge Mode
+80B04190    Number of Red Pikmin (Leaf)       in Challenge Mode
+80B04194    Number of Red Pikmin (Bud)        in Challenge Mode
+80B04198    Number of Red Pikmin (Flower)     in Challenge Mode
+80B0419C    Number of Yellow Pikmin (Leaf)    in Challenge Mode
+80B041A0    Number of Yellow Pikmin (Bud)     in Challenge Mode
+80B041A4    Number of Yellow Pikmin (Flower)  in Challenge Mode
+80B041A8    Number of White Pikmin (Leaf)     in Challenge Mode
+80B041AC    Number of White Pikmin (Bud)      in Challenge Mode
+80B041B0    Number of White Pikmin (Flower)   in Challenge Mode
+80B041B4    Number of Purple Pikmin (Leaf)    in Challenge Mode
+80B041B8    Number of Purple Pikmin (Bud)     in Challenge Mode
+80B041BC    Number of Purple Pikmin (Flower)  in Challenge Mode
+80B041C0    Number of Bulbmin (Leaf)          in Challenge Mode
+80B041C4    Number of Bulbmin (Bud)           in Challenge Mode
+80B041C8    Number of Bulbmin (Flower)        in Challenge Mode
+80B041CC    Number of Carrots (Leaf)          in Challenge Mode
+80B041D0    Number of Carrots (Bud)           in Challenge Mode
+80B041D4    Number of Carrots (Flower)        in Challenge Mode
+80B0B034    Debt (Maximum)
+80B0B4A8    Time of Day
+
+80B7105B    Yellow Marble Count P1 (Battle Mode)
+
+80E0DA44    Olimar HP (float)
+
+80E0DD64    Louie HP (float)
+

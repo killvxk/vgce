@@ -23,7 +23,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 118    BOOL     __stdcall SNetJoinGame(unsigned int a1, char *gameName, char *gamePassword, char *playerName, char *userStats, int *playerid)
 119    BOOL     __stdcall SNetLeaveGame(int type)
 120    BOOL     __stdcall SNetPerformUpgrade(DWORD *upgradestatus)
-121    BOOL     __stdcall SNetReceiveMessage(int *senderplayerid, int *data, int *databytes)
+121    BOOL     __stdcall SNetReceiveMessage(int *senderplayerid, BYTE **data, int *databytes)
 122    BOOL     __stdcall SNetReceiveTurns(int a1, int arraysize, char **arraydata, unsigned int *arraydatabytes, DWORD *arrayplayerstatus)  // arraysize = player count
 123    HANDLE   __stdcall SNetRegisterEventHandler(int type, int event)
 124    BOOL     __cdecl   SNetResetLatencyMeasurements()
@@ -80,7 +80,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 224    int      __stdcall Ordinal224(int a1)    // BNET/League related
 
 250                       SFileInit()
-251    BOOL     __stdcall SFileAuthenticateArchive(HANDLE hArchive, int a2)     // (signature) file in archive
+251    BOOL     __stdcall SFileAuthenticateArchive(HANDLE hArchive, DWORD *dwResult)     // (signature) file in archive
 252    BOOL     __stdcall SFileCloseArchive(HANDLE hArchive)
 253    BOOL     __stdcall SFileCloseFile(HANDLE hFile)
 254    BOOL     __stdcall SFileDdaBegin(HANDLE directsound, int a2, int a3)
@@ -97,7 +97,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 265    LONG     __stdcall SFileGetFileSize(HANDLE hFile, LPDWORD lpFileSizeHigh)
 266    BOOL     __stdcall SFileOpenArchive(char *archivename, DWORD dwPriority, DWORD dwFlags, HANDLE handle)
 267    BOOL     __stdcall SFileOpenFile(char *filename, HANDLE handle)
-268    BOOL     __stdcall SFileOpenFileEx(HANDLE handle, char *filename, char mode, HANDLE result)
+268    BOOL     __stdcall SFileOpenFileEx(HANDLE hMpq, const char *szFileName, DWORD dwSearchScope, HANDLE *phFile)
 269    BOOL     __stdcall SFileReadFile(HANDLE hFile, void *buffer, DWORD nNumberOfBytesToRead, int *read, LONG lpDistanceToMoveHigh)
 270    BOOL     __stdcall SFileSetBasePath(char *path)
 271    LONG     __stdcall SFileSetFilePointer(HANDLE hFile, LONG filePos, LONG *filePosHigh, DWORD dwMethod)
@@ -113,8 +113,8 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 281    BOOL     __stdcall SFileLoadFileEx(void *hArchive, char *filename, int a3, int a4, int a5, DWORD searchScope, struct _OVERLAPPED *lpOverlapped)
 282    void     __stdcall SFilePrioritizeRequest(int a1, int a2)
 283    void     __stdcall SFileCancelRequest(int a1)
-284    int      __stdcall SFileSetAsyncBudget(int a1)
-285    void     __stdcall SFileSetDataChunkSize(int a1)
+284    int      __stdcall SFileSetAsyncBudget(DWORD dwBudget)
+285    void     __stdcall SFileSetDataChunkSize(DWORD dwSize)
 286    int      __stdcall SFileEnableSeekOptimization(int a1)
 287    BOOL     __stdcall SFileReadFileEx(int a1, int a2, int a3, int a4, PLONG lpDistanceToMoveHigh, int a6)
 288    DWORD    __stdcall SFileFileExists(HANDLE hFile)
@@ -548,14 +548,14 @@ caps
 struct caps
 {
   u32 size;
-  u32 unk2;
-  u32 unk3;
   u32 unk4;
-  u32 unk5;
-  u32 unk6;
-  u32 ping;
   u32 unk8;
-  u32 unk9;
+  u32 unkC;
+  u32 unk10;
+  u32 unk14;
+  u32 ping;
+  u32 unk1C;
+  u32 unk20;
 }
 
 }}}

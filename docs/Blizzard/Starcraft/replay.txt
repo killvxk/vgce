@@ -1,0 +1,7 @@
+struct _section
+{
+  DWORD dwChecksum;     // checksum, hash?
+  DWORD dwChunkCount;
+  DWORD dwChunkSize;
+  BYTE  bData[dwChunkSize];
+} section[6];  // ?

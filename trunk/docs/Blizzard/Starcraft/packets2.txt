@@ -358,21 +358,21 @@ CLASS 2
   u8    unknown1;
   u8    unknown2;
   u32   unknown3;
-  u16   unknown4 = 0;
-  u16   unknown5 = 1;
-  u16   unknown6 = 5;
+  u16   version1;
+  u16   version2;
+  u16   version3;
   u8    unknown7;
-  DWORD unknown8;
+  DWORD keyHash;
 }}}
 CLASS 2
 
 ----------------------------------------------------
-0x3F - Unknown (Confirmation?)
+== 0x3F - Version Verification ==
 {{{
-	u8   (player ID?)
-	u16  (Null)
-	u16  (01 00)
-	u16  (05 00)
+	u8   playerID;
+	u16  version1;
+	u16  version2;
+	u16  version3;
 }}}
 CLASS 2
 

@@ -1,0 +1,23 @@
+struct _dbgItem
+{
+  u32   itemType;
+  void  *itemFunction;
+  char  *itemText;
+  char  **items;
+  u32   *data;
+  float min;
+  float max;
+  float dflt;
+};
+
+enum _itmType
+{
+  dialog          = 0,
+  button          = 1,
+  list            = 2,
+  integer_range   = 3,
+  float_range     = 4,
+  
+  end             = 10
+};
+

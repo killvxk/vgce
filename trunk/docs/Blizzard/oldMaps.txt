@@ -1,0 +1,297 @@
+W2      = Warcraft II
+SCBeta  = Starcraft Beta
+SC      = Starcraft
+BW      = Starcraft Broodwar
+SE      = Staredit
+
+WC2:  PLAYER_COUNT  = 16;
+SC:   PLAYER_COUNT  = 12;
+
+WC2:  MAX_WIDTH     = 128;
+SC:   MAX_WIDTH     = 256;
+
+WC2:  MAX_HEIGHT    = 128;
+SC:   MAX_HEIGHT    = 256;
+
+struct WPOINT
+{
+  WORD  x;
+  WORD  y;
+};
+
+ALL sections are read, except for VER, of which only the first section is read.
+
+[VER ] (All) (Required)
+WORD wVersion {
+  W2            = 17,
+  W2Expansion   = 19,
+  SCBeta_Early  = 47,
+  SCBeta        = 57,
+  SC            = 59,
+  SC_SE         = 61,
+  SC_Enhanced   = 63,
+  BWBeta        = 75,
+  BW_SE1        = 201,
+  BW_SE2        = 203,
+  BW            = 205
+}
+
+[TYPE] (17, 19) (Required)
+  char  szType[10];   // = "WAR2 MAP"
+  WORD  wUnknown;
+  DWORD dwUnknown;
+
+[DESC] (17, 19) (Required)
+  char  szDescription[32];
+
+[OWNR] (All) (Required)
+  BYTE bOwner[PLAYER_COUNT];
+  {
+    0   = None              Player
+    1   = Computer          Computer
+    2   = Player            Neutral
+    3   = Rescue Passive    Unused
+    4                       Prefer Computer
+    5   = Prefer Computer   Prefer Human
+    6   = Prefer Human      Rescue Passive
+    7   = Neutral           Rescue Active
+    8   = Closed            Closed
+    9   = Observer          
+    10  = Player Left       
+  }
+
+[ERA ] (All) (Required)
+  WORD wTileset; // & 0x07     & 0x03
+  {
+    0 = Badlands        Forest
+    1 = Space Platform  Snow
+    2 = Installation    Wasteland
+    3 = Ashworld        Swamp
+    4 = Jungle
+    5 = Desert
+    6 = Arctic
+    7 = Twilight
+  }
+
+[DIM ] (All) (Required)
+{
+  WORD  wWidth;
+  WORD  wHeight;
+}
+
+[SIDE] (All) (Required)
+{
+  BYTE  bRace[PLAYER_COUNT];
+  {
+    0 = Zerg          Human
+    1 = Terran        Orc
+    2 = Protoss       Neutral (NotAllowed Cursor)
+    3                 Random
+    4                 (Bird Cursor)
+    5 = User Select   (Sailor Cursor)
+    6 = Random        
+    7 = Inactive      
+  }
+}
+
+[SIGN] (17, 19) (Optional)
+  DWORD dwSignature;
+  {
+    default = Normal;
+          1 = Blizzard;
+          2 = Ladder;
+          3 = PGL;
+  }
+
+[UDTA] (17, 19) (Optional)
+{
+  WORD    wUseDefault;
+  WORD    wOverlapFrames[110];
+  WORD    wIndependantFrame[127];
+  WORD    wForestFrame[127];
+  WORD    wWinterFrame[127];
+  WORD    wWastelandFrame[127];
+  LONG    lSightRange[110];
+  WORD    wHitPoints[110];
+  BYTE    bHasMagic[110];
+  BYTE    bBuildTime[110];
+  BYTE    bGoldCost[110];
+  BYTE    bLumberCost[110];
+  BYTE    bOilCost[110];
+  WPOINT  size[110];
+  WPOINT  placementBox[110];
+  BYTE    bAttackRange[110];
+  BYTE    bCpuReactRange[110];
+  BYTE    bHmnReactRange[110];
+  BYTE    bArmor[110];
+  BYTE    bAllowMultiSelect[110];
+  BYTE    bPriority[110];
+  BYTE    bBasicDamage[110];
+  BYTE    bPiercingDamage[110];
+  BYTE    bIsWpnUpgradable[110];
+  BYTE    bIsArmUpgradable[110];
+  BYTE    bMissileWeapon[110];
+  BYTE    bUnitType[110];
+  BYTE    bDecayRate[110];
+  BYTE    bAnnoyFactor[110];
+  BYTE    bRClickAction[58];
+  WORD    bKillScore[110];
+  BYTE    bCanTarget[110];
+  DWORD   dwStatusFlags[110];
+  WORD    wSwampFrame[127];
+}
+
+[UGRD] (17, 19) (Optional)
+{
+  WORD  wUseDefault;
+  BYTE  bTimeCost[52];
+  BYTE  bGoldCost[52];
+  BYTE  bLumberCost[52];
+  BYTE  bOilCost[52];
+  BYTE  bIcon[52];
+  BYTE  bAffects[52];
+  BYTE  bEffect[52];
+}
+
+[ALOW] (17, 19) (Optional)
+{
+  DWORD dwUnitsAllowed[PLAYER_COUNT];
+  DWORD dwSpellsResearched[PLAYER_COUNT];
+  DWORD dwSpellsAllowed[PLAYER_COUNT];
+  DWORD dwSpellsResearching[PLAYER_COUNT];
+  DWORD dwUpgradeAllowed[PLAYER_COUNT];
+  DWORD dwUpgradeResearching[PLAYER_COUNT];
+}
+
+[SGLD] (17, 19) (Required)
+  WORD  wStartingGold[PLAYER_COUNT];
+
+[SLBR] (17, 19) (Required)
+  WORD  wStartingLumber[PLAYER_COUNT];
+
+[SOIL] (17, 19) (Required)
+  WORD  wStartingOil[PLAYER_COUNT];
+
+[AIPL] (17, 19) (Optional)
+  BYTE  bScript[PLAYER_COUNT];
+  
+[MTXM] (All) (Required)
+  WORD  wTiles[wWidth*wHeight];   // Restrictions: Can't be larger than MAX_WIDTH*MAX_HEIGHT; can be less than required amount;
+
+[SQM ] (17, 19) (Required)
+  WORD  wTiles[wWidth*wHeight];   // Unknown; Square Map?; can be less than required amount; Movement map
+
+[OILM] (17, 19) (Required)
+  BYTE  bTiles[wWidth*wHeight];   // Unknown; Oil Map?; can be less than required amount;
+
+[REGM] (17, 19) (Required)
+  WORD  wTiles[wWidth*wHeight];   // Unknown; Region Map?; can be less than required amount;
+
+[UNIT] (All)
+WC2
+{
+  WORD  wX;
+  WORD  wY;
+  BYTE  bType;
+  BYTE  bOwner;
+  WORD  wFlags;
+}
+
+[STR ] (SCBeta, SC, BW, SE)
+
+
+[SPRP] (SCBeta, SC, BW, SE)
+
+
+[FORC] (SCBeta, SC, BW, SE)
+
+
+[THGY] (SCBeta)
+
+
+[MRGN] (SCBeta, SC, BW, SE)
+
+
+[TRIG] (SCBeta, SC, BW, SE)
+
+
+[MASK] (SCBeta, SC, BW, SE)
+
+
+[VCOD] (SC, BW, SE)
+
+
+[MBRF] (SC, BW, SE)
+
+
+[THG2] (SC, BW)
+
+
+[UNIS] (SC, BW, SE)
+
+
+[UPGS] (SC, BW, SE)
+
+
+[TECS] (SC, BW, SE)
+
+
+[PUNI] (SC, BW, SE)
+
+
+[UPGR] (SC, BW, SE)
+
+
+[PTEC] (SC, BW, SE)
+
+
+[UNIx] (BW, SE)
+
+
+[UPGx] (BW, SE)
+
+
+[TECx] (BW, SE)
+
+
+[PUPx] (BW, SE)
+
+
+[PTEx] (BW, SE)
+
+
+[UPRP] (SC, BW, SE)
+
+
+[COLR] (BW)
+
+
+[IVER] (SE)
+
+
+[IVE2] (SE)
+
+
+[IOWN] (SE)
+
+
+[TILE] (SE)
+
+
+[ISOM] (SE)
+
+
+[DD2 ] (SE)
+
+
+[UPUS] (SE)
+
+
+[WAV ] (SE)
+
+
+[SWNM] (SE)
+
+
+[RGN2] (SE)
+

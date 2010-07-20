@@ -1,0 +1,11 @@
+by Heinermann
+(NTSC - US)
+
+[Maximum Debt Modifier]
+04B0B034 XXXXXXXX
+Note: This does not change the displays " X / 10000", but does change the 10000 value to whatever.
+
+[Gravity Modifer]
+04B0B014 XXXXXXXX
+Note: This is a float value. Use 10.0 for extremely low gravity, 560.0 is normal. This changes gravity globally, everything is affected.
+

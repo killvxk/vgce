@@ -1,0 +1,21 @@
+NTSC (USA) codes
+
+[Debug Menu replaces "How to Play (Air Ride)"]
+04495494 8000FBB0
+0449549C 00000000
+
+Note: Normal mode and vehicle type will crash unless the fix is used
+
+[Debug menu fix]
+0449FE64 00000003
+0449FE80 3F800000
+044A0AE0 00000003
+044A0B00 00000003
+044A0B20 00000003
+044A0B40 00000003
+044A0AFC 3F800000
+044A0B1C 3F800000
+044A0B3C 3F800000
+044A0B5C 3F800000
+
+Note: I'd use Ram Fill & Slide, but it didn't seem to work in Dolphin

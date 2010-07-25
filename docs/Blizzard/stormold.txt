@@ -514,31 +514,37 @@ player Struct
 {{{
 struct playerStruct
 {
-    playerStruct *prev;  // +0x00
-    playerStruct *next;  // +0x04
-    char playerName[260];// +0x08
-    DWORD ipAddress;     // +0x10C
-    u32 unknown_0x110;        // +0x110
-    u32 unknown_0x114;        // +0x114
-    DWORD dwFlags;       // +0x118  // 0x04 = unknown, 0x08 = dropped
-    u32 unknown_0x11C;        // +0x11C
-    u32 tickCount;       // +0x120
-    u32 playerBuffer;    // +0x124
-    int Ping;            // +0x128
+    playerStruct *prev;   // +0x00
+    playerStruct *next;   // +0x04
+    char playerName[128]; // +0x08
+    char statString[128]; // +0x88
+    WORD addr_family;     // +0x108
+    WORD port;            // +0x10A
+    DWORD ipAddress;      // +0x10C
+    u32 ping;             // +0x110
+    void *newMessagePointer;  // +0x114
+    DWORD dwFlags;        // +0x118  // 0x04 = unknown, 0x08 = dropped
+    u32 unknown_0x11C;    // +0x11C
+    u32 tickCount;        // +0x120
+    u32 playerBuffer;     // +0x124
+    int Ping;             // +0x128
     BYTE unknown_0x12C[12];  // +0x12C
-    u32 unknown_0x138;  // +0x138
+    u32 unknown_0x138;    // +0x138
     BYTE unknown_0x13C[68];  // +0x13C
-    u32 unknown_0x180   // +0x180
-    BYTE unknown_0x184[68]  // +0x184
-    u32 unknown_0x1C8   // +0x1C8
-    BYTE unknown_0x1CC[12]  // +0x1CC
-    u32 unknown_0x1D8         // +0x1D8 // ref'd by SNetDropPlayer
-    BYTE unknown7[48];  // +0x1DC
-    u16 dropReason;        // +0x20C      // Just a guess
+    u32 unknown_0x180;    // +0x180
+    BYTE unknown_0x184[68]; // +0x184
+    u32 unknown_0x1C8;    // +0x1C8
+    WORD sentMessageNumber[3];// +0x1CC
+    WORD unknown_0x1D2[3];// +0x1D2
+    u32 unknown_0x1D8;    // +0x1D8 // ref'd by SNetDropPlayer
+    WORD unknown7;        // +0x1DC
+    WORD recvMessageNumber[3]; // +0x1DE
+    BYTE unknown[40];     // +0x1E4
+    u16 dropReason;       // +0x20C      // Just a guess
     u16 droppedBy;        // +0x210       // Just a guess
-    BYTE PlayerID;       // +0x212
-                         // +0x213
-                        // +0x214
+    BYTE PlayerID;        // +0x212
+                          // +0x213
+                          // +0x214
 }
 
 }}}

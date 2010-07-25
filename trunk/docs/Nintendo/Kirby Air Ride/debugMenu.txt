@@ -7,17 +7,22 @@ struct _dbgItem
   u32   *data;
   float min;
   float max;
-  float dflt;
+  float interval;
 };
 
 enum _itmType
 {
-  dialog          = 0,
+  label           = 0,
   button          = 1,
   list            = 2,
   integer_range   = 3,
   float_range     = 4,
-  
-  end             = 10
+  integer_any     = 5,
+  hex_byte        = 6,
+  hex_word        = 7,
+  hex_dword       = 8,
+  hex_view        = 9,    // a guess
+  end             = 10,
+  dummy           = 11
 };
 

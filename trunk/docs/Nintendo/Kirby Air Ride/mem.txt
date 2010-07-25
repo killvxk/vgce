@@ -1,0 +1,50 @@
+80535A18  Rumble P1 (0 = off, 1 = on)
+
+80535A3D  Air Ride Laps Limit
+80535A3F  Air Ride Time Limit
+
+80535A49  Top Ride Item Frequency
+
+80535A8B  Top Ride Laps Limit
+
+80535A99  City Trial Time Limit (minutes)
+80535A9A  City Trial Stadium ID 
+
+80535D4C  Top Ride Stage ID
+          {   0   GRASS
+              1   SAND
+              2   SKY
+              3   FIRE
+              4   LIGHT
+              5   WATER
+              6   METAL
+          }
+
+8053646F  Air Ride Stage ID
+          {   0   FANTASY MEADOWS
+              1   CELESTIAL VALLEY
+              2   SKY SANDS
+              3   FROZEN HILLSIDE
+              4   MAGMA FLOWS
+              5   BEANSTALK PARK
+              6   MACHINE PASSAGE
+              7   CHECKER KNIGHTS
+              8   NEBULA BELT
+              9   CITY TRIAL
+              A   DRAG RACE 1
+              B   DRAG RACE 2
+              C   DRAG RACE 3
+              D   DRAG RACE 4
+              
+          }
+
+805367BC  Air Ride Checklist [120]
+80536834  ?
+805368D4  Top Ride Checklist [120]
+8053694C  ?
+805369FC  City Trial Checklist [120]
+80536A74  ?
+
+805DE53B  Sound Setting (0 = mono, 1 = stereo)
+
+805E6700  ? (City Trial) Turn UP appearance rate

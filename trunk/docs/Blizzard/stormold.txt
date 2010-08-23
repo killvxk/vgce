@@ -561,7 +561,7 @@ struct caps
   u32 unk14;
   u32 ping;
   u32 unk1C;
-  u32 unk20;
+  u32 latencyCalls;
 }
 
 }}}

@@ -917,22 +917,29 @@ CLASS 1
 
 =Packet Header=
 {{{
-	u32  udptype (0x00)
-	u16  checksum
-	u16  packet length
-	u16  Sent packets to player (seq1)
-	u16  Recieved packets from player (seq2)
-	u8   Command Class
-	u8   Command ID (0x00)
-	u8   Player ID
-	u8   Flags
+  struct SNPHead
   {
-      0x00 = Normal Traffic
-      0x01 = Verification
-      0x02 = Resend request
-      0x04 = Callback
+    u32  snpType { 0x00 = Storm packet; other values known but private for now }
+    struct STORMHead
+    {
+      u16  checksum
+      u16  packet length
+      u16  Sent packets to player (seq1)
+      u16  Recieved packets from player (seq2)
+      u8   Command Class
+      u8   Command ID (0x00)
+      u8   Player ID
+      u8   Flags
+      {
+          0x00 = Normal Traffic
+          0x01 = Verification
+          0x02 = Resend request
+          0x04 = Callback
+      }
+      void  data
+    }
   }
-	void  data
+  
 }}}
 The command opcode is not stored in the Command ID of the packet, but rather in the data, where many commands may stack.
 Command class 2 opcodes are those you'd find in a replay; unit actions.

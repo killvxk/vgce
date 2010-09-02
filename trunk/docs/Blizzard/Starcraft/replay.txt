@@ -5,3 +5,6 @@ struct _section
   DWORD dwChunkSize;
   BYTE  bData[dwChunkSize];
 } section[6];  // ?
+
+Doesn't appear compressed if size is <= 4.
+If *(DWORD*)section[i].bData == 0, the next iteration is skipped.

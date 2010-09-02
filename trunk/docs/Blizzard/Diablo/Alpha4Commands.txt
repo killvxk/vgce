@@ -1,0 +1,113 @@
+
+G     Increase Gamma
+g     Increase Gamma
+
+F     Decrease Gamma
+F     Decrease Gamma
+
+I     Open Inventory
+i     Open Inventory
+
+C     Open Character Info
+c     Open Character Info
+
+L     Toggle Darkness (Developer mode only)
+l     Toggle Darkness (Developer mode only)
+
+T     Show Location (X, Y) (Developer mode only)
+t     Show Location (X, Y) (Developer mode only)
+
+d     Show Transval (Debug mode only)
+
+e     Show EFlags (Debug mode only)
+
+M     Show Invincible State (Developer mode only)
+m     Show Invincible State (Developer mode only)
+
+P             Pause Game
+p             Pause Game
+Pause/Break   Pause Game
+
+Q     Open Quest Log
+q     Open Quest Log
+
+R     Show Random Seed
+r     Show Random Seed
+
+Z     Toggle Zoom
+z     Toggle Zoom
+
+S     Open Spell List
+s     Open Spell List
+
+*     Receive a Level Up (Developer Mode Only)
+
++     Minimap Zoom In
+=     Minimap Zoom In
+
+-     Minimap Zoom Out
+_     Minimap Zoom Out
+
+B     unk2 (Developer mode only)
+b     unk2 (Developer mode only)
+
+V     Show Version
+v     Show Version
+
+1     Assign/Select Spell Hotkey 1
+2     Assign/Select Spell Hotkey 2
+3     Assign/Select Spell Hotkey 3
+
+ESC   Open Main Menu
+F1    Open Help Menu
+
+F4    Toggle FrameRate (Debug mode only)
+F5    Teleport to Town (Developer mode only)
+F6    Teleport to Dungeon (Developer mode only)
+F7    Teleport to Catacombs (Developer mode only)
+F8    Teleport to Caves (Developer mode only)
+F9    Take Screenshot (DScrn_%d.PCX)
+
+UP      Minimap Move Up / Move cursor up (Shop/Quest)
+DOWN    Minimap Move Down / Move cursor down (Shop/Quest)
+LEFT    Minimap Move Left
+RIGHT   Minimap Move Right
+ENTER   Accept cursor option (Shop/Quest)
+
+TAB     Toggle Minimap
+SPACE   Clear All windows
+
+SHIFT   Hold this while moving the mouse at the edge of the screen to move it (Developer Mode Only)
+
+
+=============================================
+[Enabling Debug Mode and Other Options]
+
+// Open the executable in a hex editor and modify the following values:
+0xBA958     Start in Premade dungeon, Debug Mode Enabled, Random Seed preset to 9, Only enemy is Ice Stalker (blue Skeleton)
+0xBA95C     Pre-Release Demo Mode Enabled
+0xBA960     Show Intro
+0xBA968     Developer Mode Enabled (AFAIK this also makes you unhittable and make 1-hit kills, you can make yourself vulnerable again by going to the menu and turning Cheats: Off)
+0xBA970     Show Debug Tiles
+0xBA978     Light Radius Mode (Makes darkness so thick you can't even see 1 tile away)
+
+Other notes:
+ - Lava and other tiles are messed up
+ - Hell just uses the catacomb tiles with no doors, there's also no minimap
+ - Several crashes/freezing
+ - The caves aren't "closed in". The wall can just be what looks like a cliff.
+ - Rarely there will be dungeon generation bugs that prevent you from progressing.
+ - Holding the left mouse button will not continue to move your character.
+ - There are several items like "Elixers" that can raise and lower individual stats.
+ - The stairs leading down from level 16 will bring you to town (the town will be considered level 17, and going to the cathedral 18, etc)
+ 
+Known crashes/freezes:
+ - Bad unique item ID; When an item is dropped it can have an ID greater than the number of unique items, causing a buffer overflow. The crash occurs in strcpy/strcat, when referencing a bad pointer for the name of the item. References item ID 89.
+   Fix: Set 0xA841C to 0xFF. This hack will remove the unique item "The Celestial Star", but will fix the frequent crashes.
+ 
+ - When loading a level, a freeze occurs when trying to load the file "Monsters\Monsters\rflame.TRN", which doesn't exist.
+   Fix: Simply copy and rename another TRN file.
+
+
+
+

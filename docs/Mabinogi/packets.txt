@@ -1,0 +1,156 @@
+// Note: may have done a lot of things in big endian, since it's easier to manage.
+// Note: This is just some stuff I came up with after peeking at some packets; I did not analyze them in detail.
+
+struct pHead
+{
+  BYTE  bUnk;   // (This is entirely unknown; sometimes it corresponds to the packets size and sometimes not; may depend on bFlags)
+                // (Is the size after the header if type is 0x03??)
+  DWORD dwSize; // (Total packet size, including this header)
+  BYTE  bType; // (0x00 = compressed/encrypted; 0x01 = compressed/encrypted; 0x03 = Raw/Uncompressed/Decrypted)
+}
+
+// (S->C)
+// ====================================== bType 0x03 struct ======================================
+  struct cmdHead
+  {
+    DWORD dwTypeID;    // Unique Type ID for the action (not completely known, but we can call it this for now)
+    DWORD dwFlags;     // Flags; Specific for the type ID? (not completely known, but we can call it this for now)
+    DWORD dwEntityId;  // Target (this) Entity (NPC/Monster ID for example) (not completely known, but we can call it this for now)
+    BYTE  bSize;       // Size of this block, does NOT include header
+    BYTE  bCount;      // Number of data elements in this block
+    BYTE  bCount2;     // Number of data elements if bCount is 1?
+  };
+  struct element
+  {
+    BYTE bType;        // Element type, see below
+  };
+
+// ================================== bType 0x03 element types ===================================
+[0x01] // BYTE
+{
+  BYTE b1;
+}
+
+[0x03] // DWORD? int?
+{
+  DWORD dw1;
+}
+
+[0x04] // ??
+{
+  WORD w1;
+  WORD w2;
+  WORD w3;
+  WORD w4;
+}
+
+[0x05] // FLOAT
+{
+  float f1;
+}
+
+[0x06] // STRING
+{
+  BYTE bUnk1;
+  BYTE bLen;
+  char string[bLen];
+}
+
+// ================================== bType 0x03 parsed commands =================================
+// Note: The following is pseudocode and NOT an actual structure in the packet; See above: cmd/elements/etc
+[0x520D] // Unknown (flags are 0x30000000)
+  [04]
+  [01]
+
+[0x520C] // Unk (flags: 0x30000000)
+  A lot
+
+[0x526C] // Global Party/Shop Chat (flags are 0x30000000)
+  [01]byte        unknown 1
+  [06]string      source
+  [06]string      message
+  [01]byte        unknown 2
+  [03]dword       unknown 3 (always -1?)
+  [03]dword       unknown 4 (always 0?)
+  [01]byte        unknown 5 (different depending on chat type? 0x02=PARTY, 0x05=PERSONALSHOP)
+  
+[0x526C] // NPC Chat Bubble (flags are 0x0010F000)
+  [01]byte        unknown 1
+  [06]string      source
+  [06]string      message
+
+[0x6591] // Unknown, Movement? (flags are 0x00100000)
+  [03]dword       unknown 1
+  [03]dword       unknown 2
+  [03]dword       unknown 3
+  [03]dword       unknown 4
+
+[0x6593] // Unknown (flags: 0x00100000)
+  [03]
+  [03]
+  [03]
+  [03]
+
+[0x6594] // Unknown (flags are 0x00100000)
+  [01]
+  [03]
+  [03]
+  [03]
+
+[0x6E2A] // Unk (flags: 0x00100000)
+  [01]
+  [01]
+
+[0x7532] // large (flags are 0x00100000)
+  [01]
+  [03]
+  [03]
+  [05]
+  [03]
+  [05]
+  [03]
+  [05]
+  [03]
+  [05]
+  [03]
+  [05]
+  [03]
+  [05]
+  [03]
+  [05]
+  [03]
+  [05]
+  [03]
+  [05]
+  [03]
+  [03]
+  [05]
+  [03]
+  [03]
+  [01]
+  [05]
+  [03]
+  [03]
+  [03]
+  [05]
+  [05]
+  [03]
+  [03]
+  [03]
+
+[0x7920] // Unk (flags: 0x0010F000); has 3 variables
+  ??
+
+[0x908A] // Unk (flags: 0x00100000)
+  [04]
+  [03]
+  [05]
+  [05]
+
+[0x9094] // Unknown (flags: 0x00100000)
+  [04]
+
+
+
+
+

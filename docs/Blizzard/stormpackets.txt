@@ -8,7 +8,7 @@
 	u8   Command Class
 	u8   Command ID
 	u8   Player ID (-1 = All players)
-	u8   Resend
+	u8   Flags
 	...Packet Data...
 }}}
 

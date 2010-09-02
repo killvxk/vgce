@@ -1,3 +1,4 @@
+==========================================================================
 CAPS.DAT
 
 u32     sectionSize;
@@ -40,3 +41,25 @@ u32     unknown8;
 u32     unknown9;
     BNET/UDPN/MODM/SCBL/IPXN: 2
     0000:                     0
+    
+==========================================================================
+
+SNPType
+  0x00 = Storm Packet
+  {
+    storm header & data
+  }
+  0x03 = Client Ping
+  {
+    DWORD pingType;
+    {
+      0x00 = ping;
+      0x01 = pong;
+    }
+  }
+  0x05 = Battle.net UDP ping
+  0x06 = KeepAlive1 (Client?)
+  0x07 = KeepAlive2 (Server?)
+  0x08 = Response SID_LOGONCHALLENGE (establish that client can use UDP)
+  0x09 = Response SID_LOGONCHALLENGEEX (establish that client can use UDP)
+  

@@ -1,0 +1,11 @@
+// Boolean values; 1 = true; 0 = false
+
+0xB1DD0   Debug Mode (Default: Off)
+0xB1DD4   Demo Mode (Default: On)
+0xB1DD8   Play Intro (Default: On)
+0xB1DE0   Developer Mode (Default: Off)
+0xB1DE4   Show Frame Rate (Default: Off)
+0xB1DF0   Light Radius Switch (Default: Off)
+0xB1DF4   Enable Music (Default: Off)
+
+Recommended to disable "Demo Mode" and "Play Intro", as well as enable "Developer Mode" and "Enable Music".

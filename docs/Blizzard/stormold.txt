@@ -6,8 +6,8 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 101    BOOL     __stdcall SNetCreateGame(char *Source, char *a2, char *a3, int a4, int a5, int a6, char *a7, char *a8, int *playerid)
 102    BOOL     __cdecl   SNetDestroy()
 103    BOOL     __stdcall SNetEnumProviders(int (__stdcall *callback)(DWORD, DWORD, DWORD, DWORD), int mincaps)
-104    BOOL     __stdcall SNetEnumDevices(int (__stdcall *callback)(DWORD, DWORD, DWORD))
-105    BOOL     __stdcall SNetEnumGames(int (__stdcall *callback)(DWORD, DWORD, DWORD), int *hintnextcall)
+104    BOOL     __stdcall SNetEnumGames(int (__stdcall *callback)(DWORD, DWORD, DWORD), int *hintnextcall)
+105    BOOL     __stdcall SNetEnumDevices(int (__stdcall *callback)(DWORD, DWORD, DWORD))
 106    BOOL     __stdcall SNetDropPlayer(int playerid, DWORD flags)
 107    BOOL     __stdcall SNetGetGameInfo(int type, char *src, unsigned int length, int *byteswritten)
 108    BOOL     __stdcall SNetGetNetworkLatency(int measurementtype, int *result)
@@ -276,7 +276,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 477    BOOL    __stdcall SCmdRegisterArgument(int a1, int a2, char *str, int a4, int a5, int a6, int a7, int a8)
 478    int     __stdcall SCmdStringExists(int argnum)
 479    BOOL    __stdcall SCmdProcessCommandLine(int count, void *function)
-480    BOOL    __stdcall Ordinal480(int a1, int a2)   // WC3
+480    BOOL    __stdcall SCmd480(int a1, int a2)   // WC3
 481    BOOL    __stdcall SMemFindNextBlock(int a1, int a2, int a3, int a4)
 482    BOOL    __stdcall SMemFindNextHeap(int prevheap, int details, int nextheap)
 483    int     __stdcall SMemGetHeapByCaller(int a1, int a2)
@@ -384,7 +384,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 585    int          __stdcall SStrStrI(const char *string, const char *search)
 586    int          __stdcall SStrStr(char *string, const char *search)
 587    int          __stdcall SStrStr(const char *string, const char *search)
-588    int          __stdcall SNet588(char *a1, char *a2)    // league related
+588    int          __stdcall SNet588(char *a1, char *a2)    // league related?
 589
 590
 595

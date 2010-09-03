@@ -1,0 +1,27 @@
+[System]
+- Cannot continuously move by holding the mouse button down
+- Holding SHIFT to attack in place only works for ranged weapons
+- Single player only
+- UI is significantly different
+- Character/Inventory pages have swapped sides
+- Quest Log button is in Character page
+- No spell book
+- No belt, instead there is a single option that lets you select a potion like a spell
+- Many of the sounds used are completely different from the release, most notable are the voices of NPCs and characters
+
+[Town]
+- There are no entrances to Catacombs/Cave/Hell
+- Wirt is just called "The Peg-legged boy" and only has a random chance of appearing
+- The cows can't be selected
+- There is no Gossip option
+- The only NPCs are: Blacksmith, Tavern Guy, Peg-legged boy, the Witch, the Wounded Townsman, and Cows
+
+[Quest]
+- The wounded townsman tells you the Butcher killed his wife and children, and that you should avenge him, which is really cheesy
+- The Butcher appears on level 1 instead of level 2
+- The Butcher doesn't appear until you talk to the Wounded Townsman
+
+[Objects]
+- Barrels seem to have HP of their own
+
+These are only some of the differences. There are many more.

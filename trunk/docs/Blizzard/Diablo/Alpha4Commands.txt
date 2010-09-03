@@ -84,6 +84,7 @@ SHIFT   Hold this while moving the mouse at the edge of the screen to move it (D
 [Enabling Debug Mode and Other Options]
 
 // Open the executable in a hex editor and modify the following values:
+// 1 = enabled, 0 = disabled; corresponds to bool true and false.
 0xBA958     Start in Premade dungeon, Debug Mode Enabled, Random Seed preset to 9, Only enemy is Ice Stalker (blue Skeleton)
 0xBA95C     Pre-Release Demo Mode Enabled
 0xBA960     Show Intro

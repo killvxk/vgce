@@ -1,6 +1,5 @@
 =Packet Header=
 {{{
-	u32  udptype (0x00)
 	u16  checksum
 	u16  packet length
 	u16  Sent packets to player (seq1)
@@ -11,8 +10,3 @@
 	u8   Flags
 	...Packet Data...
 }}}
-
-Dropee: 00 00 00 00 f3 6e 18 00 0a 00 05 00 00 0c 00 00
-        01 00 00 00 66 00 00 00 03 00 00 00
-Others: 00 00 00 00 fb 12 18 00 02 00 02 00 00 0c 05 00
-        02 63 03 15 44 00 00 00 03 00 00 00

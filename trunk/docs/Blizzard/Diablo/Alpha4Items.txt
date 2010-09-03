@@ -1,0 +1,382 @@
+[Notes]
+  Any typos here (ex: "Scoll of Lightning" and "he Defender") are intentional and expected to be accurate.
+
+[Basic Items]
+  Falchion
+  Short Sword (2-6)
+  Buckler [3]
+  Short Bow (1-4)
+  Short Staff of Lightning (2-4)
+  Cleaver
+  Magic Rock
+  Infravision Ring
+  Undead Crown
+  Slab of Meat
+  Potion of Healing
+  Potion of Mana
+  Scroll of Identify
+  Cap
+  Skull Cap
+  Helm
+  Full Helm
+  Crown
+  Great Helm
+  Cape
+  Rags
+  Cloak
+  Robe
+  Quilted Armor
+  Leather Armor
+  Hard Leather Armor
+  Studded Leather Armor
+  Ring Mail
+  Chain Mail
+  Scale Mail
+  Breast Plate
+  Splint Mail
+  Plate Mail
+  Field Plate
+  Royal Armor
+  Full Plate Mail
+  Buckler
+  Small Shield
+  Large Shield
+  Kite Shield
+  Tower Shield
+  Potion of Healing
+  Potion of Full Healing
+  Potion of Mana
+  Potion of Full Mana
+  Potion of Experience
+  Elixir of Strength
+  Elixir of Magic
+  Elixir of Dexterity
+  Elixir of Vitality
+  Elixir of Weakness
+  Elixir of Disillusion
+  Elixir of Clumsiness
+  Elixir of Sickness
+  Scroll of Firebolt
+  Scroll of Healing
+  Scoll of Lightning
+  Scroll of Flash
+  Scroll of Identify
+  Scroll of Fire Wall
+  Scroll of Town Portal
+  Scroll of Infravision
+  Scroll of Mana Shield
+  Scroll of Fireball
+  Scroll of Nova
+  Scroll of Phasing
+  Scroll of Flame Wave
+  Scroll of Stone Curse
+  Scroll of Chain Lightning
+  Scroll of Doom Serpents
+  Scroll of Blood Boil
+  Scroll of Teleport
+  Book of 
+  Book of 
+  Book of 
+  Book of 
+  Dagger
+  Short Sword
+  Falchion
+  Scimitar
+  Claymore
+  Blade
+  Sabre
+  Long Sword
+  Broad Sword
+  Bastard Sword
+  Two-Handed Sword
+  Great Sword
+  Small Axe
+  Axe
+  Large Axe
+  Broad Axe
+  Battle Axe
+  Great Axe
+  Mace
+  Morning Star
+  War Hammer
+  Club
+  Spiked Club
+  Flail
+  Maul
+  Short Bow
+  Bow
+  Long Bow
+  Composite Bow
+  Short Battle Bow
+  Long Battle Bow
+  Short War Bow
+  Long War Bow
+  Short Staff
+  Long Staff
+  Composite Staff
+  Quarter Staff
+  War Staff
+  Ring
+  Ring
+  Ring
+
+
+[Item Prefixes]
+  Tin
+  Brass
+  Bronze
+  Iron
+  Steel
+  Silver
+  Gold
+  Platinum
+  Mithril
+  Metioric
+  Useless
+  Bent
+  Weak
+  Jagged
+  Deadly
+  Heavy
+  Vicious
+  Brutal
+  Massive
+  Savage
+  Clumsy
+  Dull
+  Sharp
+  Fine
+  Warrior's
+  Soldier's
+  Lord's
+  Knight's
+  Master's
+  Vulnerable
+  Dilapidated
+  Sturdy
+  Strong
+  Mighty
+  Valient
+  Glorious
+  Blessed
+  Saintly
+  Miraculous
+  Red
+  Crimson
+  Burgandy
+  Garnet
+  Ruby
+  Blue
+  Azure
+  Lapis
+  Cobalt
+  Sapphire
+  White
+  Pearl
+  Ivory
+  Crystal
+  Diamond
+  Topaz
+  Amber
+  Jade
+  Obsidian
+  Emerald
+  Monk's
+  Priest's
+  Bishop's
+  Cardinal's
+  Glowing
+  Cryptic
+  Arcane
+  Magestic
+  Angel's
+  Arch-Angel's
+  Plentiful
+  Bountiful
+  Flaming
+  Lightning
+  Chaos
+
+[Item Suffixes]
+  of quality
+  of maiming
+  of slaying
+  of gore
+  of pain
+  of tears
+  of health
+  of protection
+  of absorbtion
+  of deflection
+  of frailty
+  of weakness
+  of strength
+  of might
+  of power
+  of the giant
+  of the titan
+  of paralysis
+  of atrophy
+  of dexterity
+  of proficiency
+  of accuracy
+  of precision
+  of perfection
+  of draining
+  of dyslexia
+  of magic
+  of the mind
+  of brilliance
+  of sorcery
+  of wizardry
+  of decrepitude
+  of disease
+  of vitality
+  of zest
+  of vim
+  of vigor
+  of life
+  of trouble
+  of the pit
+  of the sky
+  of the moon
+  of the stars
+  of the heavans
+  of the zodiac
+  of the vulture
+  of the jackal
+  of the fox
+  of the jaguar
+  of the eagle
+  of the wolf
+  of the bear
+  of the lion
+  of the spider
+  of the frog
+  of the hyena
+  of the raven
+  of the snake
+  of the serpant
+  of the drake
+  of the dragon
+  of fragility
+  of brittleness
+  of sturdiness
+  of craftsmanship
+  of structure
+  of indestructible
+  of the dark
+  of the night
+  of light
+  of radiance
+  of stealth
+  of hiding
+  of obfuscation
+  of the thief
+  of doubling
+  of tripling
+  of fire
+  of lightning
+  of many
+  of plenty
+  of homing
+  of thorns
+  of spikes
+  of corruption
+  of pox
+  of fear
+  of rabies
+  of the crusader
+  of vision
+  of the feather
+  of the bear
+  of vileness
+
+[Unique Items]
+  The Butcher's Cleaver
+  The Rift Bow
+  The Needler
+  The Blackoak Bow
+  Flamedart
+  Fleshstinger
+  Gloomfang
+  Windforce
+  Eaglehorn
+  Gonnagal's Dirk
+  The Executioner's Blade
+  The Bonesaw
+  Shadowhawk
+  Wizardspike
+  Lightsabre
+  The Falcon's Talon
+  Inferno
+  Doombringer
+  The Grizzly
+  The Grandfather
+  The Mangler
+  Stonecleaver
+  Aguinara's Hatchet
+  Hellslayer
+  The Humongous Edge
+  Crackrust
+  Baranar's Star
+  Gnarled Root
+  The Cranium Basher
+  Schaefer's Hammer
+  Skull & Chain
+  Dreamflange
+  The Dufus Staff
+  Gleamsong
+  Thundercall
+  The Protector
+  Naj's Puzzler
+  Mindcry
+  Rod of Onan
+  Thinking Cap
+  Fool's Crest
+  Gotterdamerung
+  Royal Circlet
+  The Gladiator's Bane
+  The Rainbow Cloak
+  Wisdom's Wrap
+  Sparking Mail
+  Golem's Hide
+  Scavenger Carapace
+  Nightscape
+  Naj's Light Plate
+  Demonspike Coat
+  Split Skull Shield
+  Blackoak Shield
+  Defender of Islam
+  Ancient Rune Shield
+  Stormshield
+  Constricting Ring
+  Ring of Engagement
+  The Undead Crown
+  Bloodslayer
+  Ring of Regha
+  Helm of Sprits
+  Sharp Beak
+  Lightforge
+  Bramble
+  The Deflector
+  The Bleeder
+  Overlord's Helm
+  Leather of Aut
+  Torn Flesh of Souls
+  Dragon's Breach
+  The Celestial Axe
+  Wicked Axe
+  Bow of the Dead
+  Deadly Hunter
+  The Celestial Bow
+  Black Razor
+  Gibbous Moon
+  Gryphon's Claw
+  Ice Shank
+  he Defender
+  Immolator
+  Stormspire
+  Civerb's Cudgel
+  Hammer of Jholm
+  The Celestial Star

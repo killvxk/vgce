@@ -1,0 +1,174 @@
+[Basic Monsters]
+  Zombie
+  Ghoul
+  Rotting Carcass
+  Black Death
+  Fallen One      // With a Spear
+  Carver
+  Devil Kin
+  Dark One
+  Skeleton        // With an Axe
+  Ice Stalker
+  Burning Dead
+  Horror
+  Fallen One      // With a Sword
+  Carver
+  Devil Kin
+  Dark One
+  Scavenger
+  Plague Eater
+  Shadow Beast
+  Bone Gasher
+  Skeleton        // With a Bow
+  Ice Stalker
+  Burning Dead
+  Horror
+  Skeleton Captain
+  Ice Stalker Captain
+  Burning Dead Captain
+  Horror Captain
+  Hidden
+  Stalker
+  Unseen
+  Illusion Weaver
+  Flesh Clan        // With a Mace
+  Stone Clan
+  Fire Clan
+  Night Clan
+  Fiend
+  Blink
+  Gloom
+  Familiar
+  Flesh Clan        // With a Bow
+  Stone Clan
+  Fire Clan
+  Night Clan
+  Acid Beast
+  Poison Spitter
+  Pit Beast
+  Lava Maw
+  Skeleton King
+  Overlord
+  ud Man            // This seems to be intentional
+  Toad Demon
+  Flayed One
+  Wyrm
+  Magma Demon
+  Blood Stone
+  Hell Stone
+  Lava Lord
+  Horned Demon
+  Mud Runner
+  Frost Charger
+  Obsidian Lord
+  Red Storm
+  Storm Rider
+  Storm Lord
+  Maelstorm
+  Winged Demon
+  Gargoyle
+  Blood Claw
+  Death Wing
+  Serpent Magi
+  Fire Drake
+  Gold Magi
+  Blueback
+  Black Knight
+  Doom Guard
+  Steel Lord
+  Blood Knight
+  The Butcher
+  Succubus
+  Snow Witch
+  Hell Spawn
+  Soul Burner
+  Mega Demon
+  Guardian
+  Vortex Lord
+  Balrog
+  Mage
+  Incinerator
+  Unraveler
+  Goat Lord
+  Sneaky Lord
+  The Dark Lord         // This is Diablo himself
+
+[Unique Monsters]
+  BoneHead Keenaxe
+  Bladeskin the Slasher
+  Pukerat the Unclean
+  Boneripper
+  Eyepuke the Hungry
+  Gutshank the Quick
+  Brokenhead Bangshield
+  Bongo
+  Rot Carnage
+  Shadowbite
+  Deadeye
+  Madeye the Dead
+  Skullfire
+  The Spook
+  Putrid Bone Marrow Rot
+  Pulse Crawler
+  Wrath Raven
+  Spine Eater
+  Blackash the Burnning
+  Shadowcrow
+  Blightstone the Weak
+  Bilefroth the Pit Master
+  Bloodskin Darkbow
+  Doombat
+  Shadowdrinker
+  Haze Shifter
+  Blueflesh Deathspit
+  Bloodgutter Battlelord
+  Deathshade Fleshmaul
+  War Maggot the Mad
+  Glass Skull the Jagged
+  Blightfire
+  Nightwing the Cold
+  Gorestone Deatharrow
+  Bronzefist Firestone
+  Howlingire the Shade
+  Firewound the Grim
+  Baron Spidermaker
+  Blighthorn Steelmace
+  Chaos Howler
+  Brokenspine the Cruel
+  Brokenstorm
+  Stormbane
+  Bluepox the Fat
+  Goldblight of the Flame
+  Blackstorm
+  Putrid the Foul
+  The Flayer
+  Bluehorn the Mighty
+  Fangspeir
+  Lionskull the Bent
+  Vilevomit the Reaper
+  Redface Viperflame
+  Fangskin
+  Witchfire the Unholy
+  Sinewrot Blackskull
+  Soulslasher the Hollow
+  Lord of the Pit
+  Vomit Rust
+  Doomcloud
+  Witchmoon the Lude
+  Gorefeast Angelkiller
+  Graywar the Slayer
+  Stareye the Witch
+  Bluelord the Hunter
+  Sir Gorash
+  Bloodlust the Temptress
+  Darkweb the Queen
+  Flesh Dancer
+  Blackwound the Bloody
+  Sinwar of the Storm
+  Soulpus
+  El Chupacabra
+  Windspawn
+  Wrathfire the Doomed
+  Blacktongue
+  The Dark Lord
+

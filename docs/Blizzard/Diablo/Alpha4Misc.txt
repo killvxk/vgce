@@ -1,0 +1,147 @@
+[Spells & Skills]
+  Firebolt
+  Healing
+  Lightning
+  Flash
+  Identify
+  Fire Wall
+  Town Portal
+  Stone Curse
+  Infravision
+  Phasing
+  Mana Shield
+  Fireball
+  Guardian
+  Chain Lightning
+  Flame Wave
+  Doom Serpents
+  Blood Ritual
+  Nova
+  Invisibility
+  Sentinal
+  Golem
+  Blood Boil
+  Teleport
+  Apocalypse
+  Etherealize
+  Item Repair
+  Staff Recharge
+  Trap Disarm
+
+[Quests]
+  The Skeleton King
+  The Butcher
+  The Magic Rock
+  The Bone Chamber
+  The Maze
+
+[Shrines]
+  Mysterious
+  Imposing
+  Hidden
+  Magical
+  Mystic
+  Enchanted
+  Thaumaturgic
+  Fascinating
+  Cryptic
+  Supernatural
+  Eerie
+  Holy
+  Spiritual
+
+[Objects]
+  0x01    Door
+  0x02    Door
+  0x04    Lever
+  0x05    Small Chest
+  0x06    Chest
+  0x07    Large Chest
+  0x14    Crusified Skeleton
+  0x15    Crusified Skeleton
+  0x16    Crusified Skeleton
+  0x19    Book of Novaness
+  0x1C    Skull Lever
+  0x29    Mythical Book
+  0x2A    Door
+  0x2B    Door
+  0x30    Sarcophagus
+  0x32    Lever
+  0x34    Tome
+  0x37    Bookshelf
+  0x39    Barrel
+  0x3A    Barrel
+  0x3B    %s Shrine
+  0x3C    %s Shrine
+  0x3D    Skeleton Tome
+  0x3E    Bookcase
+  0x3F    Bookcase
+  0x40    Library Book
+  0x42    Blood Fountain
+  0x43    Decapitated Body
+  
+[Item Mods]
+  0x00    To Hit : %+i%%
+  0x01    To Hit : %+i%%
+  0x02    Damage : %+i%%
+  0x03    Damage : %+i%%
+  0x04    Damage : %+i%%  To Hit : %+i%%
+  0x05    Damage : %+i%%  To Hit : %+i%%
+  0x06    Armor Class : %+i
+  0x07    Armor Class : %+i
+  0x08    Resist Fire : %+i%%
+  0x09    Resist Lightning : %+i%%
+  0x0A    Resist General Magic : %+i%%
+  0x0B    Resist All : %+i%%
+  0x0C    Spell cost -%i%%
+  0x0D    Spell duration +%i%%
+  0x0E    All Spell levels +%i
+  0x0F    Extra charges
+  0x10    Fire hit (NW)
+  0x11    Lightning hit (NW)
+  0x12    Random spell every 5 min (NW)
+  0x13    Strength : %+i
+  0x14    Strength : %+i
+  0x15    Magic : %+i
+  0x16    Magic : %+i
+  0x17    Dexterity : %+i
+  0x18    Dexterity : %+i
+  0x19    Vitality : %+i
+  0x1A    Vitality : %+i
+  0x1B    All attributes : %+i
+  0x1C    All attributes : %+i
+  0x1D    Every hit you recieve : %+i
+  0x1E    Every hit you recieve : %+i
+  0x1F    Hit Points : %+i
+  0x20    Hit Points : %+i
+  0x21    Mana : %+i
+  0x22    Mana : %+i
+  0x23    Increase in durability
+  0x24    Decrease in durability
+  0x25    Infinite durability
+  0x26    Increases light radius %i%%
+  0x27    Decreases light radius %i%%
+  0x28    invisiblity (NW)
+  0x29    Increase arrows per shot (NW)
+  0x2A    Fire arrows
+  0x2B    Lightning arrows (NW)
+  0x2C    Homing arrows (NW)
+  0x2D    You get hurt each use (NW)
+  0x2E    Lose all mana, no regen (NW)
+  0x2F    You can't heal (NW)
+  0x30    Scare monster away (NW)
+  0x31    Attacks square twice (NW)
+  0x32    Exponential damage (NW)
+  0x33    See invisible (NW)
+  0x34    Half trap damage (NW)
+  0x35    Knock enemies back (NW)
+  0x36    Enemy stops healing (NW)
+  0x37    +%i damage to each hit
+  0x38    Fires random speed arrows
+  0x39    Unusual item damage
+  0x3A    Enhanced durability
+  0x42    You constantly lose hit points
+  default Another ability (NW)
+  
+  
+  

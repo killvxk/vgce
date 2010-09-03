@@ -1,15 +1,17 @@
 Client codes:
 CHAT    Chat client
 D2DV    Diablo II
+D2ST    Diablo II Test (Beta)
 D2XP    Diablo II Expansion
 DRTL    Diablo Retail
 DSHR    Diablo Shareware
-DTST    Unknown Diablo
+DTST    Diablo Test (Beta)
 JSTR    Japan Starcraft
 SEXP    Starcraft Expansion
 SSHR    Starcraft Shareware
 STAR    Starcraft
 W2BN    Warcraft II Battle.net
+W3DM    Warcraft III Demo
 W3XP    Warcraft III Expansion
 WAR3    Warcraft III
 
@@ -21,7 +23,7 @@ XMAC    MacOS X
 
 
 Network codes:
-0000    Null Placeholder
+0000    Null Placeholder, probably for Single Player
 ATLK
 BNET    Battle.net
 IPXN    IPX Network
@@ -29,5 +31,6 @@ IPXW
 LMRN    Unknown/Unused Modem
 MODM    Modem
 MSDP
+NONE    None, used in wc3 to identify that no network mode is being used
 SCBL    Direct Cable Connection
 UDPN    UDP Network

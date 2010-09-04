@@ -1,0 +1,19 @@
+// For version 96.11.9.2
+
+[NoCD]
+  0x2D156 - Change this byte from 0x01 to 0x00, and copy DIABDAT.MPQ from the CD to the Diablo Beta folder.
+
+[Misc]
+// Boolean values; 1 = true; 0 = false
+
+  0xDBDA8   Play Intro (Default: On)
+  0xDBDB4   Light Radius Switch (Default: Off)
+  
+[RandomSeed]
+  0xDBDC0   Non-Zero will make the random seed always this value (DWORD)
+  
+[Enable Single Player]
+  Make the following patches in "diabloui.dll".
+  0x28F5  Change this from 0x00 to 0x01 to enable the button
+  0x28E5  Change this from 0x07 to 0x06 to fix the button color
+  

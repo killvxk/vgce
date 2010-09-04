@@ -1,11 +1,12 @@
 Client codes:
 CHAT    Chat client
 D2DV    Diablo II
-D2ST    Diablo II Test (Beta)
+D2ST    Diablo II Stress Test
 D2XP    Diablo II Expansion
+DIAB    Diablo Beta
 DRTL    Diablo Retail
 DSHR    Diablo Shareware
-DTST    Diablo Test (Beta)
+DTST    Diablo Test
 JSTR    Japan Starcraft
 SEXP    Starcraft Expansion
 SSHR    Starcraft Shareware

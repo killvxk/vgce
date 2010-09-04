@@ -49,6 +49,7 @@ SNPType
   {
     storm header & data
   }
+
   0x03 = Client Ping
   {
     DWORD pingType;
@@ -57,6 +58,7 @@ SNPType
       0x01 = pong;
     }
   }
+
   0x05 = Battle.net UDP ping
   0x06 = KeepAlive1 (Client?)
   0x07 = KeepAlive2 (Server?)

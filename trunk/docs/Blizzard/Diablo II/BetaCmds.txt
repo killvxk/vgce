@@ -1,0 +1,60 @@
+[Commandline]
+    -w          VIDEO WINDOW
+    -3dfx       VIDEO 3DFX
+    -opengl     VIDEO OPENGL
+    -d3d        VIDEO D3D
+    -rave       VIDEO RAVE
+    -per        VIDEO PERSPECTIVE
+    -lq         VIDEO QUALITY
+    -gamma      VIDEO GAMMA
+    -vsync      VIDEO VSYNC
+    -fr         VIDEO FRAMERATE
+    -s          NETWORK SERVERIP
+    -gametype   NETWORK GAMETYPE
+    -arena      NETWORK ARENA
+    -joinid     NETWORK JOINID
+    -gamename   NETWORK GAMENAME
+    -bn         NETWORK BATTLENETIP
+    -mcpip      NETWORK MCPIP
+    -ama        CHARACTER AMAZON
+    -pal        CHARACTER PALADIN
+    -sor        CHARACTER SORCERESS
+    -nec        CHARACTER NECROMANCER
+    -bar        CHARACTER BARBARIAN
+    -i          CHARACTER INVINCIBLE
+    -name       CHARACTER NAME
+    -ctemp      CHARACTER CTEMP
+    -nm         MONSTER MONSTERS
+    -m          MONSTER MONSTERCLASS
+    -minfo      MONSTER MONSTERINFO
+    -md         MONSTER MONSTERDEBUG
+    -rare       ITEM RARE
+    -unique     ITEM UNIQUE
+    -act        INTERFACE ACT
+    -log        DEBUG LOG
+    -msglog     DEBUG MSGLOG
+    -safe       DEBUG SAFEMODE
+    -nosave     DEBUG NOSAVE
+    -seed       DEBUG SEED
+    -nopk       NETWORK NOPK
+    -nc         DEBUG NOCHEATS
+    -ns         DEBUG NOSOUND
+    -npl        FILEIO NOPREDLOAD
+    -direct     FILEIO DIRECT
+    -lem        FILEIO LOWEND
+    -questall   DEBUG QuEsTs
+    -comint     NETWORK COMINT
+    -skiptobnet NETWORK SKIPTOBNET
+    -openc      NETWORK OPENC
+    -nocompress FILEIO NOCOMPRESS
+    
+    -modstate0      none.dll
+    -client         D2Client.dll
+    -server         D2Server.dll
+    -multiplayer    D2Multi.dll
+    -launcher       D2Launch.dll
+    -multilan       D2MultiLAN.dll
+    -expand         D2EClient.dll
+    
+    -install
+    

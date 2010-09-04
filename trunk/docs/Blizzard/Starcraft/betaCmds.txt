@@ -1,0 +1,219 @@
+NOTE: All ommitted parameters default to 0 unless otherwise noted
+
+[Commands]
+  udraw
+      coll              -- Draws collision boxes and shows unit direction
+      contour           -- Disables images and Draws contour boxes
+      u                 -- Draws collision boxes, unit direction, and displays the unit ID
+      0                 -- Turns udraw off
+      1                 -- Hides images
+
+  showattack            -- ?
+  
+  pathdump              -- Creates a detailed path creation/update/destroy log "pathdump.txt"; Executing this command again will disable logging.
+      0                 -- These values don't seem to have any effect
+      1
+
+  statedump             -- ?
+
+  selectep <#>          -- This will highlight a specified (valid)block; One of the debug modes must be enabled in order to view changes.
+
+  showregions           -- This highlights all the regions on the map. One of the debug modes must be enabled in order to view changes.
+  
+  showeparea            -- ?
+  
+  showepmini            -- ?
+  
+  umcmtx <#>            -- ? (0 - 65536)
+
+  umcmini <#>           -- ? (0 - 65536)
+
+  umc <#>               -- ? (0 - 65536)
+
+  notrees               -- Hides pure sprites
+
+  showpath              -- Shows the unit's path with red squares. One of the debug modes must be enabled in order to view changes.
+  showareapath          -- Highlights the are path with a yellow line. One of the debug modes must be enabled in order to view changes.
+  showastar             -- ?
+  mtxgrid               -- Shows a grid for the map tiles (MTXM, matrix map).
+  showmtxnum            -- Shows the ID of each tile.
+  showmtxinfonum        -- Shows some info related to each tile
+  mtxcoords             -- Shows tile coordinates every 4 tiles
+  pixcoords             -- Shows pixel coordinates evenly spaced
+  cellgrid              -- Shows a grid for the map's minitiles
+  showumcmtxnum         -- Shows flags for each tile
+  showumcnum            -- Shows another flag for each tile
+  showbldgsquare        -- ?
+                
+  contour
+      off               -- Hides all contours
+      all               -- Shows all contours
+      <#>               -- Shows a specific contour; can be combined with unit
+      <unit>            -- Resizes the contours for the specified unit; can be combined with #
+  
+  showmtxneighbor       -- ?
+  
+  nof                   -- No params will "select a small region", I can't really provide any more details.
+      off               -- Turns nof off.
+  
+  cstats                -- Show Contour stats (Num Contours and Twistedness)
+
+  epstats               -- Show Detailed "EP" stats (Not quite sure what they are)
+
+  umcstats              -- ?
+
+  movetarget <x> <y>    -- Orders the selected units to move to a location.
+
+  cursorpix             -- Displays the coordinates of the cursor
+
+  writebounds           -- Creates "unitlocs.txt" with some unit info
+
+  goto <x> <y>          -- Moves the cursor and screen to the specified location. 
+
+  gamespeed <num>       -- Sets the game speed (values 0-7)
+  
+  execute off           -- Stops execution of a macro
+
+  execute <file>        -- Executes a specified macro file for text, cheat codes, and commands
+
+  makeunit
+      <unit>            -- Takes a unit name (below) or number
+      <count>           -- Number of units to spawn
+      <player>          -- Player owner (number)
+      <x>               -- if x or y is 0, the unit will be created at the mouse position
+      <y>
+
+  mu                    -- Alias for makeunit
+      <unit>            -- Takes a unit name (below) or number
+      <count>           -- Number of units to spawn
+      <player>          -- Player owner (number)
+      <x>               -- if x or y is 0, the unit will be created at the mouse position
+      <y>
+
+  aiu                   -- Alternate makeunit for AI
+      <unit>            -- Takes a unit name (below) or number
+      <count>           -- Number of units to spawn
+      <player>          -- This value seems ommitted
+      <x>               -- if x or y is 0, the unit will be created at the mouse position
+      <y>
+
+  mob                   -- Creates one of each unit for the specified race
+      <race>            -- can be terran, zerg, or protoss; it can also be a number: 1 = terrain, 2 = zerg, 3 = protoss; Defaults to terran
+
+  noterrain             -- Disables terrain drawing, leaving a black surface. One of the debug modes must be enabled in order to view changes.
+
+  overscroll            -- ?
+      <num>
+
+  printmap              -- Saves a screenshot of the entire map, full-scale
+
+  god                   -- Enables "god mode"
+
+  exploreall            -- ?
+      <num>
+
+  explorenone           -- ?
+      <num>
+
+  pathdebug             -- Enables path debug mode and reveals the map
+
+  cdebug                -- Enables contour debug mode and reveals the map
+
+  localplayer <num>     -- Sets the current player ID and gives control of their units
+
+  killunit <num>        -- Kills the unit specified (num is Unit ID)
+
+  killselect            -- Kills all selected units
+  ku                    -- Alias, kills all selected units
+  killside <#>          -- Kills all player #'s units
+  killallunits          -- Kills all units
+
+
+[Units For Commands]
+  marine
+  ghost
+  vulturemine
+  vulture
+  goliath
+  tank
+  scv
+  phoenix
+  wessel
+  dropship
+  battlecruiser
+  siegetank
+  firebat
+  command center
+  comsat
+  silo
+  supply depot
+  barracks
+  academy
+  factory
+  starport
+  dry docks
+  science facility
+  covert ops
+  physics lab
+  machine shop
+  engineering bay
+  armory
+  missile turret
+  bunker
+  hydralisk den
+  defiler mound
+  queen nest
+  larva
+  zergling
+  hydralisk
+  ultralisk
+  broodling
+  drone
+  overlord
+  mutalid
+  guardian
+  queen
+  defiler
+  avenger
+  hatchery
+  lair
+  hive
+  nydus pit
+  greater spire
+  evolution chamber
+  ultralisk cavern
+  spire
+  spawning pool
+  creep colony
+  spore colony
+  probe
+  zealot
+  dragoon
+  templar
+  archon
+  shuttle
+  scout
+  arbiter
+  carrier
+  reaver
+  observer
+  nexus
+  robotics
+  pylon
+  assimilator
+  observatory
+  gateway
+  photon cannon
+  citadel
+  cyber core
+  archives
+  forge
+  stargate
+  fleet beacon
+  tribunal
+  robotics bay
+  shield battery
+  mine1
+  mine2
+  mine3
+  vespene geyser

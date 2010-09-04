@@ -1,0 +1,4 @@
+[Always enable cheats and developer mode (loaded)]
+  0x00550460    Set this to 1; This enables a debug mode cheat
+  0x0055045C    Set this to 1; This enables a debug mode cheat
+  0x00731DE4    Set this to 0; This disabled multiplayer

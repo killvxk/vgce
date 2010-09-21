@@ -14,24 +14,24 @@ Command class 1 opcodes are typically those from ~0x49 to ~0x53.
 
 =Command Opcodes=
 ----------------------------------------------------
-== 0x5C - New Game Chat ==
+== 0x5C - Replay Chat ==
 {{{
-   u8          playerID
-   char[80]    message
+  BYTE bSlotID;
+  char szMessage[80];
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x5B -  Make Game Public ==
 {{{
-   No parameters.
+  // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x5A - Merge Dark Archon ==
 {{{
-   No parameters.
+  // No parameters.
 }}}
 CLASS 2 
 
@@ -40,142 +40,140 @@ CLASS 2
 ----------------------------------------------------
 == 0x58 - Minimap Ping ==
 {{{
-       s16  x
-       s16  y
+  s16 x;
+  s16 y;
 }}}
 CLASS 2 
 
 ----------------------------------------------------
 == 0x57 - Leave Game ==
 {{{
-	u8  type
-    {
-        0x01    = "Quit",
-        0x02    = "Defeat",
-        0x03    = "Victory",
-        0x04    = "Finished",
-        0x05    = "Draw",
-        0x06    = "Drop"
-    }
+	BYTE bReason;
+  {
+    LEAVE_QUIT     0x01
+    LEAVE_DEFEAT   0x02
+    LEAVE_VICTORY  0x03
+    LEAVE_FINISHED 0x04
+    LEAVE_DRAW     0x05
+    LEAVE_DROP     0x06
+  }
 }}}
 CLASS 2 
 
 ----------------------------------------------------
 == 0x56 - Change Replay Speed ==
 {{{
-    u8   type
-        {
-            0x00    = "Play",
-            0x01    = "Pause"
-        }
-    u32  speed
-        {
-            0x00 = "Slowest",
-            0x01 = "Slower",
-            0x02 = "Slow",
-            0x03 = "Normal",
-            0x04 = "Fast",
-            0x05 = "Faster",
-            0x06 = "Fastest"
-        }
-    u32  multiplier
+  BYTE bType;
+  {
+    REPLAY_PLAY  0x00
+    REPLAY_PAUSE 0x01
+  }
+  DWORD dwSpeed;
+  {
+    SPEED_SLOWEST 0x00
+    SPEED_SLOWER  0x01
+    SPEED_SLOW    0x02
+    SPEED_NORMAL  0x03
+    SPEED_FAST    0x04
+    SPEED_FASTER  0x05
+    SPEED_FASTEST 0x06
+  }
+  DWORD dwMultiplier;
 }}}
 CLASS 2 
 
 ----------------------------------------------------
 == 0x55 - Set Latency ==
 {{{
-    u8  latency
+  BYTE bLatency;
 }}}
 CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x54 - Mission Briefing Start ==
 {{{
-    // No Parameters
+  // No Parameters
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x53 - Entered Briefing Room (Internal) ==
 {{{
-    // No Parameters
+  // No Parameters
 }}}
 RETURN CODE
 
 ----------------------------------------------------
 == 0x52 - Unidentified Command (Lobby) (Internal) ==
 {{{
-    // No Parameters
+  // No Parameters
 }}}
 RETURN CODE
 
 ----------------------------------------------------
 == 0x51 - Network Error (Internal) ==
 {{{
-    // No Parameters
+  // No Parameters
 }}}
 RETURN CODE
 
 ----------------------------------------------------
 == 0x50 - Nothing (Lobby) (Internal) ==
 {{{
-      // No Parameters.
+  // No Parameters.
 }}}
 RETURN CODE
 
 ----------------------------------------------------
 == 0x4F - Map data transfer ==
 {{{
-    u16   segmentSize;
+    WORD  wCmdSize;
+    BYTE  bTransferType;
+        ... data ...
+    
+bTransferType:
+  0x00 - FD_FILE_STATUS_NEED ( size == 8 )
     {
-      u8    transferType;
-      void  transferData;
+      BYTE  bUnk1;
+      BYTE  bUnk2;    // thought this was netPlayerID too? 
+      BYTE  bNetPlayerID;
+      DWORD dwMapSize;
     }
-
-transferData:
-  0x00 - FD_FILE_STATUS_NEED
+  0x01 -  FD_FILE_STATUS_HAVE ( size >= 10 )
     {
-      u8    unknown0;
-      u8    playerID;
-      u8    unknown2;
-      u32   unknown3;
+      BYTE  bNetPlayerID;
+      DWORD dwFileSize;
+      DWORD dwFileHash;
+      char  szFileName[];
     }
-  0x01 -  FD_FILE_STATUS_HAVE
+  0x02 - ( size == 7 )
     {
-      u8      unknown0;
-      size_t  fileSize;
-      DWORD   fileHash;
-      char    fileName[];
-    }
-  0x02 - 
-    {
-      u8    unknown0;
+      u8    bNetPlayerID; // guess
       u8    unknown1;
       u32   unknown2;
     }
-  0x03 - FD_TRANSMISSION_STATUS_SENDING
+  0x03 - FD_TRANSMISSION_STATUS_SENDING ( size == 2 )
     {
-      u8    unknown0;
+      u8    bNetPlayerID; // guess
     }
-  0x04 - FD_TRANSMISSION_STATUS_RECEIVING
+  0x04 - FD_TRANSMISSION_STATUS_RECEIVING ( size >= 9 )
     {
-      u8    unknown0;
-      u8    unknown1;
-      u32   filePosition;
-      u16   blockSize;
-      char  data[blockSize];
+      BYTE  bNetPlayerID;   // guess; id from/to?
+      BYTE  bNetPlayerID2;
+      DWORD dwFilePosition;
+      WORD  wBlockSize;
+      BYTE  bBlockData[wBlockSize];
     }
-  0x05 - FD_TRANSMISSION_STATUS_IDLE
+  0x05 - FD_TRANSMISSION_STATUS_IDLE ( size == 7 )
     {
-      u8    unknown0;
-      u8    unknown1;
+      BYTE  bNetPlayerID;   // guess; id from/to?
+      BYTE  bNetPlayerID2;
       u32   unknown2;
     }
-  0x06 - Response
+  0x06 - Response ( size == 3 )
     {
-      u8    unknown0;
-      u8    unknown1;
+      BYTE  bNetPlayerID;   // guess; id from/to?
+      BYTE  bNetPlayerID2;
     }
 }}}
 CLASS 1
@@ -183,126 +181,70 @@ CLASS 1
 ----------------------------------------------------
 == 0x4E - Boot Player ==
 {{{
-    u8  Type
-		{
-			0x00 = "You have been booted."			// Default case
-			0x01 = "You have been banned."
-			0x02 = "The game creator closed all available slots."
-			0x03 = "The game host has left."
-			0x04 = "Unable to join game."
-			0x05 = "Save game file not found."
-			0x06 = "Unable to write scenario file."
-			0x07 = "You cannot join this game because it is a different version of Starcraft."
-			0x08 = "You are not able to join this game. It was not created with the same CD that spawned your copy of StarCraft."
-			0x09 = "Unable to authenticate map."
-		}
+  BYTE bReason;
+  {
+    0x00 = "You have been booted."			// Default case
+    0x01 = "You have been banned."
+    0x02 = "The game creator closed all available slots."
+    0x03 = "The game host has left."
+    0x04 = "Unable to join game."
+    0x05 = "Save game file not found."
+    0x06 = "Unable to write scenario file."
+    0x07 = "You cannot join this game because it is a different version of Starcraft."
+    0x08 = "You are not able to join this game. It was not created with the same CD that spawned your copy of StarCraft."
+    0x09 = "Unable to authenticate map."
+  }
 }}}
 CLASS 1
 
 ----------------------------------------------------
 == 0x4D - Lobby Chat 2 (Unused) ==
 {{{
-      cstring   message
+  char szMessage[];
 }}}
 CLASS 1
 
 ----------------------------------------------------
 == 0x4C - Lobby Chat ==
 {{{
-      cstring   message
+  char szMessage[];
 }}}
 CLASS 1
 
 ----------------------------------------------------
 == 0x4B - Force Name Transfer ==
 {{{
-      char name[4][30];
+  char szForceNames[4][30];
 }}}
 CLASS 1
 
 ----------------------------------------------------
 == 0x4A - Player/Force Data Transfer ==
 {{{
-      u16  tileset
-      u16  width
-      u16  height
+  WORD wTileset;
+  WORD wWidth;
+  WORD wHeight
 
-      u8   (Player 1 Controller) // not accurate?
-      u8   (Player 2 Controller)
-      u8   (Player 3 Controller)
-      u8   (Player 4 Controller)
-      u8   (Player 5 Controller)
-      u8   (Player 6 Controller)
-      u8   (Player 7 Controller)
-      u8   (Player 8 Controller)
-      u8   (Player 9 Controller)
-      u8   (Player 10 Controller)
-      u8   (Player 11 Controller)
-      u8   (Player 12 Controller)
-
-      u8   (Player 1 Race)
-      u8   (Player 2 Race)
-      u8   (Player 3 Race)
-      u8   (Player 4 Race)
-      u8   (Player 5 Race)
-      u8   (Player 6 Race)
-      u8   (Player 7 Race)
-      u8   (Player 8 Race)
-      u8   (Player 9 Race)
-      u8   (Player 10 Race)
-      u8   (Player 11 Race)
-      u8   (Player 12 Race)
-
-      u8   (Player 1 Race) // not accurate?
-      u8   (Player 2 Race)
-      u8   (Player 3 Race)
-      u8   (Player 4 Race)
-      u8   (Player 5 Race)
-      u8   (Player 6 Race)
-      u8   (Player 7 Race)
-      u8   (Player 8 Race)
-
-      u8   (Player 1 Controller)
-      u8   (Player 2 Controller)
-      u8   (Player 3 Controller)
-      u8   (Player 4 Controller)
-      u8   (Player 5 Controller)
-      u8   (Player 6 Controller)
-      u8   (Player 7 Controller)
-      u8   (Player 8 Controller)
-      u8   (Player 9 Controller)
-      u8   (Player 10 Controller)
-      u8   (Player 11 Controller)
-      u8   (Player 12 Controller)
-
-      u8   (Player 1 owning Force)
-      u8   (Player 2 owning Force)
-      u8   (Player 3 owning Force)
-      u8   (Player 4 owning Force)
-      u8   (Player 5 owning Force)
-      u8   (Player 6 owning Force)
-      u8   (Player 7 owning Force)
-      u8   (Player 8 owning Force)
-      u8   (Player 9 owning Force)
-      u8   (Player 10 owning Force)
-      u8   (Player 11 owning Force)
-      u8   (Player 12 owning Force)
-
+  BYTE bPlayerUnknownController[12]; // ?
+  BYTE bPlayerRace[12];
+  BYTE bPlayerUnknownRace[8]; // ?
+  BYTE bPlayerController[12];
+  BYTE bPlayerTeam[12];
 }}}
 CLASS 1
 
 ----------------------------------------------------
-== 0x49 - Information Request ==
+== 0x49 - Information Request == 
 {{{
-      u32   (Information Byte; 2 = Game data?, 3 = ???, 6 = File Name, 7 = File Data ??)
+  DWORD dwLocalStormID;
 }}}
 CLASS 1
 
 ----------------------------------------------------
 == 0x48 - Game Init ==
 {{{
-     u32  RandomSeed
-     u8   playerbytes[8]
+  DWORD dwRandomSeed;
+  BYTE  bPlayerBytes[8];
 }}}
 CLASS 2
 
@@ -312,21 +254,16 @@ CLASS 2
 ----------------------------------------------------
 == 0x45 - Swap Players ==
 {{{
-	u8  sourceSlot
-	u8  destinationSlot
+	BYTE bOldSlot;
+	BYTE bNewSlot;
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x44 -  Slot Change ==
 {{{
-        u8  slot
-        u8  owner
-        {
-            computer = 0,
-            open     = 1,
-            closed   = 2
-        };
+  BYTE bSlot;
+  BYTE bNewOwner; // (0 = Computer; 1 = Open; 2 = Closed)
 }}}
 CLASS 2
 
@@ -355,24 +292,24 @@ CLASS 2
 ----------------------------------------------------
 == 0x40 - Version Confirmation ==
 {{{
-  u8    unknown1;
-  u8    unknown2;
-  u32   unknown3;
-  u16   version1;
-  u16   version2;
-  u16   version3;
-  u8    unknown7;
-  DWORD keyHash;
+  BYTE  unknown1; // 0
+  BYTE  unknown2; // 0
+  DWORD unknown3; // 0
+  WORD  version1; // 0
+  WORD  version2; // 1
+  WORD  version3; // 5
+  BYTE  unknown7; // 0 (Font/Lang ?)
+  DWORD dwKeyHash;
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x3F - Version Verification ==
 {{{
-	u8   playerID;
-	u16  version1;
-	u16  version2;
-	u16  version3;
+	BYTE bStormPlayerID;
+	WORD version1; // 0
+	WORD version2; // 1
+	WORD version3; // 5
 }}}
 CLASS 2
 
@@ -380,7 +317,7 @@ CLASS 2
 == 0x3E - Game Slot Modification ==
 {{{
 	BYTE  bSlot;  // official name
-	u8  playerID;
+	BYTE  bStormPlayerID;
 	BYTE  nType;      // official name
 	BYTE  bNewRace;   // official name
 	BYTE  nTeam;      // official name
@@ -390,188 +327,190 @@ CLASS 2
 ----------------------------------------------------
 == 0x3D - Map Download % ==
 {{{
-	s8  percentage
+	char nPercent;
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x3C - Start Game ==
 {{{
-     // No parameters.
+  // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
 0x3B - Voice Squelch 2 (Unused)
 {{{
-	u8  playerID;
+	BYTE bSlotID;
 }}}
 CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 0x3A - Voice Squelch 1 (Unused)
 {{{
-	u8  playerID;
+	BYTE bSlotID;
 }}}
 CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 0x39 - Voice Enable 2 (Unused)
 {{{
-   // No parameters.
+  // No parameters.
 }}}
 CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 0x38 - Voice Enable 1 (Unused)
 {{{
-   // No parameters.
+  // No parameters.
 }}}
 CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x37 - Sync ==
 {{{
-    BYTE  SyncID;     // SyncID is SyncID >> 4
-    WORD  Hash;
-    BYTE  unk1;
-    BYTE  unk2;
-    BYTE  unk3;
+  BYTE  bSeq;     // bType = bSeq & 0x0F
+                  // bIndex = bSeq >> 4;
+                  // Where bIndex is between 0 and 16
+                  // bType is
+                  //    0/1: Units hash (All units' Type, Shields, Energy, sprite X/Y, and upper HP)
+                  //    2: Resources(ore/gas for all players), last random number, and elapsed time hash
+                  //    default: index hash
+  WORD  wSeqHash; // Above in addition to Fog(for X axis only with incrementing/looping Y), Player index and Vision hash is always calculated
+  BYTE  bVisibilityHash; // Involves Sprite and region Vision
+  BYTE  bVisibilityID;
+  BYTE  bMinimapBoxCount; // Number of unit boxes drawn on the minimap
 }}}
 CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x36 - Stim Pack ==
 {{{
-   // No parameters.
+  // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x35 - Zerg Bldg Morph ==
 {{{
-	u16  unitType
+	WORD wUnitType;
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x34 - Stop Addon (Cancel Addon) ==
 {{{
-   // No parameters.
+  // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x33 - Order Stop Upgrade (Cancel Upgrade) ==
 {{{
-   // No parameters.
+  // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x32 - Order Upgrade ==
 {{{
-	u8   upgradeType;
+	BYTE bUpgradeType;
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x31 - Order Stop Research (Cancel Research) ==
 {{{
-   // No parameters.
+  // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x30 - Order Research ==
 {{{
-	u8   techType;
+	BYTE bTechType;
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x2F - Lift Off ==
 {{{
-	s16  x;
-	s16  y;
+	short x;
+	short y;
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x2E - Cancel Nuke ==
 {{{
-   // No parameters.
+  // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x2D - Deburrow (Unburrow) ==
 {{{
-	u8   type   // Unknown
+	BYTE bCommandType; // Unused
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x2C - Burrow ==
 {{{
-	u8   type   // Unknown
+	BYTE bCommandType; // Unused
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x2B - Hold Position ==
 {{{
-	u8   type
-        {
-            0x00    = "Instant Order",
-            0x01    = "Queued Order"
-        }
+	BYTE bCommandType;
+  {
+    0x00 = "Instant Order",
+    0x01 = "Queued Order"
+  }
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x2A - Summon Archon (Merge) ==
 {{{
-   // No parameters.
+  // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x29 - Exit Transport ==
 {{{
-	u16  unitID;
+	WORD wUnitID;
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x28 - Unload All ==
 {{{
-	u8  type
-        {
-            0x00    = "Instant Order",
-            0x01    = "Queued Order"
-        }
+	BYTE bCommandType; // Unused
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x27 - Build Fighter ==
 {{{
-   // No parameters.
+  // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x26 - Siege Mode ==
 {{{
-	u8   type   // unknown
+	BYTE bCommandType; // Unused
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x25 - Tank Mode ==
 {{{
-	u8   type   // unknown
+	BYTE bCommandType; // Unused
 }}}
 CLASS 2
 
@@ -580,92 +519,92 @@ CLASS 2
 ----------------------------------------------------
 == 0x23 - Morph (Unit) ==
 {{{
-	u16  unitType
+	WORD wUnitType;
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x22 - Decloak ==
 {{{
-	u8   type   // unknown
+	BYTE bCommandType; // Unused
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x21 - Cloak ==
 {{{
-	u8   type   // unknown
+	BYTE bCommandType; // Unused
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x20 - Order Stop Build (Cancel Train) ==
 {{{
-	u16  unitID
+	WORD wUnitID;
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x1F - Order Build (Train) ==
 {{{
-	u16  unitType
+	WORD wUnitType;
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x1E - Order Return ==
 {{{
-	u8   type
-        {
-            0x00    = "Instant Order",
-            0x01    = "Queued Order"
-        }
+	BYTE bCommandType;
+  {
+    0x00 = "Instant Order",
+    0x01 = "Queued Order"
+  }
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x1D - Order Nothing ==
 {{{
-    // No parameters.
+  // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x1C - Order Stop Trilobyte (Reaver) ==
 {{{
-     // No parameters
+  // No parameters
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x1B - Order Stop Carrier ==
 {{{
-     // No parameters
+  // No parameters
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x1A - Order Stop ==
 {{{
-	u8   type
-        {
-            0x00    = "Instant Order",
-            0x01    = "Queued Order"
-        }
+	BYTE bCommandType;
+  {
+    0x00 = "Instant Order",
+    0x01 = "Queued Order"
+  }
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x19 - Order Kill Egg (Cancel Morph) ==
 {{{
-   // No parameters.
+  // No parameters.
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x18 - Order Kill (Cancel Construction) ==
 {{{
-   // No parameters.
+  // No parameters.
 }}}
 CLASS 2
 
@@ -675,213 +614,185 @@ CLASS 2
 ----------------------------------------------------
 == 0x15 - Action ==
 {{{
-	s16  x;
-	s16  y;
-	u16  unitMem;
-	u16  unitType;
-	u8   action;
-	u8   type;
-        {
-            0x00    = "Instant Order",
-            0x01    = "Queued Order"
-        }
+	short x;
+	short y;
+	WORD  wUnitID;
+	WORD  wUnitType;
+	BYTE  bAction; // Order Type
+	BYTE  bCommandType;
+  {
+    0x00 = "Instant Order",
+    0x01 = "Queued Order"
+  }
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x14 - Right Click ==
 {{{
-	s16  x;
-	s16  y;
-	u16  TargetID;
-	u16  unitType
-	u8   type
-        {
-            0x00 = "Instant Order",
-            0x01 = "Queued Order"
-        }
+  short x;
+  short y;
+	WORD  wTargetID;
+	WORD  wUnitType;
+	BYTE  bCommandType;
+  {
+    0x00 = "Instant Order",
+    0x01 = "Queued Order"
+  }
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x13 - Group Units ==
 {{{
-	u8  type
-        {
-            0x00 = "save",
-            0x01 = "recall"
-            0x02 = "add"
-        }
-	u8  slot
+	BYTE bGroupType;
+  {
+    0x00 = "save",
+    0x01 = "recall"
+    0x02 = "add"
+  }
+	BYTE bGroupSlot;
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x12 - Cheat ==
 {{{
-    u32  lCheat;
-    {
-      0x1           Black Sheep Wall
-      0x2           Operation CWAL
-      0x4           Power Overwhelming
-      0x8           Something for Nothing
-      0x10          Show Me The Money
-      0x20
-      0x40          Game Over Man
-      0x80          There is no cow level
-      0x100         Staying Alive
-      0x200         Ophelia
-      0x400
-      0x800         The Gathering
-      0x1000        Medieval Man
-      0x2000        Modify The Phase Variance
-      0x4000        War Aint What it Used to be
-      0x8000
-      0x10000
-      0x20000       Food For Thought
-      0x40000       What's Mine is Mine
-      0x80000       Breathe Deep
-      0x8000000     Ophelia Activated
-      0x20000000    Noglues and/or Ophelia Scenario selected?
+  LONG lCheat;
+  {
+    0x1           Black Sheep Wall
+    0x2           Operation CWAL
+    0x4           Power Overwhelming
+    0x8           Something for Nothing
+    0x10          Show Me The Money
+    0x20
+    0x40          Game Over Man
+    0x80          There is no cow level
+    0x100         Staying Alive
+    0x200         Ophelia
+    0x400
+    0x800         The Gathering
+    0x1000        Medieval Man
+    0x2000        Modify The Phase Variance
+    0x4000        War Aint What it Used to be
+    0x8000
+    0x10000
+    0x20000       Food For Thought
+    0x40000       What's Mine is Mine
+    0x80000       Breathe Deep
+    0x8000000     Ophelia Activated
+    0x20000000    Noglues and/or Ophelia Scenario selected?
 
-      0x28000200    Full Ophelia
-    }
+    0x28000200    Full Ophelia
+  }
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x11 - Pause Off ==
 {{{
-    // No parameters.
+  // No parameters.
 }}}
 CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x10 - Pause On ==
 {{{
-    // No parameters.
+  // No parameters.
 }}}
 CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x0F - Set Speed ==
 {{{
-    u8   bSpeed;
-    {
-        0x00 = "Slowest",
-        0x01 = "Slower",
-        0x02 = "Slow",
-        0x03 = "Normal",
-        0x04 = "Fast",
-        0x05 = "Faster",
-        0x06 = "Fastest"
-    }
+  BYTE bGameSpeed;
+  {
+    SPEED_SLOWEST 0x00
+    SPEED_SLOWER  0x01
+    SPEED_SLOW    0x02
+    SPEED_NORMAL  0x03
+    SPEED_FAST    0x04
+    SPEED_FASTER  0x05
+    SPEED_FASTEST 0x06
+  }
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x0E - Set Allies ==
 {{{
-	u2 	(Alliance p1) [0 = enemy, 1= allied, 2 = allied vic]
-	u2 	(Alliance p2) [0 = enemy, 1= allied, 2 = allied vic]
-	u2 	(Alliance p3) [0 = enemy, 1= allied, 2 = allied vic]
-	u2 	(Alliance p4) [0 = enemy, 1= allied, 2 = allied vic]
-
-	u2 	(Alliance p5) [0 = enemy, 1= allied, 2 = allied vic]
-	u2 	(Alliance p6) [0 = enemy, 1= allied, 2 = allied vic]
-	u2 	(Alliance p7) [0 = enemy, 1= allied, 2 = allied vic]
-	u2 	(Alliance p8) [0 = enemy, 1= allied, 2 = allied vic]
-
-	u2 	(Alliance p9) [0 = enemy, 1= allied, 2 = allied vic]
-	u2 	(Alliance p10) [0 = enemy, 1= allied, 2 = allied vic]
-	u2 	(Alliance p11) [0 = enemy, 1= allied, 2 = allied vic]
-	u2 	(Alliance p12) [0 = enemy, 1= allied, 2 = allied vic]
-
-	u8	Unused
+  DWORD dwAlliance;  // (dwAlliance >> playerID*2) & 3 // move dwAlliance to temp var
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x0D - Set Fog (Vision) ==
 {{{
-	u1	Vision for p1
-	u1	Vision for p2
-	u1	Vision for p3
-	u1	Vision for p4
-	u1	Vision for p5
-	u1	Vision for p6
-	u1	Vision for p7
-	u1	Vision for p8
-
-	u1	Vision for p9
-	u1	Vision for p10
-	u1	Vision for p11
-	u1	Vision for p12
-	u4	unused
+	WORD wVision;   // (wVision >> playerID) & 1 // move wVision to temp
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x0C - Placebox (Build) ==
 {{{
-	u8   orderID
-	s16  xTile
-	s16  yTile
-	u16  unitType
+  BYTE bOrderType;
+	short x; // tile position, not pixel position
+	short y; 
+	BYTE bUnitType;
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x0B - Select Delta Del ==
 {{{
-	u8  count;
-	u16 unitMem[count];
+	BYTE bCount;
+	WORD unitID[bCount];
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x0A - Select Delta Add ==
 {{{
-	u8  count;
-	u16 unitMem[count];
+	BYTE bCount;
+	WORD unitID[bCount];
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x09 - Select Units ==
 {{{
-	u8  count;
-	u16 unitMem[count];
+	BYTE bCount;
+	WORD unitID[bCount];
 }}}
 CLASS 2
 
 ----------------------------------------------------
 == 0x08 - Restart Game ==
 {{{
-      No parameters.
+  // No parameters.
 }}}
 CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x07 -  Load Game ==
 {{{
-      u32    dwGameID;
-      char   szName[];    // unused?
+  DWORD dwGameID;
+  char  szName[];    // ?
 }}}
 CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x06 - Save Game ==
 {{{
-      u32    time;
-      char   szName[];    // must be less than size of 64
+  DWORD dwSaveTime;
+  char  szName[];    // must be less than size of 64
 }}}
 CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
 == 0x05 -  Keep Alive ==
 {{{
-      // No parameters.
+  // No parameters.
 }}}
 CLASS 2 (Filtered out of replay)
 
@@ -889,26 +800,26 @@ CLASS 2 (Filtered out of replay)
 0x04 - INVALID
 0x03 - INVALID
 ----------------------------------------------------
-== 0x02 - Null Chat ==
+== 0x02 - Null Chat (Unused) ==
 {{{
-      u8        type
-      cstring   message
+  BYTE bType;
+  char szMessage[];
 }}}
 CLASS 1
 
 ----------------------------------------------------
-== 0x01 - Private Chat ==
+== 0x01 - Private Chat (Unused) ==
 {{{
-      u8        type
-      cstring   message
+  BYTE bType;
+  char szMessage[];
 }}}
 CLASS 1
 
 ----------------------------------------------------
 == 0x00 - Public Chat ==
 {{{
-      u8        type
-      cstring   message
+  BYTE bType;
+  char szMessage[];
 }}}
 CLASS 1
 
@@ -919,24 +830,24 @@ CLASS 1
 {{{
   struct SNPHead
   {
-    u32  snpType { 0x00 = Storm packet; other values known but private for now }
+    DWORD dwSnpType { 0x00 = Storm packet; other values known but private for now }
     struct STORMHead
     {
-      u16  checksum
-      u16  packet length
-      u16  Sent packets to player (seq1)
-      u16  Recieved packets from player (seq2)
-      u8   Command Class
-      u8   Command ID (0x00)
-      u8   Player ID
-      u8   Flags
+      WORD wChecksum;
+      WORD wLength;
+      WORD wSent;
+      WORD wReceived;
+      BYTE bCommandClass; // 0x01 and 0x02 for this document
+      BYTE bCommandID;    // 0x00 for this document
+      BYTE bStormPlayerID;
+      BYTE bFlags;
       {
           0x00 = Normal Traffic
           0x01 = Verification
           0x02 = Resend request
           0x04 = Callback
       }
-      void  data
+      void data;
     }
   }
   
@@ -947,10 +858,10 @@ Command class 1 opcodes are others used by Starcraft for communication; send tex
 
 =Replay Header=
 {{{
-   u32  time (Game Ticks * 255??)
-   u8   frameSize (Amount of bytes before the start of the next game frame)
+   DWORD dwTime;     // (Game Ticks * 255??)
+   BYTE  bFrameSize; // (Amount of bytes before the start of the next game frame)
 
-        u8   Player ID
-        u8   Command ID
+        BYTE bPlayerID;
+        BYTE bCommandID;
         ...Command Variables...
 }}}

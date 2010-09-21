@@ -218,7 +218,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 418    BOOL    __stdcall SMsgPopRegisterState(int type)
 419    BOOL    __stdcall SMsgPushRegisterState(int type)
 420    BOOL    __stdcall SMsg420(int a1, int a2, int a3)     // Register SMSI
-421    BOOL    __stdcall SRegLoadData(char *keyname, char *valuename, int size, LPBYTE lpData, BYTE flags, LPDWORD lpcbData)
+421    BOOL    __stdcall SRegLoadData(char *keyname, char *valuename, BYTE flags, LPBYTE lpData, int size, LPDWORD lpcbData)
 422    BOOL    __stdcall SRegLoadString(char *keyname, char *valuename, BYTE flags, char *buffer, size_t buffersize)
 423    BOOL    __stdcall SRegLoadValue(char *keyname, char *valuename, BYTE flags, int *value)
 424    BOOL    __stdcall SRegSaveData(char *keyname, char *valuename, int size, BYTE *lpData, DWORD cbData)
@@ -506,7 +506,7 @@ values for SNetGetGameInfo type
 {{{
 1 = Game Name
 2 = Game Password
-3 = Full Game Data String (see http://www.bnetdocs.org/?op=doc&did=13)
+3 = Full Game Stat String (see http://www.bnetdocs.org/?op=doc&did=13)
 4 = Game Mode
 }}}
 
@@ -573,5 +573,3 @@ struct argstruct
   char* name;
   (bool (__stdcall*)(int,int)) function;
 }
-
-provider + 0x38 = packet send function

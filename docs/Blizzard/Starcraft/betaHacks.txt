@@ -2,3 +2,10 @@
   0x00550460    Set this to 1; This enables a debug mode cheat
   0x0055045C    Set this to 1; This enables a debug mode cheat
   0x00731DE4    Set this to 0; This disabled multiplayer
+  
+[Enable Voice Chat]
+  Note: Not actually sure if it's fully enabled but in multiplayer the options dialog will no longer say you need to initialize voice settings.
+  Open regedit and create/edit the following:
+  Key  = "HKEY_LOCAL_MACHINE\SOFTWARE\Blizzard Entertainment\Starcraft\VoiceParams"
+  Type = REG_BINARY
+  Data = 02 01 02 02 63 00 00 00 00 00 00 00

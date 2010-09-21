@@ -43,7 +43,7 @@ NOTE: All ommitted parameters default to 0 unless otherwise noted
   cellgrid              -- Shows a grid for the map's minitiles
   showumcmtxnum         -- Shows flags for each tile
   showumcnum            -- Shows another flag for each tile
-  showbldgsquare        -- ?
+  showbldgsquare        -- Highlights tiles that are occupied with buildings
                 
   contour
       off               -- Hides all contours

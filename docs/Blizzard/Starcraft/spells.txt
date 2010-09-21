@@ -1,0 +1,73 @@
+Note: Naturally, having enough energy and the technology researched is required.
+Additionally, hero units will not follow these rules.
+
+[size=14][b][Common][/b][/size]
+The following are general requirements for all spells:
+- Target is visible (this includes any revealed areas on the map)
+- Target is owned by an enemy player
+- Target is not a Protoss Interceptor, Vulture Spider Mine, or Protoss Scarab
+- Target is not harvesting gas
+
+[size=14][b][Target Can Attack][/b][/size]
+Another common requirement, this time where one of any of the following conditions can be met:
+- Target has a ground weapon (with the exception of an unburrowed Lurker)
+- Target has an air weapon
+- Target is a Protoss Carrier/Gantrithor containing Interceptors
+- Target is a Protoss Reaver/Warbringer containing Scarabs
+- Target has a subunit with a ground or air weapon.
+
+[size=14][b][Terran Battlecruiser: Yamato Gun][/b][/size]
+- [Common] must be true.
+- If status flag 0x2 is set and any of [Target Can Attack] is met, then the Battlecruiser will choose this unit.
+- If target is a loaded Terran Bunker, then choose this unit.
+- Target is not a Zerg Egg
+- Target's HP and Shields combined is between 200 and 450
+- Target is not a Hero unit
+- The target that passed all of these filters will be chosen.
+
+By this logic, the Battlecruiser should also target a larva with the Yamato Gun.
+This is true.
+The unit is also more likely to choose a target that is within a 512-boxed-pixel radius of the Battlecruiser (X/Y +/- 512).
+
+[size=14][b][Zerg Defiler: Plague][/b][/size]
+- [Common] must be true.
+- If the target is not currently plagued
+- If the target is not a Hero unit
+- If all enemy HP combined in a given region is at least 250
+- Calculate all ally HP combined in a given region
+- If 2 * Ally HP < Enemy HP, the target is chosen. (Basically must do twice as much damage to enemies than to allies)
+
+The unit is more likely to choose a region within a 288-boxed-pixel radius.
+If another condition is met, the unit will choose a region within a 4096-boxed-pixel radius.
+
+[size=14][b][Zerg Defiler: Dark Swarm][/b][/size]
+- [Common] must be true.
+- If the target unit is targetting another unit
+- The target's target must be a valid player ( less than 8 ) (Note: in this context, the target is the enemy and the target's target is the AI)
+- The target's target must be an enemy of the target
+- The target's target must not have a subunit
+- The target's target must not be in the air
+- The target's target must have a ground weapon
+- The target's target weapon behaviour must be "Appear on Attacker" (melee)
+- The target(or target's subunit) has a ground weapon
+- The target's weapon behaviour must be "Fly & Don't Follow Target", "Fly & Follow Target", "Appear on target unit", "Appear on target site", or "Bounce".
+- Additional unknown requirements but that's most of it :P
+
+The unit is more likely to choose a region within a 288-boxed-pixel radius.
+Another condition will give it a 1024 or 2048 radius depending on an AI flag.
+
+[size=14][b][Zerg Queen: Parasite][/b][/size]
+Note: If a certain AI flag is set, there is a 1 in 32767 chance of the Queen casting this spell every loop.
+Otherwise, the Queen will only cast this spell if it has full energy.
+- [Common] must be true
+- Target must not have parasite detected
+- Target has no other particular status ailments, target is an active transport, target is a Spellcaster, target is a worker, or target has a combined HP and Shields value of at least 300
+
+The unit is more likely to cast it on a unit within a 288-boxed-pixel radius.
+Another condition will give it a 2048-boxed-pixel radius.
+
+
+[size=14][b][Zerg Queen: Summon Broodlings][/b][/size]
+
+
+// NOTE: This is totally time consuming

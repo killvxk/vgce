@@ -33,7 +33,7 @@ NOTE: All ommitted parameters default to 0 unless otherwise noted
   notrees               -- Hides pure sprites
 
   showpath              -- Shows the unit's path with red squares. One of the debug modes must be enabled in order to view changes.
-  showareapath          -- Highlights the are path with a yellow line. One of the debug modes must be enabled in order to view changes.
+  showareapath          -- Highlights the area path with a yellow line. One of the debug modes must be enabled in order to view changes.
   showastar             -- ?
   mtxgrid               -- Shows a grid for the map tiles (MTXM, matrix map).
   showmtxnum            -- Shows the ID of each tile.
@@ -109,10 +109,10 @@ NOTE: All ommitted parameters default to 0 unless otherwise noted
 
   god                   -- Enables "god mode"
 
-  exploreall            -- ?
+  exploreall            -- Explores the map
       <num>
 
-  explorenone           -- ?
+  explorenone           -- Un-explores the map
       <num>
 
   pathdebug             -- Enables path debug mode and reveals the map

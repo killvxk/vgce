@@ -299,7 +299,7 @@ CLASS 2
   WORD  version2; // 1
   WORD  version3; // 5
   BYTE  unknown7; // 0 (Font/Lang ?)
-  DWORD dwKeyHash;
+  DWORD dwSpawnHash;
 }}}
 CLASS 2
 

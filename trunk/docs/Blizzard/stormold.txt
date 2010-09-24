@@ -5,9 +5,9 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 100                       SNetInit()    // guess
 101    BOOL     __stdcall SNetCreateGame(char *Source, char *a2, char *a3, int a4, int a5, int a6, char *a7, char *a8, int *playerid)
 102    BOOL     __cdecl   SNetDestroy()
-103    BOOL     __stdcall SNetEnumProviders(int (__stdcall *callback)(DWORD, DWORD, DWORD, DWORD), int mincaps)
+103    BOOL     __stdcall SNetEnumDevices(int (__stdcall *callback)(DWORD, DWORD, DWORD, DWORD), int mincaps)
 104    BOOL     __stdcall SNetEnumGames(int (__stdcall *callback)(DWORD, DWORD, DWORD), int *hintnextcall)
-105    BOOL     __stdcall SNetEnumDevices(int (__stdcall *callback)(DWORD, DWORD, DWORD))
+105    BOOL     __stdcall SNetEnumProviders(int (__stdcall *callback)(DWORD, DWORD, DWORD))
 106    BOOL     __stdcall SNetDropPlayer(int playerid, DWORD flags)
 107    BOOL     __stdcall SNetGetGameInfo(int type, char *src, unsigned int length, int *byteswritten)
 108    BOOL     __stdcall SNetGetNetworkLatency(int measurementtype, int *result)
@@ -37,9 +37,9 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 
 133    BOOL     __stdcall SNetEnumGamesEx(int a1, int a2, int (__fastcall *callback)(DWORD, DWORD, DWORD), int *hintnextcall)
 134    int      __stdcall SNetSendServerChatCommand(const char *command)
-135    BOOL     __stdcall SNet135(signed int playerID, const char *buffer, unsigned int length)
-136    BOOL     __stdcall SNet136(int a1, int a2, int a3)
-137    BOOL     __stdcall SNetGetPlayerNames(DWORD flags)
+135    BOOL     __stdcall SNetSend135(signed int playerID, const char *buffer, unsigned int length) // special case for playerID -1 and -2
+136    BOOL     __stdcall SNetReceive136(int a1, int a2, int a3)
+137    BOOL     __stdcall SNet137(DWORD flags)   // this can't be SNetGetPlayerNames
 138    BOOL     __stdcall SNetCreateLadderGame(char *gameName, char *gamePassword, char *gameDataString, DWORD gameType, int a5, int a6, char *GameTemplateData, int GameTemplateSize, int playerCount, char *playerName, char *a11, int *playerID)
 139    BOOL     __stdcall SNetReportGameResult(unsigned int a1, int size, int a3, int a4, int a5)
 140    BOOL     __stdcall SNetCheckDataFile(int a1, int a2, int a3, int a4)
@@ -178,7 +178,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 359    int      __cdecl   SDrawWaitForVerticalBlank()
 
 372    BOOL     __stdcall SEvtDispatch(DWORD messageID, int a2, int a3, int a4)
-373    BOOL     __stdcall SEvtRegisterHandler(DWORD messageID, unsigned int a2, int event, int a4, void *function)
+373    BOOL     __stdcall SEvtRegisterHandler(DWORD messageID, DWORD type, int command, int class, void *callback)
 374    BOOL     __stdcall SEvtUnregisterHandler(DWORD messageID, int a2, int a3, int a4)
 375    BOOL     __stdcall SEvtUnregisterType(DWORD messageID, int type)
 376    BOOL     __stdcall SEvtPopState(DWORD messageID, int type)

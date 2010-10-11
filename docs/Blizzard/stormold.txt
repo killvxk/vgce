@@ -146,7 +146,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 322                       SBmpDestroy()
 323    BOOL     __stdcall SBmpLoadImage(const char *fileName, int size, void *buffer, int buffersize, int width, int height, int depth)
 324    BOOL     __stdcall SBmpSaveImage(const char *fileName, int paletteentries, int bitdepth, unsigned __int16 width, unsigned __int16 height, int bitmapbits)
-325    HANDLE   __stdcall SBmpAllocLoadImage(const char *fileName, int *palette, void **buffer, int *width, int *height, int unused6, int unused7, int (__stdcall *allocFunction)(DWORD))
+325    HANDLE   __stdcall SBmpAllocLoadImage(const char *fileName, int *palette, void **buffer, int *width, int *height, int unused6, int unused7, void *(__stdcall *allocFunction)(DWORD))
 326    BOOL     __stdcall SBmpSaveImageEx(const char *fileName, int paletteentries, int bitdepth, unsigned __int16 width, unsigned __int16 height, int bitmapbits, int reserved)
 
 330                       SCodeInit()

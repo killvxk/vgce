@@ -8,20 +8,21 @@ u8          unk1;
 u8          unk2;
 u8          unk3;
 u32         dateCreated;
-u8[12]      slotsAvailable;
-char[28]    gameName;
+u8          slotsAvailable[12];
+char        gameName[28];
 u16         mapWidth;
 u16         mapHeight;
-u8          isBroodwar2;
+u8          language;   // (Eng: 0x01; Kor: 0x02)
 u8          availableSlots;
-u16         gameSpeed;
+u8          gameSpeed;
+u8          unk4;
 u16         gameType;
 u16         gameSubtype;
 u32         randSeed;
 u16         tileset;
-u16         unk4;
-char[25]    creatorName;
-char[32]    mapName;
+u16         unk5;
+char        creatorName[25];
+char        mapName[32];
 u16         GameTemplate_gameType;
 u16         GameTemplate_subType;
 u16         GameTemplate_subTypeDisplay;
@@ -76,9 +77,9 @@ pStruct
     u8          playerOwner;
     u8          playerRace;
     u8          playerForce;
-    char[25]    playerName;
+    char        playerName[25];
 }[12];
 
-u32[8]  playerColour;
-u8[8]   useCustomColour;
+u32   playerColour[8];
+u8    useCustomColour[8];
 }}}

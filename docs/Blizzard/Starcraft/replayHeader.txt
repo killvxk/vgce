@@ -4,24 +4,27 @@
 {{{
 u8          isBroodwar;
 u32         frameCount;
-u8          unk1;
-u8          unk2;
-u8          unk3;
-u32         dateCreated;
-u8          slotsAvailable[12];
-char        gameName[28];
-u16         mapWidth;
-u16         mapHeight;
-u8          language;   // (Eng: 0x01; Kor: 0x02)
-u8          availableSlots;
-u8          gameSpeed;
-u8          unk4;
-u16         gameType;
-u16         gameSubtype;
-u32         randSeed;
-u16         tileset;
-u16         unk5;
-char        creatorName[25];
+u16         campaignIndex;  // value that represents which campaign was being played
+u8          GameInit_CommandByte;
+u32         GameInit_RandomSeed;
+u8          GameInit_PlayerBytes[8];
+u32         GameData_Always_Zero
+char        GameData_playerName[24];
+u32         GameData_UseMapSettings;  // specifies if the map preview will be shown and some minor things
+u16         GameData_mapWidth;
+u16         GameData_mapHeight;
+u8          GameData_activePlayerCount;
+u8          GameData_availableSlots;
+u8          GameData_gameSpeed;
+u8          GameData_gameState;
+u8          GameData_gameType;
+u8          GameData_unk1;
+u16         GameData_gameSubtype;
+u32         GameData_unused; // randSeed;
+u16         GameData_tileset;
+u8          GameData_autoSaved; // set when replay is LastReplay?
+u8          GameData_ComputerPlayerCount;
+char        gameName[25];
 char        mapName[32];
 u16         GameTemplate_gameType;
 u16         GameTemplate_subType;

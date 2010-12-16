@@ -137,33 +137,33 @@ enum TriggerOrder
 
 enum PlayerID
 {
-    PLAYER_Player1,
-    PLAYER_Player2,
-    PLAYER_Player3,
-    PLAYER_Player4,
-    PLAYER_Player5,
-    PLAYER_Player6,
-    PLAYER_Player7,
-    PLAYER_Player8,
-    PLAYER_Player9,
-    PLAYER_Player10,
-    PLAYER_Player11,
-    PLAYER_Player12,
-    PLAYER_None,
-    PLAYER_CurrentPlayer,
-    PLAYER_Foes,
-    PLAYER_Allies,
-    PLAYER_NeutralPlayers,
-    PLAYER_AllPlayers,
-    PLAYER_Force1,
-    PLAYER_Force2,
-    PLAYER_Force3,
-    PLAYER_Force4,
-    PLAYER_Unused1,
-    PLAYER_Unused2,
-    PLAYER_Unused3,
-    PLAYER_Unused4,
-    PLAYER_NonAlliedVictoryPlayers
+    PLYR_Player1,
+    PLYR_Player2,
+    PLYR_Player3,
+    PLYR_Player4,
+    PLYR_Player5,
+    PLYR_Player6,
+    PLYR_Player7,
+    PLYR_Player8,
+    PLYR_Player9,
+    PLYR_Player10,
+    PLYR_Player11,
+    PLYR_Player12,
+    PLYR_None,
+    PLYR_CurrentPlayer,
+    PLYR_Foes,
+    PLYR_Allies,
+    PLYR_NeutralPlayers,
+    PLYR_AllPlayers,
+    PLYR_Force1,
+    PLYR_Force2,
+    PLYR_Force3,
+    PLYR_Force4,
+    PLYR_Unused1,
+    PLYR_Unused2,
+    PLYR_Unused3,
+    PLYR_Unused4,
+    PLYR_NonAlliedVictoryPlayers
 };
 
 enum techIDs
@@ -376,15 +376,18 @@ enum raceID
 
 enum playerType
 {
-    PLAYER_Inactive,
-    PLAYER_ComputerGame,
-    PLAYER_Occupied,
-    PLAYER_RescuePassive,
-    PLAYER_Unused,
-    PLAYER_Computer,
-    PLAYER_Open,
-    PLAYER_Neutral,
-    PLAYER_Closed
+    PLYRTYPE_Inactive,
+    PLYRTYPE_Computer,
+    PLYRTYPE_Human,
+    PLYRTYPE_RescuePassive,
+    PLYRTYPE_RescueActive,
+    PLYRTYPE_EitherPreferComputer,
+    PLYRTYPE_EitherPreferHuman,
+    PLYRTYPE_Neutral,
+    PLYRTYPE_Closed,
+    PLYRTYPE_Observer,
+    PLYRTYPE_HumanDefeated,
+    PLYRTYPE_ComputerDefeated
 };
 
 enum unitIDs

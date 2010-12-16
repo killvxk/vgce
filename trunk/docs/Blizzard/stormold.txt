@@ -157,13 +157,13 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 335    BOOL     __stdcall SCodeGetPseudocode(int scodestring, int buffer, size_t buffersize)
 
 340                       SDrawInit()
-341    BOOL     __stdcall SDrawAutoInitialize(HINSTANCE hWnd, LPCSTR lpClassName, LPCSTR lpWindowName, int (__stdcall *a4)(HWND, UINT, WPARAM, LPARAM), signed int a5, int nWidth, int nHeight, int a8)
+341    BOOL     __stdcall SDrawAutoInitialize(HINSTANCE hInst, LPCSTR lpClassName, LPCSTR lpWindowName, LRESULT (WINAPI *pfnWndProc)(HWND, UINT, WPARAM, LPARAM), int nMode, int nWidth, int nHeight, int nBits)
 342    BOOL     __stdcall SDrawCaptureScreen(char *source)
 343    BOOL     __stdcall SDrawClearSurface(int surfacenumber)
 344    BOOL     __cdecl   SDrawDestroy()
 345    BOOL     __cdecl   SDrawFlipPage()
 346    HWND     __stdcall SDrawGetFrameWindow(HWND sdraw_framewindow)
-347    BOOL     __stdcall SDrawGetObjects(int obj1, int obj2, int obj3, int obj4, int obj5, int obj6, int obj7)
+347    BOOL     __stdcall SDrawGetObjects(LPDIRECTDRAW ddInterface, LPDIRECTDRAWSURFACE primarySurface, LPDIRECTDRAWSURFACE surface2, LPDIRECTDRAWSURFACE surface3, LPDIRECTDRAWSURFACE backSurface, LPDIRECTDRAWPALETTE ddPalette, HPALETTE hPalette);
 348    BOOL     __stdcall SDrawGetScreenSize(int width, int height, int depth)
 349    BOOL     __stdcall SDrawGetServiceLevel(int a1)
 350    BOOL     __stdcall SDrawLockSurface(int surfacenumber, RECT *lpDestRect, void **lplpSurface, int *lpPitch, int arg_unused)
@@ -177,7 +177,7 @@ Note: Some name assignments may not be accurate, or may be out-dated. This is fo
 358    BOOL     __stdcall SDrawUpdateScreen(BOOL bErase)
 359    int      __cdecl   SDrawWaitForVerticalBlank()
 
-372    BOOL     __stdcall SEvtDispatch(DWORD messageID, int a2, int a3, int a4)
+372    BOOL     __stdcall SEvtDispatch(DWORD dwMessageID, DWORD dwFlags, int type, s_evt *event)
 373    BOOL     __stdcall SEvtRegisterHandler(DWORD messageID, DWORD type, int command, int class, void *callback)
 374    BOOL     __stdcall SEvtUnregisterHandler(DWORD messageID, int a2, int a3, int a4)
 375    BOOL     __stdcall SEvtUnregisterType(DWORD messageID, int type)

@@ -1,0 +1,14 @@
+struct _head
+{
+  WORD  wFrameCount;
+  WORD  wWidth;
+  WORD  wHeight;
+  struct
+  {
+    BYTE  bLeft;
+    BYTE  bTop;
+    BYTE  bRight;
+    BYTE  bBottom;
+    WORD  *pFrameData;
+  } frames[wFrameCount];
+};

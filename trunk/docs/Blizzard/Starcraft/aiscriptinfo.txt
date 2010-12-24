@@ -1,0 +1,100 @@
+[AI_Primary_Controller]
+  dwFlags -   0x00000001 = wait secure??
+              0x00000002 = started town
+              0x00000004 = default build off
+              0x00000008 = transports off
+              0x00000010 = farms no timing
+              0x00000020 = campaign
+              0x00000080 = creep (far/near?)
+              0x00000400 = upgrading 
+              
+[aiscript]
+0x00000001 = use BWScript
+0x00000002 - thread killable
+0x00000004 - kill thread
+0x00000008 - target expansion
+
+AI_Captains_Flags:
+  0x02  wait_bunkers
+  0x10  wait_turrets
+  0x40  campaign?
+
+[randIndex - 0x0051C610 (random counts)]
+  0  - ISCRIPT something randomizer ??
+  1  - ISCRIPT something2 randomizer ??
+  2  - ISCRIPT uflunstable randomizer
+  3  - ISCRIPT waitrand randomizer
+  4  - ISCRIPT playsndrand randomizer
+  5  - ISCRIPT playsndbtwn randomizer
+  6  - ISCRIPT turnrand randomizer
+  7  - ISCRIPT randcondjmp randomizer
+  8  - building something randomizer ?
+  9  - SCV build order target position randomizer
+  10 - SCV build order main order timer randomizer
+  11 - Protoss Interceptor something randomizer
+  12 - iscript something? or strafe unit randomizer??
+  13 - Weapon anim cooldown randomizer
+  14 - Create unit randomizer (Image random vertical offset (air units)?? )
+  15 - Unit wireframe randomizer
+  17 - Recall something randomizer
+  18 - Recall SFX randomizer
+  19 - Some order?
+  20 - Larva randomizer
+  26 - in game loop?
+  27 - Init rnd info (game loop)?
+  28 - Init rnd info (game loop) sub?
+  29 - Orders Guard main order timer randomizer
+  30 - Something hallucination randomizer ?
+  31 - Stim Pack SFX randomizer
+  32 - Player ID randomize (something, begin game) ?
+  33 - Player slot randomize ??
+  36 - Graphic turn/direction randomizer
+  37 - Repulse angle randomizer
+  39 - CHK Unit spawn something (scarab?) removal timer?
+  40 - AI attack manager something?
+  42 - AI Zerg Queen parasite order randomizer
+  44 - AI Spider mine locations Region Randomizer
+  45 - AI Spider mine locations X Randomizer
+  46 - AI Spider mine locations Y Randomizer
+  47 - Orders Junk Yard Dog/Critter main order timer
+  48 - Orders Junk Yard Dog/Critter movement randomizer
+  49 - Unit Spell cooldown randomizer
+  50 - Unit Movement something from illegal randomizer ?? regions??
+  51 - Unit Movement wait free (UMWaitFree) or start path randomizer
+  52 - AISCRIPT random_jump
+  54 - AI Send Suicide
+  55 - AI Patrol
+  56 - Retreat something??
+  57 - TRGACT set switch randomizer
+  58 - Bullet class air splash randomizer
+  144 - Player struct/slot something randomizer?
+  
+[bwInternalErrCode - 0x0066FF60]
+  0  = None
+  1  = Unit not owned
+  2  = Tech not researched
+  3  = No train slots available
+  4  = Unit is missing addon
+  5  = Unit is unburrowed
+  6  = Unit is on ground
+  7  = Unit is lifted
+  8  = Unit is busy/insufficient ammo/incompatible
+  9  = Missing unit research
+  10 = Unit is frozen
+  11 = Unit is burrowed
+  12 = Already in progress
+  13 = Tech Already Researched
+  14 = Upgrade Has Reached Maximum
+  15 = Invalid Order Type
+  16 = Invalid Unit Type
+  17 = Invalid Tech Type
+  18 = Invalid Upgrade Type
+  19 = Unit is not a powerup
+  20 = Unit not completed
+  21 = (Grey out)
+  22 = Unit is a hallucination
+  23 = Missing requirement dependencies (Blank)
+  
+  25 = Unit/Race does not match
+  26 = Not broodwar
+  

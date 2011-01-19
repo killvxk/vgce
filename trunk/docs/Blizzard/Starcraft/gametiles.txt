@@ -1,0 +1,9 @@
+struct gameTile
+{
+  BYTE visibilityFlags;
+  BYTE exploredFlags;
+  BYTE groundHeight : 4;
+  BYTE flags1 : 4; // 8 = doodad, 4 = creep
+  BYTE flags2 : 4; // 8 = occupied, 2 = doodad
+  BYTE flags3 : 4; // 4 = creep, 2 = doodad, 1 = creep disappearing
+}

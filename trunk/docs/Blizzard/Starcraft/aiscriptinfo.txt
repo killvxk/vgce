@@ -32,8 +32,8 @@ AI_Captains_Flags:
   9  - SCV build order target position randomizer
   10 - SCV build order main order timer randomizer
   11 - Protoss Interceptor something randomizer
-  12 - iscript something? or strafe unit randomizer??
-  13 - Weapon anim cooldown randomizer
+  12 - Standard attack cooldown randomizer (attack unit, etc.)
+  13 - Turret attack cooldown randomizer (hold position, bunker guard, tower attack)
   14 - Create unit randomizer (Image random vertical offset (air units)?? )
   15 - Unit wireframe randomizer
   17 - Recall something randomizer

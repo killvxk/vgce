@@ -1,0 +1,103 @@
+[HKEY_CLASSES_ROOT] - Windows Vista
+
+//////////////////////////////////////////////////////////// BASE VALUES ///////////////////////////////////////////////////
+  [Default Options]
+    (default)               | REG_SZ    | Name
+    FriendlyTypeName        | REG_SZ    | Friendly Name
+    PerceivedType           | REG_SZ    | Unknown
+    Content Type            | REG_SZ    | Unknown
+
+  [Type Properties]
+    ConflictPrompt          | REG_SZ    | 
+    ExtendedTileInfo        | REG_SZ    | 
+    FullDetails             | REG_SZ    | 
+    InfoTip                 | REG_SZ    | The tip that appears when the mouse hovers over the object.
+    PreviewDetails          | REG_SZ    | 
+    PreviewTitle            | REG_SZ    | 
+    QuickTip                | REG_SZ    | 
+    SetDefaultsFor          | REG_SZ    | 
+    TileInfo                | REG_SZ    | 
+    Details                 | REG_SZ    | 
+    FileOperationPrompt     | REG_SZ    | 
+    NonPersonal             | REG_SZ    | 
+    NewMenuPreferredTypes   | REG_SZ    | 
+    NewMenuAllowedTypes     | REG_SZ    | 
+    
+    [Properties]  - Use "prop:" as a prefix for properties. Separate properties using a semicolon. Can otherwise just use a user string.
+      System.ItemType
+      System.Size
+      System.DateModified
+      System.DateCreated
+      System.OfflineAvailability
+      System.PropGroup.FileSystem
+      System.ItemNameDisplay
+      System.ItemFolderPathDisplay
+      System.DateCreated
+      System.FileAttributes
+      System.OfflineStatus
+      System.SharedWith
+      System.FileOwner
+      System.ComputerName
+      System.Author
+      System.Document.DateCreated
+      Type
+      Size
+  
+  [Flags]
+    BrowserFlags            | REG_DWORD | Flags unknown
+    EditFlags               | REG_DWORD | Flags unknown
+
+  [Modifiers] - Leave the contents of these values blank.
+    IsShortcut              | REG_SZ    | Specifies that this type is a reference to another file.
+    NeverShowExt            | REG_SZ    | Specifies that this type never displays its file extension, even if it is enabled in folder options.
+    AlwaysShowExt           | REG_SZ    | Specifies that this type always displays its file extension, even if it is disabled in folder options.
+    IconHandler             | REG_SZ    | 
+    DocObject               | REG_SZ    | 
+    BrowseInPlace           | REG_SZ    | 
+    
+    URL Protocol            | REG_SZ    | Specifies that this type is a URL protocol. Examples: http:, ftp:, file:
+    TypeOverlay             | REG_SZ    | 
+    NoOpen                  | REG_SZ    | 
+    
+  [Extended Options]
+    PreferExecuteOnMismatch | REG_DWORD | Unknown
+    bin                     | REG_BINARY| Unknown
+    ShellFolder             | REG_SZ    | Unknown
+    Source Filter           | REG_SZ    | Unknown
+    ThumbnailCutoff         | REG_DWORD | Unknown
+    BaseClass               | REG_SZ    | Specifies another type to use as a template for this one.
+    DefaultDropEffect       | REG_DWORD | Unknown
+    Treatment               | REG_DWORD | Unknown
+    
+    
+    // any name containing "text/html" sets a flag???
+
+//////////////////////////////////////////////////////////// SUBKEYS ///////////////////////////////////////////////////
+[<extension>]
+  [Shell]
+    {
+     [ReadDisc]
+     [Open]
+     [Print]
+     [PrintTo]
+     [Edit]
+     [Play]
+     [RunAs]
+    }
+      [command]       -- Has possible value "IsolatedCommand"
+      [DropTarget]
+  [ProgID]
+  [DefaultIcon]
+  [ShellEx]
+    [ContextMenuHandlers]
+    [IconHandler]
+    [PropertySheetHandlers]
+    [DropHandler]
+  [CLSID]
+  [CurVer]
+  [PersistentHandler]
+  [OpenWithProgIds]
+    [Shared]
+  [ShellNew]
+  [OpenWithList]
+

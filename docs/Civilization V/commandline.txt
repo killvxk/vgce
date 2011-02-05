@@ -1,0 +1,31 @@
+[Command Line]
+  -LeaderViewer                             Starts the Leader Viewer.
+  -LeaderBenchmark                          Starts the Leader Viewer.
+  -LeaderCompressionBenchmark               Starts the Leader Viewer.
+  -Nexus                                    Unknown (supposedly sets the server to connect to)
+  -MemTracker                               Unknown
+  -Automation                               Unknown
+  -verbose                                  Unknown
+  -TerrainCompaction                        Unknown
+  -benchmark                                Performs a benchmark test.
+    [The following commands can be used with -benchmark]
+      CPU
+      NoShadow
+      GPU
+      FullRender
+      lategameview
+      Landmarks
+      Units
+
+  [Other unsorted parameters]
+    On
+    Off
+    NoCallStacks
+    NoDeallocations
+    NoLocations
+    PoolFilter
+    !PoolFilter
+
+  [Other possible commands]
+  -NullDevice
+  +connect_lobby

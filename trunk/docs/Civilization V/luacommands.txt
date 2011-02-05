@@ -1,0 +1,437 @@
+// Notes: None of these were tested or verified.
+//        If things are left blank then I couldn't identify it within 10 seconds, or involved structures I didn't feel like getting involved with.
+//        I use "int" to represent numbers, so they might not actually be ints, but floats as well.
+//        Also did this with no references at all, which means possible documentation and existing lua scripts did not influence this document.
+//        Stopped looking up parameters after a little bit.
+
+Network::Connect(string address, int port);
+Network::HttpRequest(string);
+Network::HttpRequest(table);
+void Network::SendChangeWar(int, bool);
+void Network::SendPledgeMinorProtection(int, bool);
+void Network::SendMinorNoUnitSpawning(int, bool);
+void Network::SendLiberateMinor(int, int);
+void Network::SendResearch(int, int, bool);
+void Network::SendDoTask(int, int, int, int, bool, bool, bool, bool);
+void Network::SendCityBuyPlot(int, int, int);
+void Network::SendSetCityAIFocus(int, int);
+void Network::SendSetCityAvoidGrowth(int, bool);
+void Network::SendMinorCivEnterTerritory(int);
+void Network::SendUpdatePolicies(int, bool, bool);
+void Network::SendDiploVote(int);
+void Network::SendBarbarianRansom(int, int);
+void Network::SendGiftUnit(int, int);
+void Network::SendReturnCivilian(bool, int, int);
+void Network::SendExtendedGame();
+void Network::SendUpdateCityCitizens(int);
+void Network::SendRenameCity(int, string);
+void Network::SendRenameUnit(int, string);
+int  Network::GetSynchRandSeed();
+int  Network::GetMapRandSeed()
+Network::ParseURL(string);
+string Network::URLEncode(string);
+string Network::URLDecode(string);
+void Network::BroadcastGameSettings();
+void Network::BroadcastPlayerInfo();
+void Network::SendChat(string message);
+void Network::SendChat(string message, int, int);
+bool Network::HasReconnectCache();            // always false??
+void Network::Reconnect();
+bool Network::IsEveryoneConnected();
+bool Network::IsConnectedToSteam();           // ?? Didn't find the return value but assuming bool
+
+void Steam::ActivateGameOverlay(string);
+void Steam::ActivateGameOverlayToWebPage(string);
+void Steam::ActivateGameOverlayToStore();
+void Steam::ActivateGameOverlayToStore(int);
+void Steam::SetOverlayNotificationPosition();   // sets to bottom right
+void Steam::SetOverlayNotificationPosition(string);   // must be one of: top_left, top_right, bottom_left, bottom_right
+bool Steam::IsOverlayEnabled();
+Steam::GetMySteamID();
+Steam::GetPlayerSteamID(int);
+string Steam::GetCloudSaveFileName(int slot);
+int Steam::GetMaxCloudSaves();      // returns the constant 10, but use it as it may or may not change in the future
+Steam::GetCloudSaves();
+bool Steam::SaveGameToCloud(int slot);
+
+string Locale::ConvertTextKey(string, ...);
+bool Locale::HasTextKey(string);
+Locale::GetHotKeyDescription(string);
+Locale::GetHotKeyDescription(string, bool);
+Locale::GetHotKeyDescription(string, bool, bool);
+string Locale::GetHotKeyDescription(string, bool, bool, bool);   // assuming the three bools are Ctrl, Alt, and Shift??
+string Locale::Lookup(string, ...);
+string Locale::LookupLanguage(string, string, ...);
+int    Locale::Length(string str);           // returns the length of the string
+string Locale::ToUpper(string str);       // convert a string to uppercase
+string Locale::ToLower(string str);       // convert a string to lowercase
+string Locale::ToCurrency(int num);       // formats a number to currency
+string Locale::ToNumber(int, string);
+string Locale::ToPercent(int num);        // formats a number to percentage
+string Locale::ToRomanNumeral(int num);   // formats a number to Roman Numeral
+string Locale::ToSpellout(int);
+int    Locale::TruncateString(string str, int maxChars, bool bAddEllipsis);
+int    Locale::Compare(string str1, string str2);
+bool   Locale::SetCurrentLanguage(string lang);
+Locale::GetCurrentLanguage();
+Locale::GetSupportedLanguages();
+Locale::GetCurrentSpokenLanguage();
+bool Locale::SetCurrentSpokenLanguage(string lang);
+Locale::GetSupportedSpokenLanguages
+bool Locale::IsASCII(string str);
+bool Locale::IsUTF8(string str);
+
+Path::GetDirectoryName
+Path::GetExtension
+Path::GetFileName
+Path::GetFileNameWithoutExtension
+Path::GetAltDirectorySeparatorChar
+Path::GetDirectorySeparatorChar
+Path::GetExtensionSeparatorChar
+Path::GetPathSeparatorChar
+Path::GetVolumeSeparatorChar
+Path::NormalizePath
+
+Modding::GetDownloadProgress
+Modding::GetDownloadErrorMessage
+Modding::SuspendDownload
+Modding::ResumeDownload
+Modding::CancelDownload
+Modding::DownloadMod
+Modding::IsDownloaderInitialized
+Modding::DownloadedFilesExistLocally
+Modding::DiscoverMods
+Modding::HasPendingInstalls
+Modding::InstallMods
+Modding::GetInstallProgress
+Modding::GetActivatedMods
+Modding::GetInstalledMods
+Modding::GetInstalledModVersions
+Modding::GetActivatedModVersion
+Modding::GetActivatedModEntryPoints
+Modding::GetEvaluatedFilePath
+Modding::GetModEntryPoints
+Modding::GetMapFiles
+Modding::ActivateSpecificMod
+Modding::ActivateEnabledMods
+Modding::DeactivateMods
+Modding::DeactivateDLC
+Modding::ActivateDLC
+Modding::PerformActions
+Modding::EnableMod
+Modding::DisableMod
+Modding::DeleteMod
+Modding::UpdateMod
+Modding::OnlineQuery
+Modding::RecordCountQuery
+Modding::RateMod
+Modding::FlagForModeration
+Modding::OpenUserData
+Modding::DeleteUserData
+Modding::HasUserData
+Modding::MarkHasRatedMod
+Modding::HasRatedMod
+Modding::AllActivatedModsContainPropertyValue
+Modding::AnyActivatedModsContainPropertyValue
+Modding::AllEnabledModsContainPropertyValue
+Modding::AnyEnabledModsContainPropertyValue
+Modding::CloudSaveCompatibleWithCurrentActivatedMods
+Modding::SavedGameCompatibleWithCurrentActivatedMods
+Modding::SavedGameCompatibleWithCurrentEnabledMods
+
+OptionsManager::GetHDStrategicView_Cached
+OptionsManager::SetHDStrategicView_Cached
+OptionsManager::GetOverlayLevel_Cached
+OptionsManager::SetOverlayLevel_Cached
+OptionsManager::GetShadowLevel_Cached
+OptionsManager::SetShadowLevel_Cached
+OptionsManager::GetFOWLevel_Cached
+OptionsManager::SetFOWLevel_Cached
+OptionsManager::GetTerrainDetailLevel_Cached
+OptionsManager::SetTerrainDetailLevel_Cached
+OptionsManager::GetTerrainTessLevel_Cached
+OptionsManager::SetTerrainTessLevel_Cached
+OptionsManager::GetTerrainShadowQuality_Cached
+OptionsManager::SetTerrainShadowQuality_Cached
+OptionsManager::GetWaterQuality_Cached
+OptionsManager::SetWaterQuality_Cached
+OptionsManager::GetTextureQuality_Cached
+OptionsManager::SetTextureQuality_Cached
+OptionsManager::GetNumContinents_Cached
+OptionsManager::SetNumContinents_Cached
+OptionsManager::GetVSync_Cached
+OptionsManager::SetVSync_Cached
+OptionsManager::GetLeaderQuality_Cached
+OptionsManager::SetLeaderQuality_Cached
+OptionsManager::ResetDefaultGraphicsOptions
+OptionsManager::HasUserChangedGraphicsOptions
+OptionsManager::GetAASamples_Cached
+OptionsManager::SetAASamples_Cached
+OptionsManager::IsAALevelSupported
+OptionsManager::GetFullscreen
+OptionsManager::GetFullscreen_Cached
+OptionsManager::SetFullscreen_Cached
+OptionsManager::GetResolution_Cached
+OptionsManager::SetResolution_Cached
+OptionsManager::GetWindowResolution_Cached
+OptionsManager::SetWindowResolution_Cached
+OptionsManager::HasUserChangedResolution
+OptionsManager::GetMaxResolution
+OptionsManager::GetPolicyInfo
+OptionsManager::GetPolicyInfo_Cached
+OptionsManager::SetPolicyInfo_Cached
+OptionsManager::GetSmallUIAssets
+OptionsManager::GetSmallUIAssets_Cached
+OptionsManager::SetSmallUIAssets_Cached
+OptionsManager::GetAutoUIAssets
+OptionsManager::GetAutoUIAssets_Cached
+OptionsManager::SetAutoUIAssets_Cached
+OptionsManager::GetGridOn
+OptionsManager::GetGridOn_Cached
+OptionsManager::SetGridOn_Cached
+OptionsManager::GetResourceOn
+OptionsManager::GetResourceOn_Cached
+OptionsManager::SetResourceOn_Cached
+OptionsManager::GetYieldOn
+OptionsManager::GetYieldOn_Cached
+OptionsManager::SetYieldOn_Cached
+OptionsManager::IsAutoWorkersDontReplace
+OptionsManager::IsAutoWorkersDontReplace_Cached
+OptionsManager::SetAutoWorkersDontReplace_Cached
+OptionsManager::IsNoCitizenWarning
+OptionsManager::IsNoCitizenWarning_Cached
+OptionsManager::SetNoCitizenWarning_Cached
+OptionsManager::GetTutorialLevel
+OptionsManager::GetTutorialLevel_Cached
+OptionsManager::SetTutorialLevel_Cached
+OptionsManager::IsNoRewardPopups
+OptionsManager::IsNoRewardPopups_Cached
+OptionsManager::SetNoRewardPopups_Cached
+OptionsManager::IsNoTileRecommendations
+OptionsManager::IsNoTileRecommendations_Cached
+OptionsManager::SetNoTileRecommendations_Cached
+OptionsManager::IsCivilianYields
+OptionsManager::IsCivilianYields_Cached
+OptionsManager::SetCivilianYields_Cached
+OptionsManager::IsNoBasicHelp
+OptionsManager::IsNoBasicHelp_Cached
+OptionsManager::SetNoBasicHelp_Cached
+OptionsManager::GetStraightZoom
+OptionsManager::GetStraightZoom_Cached
+OptionsManager::SetStraightZoom_Cached
+OptionsManager::GetBindMouseMode
+OptionsManager::GetBindMouseMode_Cached
+OptionsManager::SetBindMouseMode_Cached
+OptionsManager::GetTooltip1Seconds
+OptionsManager::GetTooltip1Seconds_Cached
+OptionsManager::SetTooltip1Seconds_Cached
+OptionsManager::GetTooltip2Seconds
+OptionsManager::GetTooltip2Seconds_Cached
+OptionsManager::SetTooltip2Seconds_Cached
+OptionsManager::IsDebugMode
+OptionsManager::IsDebugMode_Cached
+OptionsManager::SetDebugMode_Cached
+OptionsManager::GetTurnsBetweenAutosave
+OptionsManager::GetTurnsBetweenAutosave_Cached
+OptionsManager::SetTurnsBetweenAutosave_Cached
+OptionsManager::GetNumAutosavesKept
+OptionsManager::GetNumAutosavesKept_Cached
+OptionsManager::SetNumAutosavesKept_Cached
+OptionsManager::GetSinglePlayerAutoEndTurnEnabled
+OptionsManager::GetSinglePlayerAutoEndTurnEnabled_Cached
+OptionsManager::SetSinglePlayerAutoEndTurnEnabled_Cached
+OptionsManager::GetMultiplayerAutoEndTurnEnabled
+OptionsManager::GetMultiplayerAutoEndTurnEnabled_Cached
+OptionsManager::SetMultiplayerAutoEndTurnEnabled_Cached
+OptionsManager::ResetTutorial
+OptionsManager::CommitGameOptions
+OptionsManager::SyncGameOptionsCache
+OptionsManager::CommitGraphicsOptions
+OptionsManager::SyncGraphicsOptionsCache
+OptionsManager::CommitResolutionOptions
+OptionsManager::SyncResolutionOptionsCache
+OptionsManager::HasUserChangedResolution
+OptionsManager::ResetDefaultGameOptions
+
+Matchmaking::RefreshLANGameList
+Matchmaking::RefreshInternetGameList
+Matchmaking::GetMultiplayerGameList
+Matchmaking::GetMultiplayerGameCount
+Matchmaking::HostLANGame
+Matchmaking::HostInternetGame
+Matchmaking::JoinMultiplayerGame
+Matchmaking::LeaveMultiplayerGame
+Matchmaking::LaunchMultiplayerGame
+Matchmaking::GetPlayerList
+Matchmaking::GetPlayerCount
+Matchmaking::GetCurrentGameName
+Matchmaking::GetFriendList
+Matchmaking::IsHost
+Matchmaking::GetHostID
+Matchmaking::GetLocalID
+Matchmaking::SetMultiplayerResumeGame
+Matchmaking::KickPlayer
+
+
+UI::LookAtSelectionPlot
+UI::CanDoInterfaceMode
+UI::GetLookAtPlot
+UI::GetSelectionPlot
+UI::GetInterfacePlotUnit
+UI::GetHeadSelectedUnit
+UI::GetSelectedUnitID
+UI::SelectUnit
+UI::SelectGroup
+UI::SelectAll
+UI::RemoveFromSelectionList
+UI::MakeSelectionListDirty
+UI::CanSelectionListFound
+UI::CanSelectionListWork
+UI::IsPopupUp
+UI::IsPopupQueued
+UI::IsDiploOrPopupWaiting
+UI::GetLastSelectedUnit
+UI::SetLastSelectedUnit
+UI::ChangePlotListColumn
+UI::GetGotoPlot
+UI::GetSingleMoveGotoPlot
+UI::GetOriginalPlot
+UI::ClearSelectionList
+UI::InsertIntoSelectionList
+UI::SelectCity
+UI::SelectLookAtCity
+UI::AddSelectedCity
+UI::ClearSelectedCities
+UI::IsCitySelected
+UI::GetHeadSelectedCity
+UI::IsCitySelection
+UI::UpdateCityScreen
+UI::SetPlaceUnit
+UI::GetPlaceUnit
+UI::ClearPlaceUnit
+UI::CanPlaceUnitAt
+UI::HighlightCanPlacePlots
+UI::ClearEventMessages
+UI::GetCycleSelectionCounter
+UI::SetCycleSelectionCounter
+UI::ChangeCycleSelectionCounter
+UI::GetEndTurnCounter
+UI::SetEndTurnCounter
+UI::ChangeEndTurnCounter
+UI::CheckForCommandLineInvitation
+UI::IsCombatFocus
+UI::SetCombatFocus
+UI::IsDirty
+UI::SetDirty
+UI::MakeInterfaceDirty
+UI::UpdateCursorType
+UI::LookAt
+UI::CenterCamera
+UI::ReleaseLockedCamera
+UI::IsCameraMoving
+UI::IsFocused
+UI::ToggleYieldVisibleMode
+UI::ToggleResourceVisibleMode
+UI::ToggleGridVisibleMode
+UI::GetOriginalPlotCount
+UI::IsCityScreenUp
+UI::SetCityScreenUp
+UI::CanEndTurn
+UI::WaitingForRemotePlayers
+UI::SetInterfaceMode
+UI::GetInterfaceMode
+UI::SetInterfaceModeValue
+UI::GetInterfaceModeValue
+UI::GetInterfaceModeDebugItemID1
+UI::SetInterfaceModeDebugItemID1
+UI::GetInterfaceModeDebugItemID2
+UI::SetInterfaceModeDebugItemID2
+UI::SetFlashing
+UI::IsFlashing
+UI::SetDiplomacyLocked
+UI::IsDiplomacyLocked
+UI::SetCanEndTurn
+UI::IsHasMovedUnit
+UI::SetHasMovedUnit
+UI::IsForcePopup
+UI::SetForcePopup
+UI::LookAtCityOffset
+UI::GetPlotListColumn
+UI::VerifyPlotListColumn
+UI::GetPlotListOffset
+UI::ExitingToMainMenu
+UI::IsInAdvancedStart
+UI::SetInAdvancedStart
+UI::SetBusy
+UI::IsNoSelectionListCycle
+UI::SetNoSelectionListCycle
+UI::LocationSelect
+UI::DoSelectCityAtPlot
+UI::AltKeyDown
+UI::ShiftKeyDown
+UI::CtrlKeyDown
+UI::GetMouseOverHex
+UI::GetScratchDeal
+UI::ActivateNotification
+UI::RemoveNotification
+UI::RebroadcastNotifications
+UI::GetVersionInfo
+UI::ExitGame
+UI::SaveFileList
+UI::LoadSaveFile
+UI::QuickSave
+UI::SaveGame
+UI::DeleteSavedGame
+UI::GetSavedGameModificationTime
+UI::SaveMap
+UI::GetMapPreview
+UI::GetMapPlayers
+UI::IsMapScenario
+UI::ResetScenarioPlayerSlots
+UI::MoveScenarioPlayerToSlot
+UI::SetNextGameState
+UI::GetCurrentGameState
+UI::incTurnTimerSemaphore
+UI::decTurnTimerSemaphore
+UI::interruptTurnTimer
+UI::OnHumanOpenedTradeScreen
+UI::OnHumanDemand
+UI::DoProposeDeal
+UI::DoDemand
+UI::DoEqualizeDealWithHuman
+UI::DoWhatWillAIGive
+UI::DoWhatDoesAIWant
+UI::IsAIRequestingConcessions
+UI::IsHumanMakingDemand
+UI::GetRepeatActionPlayer
+UI::SetRepeatActionPlayer
+UI::GetStartDiploRepeatCount
+UI::ChangeStartDiploRepeatCount
+UI::GetOfferTradeRepeatCount
+UI::SetOfferTradeRepeatCount
+UI::ChangeOfferTradeRepeatCount
+UI::OpenTechTree
+UI::BindMouse
+UI::DebugKeyHandler
+UI::BulkHideUI
+UI::HasMadeProposal
+UI::ProposedDealExists
+UI::LoadProposedDeal
+UI::LoadCurrentDeal
+UI::LoadHistoricDeal
+UI::GetNumCurrentDeals
+UI::GetNumHistoricDeals
+UI::DoFinalizePlayerDeal
+UI::RequestMinimapBroadcast
+UI::GetTempString
+UI::IsForceDiscussionModeQuitOnBack
+UI::SetForceDiscussionModeQuitOnBack
+UI::IsLoadedGame
+UI::GetCredits
+UI::GetHallofFameData
+UI::SendPathfinderUpdate
+UI::DebugFlag
+UI::HasShownLegal
+UI::RequestLeaveLeader
+UI::GetLeaderHeadRootUp
+UI::SetLeaderHeadRootUp

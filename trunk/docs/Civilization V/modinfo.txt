@@ -1,0 +1,37 @@
++----------+
+| XML Tags |
++----------+
+Properties
+  Name                          The title of the mod.
+  Stability                     The text that appears after the version. Examples: Alpha, Beta, Test, etc.
+  Teaser                        The text displayed in the list of mods (browse window).
+  Description                   The large description used for the mod.
+  Authors                       The Author(s) of the mod.
+  SpecialThanks                 Gives special mention to...
+  HideSetupGame                 Unknown.
+  Homepage                      The homepage of the mod, though I didn't see it displayed.
+  AffectsSavedGames             A notification that indicates if this mod will affect saved games. Can be 0 or 1.
+  MinCompatibleSaveVersion      The version of the mod.
+  SupportsSinglePlayer          A notification that indicates if this mod is compatible with Single Player. Can be 0 or 1.
+  SupportsMultiplayer           A notification that indicates if this mod is compatible with Multi-Player. Can be 0 or 1.
+  SupportsMac                   A notification that indicates if this mod is compatible with the macintosh version. Canbe 0 or 1.
+  ReloadLandmarkSystem          Specifies if Civilization V should reload its Landmark system. Can be 0 or 1.
+  ReloadStrategicViewSystem     Specifies if Civilization V should reload its Strategic View system. Can be 0 or 1.
+  ReloadUnitSystem              Specifies if Civilization V should reload its Unit system. Can be 0 or 1.
+Dependencies
+References
+Blocks
+Files
+  <File md5="some md5 hash">some file</File>
+Actions
+  OnModActivate
+    UpdateDatabase
+-------------------------------------------------
++-----------------+
+| Text Formatting |
++-----------------+
+[COLOR]
+[ENDCOLOR]
+[/COLOR]
+[ICON]
+[NEWLINE]

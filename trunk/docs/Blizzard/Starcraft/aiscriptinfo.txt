@@ -20,8 +20,8 @@ AI_Captains_Flags:
   0x40  campaign?
 
 [randIndex - 0x0051C610 (random counts)]
-  0  - ISCRIPT something randomizer ??
-  1  - ISCRIPT something2 randomizer ??
+  0  - Bullet Launch Spin something Randomizer
+  1  - Bullet Miss Target Randomizer
   2  - ISCRIPT uflunstable randomizer
   3  - ISCRIPT waitrand randomizer
   4  - ISCRIPT playsndrand randomizer

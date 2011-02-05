@@ -1,0 +1,41 @@
+[Version 1.71.4289]
+[Command Line]
+  -ADDDATADIR:<string>
+  -AUTOSHUTDOWN:<integer>
+  -BENCHMARK
+  -CHOOSEKNIGHT
+  -DEBUGGAMEREPLAY
+  -DISPLAYSCRIPTERRORS
+  -EXITONERROR
+  -EXTRA#                                   Where # is a number from 1 to 9.
+  -GRABSCREENSHOTS
+  -GUIREPLAY:<string>
+  -HIDEGUI
+  -LANG:<string>
+  -MAP:<string>
+  -MODELSOUNDANIM <string:optional>
+  -MODELVIEW <string:optional>
+  -MP
+  -NOTURNSTATS
+  -ONGAMESTART:<string>
+  -PLAYALLCUTSCENES
+  -PLAYCUTSCENE:<string>
+  -PRELOADMODELS:<yes|no>
+  -RECORDGUI
+  -RELAUNCHMCE
+  -REPLAY:<string>
+  -SAVEAFTERXSECONDS:<integer>,<string>
+  -SAVEGAME:<string>
+  -SINGLECORE
+  -TERRAINBUFFERSIZE:<integer>
+  -TICKRATE:<float>
+  -USEDATAOP
+  -USEEXEDIR
+  -VTUNE:<integer>
+  -VTUNEGUI
+  -VTUNELOGIC
+  -WATERBUFFERSIZE:<integer>
+  
+[Activation Codes (Options)]
+  0025722953
+  1703848010

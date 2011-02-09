@@ -1,0 +1,88 @@
+[Game Commands]
+  /me
+  /em
+  /kick
+  /boot
+  /k
+  /b
+
+[Console Commands]
+  HELP [<keyword>]
+  SHOT <filename>.tga
+  MEMDUMP
+  EXIT
+  QUIT
+  WIRE [0/1]
+  NPOLYS [0/1]
+  BBOX [0/1]
+  SIDES
+  AI <side#> [START|STOP] [[+|-]INACTIVE] [[+|-]SHOWSTANCE] [[+|-]SHOWGROUPS] [[+|-]SHOWGROUPINFO]
+  @ <cheat code>
+  # <cheat code>
+  ! <cheat code>
+  
+[Cheat Codes]
+  STRING                        LENGTH    HASH          DESCRIPTION
+
+  AllIWantForXmasIsA            18        0x01206B61    Spawn 1 creature
+  APlethoraOf                   11        0x00024639    Spawn 4 creatures
+  ByThePowerOfGraySkull         21        0x09AD1714    Restore Health
+  IHaveThePower                 13        0x0009D9DD    Restore Mana
+  DontFearTheReaper             17        0x0099C2FA    Restore Souls
+  CastrateTheHeathens           19        0x0276F171    Allow collection of red souls
+  GimmeGimmeGimme               15        0x00243565    Obtain a new spell
+  TimeIsOnMySide                14        0x0011C0F2    Reset spell cooldowns
+  YourBulletsCannotHarmMe       23        0x24756D9B    Wizard does not lose health
+  MyWingsAreLikeAShieldOfSteel  28        0x4DB9AFF5    Wizard can not be attacked
+  RageBuilding                  12        0x00049118    Level Up
+
+[Command Line]
+  -l
+  -host
+  -join
+  -ip
+  -name
+
+[Registry Keys]
+  "HKEY_LOCAL_MACHINE\SOFTWARE\Shiny Entertainment\Sacrifice\Options\"
+    
+    NAME                                  TYPE        DEFAULT       MIN     MAX
+    "# Times Run"                         REG_DWORD   0             0       0x7FFFFFFF
+    "Mouse speed"                         REG_DWORD   32            16      128
+    "Compatability problem ignore list"   REG_DWORD   0             0       0x7FFFFFFF
+    "Character texture detail"            REG_DWORD   7             5       9
+    "CTR too high at"                     REG_DWORD   0             5       9
+    "Texture detail"                      REG_DWORD   0             0       3
+    "Graphic detail"                      REG_DWORD   3             0       7
+    "General graphics options"            REG_DWORD   0             0       0x7FFFFFFF
+    "Number of scars"                     REG_DWORD   256           32      256
+    "Types of scars allowed"              REG_DWORD   3             0       0x7FFFFFFF
+    "Landscape drawing modes"             REG_DWORD   120           0       0x7FFFFFFF
+    "Target framerate"                    REG_DWORD   20            10      30
+    "Friendly fire"                       REG_DWORD   1             0       1
+    "Friendly damage multiplier (x128)"   REG_DWORD   64            0       128
+    "Show gameplay tips"                  REG_DWORD   1             0       1
+    "Demo mode"                           REG_DWORD   1             0       1
+    "Swap mouse buttons"                  REG_DWORD   0             0       1
+    "Double click time"                   REG_DWORD   20            10      60
+    "Cross menu time"                     REG_DWORD   15            0       60
+    "Control options"                     REG_DWORD   7             0       0x7FFFFFFF
+    "Gamma correction (*1000)"            REG_DWORD   1300          1000    2000
+    "Triple buffering"                    REG_DWORD   0             0       1
+    "Texture filter"                      REG_DWORD   1             0       2
+    "Draw widgets"                        REG_DWORD   1             0       1
+    "Renderer DLL"                        REG_SZ      "3d_d3d.dll"          64
+    "Sound Library"                       REG_SZ      "sound.dll"           64
+    "Sound Provider"                      REG_SZ      "DirectSound3D 7+ Software - Pan and Volume"    64
+    "Resolution"                          REG_BINARY  640,480,1,16,0,0      24
+    "Player name"                         REG_SZ      "Eldred"              32
+    "IP address"                          REG_SZ      ""                    32
+    "CD Key"                              REG_SZ      ""                    64
+    "Sound FX Volume"                     REG_DWORD   100           0       100
+    "Music Volume"                        REG_DWORD   100           0       100
+    "Disable Music"                       REG_DWORD   0             0       1
+    "Speaker Setup"                       REG_DWORD   0             0       3
+    "No Advisor VO"                       REG_DWORD   0             0       1
+    "Key repeat start"                    REG_DWORD   50            0       100
+    "Key repeat delay"                    REG_DWORD   10            0       20
+

@@ -3,7 +3,7 @@ Additionally, hero units will not follow these rules.
 
 [size=14][b][Common][/b][/size]
 The following are general requirements for all spells:
-- Target is visible (this includes any revealed areas on the map)
+- Target is visible and detected (this includes any revealed areas on the map)
 - Target is owned by an enemy player
 - Target is not a Protoss Interceptor, Vulture Spider Mine, or Protoss Scarab
 - Target is not harvesting gas
@@ -67,7 +67,15 @@ The unit is more likely to cast it on a unit within a 288-boxed-pixel radius.
 Another condition will give it a 2048-boxed-pixel radius.
 
 
-[size=14][b][Zerg Queen: Summon Broodlings][/b][/size]
+[size=14][b][Terran Medic: Optical Flare][/b][/size]
+- [Common] must be true
+- Target must not be a building
+- Target must not be blind
+- Target must be a detector, completed, and must not be disabled, locked down, stasised, maelstromed, or blind
+- If the above point is not met, then the unit's current hitpoints and shields combined must be greater than 80
+- Unit must have maximum energy stored
 
+The unit is more likely to cast it on a unit within a 288-boxed-pixel radius.
+Another condition will give it a 1024-boxed-pixel radius.
 
 // NOTE: This is totally time consuming

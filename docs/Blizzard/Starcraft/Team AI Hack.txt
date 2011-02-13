@@ -1,0 +1,176 @@
+Notes: In a 4-force Team game, move to the last force.
+       Set the other 3 to Computer.
+       Change your force via memory editor to one of the following:
+
+0xFF  yes
+0xFE  no
+0xFD  yes
+0xFC  no
+0xFB  yes
+0xFA  yes
+0xF9  no
+0xF8  yes
+0x81  no
+0x80  no
+0x7F  yes
+0x7E  no
+0x70  yes
+0x64  no
+0x5A  yes
+0x37  no
+0x2F  no
+
+
+Doing so will share your base with a standard Computer AI.
+
+Changing the force name:
+0x01    Team 1<0>
+0x02    Team 2<0>
+0x03    Team 3<0>
+0x04    Team 4<0>
+0x05    Force 1<0>
+0x06    Force 2<0>
+0x07    Force 3<0>
+0x08    Force 4<0>
+0x09    Observer<0>
+0x0A    Observers<0>
+0x0B    Elite Guard<0>
+0x0C    Mar Sara<0>
+0x0D    Kel-Morian Combine<0>
+0x0E    Antiga<0>
+0x0F    Delta Squadron<0>
+0x10    Omega Squadron<0>
+0x11    Alpha Squadron<0>
+0x12    Epsilon Squadron<0>
+0x13    Tiamat Brood<0>
+0x14    Surtur Brood<0>
+0x15    Fenris Brood<0>
+0x16    Jormungand Brood<0>
+0x17    Garm Brood<0>
+0x18    Grendel Brood<0>
+0x19    Baelrog Brood<0>
+0x1A    Leviathan Brood<0>
+0x1B    Ara Tribe<0>
+0x1C    Sargas Tribe<0>
+0x1D    Akilae Tribe<0>
+0x1E    Furinax Tribe<0>
+0x1F    Auriga Tribe<0>
+0x20    Venatir Tribe<0>
+0x21    Shelak Tribe<0>
+0x22    Velari Tribe<0>
+0x23    %s was eliminated.<0>
+0x24    Player %d was eliminated.<0>
+0x25    Player %s left the game.<0>
+0x26    Player %s was dropped.<0>
+0x27    %s paused the game. (%d timeouts remaining)<0>
+0x28    %s resumed the game.<0>
+0x29    * Message Sent * (unused)<0>
+0x2A    Building exit is blocked.<0>
+0x2B    Cannot create more units.<0>
+0x2C    Unable to create unit. Sprites or images array possibly full.<0>
+0x2D    Select Target<0>
+0x2E    Select Location<0>
+0x2F    Cheat Enabled<0>
+0x30    Cheat Disabled<0>
+0x31    %s is now playing as an observer.<0>
+0x32    You are now playing as an observer.<0>
+0x33    Player %s set network for low latency.<0>
+0x34    Player %s set network for high latency.<0>
+0x35    Player %s set network for extra high latency.<0>
+0x36    Anonymous (unused)<0>
+0x37    Illegal number of teams.<0>
+0x38    %s has joined the game.<0>
+0x39    %s has left the game.<0>
+0x3A    %s was dropped from the game.<0>
+0x3B    Ignoring messages from %s.<0>
+0x3C    Accepting messages from %s.<0>
+0x3D    <60>To: %s<62><0>
+0x3E    <60>From: %s<62><0>
+0x3F    A network error has occured.<0>
+0x40    Error initializing standard.snp.  Please reinstall StarCraft.<0>
+0x41    Unable to initialize network provider.<0>
+0x42    Unable to initialize device.<0>
+0x43    Invalid network provider.<0>
+0x44    Unable to register events.<0>
+0x45    Invalid player.<0>
+0x46    Invalid character.<0>
+0x47    Unable to join game.<0>
+0x48    Unable to join game. The selected game is an incompatible version of Starcraft.<0>
+0x49    Unable to send message.<0>
+0x4A    Unable to create single player game.<0>
+0x4B    Invalid game options.<0>
+0x4C    Unable to create multi player game.<0>
+0x4D    Save Game File Not Found.<0>
+0x4E    Error launching game.<0>
+0x4F    Error loading scenario file.<0>
+0x50    Unable to load saved game file.<0>
+0x51    Unable to load the SCM associated with this save file.<0>
+0x52    Unable to distribute map.<0>
+0x53    Unable to write save file.<0>
+0x54    Unable to load campaign options.  Please reinstall StarCraft.<0>
+0x55    You must own the full version of StarCraft to play the single player campaigns.<0>
+0x56    You must own the full version of StarCraft to create a multiplayer game.<0>
+0x57    You can only join games created by the owner of the CD that spawned your copy.<0>
+0x58    Unable to find the specified campaign map.<0>
+0x59    Network upgrade failed.<0>
+0x5A    SYNC ERROR.<0>
+0x5B    Saving Game...<10>File Name: <0>
+0x5C    Screen captured to file '%s'.<0>
+0x5D    %s was %s and played for %s<10><0>
+0x5E    On map "%s":<10><0>
+0x5F    Overall Score %u<10>    %10u for %s<10>    %10u for %s<10>    %10u for %s<10><0>
+0x60    Units Score %u<10>    %10u Units %s<10>    %10u Units %s<10>    %10u Units %s<10><0>
+0x61    Structures Score %u<10>    %10u Structures %s<10>    %10u Structures %s<10>    %10u Structures %s<10><0>
+0x62    Resources Score %u<10>    %10u %s<10>    %10u %s<10>    %10u %s<10><0>
+0x63    Destroy all of an opponent's buildings to eliminate him.<0>
+0x64    Accumulate 2500 ore.<10>Accumulate 2500 gas.<0>
+0x65    Accumulate 5000 ore.<10>Accumulate 5000 gas.<0>
+0x66    Accumulate 7500 ore.<10>Accumulate 7500 gas.<0>
+0x67    Accumulate 10000 ore.<10>Accumulate 10000 gas.<0>
+0x68    Get the most kills or razings before time runs out.<0>
+0x69    Capture an opponent's flag to eliminate him.<0>
+0x6A    Destroy any opponent's HQs to eliminate him.<0>
+0x6B    %s had his flag taken!<0>
+0x6C    %s had their flag taken!<0>
+0x6D    %s had his flag return to his base.<0>
+0x6E    %s had their flag return to their base.<0>
+0x6F    %s had his flag captured!<0>
+0x70    %s had their flag captured!<0>
+0x71    You must configure your system for voice chat before attempting to change settings. To configure, please exit Starcraft and run the voice configuration utility "STARVOX.exe".<0>
+0x72    Voice chat settings can only be modified while you are playing a multiplayer game.<0>
+0x73    Your system does not have DirectSound installed. Please run the setup program supplied with Starcraft to install DirectX drivers for your system.<0>
+0x74    Your system does not appear to be configured for voice chat. Please reinstall Starcraft using the install program on the Starcraft CDROM.<0>
+0x75    Another application is using audio. Please exit the other application and try running this application again.<0>
+0x76    An error occurred while attempting to initialize voice fonts: %s<10>Error 0x%08x %s<0>
+0x77    An error occurred while attempting to initialize voice capture: %s<10>Error 0x%08x %s<0>
+0x78    An error occurred while attempting to initialize sound: %s<10>Error 0x%08x %s<0>
+0x79    An error occurred while attempting to initialize voice playback: %s<10>Error 0x%08x %s<0>
+0x7A    ERROR: cannot play music from network drive.<0>
+0x7B    We recommend that you complete the Terran Campaign before playing this campaign.<10><10>Do you wish to play the Zerg Campaign anyway?<0>
+0x7C    We recommend that you complete the Terran and Zerg Campaigns before playing this campaign.<10><10>Do you wish to play the Protoss Campaign anyway?<0>
+0x7D    We recommend that you complete the Protoss Campaign before playing this campaign.<10><10>Do you wish to play the Terran Campaign anyway?<0>
+0x7E    We recommend that you complete the Protoss and Terran Campaigns before playing this campaign.<10><10>Do you wish to play the Zerg Campaign anyway?<0>
+0x7F    Elite Guard<0>
+0x80    Mar Sara<0>
+0x81    Kel-Morian Combine<0>
+0x82    Antiga<0>
+0x83    Delta Squadron<0>
+0x84    Atlas Wing<0>
+0x85    Cronus Wing<0>
+0x86    Epsilon Squadron<0>
+0x87    Tiamat Brood<0>
+0x88    Surtur Brood<0>
+0x89    Fenris Brood<0>
+0x8A    Jormungand Brood<0>
+0x8B    Garm Brood<0>
+0x8C    Grendel Brood<0>
+0x8D    Baelrog Brood<0>
+0x8E    Leviathan Brood<0>
+0x8F    Ara Tribe<0>
+0x90    Sargas Tribe<0>
+0x91    Akilae Tribe<0>
+0x92    Furinax Tribe<0>
+0x93    Auriga Tribe<0>
+0x94    Venatir Tribe<0>
+0x95    Shelak Tribe<0>
+0x96    Velari Tribe<0>

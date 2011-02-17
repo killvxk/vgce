@@ -19,7 +19,9 @@ Notes: In a 4-force Team game, move to the last force.
 0x5A  yes
 0x37  no
 0x2F  no
-
+0x21  no
+0x15  yes
+0x09  no; vision of a comp, crapton of resources
 
 Doing so will share your base with a standard Computer AI.
 
@@ -174,3 +176,21 @@ Changing the force name:
 0x94    Venatir Tribe<0>
 0x95    Shelak Tribe<0>
 0x96    Velari Tribe<0>
+
+
+
+----------------------------------------------------------------------
+OPCODE| PLAYER| NATION| FORCE|
+0x05    0       0
+0x06    2       0
+0x07    0       7
+0x08    0       0
+0x09    2       128
+0x0A    0       0       3
+0x0B    0       128     4
+0x0C    1       0       4
+0x0D    1       255     4
+0x0E    0       255     4
+0x0F    0       0       4
+
+

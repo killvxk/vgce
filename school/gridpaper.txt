@@ -1,0 +1,49 @@
+These instructions are for printing Graphing paper with the same (or better) quality than store-bought paper.
+The paper was supposed to represent the Staples 10:1" refill paper that costs a minimum of $3.00+tax(+shipping) CAD for 20 sheets. (I remember it being more expensive than $3.00, but it is listed as such on their website)
+The custom paper has near-equal measurements and seemingly higher quality, as well as more grid space.
+Now I'm not sure what it costs to refill a HP printer color cartridge but I assume the difference is worth it.
+
+[INSTRUCTIONS]:
+  1. Obtain a color printer if you have not already done so.
+  2. Insert blank sheets of paper and make sure it is working correctly.
+  3. Download and install Irfanview (use google) if you have not already done so.
+  4. Open "gridFull.gif" with Irfanview.
+  5. Go to Image->Resize/Resample.
+  6. Set DPI to 200 (don't touch anything else).
+  7. Click OK.
+  8. Go to File->Print and select your printer.
+  9. Make sure the settings are set as follows:
+      Portrait        Paper: Borderless Letter or Letter
+      Print size: Original size
+      Position: 0,0
+      Copies: 1
+  10. Click on Print.
+
+If done correctly, between 99% and 100% of the graph should be visible.
+If the border of the graph was cut off, try going to Step 6 and use 201 as the DPI setting.
+If it is still cut off, then just increase the DPI until it becomes visible.
+
+If the settings are perfect (and you have verified them) you can then print as many sheets as you need or want.
+
+[Additional Info]:
+  Grid was made using only MSPaint and Irfanview.
+  Sizes:
+    Cell:         20x20 pixels (includes borders).
+    5x5 Cells:    100x100 pixels (includes borders).
+    10x10 Cells:  200x200 pixels (includes borders).
+    Full:         1602x2002 pixels.
+
+  Colors:
+    Background:         RGB(255, 255, 255) or #FFFFFF AKA white
+    Cell border:        RGB(196, 222, 172) or #C4DEAC
+    5x5 cell border:    RGB(188, 254, 116) or #BCFE74
+    10x10 cell border:  RGB(156, 254, 52)  or #9CFE34
+
+  Creation Steps:
+    1. Create a 10x10 grid in MSPaint(See above for information), omitting the right and bottom border.
+    2. Open Irfanview and go to "Image->Create Panorama Image...".
+    3. Add the grid X number of times horizontally. Save it.
+    4. Create a new panorama image and add the previous work X number of times vertically. Save it.
+    5. Open it back up in MSPaint and go to "Image->Attributes...". Increase the size by your border size.
+    6. Add the border to the right and bottom of your final image.
+    7. Save and you're done.

@@ -19,10 +19,15 @@ Saved content must be decrypted using a special Brawl key for the first portion 
 0x00 (8)		//Wii ID - Same as "Wii Number" in Address Book (not necessary)
 0x08 (8)		//Wii System Date/Time (not necessary)
 0x10 (4)	!	//Checksum
-0x14 (1)		//Region
-	0x00 = "JAP";
-	0x21 = "USA";
-	0x44 = "EUR";
+0x14 (1)		//Version Info (bitwise values, probably incorrect)
+  00011111    Country? code      (Mask: 0x1F)
+    0x00 = "JAP";
+    0x01 = "USA";
+    0x04 = "EUR";
+  11100000    Region/Format code (Mask: 0xE0 >> 5)
+    0x00 = "RSBJ";
+    0x01 = "RSBE";
+    0x02 = "RSBP";
 0x15 (1) 	!	//Content Type
 	0x01 = "Snapshot";
 	0x02 = "Replay";

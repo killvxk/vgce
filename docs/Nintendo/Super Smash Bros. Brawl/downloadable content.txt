@@ -24,10 +24,13 @@ Saved content must be decrypted using a special Brawl key for the first portion 
     0x00 = "JAP";
     0x01 = "USA";
     0x04 = "EUR";
+    0x07 = "KOR";
+    // looking for: "AUS"
   11100000    Region/Format code (Mask: 0xE0 >> 5)
     0x00 = "RSBJ";
     0x01 = "RSBE";
     0x02 = "RSBP";
+    0x03 = "RSBK";
 0x15 (1) 	!	//Content Type
 	0x01 = "Snapshot";
 	0x02 = "Replay";

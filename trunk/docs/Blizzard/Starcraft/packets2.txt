@@ -307,9 +307,9 @@ CLASS 2
 == 0x3F - Version Verification ==
 {{{
 	BYTE bStormPlayerID;
-	WORD version1; // 0
-	WORD version2; // 1
-	WORD version3; // 5
+	WORD unknown;     // 0
+	WORD versionHigh; // 1
+	WORD versionLow;  // 5
 }}}
 CLASS 2
 
@@ -339,28 +339,28 @@ CLASS 2
 CLASS 2
 
 ----------------------------------------------------
-0x3B - Voice Squelch 2 (Unused)
+0x3B - Voice Enable (Unused) // might be swapped with squelch
 {{{
 	BYTE bSlotID;
 }}}
 CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
-0x3A - Voice Squelch 1 (Unused)
+0x3A - Voice Squelch (Unused)// might be swapped with enable
 {{{
 	BYTE bSlotID;
 }}}
 CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
-0x39 - Voice Enable 2 (Unused)
+0x39 - Voice On (Unused) // might be swapped with off
 {{{
   // No parameters.
 }}}
 CLASS 2 (Filtered out of replay)
 
 ----------------------------------------------------
-0x38 - Voice Enable 1 (Unused)
+0x38 - Voice Off (Unused) // might be swapped with on
 {{{
   // No parameters.
 }}}
@@ -516,6 +516,9 @@ CLASS 2
 
 ----------------------------------------------------
 0x24 -  INVALID
+{{{
+  // No parameters
+}}}
 ----------------------------------------------------
 == 0x23 - Morph (Unit) ==
 {{{
@@ -777,7 +780,7 @@ CLASS 2 (Filtered out of replay)
 == 0x07 -  Load Game ==
 {{{
   DWORD dwGameID;
-  char  szName[];    // ?
+  char  szName[]; // max chars is 28
 }}}
 CLASS 2 (Filtered out of replay)
 
@@ -785,7 +788,7 @@ CLASS 2 (Filtered out of replay)
 == 0x06 - Save Game ==
 {{{
   DWORD dwSaveTime;
-  char  szName[];    // must be less than size of 64
+  char  szName[]; // max chars is 28
 }}}
 CLASS 2 (Filtered out of replay)
 

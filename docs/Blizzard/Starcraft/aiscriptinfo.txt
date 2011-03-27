@@ -60,7 +60,7 @@ AI_Captains_Flags:
   48 - Orders Junk Yard Dog/Critter movement randomizer
   49 - Unit Spell cooldown randomizer
   50 - Unit Movement something from illegal randomizer ?? regions??
-  51 - Unit Movement wait free (UMWaitFree) or start path randomizer
+  51 - Path delay randomizer
   52 - AISCRIPT random_jump
   54 - AI Send Suicide
   55 - AI Patrol

@@ -1,0 +1,6 @@
+[Commandline]
+  windowed_mode               
+  execute_by_leading            - Skips the patcher
+  special
+  no_change_color_depth
+  change_color_depth

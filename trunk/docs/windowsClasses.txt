@@ -1,0 +1,30 @@
+[Extended]
+  SysHeader32
+  ToolbarWindow32
+  ReBarWindow32
+  tooltips_class32
+  msctls_statusbar32
+  msctls_trackbar32
+  msctls_updown32
+  msctls_progress32
+  msctls_hotkey32
+  SysListView32
+  SysTreeView32
+  ComboBoxEx32
+  SysTabControl32
+  SysAnimate32
+  SysMonthCal32
+  SysDateTimePick32
+  SysIPAddress32
+  SysPager
+  NativeFontCtl
+  Button
+  Static
+  Edit
+  ListBox
+  ComboBox
+  ScrollBar
+  
+[Others?]
+  msctls_netaddress
+  

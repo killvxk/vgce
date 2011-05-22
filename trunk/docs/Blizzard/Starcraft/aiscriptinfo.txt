@@ -38,7 +38,7 @@ AI_Captains_Flags:
   15 - Unit wireframe randomizer
   17 - Recall something randomizer
   18 - Recall SFX randomizer
-  19 - Some order?
+  19 - Order Target Acquisition
   20 - Larva randomizer
   26 - in game loop?
   27 - Init rnd info (game loop)?
@@ -50,7 +50,7 @@ AI_Captains_Flags:
   33 - Player slot randomize ??
   36 - Graphic turn/direction randomizer
   37 - Repulse angle randomizer
-  39 - CHK Unit spawn something (scarab?) removal timer?
+  39 - Interceptor death timer randomizer
   40 - AI attack manager something?
   42 - AI Zerg Queen parasite order randomizer
   44 - AI Spider mine locations Region Randomizer

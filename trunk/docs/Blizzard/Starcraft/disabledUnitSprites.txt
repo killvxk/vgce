@@ -1,0 +1,11 @@
+Larva           - Rotates
+Drone           - Harvest Anim
+Goliath Turret  - Rotates
+Terran Bldgs    - Half built
+Zerg Bldgs      - Nothing special
+Ghost           - Idle Anim
+Marine          - Idle Anim
+SCV             - Harvest Anim
+Dark Templar    - Rotates
+Xel'Naga Temple - Invisible
+

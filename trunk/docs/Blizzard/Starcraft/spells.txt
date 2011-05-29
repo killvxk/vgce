@@ -1,81 +1,202 @@
-Note: Naturally, having enough energy and the technology researched is required.
-Additionally, hero units will not follow these rules.
+[size=18][color=#DFA51C][b]Definitions[/b][/color][/size]
 
-[size=14][b][Common][/b][/size]
-The following are general requirements for all spells:
-- Target is visible and detected (this includes any revealed areas on the map)
-- Target is owned by an enemy player
-- Target is not a Protoss Interceptor, Vulture Spider Mine, or Protoss Scarab
-- Target is not harvesting gas
+[size=14][u][b]Region[/b][/u][/size]
+A region is a group of tiles(usually under 100 tiles). Regions are used internally for pathfinding, AI, and some other things.
+[attach=7802]
 
-[size=14][b][Target Can Attack][/b][/size]
-Another common requirement, this time where one of any of the following conditions can be met:
-- Target has a ground weapon (with the exception of an unburrowed Lurker)
-- Target has an air weapon
-- Target is a Protoss Carrier/Gantrithor containing Interceptors
-- Target is a Protoss Reaver/Warbringer containing Scarabs
-- Target has a subunit with a ground or air weapon.
+[size=14][u][b]Box-pixel Radius[/b][/u][/size]
+Not a true radius. Instead just takes the X +- value, and Y +- value, making it square or boxed like a location with equal dimensions. This greatly increases performance of the application.
 
-[size=14][b][Terran Battlecruiser: Yamato Gun][/b][/size]
-- [Common] must be true.
-- If status flag 0x2 is set and any of [Target Can Attack] is met, then the Battlecruiser will choose this unit.
-- If target is a loaded Terran Bunker, then choose this unit.
-- Target is not a Zerg Egg
-- Target's HP and Shields combined is between 200 and 450
-- Target is not a Hero unit
-- The target that passed all of these filters will be chosen.
+[size=18][color=#DFA51C][b]Unit Behaviours[/b][/color][/size]
 
-By this logic, the Battlecruiser should also target a larva with the Yamato Gun.
-This is true.
-The unit is also more likely to choose a target that is within a 512-boxed-pixel radius of the Battlecruiser (X/Y +/- 512).
+[color=#EBEE80][b]Air Units[/b][/color] (In General)
+[list][*]Always move and patrol to the exact center of a region as depicted in the above screenshot.
+[/list]
 
-[size=14][b][Zerg Defiler: Plague][/b][/size]
-- [Common] must be true.
-- If the target is not currently plagued
-- If the target is not a Hero unit
-- If all enemy HP combined in a given region is at least 250
-- Calculate all ally HP combined in a given region
-- If 2 * Ally HP < Enemy HP, the target is chosen. (Basically must do twice as much damage to enemies than to allies)
+[size=18][color=#DFA51C][b]Unit Abilities[/b][/color][/size]
+[i]Notes: All abilities follow normal requirement procedures, doesn't target invincible units, etc.
+Hero units do not use abilities except for Cloak.
+Just because a unit is excluded from a primary target does not mean it isn't included in cluster calculations.[/i]
 
-The unit is more likely to choose a region within a 288-boxed-pixel radius.
-If another condition is met, the unit will choose a region within a 4096-boxed-pixel radius.
+[color=#EBEE80][b]Spider Mines[/b][/color]
+[list][*]Hits 3 randomizers; one for region, one for X, one for Y. Places a mine within a 256x256 box-pixel radius of an "owned" region's center. The best way to make the AI "own" a region is to run an AI script at the location and place a buildings owned by the computer player in the region.
+[/list]
 
-[size=14][b][Zerg Defiler: Dark Swarm][/b][/size]
-- [Common] must be true.
-- If the target unit is targetting another unit
-- The target's target must be a valid player ( less than 8 ) (Note: in this context, the target is the enemy and the target's target is the AI)
-- The target's target must be an enemy of the target
-- The target's target must not have a subunit
-- The target's target must not be in the air
-- The target's target must have a ground weapon
-- The target's target weapon behaviour must be "Appear on Attacker" (melee)
-- The target(or target's subunit) has a ground weapon
-- The target's weapon behaviour must be "Fly & Don't Follow Target", "Fly & Follow Target", "Appear on target unit", "Appear on target site", or "Bounce".
-- Additional unknown requirements but that's most of it :P
+[color=#EBEE80][b]Recharge Shields[/b][/color]
+[list][*]The shield battery must have at least 50 energy.
+[*]The target unit must have at most 40 shield points remaining.
+[*]The target must not be engaged with an enemy.
+[*]Follows some additional unknown rules.
+[/list]
 
-The unit is more likely to choose a region within a 288-boxed-pixel radius.
-Another condition will give it a 1024 or 2048 radius depending on an AI flag.
+[color=#EBEE80][b]Yamato Gun[/b][/color]
+[list][*]If idle, the target range is the entire map. Otherwise when provoked it will choose a target within a 512x512 box-pixel radius.
+[*]Does not target Interceptors, Spider Mines, Scarabs, Zerg Eggs, or workers harvesting gas.
+[*]Does not target heroes.
+[*]Target must be a unit that has a HP+Shields total between 200 and 450.
+[*]Exceptions are buildings that have a weapon (turret), and a loaded bunker.
+[/list]
 
-[size=14][b][Zerg Queen: Parasite][/b][/size]
-Note: If a certain AI flag is set, there is a 1 in 32767 chance of the Queen casting this spell every loop.
-Otherwise, the Queen will only cast this spell if it has full energy.
-- [Common] must be true
-- Target must not have parasite detected
-- Target has no other particular status ailments, target is an active transport, target is a Spellcaster, target is a worker, or target has a combined HP and Shields value of at least 300
+[color=#EBEE80][b]Plague[/b][/color]
+[list][*]If idle, the target range is a 4096 box-pixel radius, otherwise it is a 288 box-pixel radius.
+[*]Does not target Interceptors, Spider Mines, Scarabs, or workers harvesting gas.
+[*]Does not target units that have already been plagued.
+[*]Does not target heroes.
+[*]Enemy unit cluster must have at least 250 HP total, and this value must be greater than 2 times the HP+Shields total of allies in the cluster.
+[/list]
 
-The unit is more likely to cast it on a unit within a 288-boxed-pixel radius.
-Another condition will give it a 2048-boxed-pixel radius.
+[color=#EBEE80][b]Dark Swarm[/b][/color]
+[list][*]If idle, the target range is a 2048 box-pixel radius in campaign scripts or 1024 box-pixel radius in normal scripts. Otherwise it will be a 288 box-pixel radius when provoked.
+[*]Does not target Interceptors, Spider Mines, Scarabs, or workers harvesting gas.
+[*]Generally targets almost any unit (either that or unknown?).
+[*]If the target is an air unit, it will cast swarm over the air unit's target.
+[*]Occurs only if plague fails.
+[/list]
 
+[color=#EBEE80][b]Parasite[/b][/color]
+[list][*]1/256 chance of casting when running a campaign script, otherwise it will only cast it if it has full energy.
+[*]2048 box-pixel radius when idle. 288 box-pixel radius when provoked.
+[*]Does not target Interceptors, Spider Mines, Scarabs, or workers harvesting gas.
+[*]In a campaign script it only casts when the unit does not have parasite by anyone, otherwise it will cast if the unit doesn't have parasite by itself. (For example if another player parasited the unit, in a campaign the computer won't parasite the unit a second time for itself, but in a non-campaign script it will).
+[*]In a non-campaign script, the unit must either be a clean detector(no blind,stasis,maelstrom,lockdown), be a transport, be a spellcaster(not hallucinations), be a worker, or have at least 300 HP+Shields.
+[/list]
 
-[size=14][b][Terran Medic: Optical Flare][/b][/size]
-- [Common] must be true
-- Target must not be a building
-- Target must not be blind
-- Target must be a detector, completed, and must not be disabled, locked down, stasised, maelstromed, or blind
-- If the above point is not met, then the unit's current hitpoints and shields combined must be greater than 80
-- Unit must have maximum energy stored
+[color=#EBEE80][b]Spawn Broodling[/b][/color]
+[list][*]In a campaign script has a 255/256 chance of casting. Otherwise it will only cast if it has less than maximum energy or parasite requirements fail.
+[*]2048 box-pixel radius when idle. 288 box-pixel radius when provoked.
+[*]Does not target Interceptors, Spider Mines, Scarabs, or workers harvesting gas.
+[*]Does not target heroes.
+[*]Target must either have 100 HP+Shields, be a worker, siege tank, medic, or a ghost that is currently nuking.
+[*]Exception to previous point when unit is provoked.
+[/list]
 
-The unit is more likely to cast it on a unit within a 288-boxed-pixel radius.
-Another condition will give it a 1024-boxed-pixel radius.
+[color=#EBEE80][b]Ensnare[/b][/color]
+[list][*]Only casts if both parasite and spawn broodling requirements fail.
+[*]Always casts in a campaign script, otherwise it must have full energy.
+[*]If idle, the target range is a 2048 box-pixel radius in campaign scripts or 1024 box-pixel radius in normal scripts. Otherwise it will be a 288 box-pixel radius when provoked.
+[*]Does not target Interceptors, Spider Mines, Scarabs, or workers harvesting gas.
+[*]Does not target units already ensnared.
+[*]Enemy unit cluster must have at least 250 HP+Shields total, and this value must be greater than 2 times the HP+Shields total of allies in the cluster.
+[/list]
 
-// NOTE: This is totally time consuming
+[color=#EBEE80][b]Stasis Field[/b][/color]
+[list][*]If idle, the target range is a 2048 box-pixel radius in campaign scripts or 1024 box-pixel radius in normal scripts. Otherwise it will be a 288 box-pixel radius when provoked.
+[*]Does not target Interceptors, Spider Mines, Scarabs, or workers harvesting gas.
+[*]Only targets units owned by players 1-8.
+[*]Enemy unit cluster must have at least 250 HP+Shields total, and this value must be greater than 2 times the HP+Shields total of allies in the cluster.
+[/list]
+
+[color=#EBEE80][b]Recall[/b][/color]
+[list][*]Has several "unknown" requirements. (Needs research)
+[*]Only casts if Stasis Field requirements fail.
+[*]Target range is the entire map.
+[*]Target unit must be targetting another unit.
+[*]Target unit must be either Carrier, Gantrithor, Reaver, or Warbringer. (No other units are targetted)
+[*]Target's shields must be at most 10.
+[/list]
+
+[color=#EBEE80][b]Psionic Storm[/b][/color]
+[list][*]If idle, the target range is a 2048 box-pixel radius in campaign scripts or 1024 box-pixel radius in normal scripts. Otherwise it will be a 288 box-pixel radius when provoked.
+[*]Does not target Interceptors, Spider Mines, Scarabs, or workers harvesting gas.
+[*]Enemy unit cluster must have at least 250 HP+Shields total unless the unit was provoked, and this value must be greater than 2 times the HP+Shields total of allies in the cluster.
+[/list]
+
+[color=#EBEE80][b]Hallucination[/b][/color]
+[list][*]Must have maximum energy.
+[*]Only casts if Psionic Storm requirements fail.
+[*]Only casts when idle.
+[*]Targets units within a 1024 box-pixel radius.
+[*]Only hallucinates Carriers, Scouts, Arbiters, and Archons. (No other units are targetted)
+[/list]
+
+[color=#EBEE80][b]Lockdown[/b][/color]
+[list][*]If idle, the target range is a 2048 box-pixel radius in campaign scripts or 1024 box-pixel radius in normal scripts. Otherwise it will be a 288 box-pixel radius when provoked.
+[*]Does not target Interceptors, Spider Mines, Scarabs, or workers harvesting gas.
+[*]Unit must not be frozen with another ability.
+[*]Targets loaded Shuttles, loaded Dropships, carriers, and reavers.
+[*]Targets units that are targetting an allied unit.
+[/list]
+
+[color=#EBEE80][b]Cloak[/b][/color]
+[list][*]All units with cloaking ability will automatically cloak when attacked, including heroes.
+[*]Cloak is also used only in some very special (unknown/needs research) cases.
+[/list]
+
+[color=#EBEE80][b]EMP Shockwave[/b][/color]
+[list][*]If idle, the target range is a 2048 box-pixel radius, otherwise it is a 288 box-pixel radius.
+[*]Will prioritize EMP on shields over EMP on units with energy.
+[*]Does not target Interceptors, Scarabs, or workers harvesting gas.
+[*]Enemy unit cluster must have at least 200 Shields OR 200 Energy total.
+[*]Does not include hallucinations in energy calculations.
+[/list]
+
+[color=#EBEE80][b]Defensive Matrix[/b][/color]
+[list][*]Only casts if EMP Shockwave requirements fail.
+[*]If idle, the target range is a 2048 box-pixel radius, otherwise it is a 288 box-pixel radius.
+[*]Only targets units that have another target, and are not cloaked.
+[*]Target unit must have at least 100 maximum HP, and have at most 75 HP remaining.
+[*]Targets allies as well.
+[*]Must not be matrixed.
+[/list]
+
+[color=#EBEE80][b]Irradiate[/b][/color]
+[list][*]Only casts if both EMP Shockwave and Defensive Matrix requirements fail.
+[*]If idle, the target range is a 2048 box-pixel radius, otherwise it is a 288 box-pixel radius.
+[*]Does not target Interceptors, Spider Mines, Scarabs, Zerg Eggs, Larva, Lurker Eggs, or workers harvesting gas.
+[*]Must not be irradiated.
+[*]When a campaign script is run, targets only workers, overlords, and medics when idle. Targets everything when provoked or not running a campaign script.
+[/list]
+
+[color=#EBEE80][b]Disruption Web[/b][/color]
+[list][*]If idle, the target range is a 4096 box-pixel radius in campaign scripts or 2048 box-pixel radius in normal scripts. Otherwise it will be a 288 box-pixel radius when provoked.
+[*]Does not target Spider Mines, Scarabs, or workers harvesting gas.
+[*]Targets turrets, spore colonies, cannons, and loaded bunkers whose first loaded unit is targetting an allied unit. (For example, if you load and SCV first, and then load marines, they will not cast Disruption Web on the bunker)
+[*]Targets other ground units that can attack and are targetting an allied unit only if they are within a 256 pixel radius.
+[/list]
+
+[color=#EBEE80][b]Restoration[/b][/color]
+[list][*]Target range is a 1024 box-pixel radius.
+[*]Target unit's HP+Shields must be greater than 60.
+[*]Unit must have one of the following status ailments: Ensnare, Plague, Irradiate, Lockdown, Maelstrom, Acid Spores.
+[*]If an unknown condition is met, then it will check the entire map for units with parasite or maelstrom.
+[/list]
+
+[color=#EBEE80][b]Optical Flare[/b][/color]
+[list][*]Only casts if Restoration requirements fail.
+[*]Only casts when energy is at max.
+[*]If idle, the target range is a 1024 box-pixel radius, otherwise it is a 288 box-pixel radius.
+[*]Does not target Interceptors, Spider Mines, Scarabs, or workers harvesting gas.
+[*]Does not target units that are blind.
+[*]The maximum HP+Shields must be greater than 80.
+[*]Will blind clean detectors(No blind,lockdown,maelstrom,stasis) as an exception.
+[/list]
+
+[color=#EBEE80][b]Healing[/b][/color]
+[list][*]Will move to heal any organic unit that isn't at full health.
+[*]Normal auto-heal behaviour applies.
+[/list]
+
+[color=#EBEE80][b]Feedback[/b][/color]
+[list][*]If idle, the target range is a 2048 box-pixel radius in campaign scripts or 1024 box-pixel radius in normal scripts. Otherwise it will be a 288 box-pixel radius when provoked.
+[*]Does not feedback heroes or hallucinations.
+[*]Will feedback only if the target's energy is greater than its HP+Shields.
+[/list]
+
+[color=#EBEE80][b]Mind Control[/b][/color]
+[list][*]Only casts when Feedback requirements fail.
+[*]Target acquisition range is a 1024 box-pixel radius.
+[*]Does not target Interceptors, Spider Mines, Scarabs, or workers harvesting gas.
+[*]Does not target heroes.
+[*]Will always mind control the following units: Siege Tank, Science Vessel, Battlecruiser, Medic, Ultralisk, Overlord, Queen, Defiler, Devourer, Dark Archon, Dark Templar, High Templar, Arbiter, Carrier, Reaver, and Lurker.
+[*]Will mind control units that cost at least as much minerals [b][i]and[/i][/b] as much gas as a Protoss Dark Templar.
+[/list]
+
+[color=#EBEE80][b]Maelstrom[/b][/color]
+[list][*]Only casts when both Feedback and Mind Control requirements fail.
+[*]Does not cast when unit has as much energy as both Maelstrom and Mind Control.
+[*]If idle, the target range is a 2048 box-pixel radius in campaign scripts or 1024 box-pixel radius in normal scripts. Otherwise it will be a 288 box-pixel radius when provoked.
+[*]Does not target Zerg Larva, Zerg Egg, Lurker Egg, Cocoon, or workers harvesting gas.
+[*]Does not target units that have been maelstromed.
+[*]Enemy unit cluster must have at least 250 HP+Shields total unless the unit was provoked, and this value must be greater than 2 times the HP+Shields total of allies in the cluster.
+[*]Targets loaded Overlords always as an exception.
+[/list]

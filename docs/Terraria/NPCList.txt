@@ -1,6 +1,12 @@
-// NPC in order by ID; for 1.0.3
+// for 1.0.3
 
-NULL // dummy entry, doesn't exist
+Green Slime
+Pinky
+Baby Slime
+Black Slime
+Purple Slime
+Red Slime
+Yellow Slime
 Blue Slime
 Demon Eye
 Zombie

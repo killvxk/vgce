@@ -1,0 +1,255 @@
+Gold Broadsword
+Gold Shortsword
+Gold Axe
+Gold Hammer
+Gold Bow
+Silver Pickaxe
+Silver Broadsword
+Silver Shortsword
+Silver Axe
+Silver Hammer
+Silver Bow
+Copper Pickaxe
+Copper Broadsword
+Copper Shortsword
+Copper Axe
+Copper Hammer
+Copper Bow 
+Iron Pickaxe
+Dirt Block
+Stone Block
+Iron Broadsword
+Mushroom
+Iron Shortsword
+Iron Hammer
+Torch
+Wood
+Iron Axe
+Iron Ore
+Copper Ore
+Gold Ore
+Silver Ore
+Copper Watch
+Silver Watch
+Gold Watch
+Depth Meter
+Gold Bar
+Copper Bar
+Silver Bar
+Iron Bar
+Gel
+Wooden Sword
+Wooden Door
+Stone Wall
+Acorn
+Lesser Healing Potion
+Life Crystal
+Dirt Wall
+Bottle
+Wooden Table
+Furnace
+Wooden Chair
+Iron Anvil
+Work Bench
+Goggles
+Lens
+Wooden Bow
+Wooden Arrow
+Flaming Arrow
+Shuriken
+Suspicious Looking Eye
+Demon Bow
+War Axe of the Night
+Light's Bane
+Unholy Arrow
+Chest
+Band of Regeneration
+Magic Mirror
+Jester's Arrow
+Angel Statue
+Cloud in a Bottle
+Hermes Boots
+Enchanted Boomerang
+Demonite Ore
+Demonite Bar
+Heart
+Corrupt Seeds
+Vile Mushroom
+Ebonstone Block
+Grass Seeds
+Sunflower
+Vilethorn
+Starfury
+Purification Powder
+Vile Powder
+Rotten Chunk
+Worm Tooth
+Worm Food
+Copper Coin
+Silver Coin
+Gold Coin
+Platinum Coin
+Fallen Star
+Copper Greaves
+Iron Greaves
+Silver Greaves
+Gold Greaves
+Copper Chainmail
+Iron Chainmail
+Silver Chainmail
+Gold Chainmail
+Grappling Hook
+Iron Chain
+Shadow Scale
+Piggy Bank
+Mining Helmet
+Copper Helmet
+Iron Helmet
+Silver Helmet
+Gold Helmet
+Wood Wall
+Wood Platform
+Flintlock Pistol
+Musket
+Musket Ball
+Minishark
+Iron Bow
+Shadow Greaves
+Shadow Scalemail
+Shadow Helmet
+Nightmare Pickaxe
+The Breaker
+Candle
+Copper Chandelier
+Silver Chandelier
+Gold Chandelier
+Mana Crystal
+Lesser Mana Potion
+Band of Starpower
+Flower of Fire
+Magic Missile
+Dirt Rod
+Orb of Light
+Meteorite
+Meteorite Bar
+Hook
+Flamarang
+Molten Fury
+Fiery Greatsword
+Molten Pickaxe
+Meteor Helmet
+Meteor Suit
+Meteor Leggings
+Angel Statue
+Space Gun
+Rocket Boots
+Gray Brick
+Gray Brick Wall
+Red Brick
+Red Brick Wall
+Clay Block
+Blue Brick
+Blue Brick Wall
+Chain Lantern
+Green Brick
+Green Brick Wall
+Pink Brick
+Pink Brick Wall
+Gold Brick
+Gold Brick Wall
+Silver Brick
+Silver Brick Wall
+Copper Brick
+Copper Brick Wall
+Spike
+Water Candle
+Book
+Cobweb
+Necro Helmet
+Necro Breastplate
+Necro Greaves
+Bone
+Muramasa
+Cobalt Shield
+Aqua Scepter
+Lucky Horseshoe
+Shiny Red Balloon
+Harpoon
+Spiky Ball
+Ball 'O Hurt
+Blue Moon
+Handgun
+Water Bolt
+Bomb
+Dynamite
+Grenade
+Sand Block
+Glass
+Sign
+Ash Block
+Obsidian
+Hellstone
+Hellstone Bar
+Mud Block
+Sapphire
+Ruby
+Emerald
+Topaz
+Amethyst
+Diamond
+Glowing Mushroom
+Star
+Ivy Whip
+Breathing Reed
+Flipper
+Healing Potion
+Mana Potion
+Blade of Grass
+Thorn Chakrum
+Obsidian Brick
+Obsidian Skull
+Mushroom Grass Seeds
+Jungle Grass Seeds
+Wooden Hammer
+Star Cannon
+Blue Phaseblade
+Red Phaseblade
+Green Phaseblade
+Purple Phaseblade
+White Phaseblade
+Yellow Phaseblade
+Meteor Hamaxe
+Empty Bucket
+Water Bucket
+Lava Bucket
+Jungle Rose
+Stinger
+Vine
+Feral Claws
+Anklet of the Wind
+Staff of Regrowth
+Hellstone Brick
+Whoopie Cushion
+Shackle
+Molten Hamaxe
+Flamelash
+Phoenix Blaster
+Sunfury
+Hellforge
+Clay Pot
+Nature's Gift
+Bed
+Silk
+Lesser Restoration Potion
+Restoration Potion
+Jungle Hat
+Jungle Shirt
+Jungle Pants
+Molten Helmet
+Molten Breastplate
+Molten Greaves
+Meteor Shot
+Sticky Bomb
+Black Lens
+Sunglasses
+Wizard Hat

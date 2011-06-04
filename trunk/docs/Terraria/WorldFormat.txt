@@ -13,13 +13,27 @@ struct string
   char szString[bSizeofString]; // pseudocode to show how it is read
 };
 
+// =================== DATA ===============================
+bool isTileFrameImportant[] = {
+  0, 0, 0, 1, 0, 1, 0, 0,
+  0, 0, 1, 1, 1, 1, 1, 1,
+  1, 1, 1, 0, 1, 1, 0, 0,
+  1, 0, 1, 1, 1, 1, 0, 1,
+  0, 1, 1, 1, 1, 0, 0, 0,
+  0, 0, 1, 0, 0, 0, 0, 0,
+  0, 0, 1, 0, 0, 0, 0, 1,
+  0, 0, 0, 0, 0, 1, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 1,
+  1, 1, 1, 0, 0, 1, 1, 1
+};
+
 // =================== WORLD TYPES ===============================
 struct TILE
 {
   bool isActive;
   { // only if isActive is true
     char  cTileType;
-    { // only if tile frame is important (internal)
+    { // only if isTileFrameImportant[cTileType] is true
       short frameX;
       short frameY;
     }

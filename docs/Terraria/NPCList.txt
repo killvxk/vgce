@@ -1,0 +1,48 @@
+// NPC in order by ID; for 1.0.3
+
+NULL // dummy entry, doesn't exist
+Blue Slime
+Demon Eye
+Zombie
+Eye of Cthulhu
+Servant of Cthulhu
+Eater of Souls
+Devourer Head
+Devourer Body
+Devourer Tail
+Giant Worm Head
+Giant Worm Body
+Giant Worm Tail
+Eater of Worlds Head
+Eater of Worlds Body
+Eater of Worlds Tail
+Mother Slime
+Merchant
+Nurse
+Arms Dealer
+Dryad
+Skeleton
+Guide
+Meteor Head
+Fire Imp
+Burning Sphere
+Goblin Peon
+Goblin Thief
+Goblin Warrior
+Goblin Sorcerer
+Chaos Ball
+Angry Bones
+Dark Caster
+Water Sphere
+Burning Skull
+Skeletron Head
+Skeletron Hand
+Old Man
+Demolitionist
+Bone Serpent Head
+Bone Serpent Body
+Bone Serpent Tail
+Hornet
+Man Eater
+Dead Miner
+Tim

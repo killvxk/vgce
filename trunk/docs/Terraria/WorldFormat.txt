@@ -1,0 +1,107 @@
+// some pseudocode; for ver 1.0.3
+
+// =================== BASIC TYPES ===============================
+struct point
+{
+  int x;
+  int y;
+};
+
+struct string
+{
+  BYTE bSizeofString;
+  char szString[bSizeofString]; // pseudocode to show how it is read
+};
+
+// =================== WORLD TYPES ===============================
+struct TILE
+{
+  bool isActive;
+  { // only if isActive is true
+    char  cTileType;
+    { // only if tile frame is important (internal)
+      short frameX;
+      short frameY;
+    }
+  }
+  bool  isLighted;
+
+  bool  isWall;
+  { // only if isWall is true
+    char cWall;
+  }
+
+  bool isLiquid;
+  { // only if isLiquid is true
+    char cLiquid;
+    bool isLava;
+  }
+};
+
+struct CHEST
+{
+  bool isActive;
+  { // only if isActive is true
+    point   position;
+    struct ITEM
+    {
+      char cStackCount;
+      { // only if the stack is greater than 0
+        string itemName;
+      }
+    } items[20];
+  } isActive;
+};
+
+struct SIGN
+{
+  bool isActive;
+  { // only if isActive is true
+    string  text;
+    point   position;    
+  }
+};
+
+struct NPC
+{
+  bool isActive;
+  { // only if isActive is true
+    string  npcName;
+    point   position;
+    bool    isHomeless;
+    point   homeTile;
+  }
+};
+
+// =================== WORLD FORMAT ===============================
+struct WORLD
+{
+  int     iVersion;        // 4 = 1.0.3
+  string  worldName;
+  int     iWorldID;
+  int     iBoundsLeft;      // pixels
+  int     iBoundsRight;     // pixels
+  int     iBoundsTop;       // pixels
+  int     iBoundsBottom;    // pixels
+  point   worldSize;        // tiles
+  point   spawnPosition;    // tiles
+  double  worldSurface;
+  double  rockLayer;
+  double  worldTime;
+  bool    isDayTime;
+  int     iBloodMoonPhase;
+  bool    isBloodMoon;
+  point   dungeonLocation;    // tiles
+  bool    isBossDefeated[3];
+  bool    isShadowOrbSmashed;
+  bool    spawnMeteor;
+  char    cShadowOrbCount;
+  int     iInvasionDelay;
+  int     iInvasionSize;
+  int     iInvasionType;
+  double  invasionCurrentX;
+  TILE    mapTiles[worldSize.y][worldSize.x];
+  CHEST   treasureChests[1000];
+  SIGN    signs[1000];
+  NPC     npcList[];  // size is variable; until it reaches the first inactive entry
+};

@@ -1,4 +1,5 @@
 // some pseudocode; for ver 1.0.3
+// bool = 1 BYTE
 
 // =================== BASIC TYPES ===============================
 struct point
@@ -40,14 +41,14 @@ struct TILE
   }
   bool  isLighted;
 
-  bool  isWall;
-  { // only if isWall is true
-    char cWall;
+  bool  hasWall;
+  { // only if hasWall is true
+    char cWallType;
   }
 
-  bool isLiquid;
-  { // only if isLiquid is true
-    char cLiquid;
+  bool hasLiquid;
+  { // only if hasLiquid is true
+    char cLiquidType;
     bool isLava;
   }
 };

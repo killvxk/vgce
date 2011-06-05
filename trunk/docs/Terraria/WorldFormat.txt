@@ -82,7 +82,8 @@ struct NPC
   bool isActive;
   { // only if isActive is true
     string  npcName;
-    point   position;
+    float   positionX;
+    float   positionY;
     bool    isHomeless;
     point   homeTile;
   }

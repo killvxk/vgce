@@ -1,0 +1,51 @@
+// XNA 4.0 (XNB file)
+// NOTE: This format is incomplete and unverified
+// pseudocode to cut corners
+
+struct string
+{
+  BYTE bCharCount;
+  char text[bCharCount];
+};
+
+//XNB Header
+{
+  char    magic[3]; // constant {'X','N','A'}
+  u8      platform;  // ? 'w' for windows??
+  u16     gfxStorage;  // graphicsProfile = (( gfxStorage & 0x7F00) >> 8)  // unused?
+                       // compression = ( gfxStorage & 0x80FF) // 5 = uncompressed; 0x8005 = compressed
+  u32     baseFileSize;
+  { // only if compressed
+    u32 decompressedSize;
+    // (something about Decompression imported from an external XNA DLL)
+  }
+}
+
+//Content (may be inaccurate)
+{
+  encodedInt typeCount;
+  {
+    string  contentName;
+    u32     contentVersion;
+    // stuff
+  }
+  encodedInt sharedResourceFixups;
+}
+
+
+
+int decodeInt(BYTE *data)
+{
+  int rval = 0, bitShift = 0;
+  do
+  {
+    if ( bitShift == 7 * 5 )
+    {
+      // throw some exception
+    }
+    BYTE bCurrent = *(data++);
+    rval |= (bCurrent & 0x7F) << bitShift;
+    bitShift += 7;
+  } while ( !(bCurrent & 0x80) );
+  return rval;
+};

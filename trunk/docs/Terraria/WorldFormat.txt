@@ -120,4 +120,9 @@ struct WORLD
   CHEST   treasureChests[1000];
   SIGN    signs[1000];
   NPC     npcList[];  // size is variable; until it reaches the first inactive entry
+  { // after ver 7
+    bool    worldValid;
+    string  worldNameCheck;
+    int     worldIDCheck;
+  }
 };

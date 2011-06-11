@@ -253,3 +253,29 @@ Sticky Bomb
 Black Lens
 Sunglasses
 Wizard Hat
+Top Hat
+Tuxedo Shirt
+Tuxedo Pants
+Summer Hat
+Bunny Hood
+Plumber's Hat
+Plumber's Shirt
+Plumber's Pants
+Hero's Hat
+Hero's Shirt
+Hero's Pants
+Fish Bowl
+Archaeologist's Hat
+Archaeologist's Jacket
+Archaeologist's Pants
+Black Dye
+Green Dye
+Ninja Hood
+Ninja Shirt
+Ninja Pants
+Leather
+Red Hat
+Goldfish
+Robe
+Robot Hat
+Gold Crown

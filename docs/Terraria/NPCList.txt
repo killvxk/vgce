@@ -7,6 +7,7 @@ Black Slime
 Purple Slime
 Red Slime
 Yellow Slime
+Jungle Slime
 Blue Slime
 Demon Eye
 Zombie
@@ -50,5 +51,18 @@ Bone Serpent Body
 Bone Serpent Tail
 Hornet
 Man Eater
-Dead Miner
+Undead Miner
 Tim
+Bunny
+Corrupt Bunny
+Harpey
+Cave Bat
+King Slime
+Jungle Bat
+Doctor Bones
+The Groom
+Clothier
+Goldfish
+Snatcher
+Corrupt Goldfish
+Piranha

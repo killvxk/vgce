@@ -17,24 +17,30 @@ struct string
   u32     baseFileSize;
   { // only if compressed
     u32 decompressedSize;
-    // (something about Decompression imported from an external XNA DLL)
+    // (Decompress using imported XNA DLL functions; CreateDecompressionContext, Decompress, and DestroyDecompressionContext)
   }
 }
 
 //Content (may be inaccurate)
 {
-  encodedInt typeCount;
-  {
-    string  contentName;
-    u32     contentVersion;
-    // stuff
-  }
-  encodedInt sharedResourceFixups;
+  u8          unknown;
+  u8          manifestStrSize;
+  u8          unknown;
+  char        manifest[manifestStrSize];
+  u8          wtf[6];
+  // actual content
+  { // Texture2D
+    u32 surfaceFormat; // 0 = RGBA?
+    u32 width;
+    u32 height;
+    u32 count;  // frames???
+    u32 size;   // data size
+  }  
 }
 
 
 
-int decodeInt(BYTE *data)
+int decodeInt(BYTE *data) // This is referenced/used but the data doesn't follow
 {
   int rval = 0, bitShift = 0;
   do

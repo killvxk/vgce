@@ -1,3 +1,6 @@
+// 1.0.4
+
+Gold Pickaxe
 Gold Broadsword
 Gold Shortsword
 Gold Axe

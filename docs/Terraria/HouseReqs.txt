@@ -1,0 +1,48 @@
+[Chairs]
+  Wooden Chair
+
+[Doors]
+  Open Door
+  Closed Door
+  Wooden Platform
+
+[Tables]
+  Wooden Table
+  Workbench
+
+[Light Sources]
+  Torch
+  Candle
+  Copper Chandelier
+  Silver Chandelier
+  Gold Chandelier
+  Chain Lantern
+  Water Candle
+
+[Walls (background)]
+  Stone Wall
+  Wood Wall
+  Gray Brick Wall
+  Red Brick Wall
+  Gold Brick Wall
+  Silver Brick Wall
+  Copper Brick Wall
+
+[Evil Tiles] // affects score (-1 score per tile)
+  Corrupted Grass
+  Corrupted Weeds
+  Ebonstone
+  Corrupted Thorns
+
+[Good Tiles] // affects score (+5 score per tile) (sunflower takes more than one tile, so it's like +40 per sunflower)
+  Sunflower
+
+[Rules]
+  - Must contain one Chair, Table, Door, and Light Source. (Door can be a single Wooden Platform tile with no exit)
+  - Can't be within 10 tiles of the (true) map tile border (not map bounds).
+  - Must contain at least 60 tiles and at most 1900.
+  - Good/Evil Tile score is calculated within (approx.) 75 tiles of the left and right sides of the house, and (approx.) 53 tiles above, and (approx.) 57 tiles below.
+  - If Good/Evil score is greater than -50, then the score is ignored.
+  - Good/Evil score must be greater than -250 in order to consider other score.
+  - Other miscelaneous/unknown scores can be negated by placing sunflowers.
+  - Can use any solid tile as the foundation (including dirt/mud/hellstone/etc).

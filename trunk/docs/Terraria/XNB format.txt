@@ -4,14 +4,14 @@
 
 struct string
 {
-  BYTE bCharCount;
-  char text[bCharCount];
+  encodedInt  charCount;
+  char        text[charCount];
 };
 
 //XNB Header
 {
   char    magic[3]; // constant {'X','N','A'}
-  u8      platform;  // ? 'w' for windows??
+  u8      platform;  // ? 'w' for windows?? (constant)
   u16     gfxStorage;  // graphicsProfile = (( gfxStorage & 0x7F00) >> 8)  // unused?
                        // compression = ( gfxStorage & 0x80FF) // 5 = uncompressed; 0x8005 = compressed
   u32     baseFileSize;
@@ -23,11 +23,11 @@ struct string
 
 //Content (may be inaccurate)
 {
-  u8          unknown;
-  u8          manifestStrSize;
-  u8          unknown;
-  char        manifest[manifestStrSize];
-  u8          wtf[6];
+  encodedInt  typeCount;
+  string      manifest;
+  u32         typeVersion;
+  encodedInt  sharedResourceCount; // ignoring this
+  encodedInt  index;
   // actual content
   { // Texture2D
     u32 surfaceFormat; // 0 = RGBA?
@@ -35,9 +35,8 @@ struct string
     u32 height;
     u32 count;  // frames???
     u32 size;   // data size
-  }  
+  }
 }
-
 
 
 int decodeInt(BYTE *data) // This is referenced/used but the data doesn't follow
@@ -52,6 +51,6 @@ int decodeInt(BYTE *data) // This is referenced/used but the data doesn't follow
     BYTE bCurrent = *(data++);
     rval |= (bCurrent & 0x7F) << bitShift;
     bitShift += 7;
-  } while ( !(bCurrent & 0x80) );
+  } while ( (bCurrent & 0x80) );
   return rval;
 };

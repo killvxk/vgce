@@ -115,7 +115,8 @@ struct WORLD
   int     iBoundsRight;     // pixels
   int     iBoundsTop;       // pixels
   int     iBoundsBottom;    // pixels
-  point   worldSize;        // tiles
+  int     iWorldHeight;     // tiles
+  int     iWorldWidth;      // tiles
   point   spawnPosition;    // tiles
   double  worldSurface;
   double  rockLayer;
@@ -136,7 +137,7 @@ struct WORLD
   CHEST   treasureChests[1000];
   SIGN    signs[1000];
   NPC     npcList[];  // size is variable; until it reaches the first inactive entry
-  { // after ver 7
+  { // at least ver 7
     bool    worldValid;
     string  worldNameCheck;
     int     worldIDCheck;

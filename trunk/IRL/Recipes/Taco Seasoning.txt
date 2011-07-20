@@ -1,0 +1,22 @@
+This recipe is for the easiest taco seasoning using minimal ingredients, for those that don't cook or don't have much money.
+
+[Minimalist Taco Seasoning]
+  [Essential Ingredients]
+    1 tbsp    Chili Powder
+    1 tsp     Onion Powder (or Onion Salt, or minced cooking onion)
+    1 tsp     Ground Cumin
+    1 tsp     Paprika
+
+  [Instructions]
+    Break up and cook 1 lb of ground beef in a pan (medium-high heat).
+    Pick up the grease with paper towels, or just leave it if you wanna get fat.
+    When meat has browned, pour 1 cup of water, and taco seasoning (don't turn down the heat).
+    Wait until the water boils out, then turn off heat and serve.
+
+    For additional flavour, add any or all of the optional ingredients below:
+  
+  [Optional Ingredients]
+    1 tsp     Salt (or Sea Salt)
+    1 tsp     Sugar
+    1 tsp     Garlic Powder (or Garlic Salt, or minced garlic)
+    1 tsp     Powdered Oregano

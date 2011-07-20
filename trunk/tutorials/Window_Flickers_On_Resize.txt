@@ -1,0 +1,3 @@
+(For Win32 API)
+
+Use the WS_CLIPCHILDREN style when creating your main window (the one that is resized).

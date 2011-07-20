@@ -1,0 +1,34 @@
+(For Win32 API)
+
+If you went to hell and back trying to figure out how you can get a  status bar 
+in your main window and not have the MDI client overwrite it, then this is for you.
+
+First create the status bar as you normally would for the main window, as well as your MDI client window.
+
+Save the HWND value for the status bar, the mdi client, and the frame window.
+Add a function like this one:
+////////////////////////////////////////////////////
+void SetMdiClientSize()
+{
+  RECT rctStatus;
+  GetClientRect(hWndStatusBar, &rctStatus);
+  RECT rctMain;
+  GetClientRect(hWndMain, &rctMain);
+  MoveWindow(hWndMdi, 0, 0, rctMain.right, rctMain.bottom - rctStatus.bottom, TRUE);
+}
+////////////////////////////////////////////////////
+
+Call that function after creating the MDI client.
+Then in the message handling area for the WndProc of your frame window:
+////////////////////////////////////////////////////
+  case WM_SIZE:
+    SendMessage(hWndStatusBar, message, wParam, lParam);
+    SetMdiClientSize();
+    return DefWindowProc(hWnd, message, wParam, lParam);
+////////////////////////////////////////////////////
+
+This will size the status bar so that it moves when you resize the window.
+It will also correctly set the MDI client size so that it doesn't overlap the status bar.
+Do NOT call DefFrameProc, call DefWindowProc. Calling DefFrameProc will undo your changes.
+
+

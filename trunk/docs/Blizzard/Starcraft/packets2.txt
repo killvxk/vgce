@@ -307,7 +307,7 @@ CLASS 2
 == 0x3F - Version Verification ==
 {{{
 	BYTE bStormPlayerID;
-	WORD unknown;     // 0
+	WORD flags;       // 0
 	WORD versionHigh; // 1
 	WORD versionLow;  // 5
 }}}

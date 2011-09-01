@@ -7,6 +7,7 @@ cock      = $!$%
 cunt      = $&!%
 dick      = %@$%
 dildo     = %@%&!
+erect     = &#&$%
 faggot    = !@!@!%
 fuck      = !&$%
 gook      = !@!$
@@ -30,6 +31,7 @@ whore     = !@!#&
     "cunt",
     "dick",
     "dildo",
+    "erect",
     "faggot",
     "fuck",
     "gook",

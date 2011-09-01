@@ -1,0 +1,75 @@
+// Note: The following applies only to the demo version of Bastion
+[Command Line]
+  -l <lang>           Sets the language. Can be "en", "fr", "it", "de", "es".
+  --lang <lang>       Alias for above.
+  -lang <lang>        Alias for above.
+  -x <value>          Sets the resolution width.
+  -y <value>          Sets the resolution height.
+  -windowed           Runs in windowed mode.
+  -noborder           Runs without border.
+  -nofixedstep        
+  -deadzone
+  -isomovement        Enables isometric movement.
+  -orthomovement      Disables isometric movement.
+  -kiosk              Runs in kiosk mode. ("Unlock full game" does not appear in the menu)
+  
+// Note: XBox Controller commands not included
+[Menu Debug Commands]
+  CTRL+SHIFT+D        Enables Debug Mode. Only usable in the menu. Required for the other commands.
+  CTRL+U              Goes to level select screen.
+  CTRL+PLUS           Changes the kid's graphic on the title screen to a smaller one with a twirlybird thing. Enables "New Game Plus".
+  CTRL+DEL            Resets the kid's graphic on the title screen to the original larger one.
+  F11                 Toggle player tracking. Can also be used on in-game menu.
+  F12                 
+    
+[Anywhere Debug Commands]
+  CTRL+F              Shows the frame rate.
+  CTRL+A              Toggles the sound.
+  
+[Game Debug Commands]
+  CTRL+U              Equips a random set of equipment.
+  CTRL+M              Gives 9999 money, 999 points, and a goal piece.
+  SHIFT+R             Refill all ammo.
+  CTRL+MouseWheel     Zoom in and out (infinitely).
+  CTRL+MouseMiddle    Reset the zoom.
+  CTRL+G              God mode. Invincibility, super speed, noclip, deal 100x normal damage.
+  CTRL+K              Toggles the ability to always deal a critical hit.
+  CTRL+O              Toggle tutorial.
+  CTRL+E              Draws extended objects.
+  SHIFT+E             Gives 200 experience points.
+  SHIFT+U             Unlock several things. Obtains 99999999+99999999 experience, 400 money.
+  CTRL+Q              Restart the level.
+  SHIFT+PLUS          Increases brightness level.
+  SHIFT+MINUS         Decreases brightness level.
+  CTRL+J              Toggle Fish-Eye view.
+  CTRL+H              Set max health.
+  SHIFT+N             
+  CTRL+X
+  CTRL+A
+  CTRL+PLUS           Change camera angle forward. (?)
+  CTRL+MINUS          Change camera angle backward. (?)
+  CTRL+R              
+  SHIFT+W             Draw weapon organization. (?)
+  CTRL+W              Win the current battle.
+  CTRL+N              Ends the current wave.
+  SHIFT+D             Toggle debug messages. (?)
+  CTRL+D              Iterate debug messages. (?)
+  SHIFT+LEFT          Move camera left.
+  SHIFT+RIGHT         Move camera right.
+  SHIFT+UP            Move camera up.
+  SHIFT+DOWN          Move camera down.
+
+[Other Debug Commands]
+  CTRL+U              In most places will unlock everything for that screen.
+  
+  
+
+[PC Names]  - Based on the name of the PC, different configurations are applied.
+  GAVINSIMON
+  GAVINSIMONWORK
+  AMIRRAOWORK
+  GREGKASAVINWORK
+  JAYEPPERSONWORK
+  ANDREWMACBOOK
+  JASONKOKAL-PC
+  

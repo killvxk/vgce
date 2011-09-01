@@ -1,6 +1,6 @@
 struct _section
 {
-  DWORD dwChecksum;     // checksum, hash?
+  DWORD dwChecksum;     // crc32
   DWORD dwChunkCount;
   DWORD dwChunkSize;
   BYTE  bData[dwChunkSize];

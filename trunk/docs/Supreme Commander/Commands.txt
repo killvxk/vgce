@@ -1,0 +1,24 @@
+[Command Line]
+  /waitfordebugger
+  /aqtime
+  /alloclog
+  /singleproc
+  /purgecache
+  /mediacenter
+
+[Cheats]
+  SallyShears       - Reveal entire map
+  BlingBling        - Get 10000 or something mass and energy.
+  ZeroExtraStorage  - Set all energy and storage to 0.
+  DamageUnit        - Damage or heal the selected unit (use negative to heal)
+  AddImpulse        - 
+  AI_RunOpponentAI  -
+  ReconFlush
+  ai_InstaBuild
+  ai_FreeBuild
+  dbg
+  NoDamage
+  Purge
+  KillAll
+  DestroyAll
+  

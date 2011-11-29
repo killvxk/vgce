@@ -1,7 +1,6 @@
 #summary AIEdit Opcodes list
 #labels Type-List,Game-Starcraft,Platform-PC
 
-=Table of Contents=
 <wiki:toc max_depth="2" />
 
 ----
@@ -104,7 +103,7 @@ The use of this command is unknown. Takes no parameters.
 
 =0x10 - capt_expand=
 _Description:_
-The use of this command is unknown
+Captures an expansion with a default build scheme.
  Takes no parameter
  
 
@@ -218,16 +217,13 @@ Make selected player ally
 
 =0x22 - default_min=
 _Description:_
-The use of this command is unknown
+Defines the number of units that will be sent to expansions when the AI tries to expand.
  Takes %1(byte) as parameter
- 
-_*I'm guessing this is to set the default minerals(starting resources) for the game.*_
 
 
 =0x23 - defaultbuild_off=
 _Description:_
-The use of this command is unknown. Takes no parameters.
- 
+Does not automatically train units. Takes no parameters.
 
 
 =0x24 - stop=
@@ -316,7 +312,7 @@ Jumps to %2(block) if %1(byte) normal game minutes have passed in the game
  
 
 
-=0x32 - farms_notiming=farms_notiming
+=0x32 - farms_notiming=
 _Description:_
 Build necessary farms only when it hits the maximum supply available
  
@@ -342,9 +338,28 @@ The use of this command is unknown. Takes no parameters.
 
 =0x36 - default_build=
 _Description:_
-The use of this command is unknown. Takes no parameters.
- 
+Notifies the AI that it should automatically start training race-specific units if it has at least 600 minerals and 300 gas. It will train these units until the define_max value is reached.
 
+Takes no parameters.
+
+==Units Trained==
+  * Zerg
+    * Hydralisk
+    * Mutalisk
+  * Terran
+    * Marine
+    * Ghost
+    * Siege Tank
+    * Goliath
+    * Wraith
+    * Battlecruiser
+  * Protoss
+    * Zealot
+    * Dragoon
+    * Reaver
+    * Scout
+    * Carrier
+ 
 
 =0x37 - harass_factor=
 _Description:_
@@ -384,8 +399,12 @@ If it is a ground map(in other words, if the enemy is reachable), jump to %1(blo
 
 =0x3D - place_guard=
 _Description:_
-Place %2(byte) guards(guardindex, 0+) using %1(unit) to guard town.
-  
+Assign one %1(unit) to guard town at position %2(byte).
+
+== Position ==
+  * 0 = Town Location Center
+  * 1 = Mineral Line
+  * 2 = Gas Refinery
 
 
 =0x3E - wait_force=
@@ -418,6 +437,7 @@ The use of this command is unknown. Takes %1(military).
  
 *_Eval probably stands for evaluate._*
 
+
 =0x43 - creep=
 _Description:_
 Place towers using %1(byte) placement scheme (undefined).
@@ -426,7 +446,7 @@ Place towers using %1(byte) placement scheme (undefined).
 
 =0x44 - panic=
 _Description:_
-Go to %1(block) when attacked.
+Expand in %1(block) when unmined resources reach below 7500 (not completely known). Repeats.
  
 
 
@@ -587,7 +607,7 @@ The use of this command is unknown. Takes no parameters.
 
 =0x5C - guard_all=
 _Description:_
-The use of this command is unknown
+Sends all units to guard the town.
  Takes no parameters
  
 

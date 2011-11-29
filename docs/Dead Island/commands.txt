@@ -1,0 +1,31 @@
+[Command Line]
+  [Modes]
+    /repltest           Runs a weird test.
+  
+  [Options]
+    -ami                Run multiple instances.
+    --wd                Use the current directory as the working directory.
+  
+  [Paths]
+    -game_dir=
+    ini=
+    gn=
+    pre=
+  
+  [Unknown?]
+    -autostartlevel
+    -testload
+    -avicodec
+    -cssrec
+    -avirec
+    -reconstart
+    -sssize
+    -nohyperthreading
+    -nomovieview
+    -ingamenosprites
+    -nologos
+    -drawmovieframe
+    -debugconf=
+    -safemode
+    -fps=
+    

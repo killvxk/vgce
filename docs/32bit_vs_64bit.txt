@@ -1,0 +1,31 @@
+A project was compiled for both 32-bit and 64-bit targets, no specialization was applied for either target.
+
+On intel 2620M @ 2.7GHz, 4 GB RAM @ 665 MHz
+
+The following functions were looped for one minute, here are the results.
+
+[memset]
+ [SIZE]  [TARGET]  [ITERATIONS]
+  500MB   x86       500
+          x64       1052
+  100MB   x86       2439
+          x64       5188
+  10MB    x86       24479
+          x64       53432
+  4MB     x86       114781
+          x64       135708
+  2MB     x86       659242
+          x64       270849
+
+[memcpy]
+ [SIZE]  [TARGET]  [ITERATIONS]
+  500MB   x86       335
+          x64       460
+  10MB    x86       16453
+          x64       23287
+  4MB     x86       42396
+          x64       82481
+  2MB     x86       134236
+          x64       221988
+  1MB     x86       828752
+          x64       531179

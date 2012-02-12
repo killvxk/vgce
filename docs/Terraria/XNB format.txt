@@ -1,6 +1,15 @@
 // XNA 4.0 (XNB file)
 // NOTE: This format is incomplete and unverified
 // pseudocode to cut corners
+//
+// NOTE #2: This was conceived with no help and no references.
+// Someone recently pointed out a link to the official documentation.
+//
+// The OFFICIAL format documentation and example code can be found
+// here: http://create.msdn.com/en-US/sample/xnb_format
+// _Also note that Using the official documentation also requires
+// you to follow their license, please read it carefully before
+// using their documentation._
 
 struct string
 {

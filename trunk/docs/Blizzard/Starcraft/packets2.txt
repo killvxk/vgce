@@ -741,7 +741,7 @@ CLASS 2
   BYTE bOrderType;
 	short x; // tile position, not pixel position
 	short y; 
-	BYTE bUnitType;
+	WORD wUnitType;
 }}}
 CLASS 2
 

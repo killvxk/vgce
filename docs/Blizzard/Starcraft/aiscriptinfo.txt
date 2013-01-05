@@ -94,7 +94,7 @@ AI_Captains_Flags:
   21 = (Grey out)
   22 = Unit is a hallucination
   23 = Missing requirement dependencies (Blank)
-  
+  24 = Invalid Table Entry
   25 = Unit/Race does not match
   26 = Not broodwar
   

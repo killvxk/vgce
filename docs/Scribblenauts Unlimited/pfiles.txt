@@ -1,0 +1,61 @@
+struct string
+{
+  uchar nSize;
+  char  str[nSize];
+};
+
+//[index.bin]
+  struct index_bin_header
+  {
+    // entry block
+    uint numEntries;
+    struct entry
+    {
+      uchar nArchiveId;
+      uchar flags;          // 6 = compressed
+      uint  archiveOffset;
+      uint  blockSize;
+      uint  decompressedSize;
+    } entries[numEntries];
+    
+    // archive block
+    uint numArchives;
+    string archiveNames[numArchives];
+  };
+
+//[1s]
+  struct 1s_header
+  {
+    uint numEntries;
+    struct entry
+    {
+      string nameStr; // Underscore-separated directory/name/extension
+      uint index;     // The index of the entry in the index.bin file
+    } entries[numEntries];
+  };
+  
+// The archive blocks are compressed using a basic zlib compression (use easyzlib and extraction will be a breeze)
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+struct dictionary_header
+{
+  string validCharacters;
+  int unk_0;  // entries?
+  int unk_1;
+  ...
+};
+
+struct adj_dictionary_entry   // may contain some type of opcodes?
+{
+  uchar entrySize;
+  string entryName;
+  uint unkId;
+  ... ???
+};
+
+struct scribble_adj_header    // *_SA
+{
+  unsigned fileSize;
+  ... unknown;
+};

@@ -1,0 +1,54 @@
+metadata : map
+  name : string       // name of the dungeon
+  species : string    // species that "owns" the dungeon?? 
+  rules : rules       // see rules.txt
+  maxRadius : int     // Default: 100
+  maxParts : int      // Default: 100
+  anchor : [string]
+tiles : [map]
+  value : Vec4B
+  brush : [][]
+    "clear"
+    "front", string       // foreground tile
+    "back", string        // background tile
+    "object", string, map
+      direction : direction2    // left, right
+      parameters : map
+        level : double
+        levelAdjustment : double
+        initialItems : [variable]   // allows items without treasure pool
+        // each entry can be one of the following types
+          : map               // full form
+            name : string     // "item" is also an alias
+            count : int       // Good idea to avoid values below 1
+            data : map
+              // unknown
+          : [string,int,map]  // short form
+          : string            // single item with 1 quantity and default data
+        treasurePools : [string]
+    "biomeitems"
+    "biometree"
+    "item", string // (?)
+    "npc", map
+      seed : string
+        "stable"
+      ...
+    "random", ...
+    "surface", ...
+    "surfacebackground", ...
+    "water", ...
+    "lava", ...
+    "acid", ...
+    "tentaclejuice", ...
+    "tarliquid", ...
+    "wire", map
+      "group", string // "default" if omitted??
+      "local", bool
+  rules : rules       // see rules.txt
+  connector : bool
+  connector-value : Vec4B
+  direction : direction4    // left, right, up, down
+parts : [map]
+  def : []
+    "image", [image,image]
+  overrideAllowAlways : bool

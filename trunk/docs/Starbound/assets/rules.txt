@@ -1,0 +1,11 @@
+rules : [][]
+  "worldGenMustContainSolid"
+  "worldGenMustContainAir"
+  "worldGenMustContainSolidBackground"
+  "worldGenMustContainAirBackground"
+  "allowOverdrawing"
+  "ignorePartMaximumRule"
+  "maxSpawnCount", [...]
+  "doNotConnectToPart", [string]
+  "doNotCombineWith", [string]
+  

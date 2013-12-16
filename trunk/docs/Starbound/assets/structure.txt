@@ -1,0 +1,21 @@
+config
+  fuelMax : int
+backgroundOverlays : [map]
+  position : Vec2F
+  image : image
+foregroundOverlays : [map]
+  position : Vec2F
+  image : image
+blocksPosition : Vec2I
+blockKey : [map]
+  foregroundMat : string        // default: ""
+  backgroundMat : string        // default: ""
+  foregroundBlock : bool        // default: false
+  backgroundBlock : bool        // default: false
+  object : string               // default: ""
+  objectDirection : direction2  // default: "left"
+  objectParameters : map        // same mapping as .object files?
+  flags : [string]
+    "playerSpawn"
+  value : color
+blockImage : image
